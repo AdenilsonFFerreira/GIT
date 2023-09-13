@@ -1,22 +1,22 @@
 SEMPRE NA PASTA DO PROJETO
 
 é possivel utilizar o git apenas local não precisando fazer nada pela interet
-caso queira usar o github é necessario criar os repositorio pela pelo site
+caso queira usar o github é necessario criar os repositorio pelo site
 depois no pc criar a pasta onde vai ficar o repositorio para fazer o passo a passo de instalação
 feito isso uma vez despois é so ir mandado as coisas.
 -------------------------------------------------------------------------------------------------------------------------
 
-PRIMEIRA COISA A FAZER
+USO LOCAL
 ver estatus
 inicializar - sera feito a primeira vez na pasta que se quer manter os projetos
 	depois de feito so em uma noca reinstalação sera utilizado novamente
 
 -------------------------------------------------------------------------------------------------------------------------
 
-SEGUNDA COISA
-no git hub.com
-criar o repositorio
-ele vai dar um passo a passo como criar repositorio
+USO GITHUB>COM
+vai ignorar o passo a passo USO LOCAL
+e começa criando o repositorio no sitetorio
+ele vai dar um passo a passo de como criar repositorio e depois vai seguindo
 
 -------------------------------------------------------------------------------------------------------------------------
 
