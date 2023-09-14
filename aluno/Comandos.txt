@@ -4,21 +4,21 @@ SEMPRE NA PASTA DO PROJETO
 caso queira usar o github é necessario criar os repositorio pelo site
 depois no pc criar a pasta onde vai ficar o repositorio para fazer o passo a passo de instalação
 feito isso uma vez despois é so ir mandado as coisas.
--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 USO LOCAL
 ver estatus
 inicializar - sera feito a primeira vez na pasta que se quer manter os projetos
 	depois de feito so em uma noca reinstalação sera utilizado novamente
 
--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 USO GITHUB>COM
 vai ignorar o passo a passo USO LOCAL
 e começa criando o repositorio no sitetorio
 ele vai dar um passo a passo de como criar repositorio e depois vai seguindo
 
--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 status - mostra as alterações dos arquivos e o que foi criado e precisa de atualização
 	criou um arquivo ou pasta como novo
@@ -52,4 +52,75 @@ mv - server pra renomear ou mover um arquivo
 	mover - git rm nodedoarquivo localdoarquivo
 	renomear - git mv nomedoarquivo novonomedoarquivo
 
-checkout - 
+checkout - usado quando vc faz a alteraçao no arquivo ou projeto porem desistiu de enviar
+	nesse caso ele cancela toda alteração que foi feita sem exeção sempre tomar cuidado 
+	ao utiliza-lo
+	git checkout nomedoarquivo
+
+.gitignore - par ignorar arquivosou pastas que não queira que seja enviado como exemplo arquivos de segurança etc
+	DICA - sempre criar esse arquivo quando incia a pasta git
+	SEMPRE COLOCAR O ARQUIVO OU PASTA NO .GITIGNORE ANTES DE CRIA-LOS
+	
+reset - vai fazer o reset de tudo o que forma feito commit e deve ser usado antes do push
+	elimina tudo e sempre é usado com a flag --hard 
+	git reset --flag
+
+-------------------------------------------------------------------------------------------------------------------
+
+branch são as ramificações do projeto para cada desenvolvedor sempre a partir do MASTER
+	cada branch pode caminhar sozinha independente das outras sempre criar branch da master e não de outra 
+	SEMPRE COMITAR ANTES DE MUDAR DE BRANCH
+	SEMPRE OBSERVAR A BRANCH QUE SE ESTA POIS ELAS SÃO ESCALAVEIS SE VC ESTA EM UMA E CRIA MAIS UMA ELA VIRA UMA RAMIFICAÇÃO  EM CASCATA
+
+MOSTRAR
+git branch - ira mostrar as branch 
+
+CRIAR
+git branch nomedabranch - cria uma nova branch
+
+DELETAR
+git branch -d ou --delete nomedobranch - delet um branch
+
+MUDAR *indica a branch posicionada
+git checkout nomedabranch - muda de branch
+git checkout -b nomedabranchnova - cria uma nova branch e muda pra ela
+
+UNIR
+git merge - uni as branchs atualizando ainda mais o projeto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
