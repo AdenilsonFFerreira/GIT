@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             lblUsuario = new Label();
             lblSenha = new Label();
             txbUsuario = new TextBox();
@@ -37,18 +36,8 @@
             btnCancelar = new Button();
             lblRecuperar = new LinkLabel();
             lblCadastro = new LinkLabel();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(175, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(120, 24);
-            label1.TabIndex = 0;
-            label1.Text = "Faça o Login";
-            label1.Click += label1_Click;
             // 
             // lblUsuario
             // 
@@ -132,6 +121,17 @@
             lblCadastro.Text = "Cadastro";
             lblCadastro.LinkClicked += lblCadastro_LinkClicked;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(175, 57);
+            label1.Name = "label1";
+            label1.Size = new Size(120, 24);
+            label1.TabIndex = 0;
+            label1.Text = "Faça o Login";
+            label1.Click += label1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -154,8 +154,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label lblUsuario;
         private Label lblSenha;
         private TextBox txbUsuario;
@@ -164,5 +162,6 @@
         private Button btnCancelar;
         private LinkLabel lblRecuperar;
         private LinkLabel lblCadastro;
+        private Label label1;
     }
 }

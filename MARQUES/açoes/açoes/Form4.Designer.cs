@@ -44,6 +44,7 @@
             btnOperacao.TabIndex = 5;
             btnOperacao.Text = "Operação";
             btnOperacao.UseVisualStyleBackColor = true;
+            btnOperacao.Click += btnOperacao_Click;
             // 
             // btnAnalise
             // 

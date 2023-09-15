@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace açoes
+namespace WindowsFormsApp1
 {
     public partial class Form4 : Form
     {
         public Form4()
         {
             InitializeComponent();
-        }
-
-        private void btnOperacao_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

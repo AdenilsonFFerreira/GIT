@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace açoes
+namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class Form2 : Form
     {
-        public Form4()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void btnOperacao_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
