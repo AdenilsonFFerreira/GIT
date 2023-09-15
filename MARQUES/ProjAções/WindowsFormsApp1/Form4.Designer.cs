@@ -44,6 +44,7 @@
             this.btnOperacao.TabIndex = 0;
             this.btnOperacao.Text = "Operação";
             this.btnOperacao.UseVisualStyleBackColor = true;
+            this.btnOperacao.Click += new System.EventHandler(this.btnOperacao_Click);
             // 
             // btnAnalise
             // 
@@ -96,7 +97,7 @@
             this.Controls.Add(this.btnAnalise);
             this.Controls.Add(this.btnOperacao);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "MODO DE OPERAÇÃO";
             this.ResumeLayout(false);
 
         }

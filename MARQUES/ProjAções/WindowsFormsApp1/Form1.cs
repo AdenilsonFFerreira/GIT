@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
         {
             Form4 form4 = new Form4();
             form4.Show();
+            //this.Close();
         }
 
         private void lblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
