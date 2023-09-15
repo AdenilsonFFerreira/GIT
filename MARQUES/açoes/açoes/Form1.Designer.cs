@@ -95,6 +95,7 @@
             btnOk.TabIndex = 5;
             btnOk.Text = "OK";
             btnOk.UseVisualStyleBackColor = true;
+            btnOk.Click += btnOk_Click;
             // 
             // btnCancelar
             // 
@@ -105,6 +106,7 @@
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // lblRecuperar
             // 

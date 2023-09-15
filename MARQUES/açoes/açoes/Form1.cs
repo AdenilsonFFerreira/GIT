@@ -16,5 +16,16 @@ namespace açoes
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            Form4 form4 = new Form4(); // Crie uma instância de Form2
+            form4.Show(); // Exiba o Form2
+        }
     }
 }
