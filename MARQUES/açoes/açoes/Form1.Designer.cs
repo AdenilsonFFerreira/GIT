@@ -118,6 +118,7 @@
             lblRecuperar.TabIndex = 7;
             lblRecuperar.TabStop = true;
             lblRecuperar.Text = "Recuperar a Senha";
+            lblRecuperar.LinkClicked += lblRecuperar_LinkClicked;
             // 
             // lblCadastro
             // 
@@ -129,6 +130,7 @@
             lblCadastro.TabIndex = 8;
             lblCadastro.TabStop = true;
             lblCadastro.Text = "Cadastro";
+            lblCadastro.LinkClicked += lblCadastro_LinkClicked;
             // 
             // Form1
             // 

@@ -23,9 +23,21 @@ namespace açoes
         }
 
         private void btnOk_Click(object sender, EventArgs e)
-        {
-            Form4 form4 = new Form4(); // Crie uma instância de Form2
-            form4.Show(); // Exiba o Form2
+        {           
+            Form4 form4 = new Form4();
+            form4.Show();
+        }
+
+        private void lblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {               
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void lblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {              
+            Form3 form3 = new Form3();
+            form3.Show();
         }
     }
 }

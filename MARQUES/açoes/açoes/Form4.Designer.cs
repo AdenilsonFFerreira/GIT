@@ -40,7 +40,7 @@
             btnOperacao.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnOperacao.Location = new Point(31, 60);
             btnOperacao.Name = "btnOperacao";
-            btnOperacao.Size = new Size(137, 44);
+            btnOperacao.Size = new Size(153, 50);
             btnOperacao.TabIndex = 5;
             btnOperacao.Text = "Operação";
             btnOperacao.UseVisualStyleBackColor = true;
@@ -50,7 +50,7 @@
             btnAnalise.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnAnalise.Location = new Point(225, 60);
             btnAnalise.Name = "btnAnalise";
-            btnAnalise.Size = new Size(137, 44);
+            btnAnalise.Size = new Size(153, 50);
             btnAnalise.TabIndex = 6;
             btnAnalise.Text = "Analise";
             btnAnalise.UseVisualStyleBackColor = true;
@@ -60,7 +60,7 @@
             btnFi.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnFi.Location = new Point(416, 60);
             btnFi.Name = "btnFi";
-            btnFi.Size = new Size(137, 44);
+            btnFi.Size = new Size(153, 50);
             btnFi.TabIndex = 7;
             btnFi.Text = "FI";
             btnFi.UseVisualStyleBackColor = true;
@@ -68,9 +68,9 @@
             // btnRelatorios
             // 
             btnRelatorios.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRelatorios.Location = new Point(327, 171);
+            btnRelatorios.Location = new Point(314, 163);
             btnRelatorios.Name = "btnRelatorios";
-            btnRelatorios.Size = new Size(137, 44);
+            btnRelatorios.Size = new Size(153, 50);
             btnRelatorios.TabIndex = 8;
             btnRelatorios.Text = "Relatorios";
             btnRelatorios.UseVisualStyleBackColor = true;
@@ -78,9 +78,9 @@
             // btnConfiguracao
             // 
             btnConfiguracao.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnConfiguracao.Location = new Point(122, 171);
+            btnConfiguracao.Location = new Point(109, 163);
             btnConfiguracao.Name = "btnConfiguracao";
-            btnConfiguracao.Size = new Size(137, 44);
+            btnConfiguracao.Size = new Size(153, 50);
             btnConfiguracao.TabIndex = 9;
             btnConfiguracao.Text = "Configurações";
             btnConfiguracao.UseVisualStyleBackColor = true;
