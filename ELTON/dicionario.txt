@@ -1,0 +1,46 @@
+ID	
+Title	
+Last Name	
+First Name	
+Name Addition	
+Sex	
+Date of Birth	
+
+Height	
+Weight	
+Mask	
+Race	
+Body Fat	
+Hip/Waist Ratio	
+BMI	
+Estimated Fitness Level	
+BSA	
+Hct	
+Hb	
+Medication that changes the Heart Rate	
+Medication	
+Existing Medical Conditions	
+
+Maximum Oxygen Uptake	
+Maximum Relative Oxygen Uptake	
+Maximum Oxygen Pulse	
+Maximum Heart Rate	
+Maximum Minute Ventilation	
+Maximum Breathing Frequency	
+Maximum Work Rate	
+Maximum Arterial Blood Pressure	
+Spirometry normal value set	
+LBW	
+IC	
+VC	
+FEV1	
+
+Start Time	
+Duration	
+CPET device	
+Serial number	
+Firmware version	
+Flow Sensor	
+Temperature	
+Barometric Pressure	
+Humidity	
