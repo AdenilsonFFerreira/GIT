@@ -1,2 +1,4 @@
 nome 100 caracteres
 	normalização - subdividir 
+
+not null -  nunca pode ter valor numero
