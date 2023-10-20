@@ -95,7 +95,7 @@
             this.lblRecuperar.TabIndex = 5;
             this.lblRecuperar.TabStop = true;
             this.lblRecuperar.Text = "Recuperar a Senha";
-            this.lblRecuperar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRecuperar_LinkClicked);
+            this.lblRecuperar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblRecuperar_LinkClicked);
             // 
             // lblCadastro
             // 
@@ -107,7 +107,7 @@
             this.lblCadastro.TabIndex = 6;
             this.lblCadastro.TabStop = true;
             this.lblCadastro.Text = "Cadastro";
-            this.lblCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCadastro_LinkClicked);
+            this.lblCadastro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LblCadastro_LinkClicked);
             // 
             // btnOk
             // 
@@ -118,7 +118,7 @@
             this.btnOk.TabIndex = 7;
             this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            this.btnOk.Click += new System.EventHandler(this.BtnOk_Click);
             // 
             // btnCancelar
             // 
@@ -129,7 +129,7 @@
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // Form1
             // 

@@ -17,25 +17,25 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnOk_Click(object sender, EventArgs e)
+        private void BtnOk_Click(object sender, EventArgs e)
         {
             Form4 form4 = new Form4();
             form4.Show();
             //this.Close();
         }
 
-        private void lblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
         }
 
-        private void lblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form3 form3 = new Form3();
             form3.Show();

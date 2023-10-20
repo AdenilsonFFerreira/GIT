@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,48 @@ namespace WindowsFormsApp1
         public Form3()
         {
             InitializeComponent();
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using System.Data.SqlClient;
+
+            public void BtnSubmit_Click(object sender, EventArgs e)
+            {
+                string connectionString = "newConexao";
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    string query = "INSERT INTO LOGON (Usuario, Senha) VALUES (@Usuario, @Senha)";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
+                        command.Parameters.AddWithValue("@Senha", txtSenha.INT);
+                        command.ExecuteNonQuery();
+                    }
+                }
+            }
+
         }
     }
 }

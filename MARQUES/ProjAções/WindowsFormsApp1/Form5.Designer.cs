@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Ação");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("QTD");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("Valor");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Ação");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("QTD");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Valor");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +42,8 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +72,7 @@
             this.label3.Size = new System.Drawing.Size(78, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "QUANTIDADE";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -110,7 +112,7 @@
             this.btnAdicionar.TabIndex = 7;
             this.btnAdicionar.Text = "ADICIONAR";
             this.btnAdicionar.UseVisualStyleBackColor = true;
-            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // btnSair
             // 
@@ -120,28 +122,35 @@
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // listView1
             // 
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
-            this.listView1.Location = new System.Drawing.Point(444, 128);
+            listViewItem1,
+            listViewItem2,
+            listViewItem3});
+            this.listView1.Location = new System.Drawing.Point(13, 11);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(330, 104);
+            this.listView1.Size = new System.Drawing.Size(363, 259);
             this.listView1.TabIndex = 9;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Location = new System.Drawing.Point(398, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(390, 284);
+            this.panel1.TabIndex = 10;
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txbValor);
@@ -151,9 +160,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "Form5";
             this.Text = "OPERAÇÃO";
             this.Load += new System.EventHandler(this.Form5_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,5 +183,6 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

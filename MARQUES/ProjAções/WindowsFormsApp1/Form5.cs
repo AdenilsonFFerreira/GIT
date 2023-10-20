@@ -56,17 +56,17 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
+        private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             Conexao conexao = new Conexao();
             SqlCommand sqlCommand = new SqlCommand();
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

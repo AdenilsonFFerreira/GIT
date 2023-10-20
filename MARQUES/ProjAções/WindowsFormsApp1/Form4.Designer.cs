@@ -44,7 +44,7 @@
             this.btnOperacao.TabIndex = 0;
             this.btnOperacao.Text = "Operação";
             this.btnOperacao.UseVisualStyleBackColor = true;
-            this.btnOperacao.Click += new System.EventHandler(this.btnOperacao_Click);
+            this.btnOperacao.Click += new System.EventHandler(this.BtnOperacao_Click);
             // 
             // btnAnalise
             // 
