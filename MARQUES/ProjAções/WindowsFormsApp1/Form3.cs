@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
+        
+
         public Form3()
         {
             InitializeComponent();
@@ -40,23 +42,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using System.Data.SqlClient;
+           
+        }
 
-            public void BtnSubmit_Click(object sender, EventArgs e)
-            {
-                string connectionString = "newConexao";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "INSERT INTO LOGON (Usuario, Senha) VALUES (@Usuario, @Senha)";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Usuario", txtUsuario.Text);
-                        command.Parameters.AddWithValue("@Senha", txtSenha.INT);
-                        command.ExecuteNonQuery();
-                    }
-                }
-            }
+        private void label13_Click(object sender, EventArgs e)
+        {
 
         }
     }

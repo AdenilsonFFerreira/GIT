@@ -328,7 +328,7 @@ WHERE Nome_Aluno IN
 	(SELECT Nome_Aluno	FROM	AlunosCOPIA)
 GO
 
---EXIBE INFORMAÇÕES SEOBRE OS ALUNOS E AS VIAJENS QUE ELES REALIZARAM
+--EXIBE INFORMAÇÕES SOBRE OS ALUNOS E AS VIAJENS QUE ELES REALIZARAM
 SELECT	Viagens.Cod_Viagem	AS	'Código da Viagem',
 		Alunos.Nome_Aluno	AS	'Nome',
 		Alunos.Telefone,
@@ -341,3 +341,55 @@ SELECT	Viagens.Cod_Viagem	AS	'Código da Viagem',
 FROM Alunos INNER JOIN Viagens
 		ON Alunos.Cod_Viagem = Viagens.Cod_Viagem
 GO
+
+--exibir os dados dos paise utilizados coo destino nas viajens dos alunos
+--cadastrados cujo codigo seja USA
+SELECT	Cod_Pais	AS	'Codigo',
+		Nome_Pais	AS	'Pais de Destino',
+		Idioma_pais	AS	'Idioma'
+FROM Paises
+WHERE Cod_Pais = (SELECT DISTINCT Pais_Destino
+	FROM Viagens	WHERE Pais_Destino = 'usa')
+GO
+
+--EXIBE OS DADOS DOS PAISES UTILIZADOS COMO DESTINO NAS VIAJENS DOS ALUNOS CADASTRADOS
+SELECT	Cod_Pais	AS	'Codigo',
+		Nome_Pais	AS	'Pais de Destino',
+		Idioma_pais	AS	'Idioma'
+FROM Paises
+WHERE Cod_Pais IN
+	(SELECT Pais_Destino FROM Viagens)
+GO
+
+--EXIBE O CODIGO NOME OU QUANIDADE DE VIAJENS CADASTRADAS PARA O PAIS DE DESTINO
+--EXIBE SOMENTE AS INFORMAÇÕES PARA OS PAISES CUJO QUANTIDADE DE VIAJENS SEJA MAIOR OUIGUAL
+--A QUANTIDADE DE VIAJENS REALIZADAS PARA O MEXICO
+SELECT	Cod_Pais	AS	'Codigo',
+		P.Nome_Pais	AS	'Pais de Destino',
+		COUNT (Cod_Pais)	AS	'Total de Viajens'
+FROM Paises P INNER JOIN Viagens V
+	ON P.Cod_Pais = V.Pais_Destino
+GROUP BY P.Cod_Pais, P.Nome_Pais
+HAVING COUNT (P.Cod_Pais)>= (SELECT COUNT (Pais_Destino)
+	FROM Viagens	
+	WHERE Pais_Destino = 'MEX')
+GO
+
+--EXIBE OS DADOS DOS PAISES UTILIZADOS COMO DESTINO NAS VIAJENS DOS ALUNOS CADASTRADOS DESDE QUE
+--ESSES PAISES SEJAM OS ESTADOS UNIDOS MEXICO OU BRASIL
+SELECT	Cod_Pais	AS	'Codigo',
+		Nome_Pais	AS	'Pais de Destino',
+		Idioma_pais	AS	'Idioma'
+FROM Paises
+WHERE Cod_Pais = ANY (SELECT Pais_Destino FROM Viagens WHERE Pais_Destino IN ('USA', 'MEX', 'BRA'))
+GO
+
+--EXIBE OD DADOS DOS ALUNOS CUJO CODIGO SEJA MAIO DO QUE TODOS OS VALORES FA LISTA
+--DE PARAMETROS RETORNADA POR UM CONSTRUTOR DE VALOR DE TABELA
+SELECT	Cod_Aluno	AS	'Codigo',
+		Nome_Aluno	AS	'Pais de Destino',
+		Endereco	AS	'Endereço'
+FROM Alunos
+WHERE Cod_Aluno > ALL (SELECT * FROM (VALUES (1), (3), (10)) AS Codigo (a))
+GO
+

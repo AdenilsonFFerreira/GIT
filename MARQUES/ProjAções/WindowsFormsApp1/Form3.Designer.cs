@@ -300,6 +300,7 @@
             this.label13.Size = new System.Drawing.Size(92, 20);
             this.label13.TabIndex = 25;
             this.label13.Text = "USUARIO: ";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
