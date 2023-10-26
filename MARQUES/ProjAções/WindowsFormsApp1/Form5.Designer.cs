@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Ação");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("QTD");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Valor");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ação");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("QTD");
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Valor");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -89,6 +89,7 @@
             this.txbAcao.Name = "txbAcao";
             this.txbAcao.Size = new System.Drawing.Size(100, 20);
             this.txbAcao.TabIndex = 4;
+            this.txbAcao.TextChanged += new System.EventHandler(this.txbAcao_TextChanged);
             // 
             // txbQtd
             // 
@@ -96,6 +97,7 @@
             this.txbQtd.Name = "txbQtd";
             this.txbQtd.Size = new System.Drawing.Size(100, 20);
             this.txbQtd.TabIndex = 5;
+            this.txbQtd.TextChanged += new System.EventHandler(this.txbQtd_TextChanged);
             // 
             // txbValor
             // 
@@ -103,6 +105,7 @@
             this.txbValor.Name = "txbValor";
             this.txbValor.Size = new System.Drawing.Size(100, 20);
             this.txbValor.TabIndex = 6;
+            this.txbValor.TextChanged += new System.EventHandler(this.txbValor_TextChanged);
             // 
             // btnAdicionar
             // 
@@ -128,9 +131,9 @@
             // 
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
+            listViewItem7,
+            listViewItem8,
+            listViewItem9});
             this.listView1.Location = new System.Drawing.Point(15, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(363, 259);

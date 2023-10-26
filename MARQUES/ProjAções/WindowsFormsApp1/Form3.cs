@@ -42,10 +42,35 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            // Substitua essas linhas pelas suas próprias TextBoxes
+            string usuario = textBox12_TextChanged;
+            string senha = textBox13_TextChanged;
+
+            string connectionString = "newConexao"; // Substitua isso pela sua string de conexão
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "INSERT INTO LOGON (Usuario, Senha) VALUES (@Usuario, @Senha)";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Usuario", usuario);
+                    command.Parameters.AddWithValue("@Senha", senha);
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox12_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -68,41 +69,37 @@ namespace WindowsFormsApp1
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            Conexao conexao = new Conexao();
-            SqlCommand sqlCommand = new SqlCommand();
+            SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
+            string sql = "INSERT INTO PAPEL(ID, Acao, Quantidade, Valor) VALUES (@id, @acao, @quantidade, @valor)";
+            Random numeroID = new Random();
+            numeroID.Next();
 
-            sqlCommand.Connection = conexao.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO PAPEL VALUES (@acao, @quantidade, @valor)"
-            ;
-
-            sqlCommand.Parameters.AddWithValue("@acao", txbAcao.Text);
-            sqlCommand.Parameters.AddWithValue("@quantidade", txbQtd.Text);
-            sqlCommand.Parameters.AddWithValue("valor", txbValor.Text);
-            
             try
             {
-                //Insere o cliente
-                sqlCommand.ExecuteNonQuery();
+                SqlCommand c = new SqlCommand(sql, conn);
+                c.Parameters.Add(new SqlParameter("@id", numeroID.Next()));
+                c.Parameters.Add(new SqlParameter("@acao", this.txbAcao.Text));
+                c.Parameters.Add(new SqlParameter("@quantidade", this.txbQtd.Text));
+                c.Parameters.Add(new SqlParameter("@valor", this.txbValor.Text));
+
+                conn.Open();
+
+                c.ExecuteNonQuery();   
+
+                conn.Close();
+                MessageBox.Show("Enviado com sucesso!");
             }
-            catch (Exception err)
+            catch (SqlException ex)
             {
-                throw new Exception("Erro: Problemas ao inserir colaborador no banco.\n"
-                    + err.Message);
+                MessageBox.Show("Ocorreu o erro: " + ex);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex);
             }
             finally
             {
-                conexao.CloseConnection();
-            }
-            MessageBox.Show(
-                "Cadastrado com Sucesso",
-                "CADASTRO",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information
-                );
-            {
-                txbAcao.Clear();
-                txbQtd.Clear();
-                txbValor.Clear();
+                conn.Close();
             }
         }
 
@@ -114,6 +111,21 @@ namespace WindowsFormsApp1
         private void Form5_Load(object sender, EventArgs e)
         {
             UpdateListView();
+        }
+
+        private void txbAcao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbQtd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbValor_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
