@@ -19,9 +19,14 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        SqlConnection conn = new SqlConnection (@"DATA Source = SNVME\SQLEXPRESS; integrated security=SSPI; initial catolog = ProjAcoes");
+        SqlCommand conn = new SqlCommand ();
+        SqlDataReader dt;
+
         private void UpdateListView()
         {
-            Conexao conn = new Conexao();
+            /*Conexao conn = new Conexao();
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
@@ -55,6 +60,7 @@ namespace WindowsFormsApp1
             {
                 conn.CloseConnection();
             }
+        */
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -71,8 +77,8 @@ namespace WindowsFormsApp1
         {
             SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
             string sql = "INSERT INTO PAPEL(ID, Acao, Quantidade, Valor) VALUES (@id, @acao, @quantidade, @valor)";
-            Random numeroID = new Random();
-            numeroID.Next();
+            //Random numeroID = new Random();
+            //numeroID.Next();
 
             try
             {
@@ -84,7 +90,8 @@ namespace WindowsFormsApp1
 
                 conn.Open();
 
-                c.ExecuteNonQuery();   
+                c.ExecuteNonQuery();
+                //conn.Commit();
 
                 conn.Close();
                 MessageBox.Show("Enviado com sucesso!");
