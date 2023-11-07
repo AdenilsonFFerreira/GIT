@@ -43,8 +43,8 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
         {
             // Substitua essas linhas pelas suas próprias TextBoxes
-            string usuario = textBox12_TextChanged;
-            string senha = textBox13_TextChanged;
+            string usuario = textBox12.Text;
+            string senha = textBox13.Text;
 
             string connectionString = "newConexao"; // Substitua isso pela sua string de conexão
             using (SqlConnection connection = new SqlConnection(connectionString))

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace WindowsFormsApp1
+namespace WindowsFormsApp1                                                                                      
 {
     public partial class Form5 : Form
     {
@@ -19,48 +19,11 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        SqlConnection conn = new SqlConnection (@"DATA Source = SNVME\SQLEXPRESS; integrated security=SSPI; initial catolog = ProjAcoes");
-        SqlCommand conn = new SqlCommand ();
-        SqlDataReader dt;
+              
 
         private void UpdateListView()
         {
-            /*Conexao conn = new Conexao();
-            SqlCommand sqlCom = new SqlCommand();
-
-            sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT * FROM PAPEL";
-
-            try
-            {
-                SqlDataReader dr = sqlCom.ExecuteReader();
-
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
-                while (dr.Read())
-                {
-                    string acao = (string)dr["Acao"];
-                    int qtd = (int)dr["Quantidade"];
-                    decimal valor = (decimal)(dr["Valor"]);
-
-                    ListViewItem lv = new ListViewItem();
-                    lv.SubItems.Add(acao);
-                    lv.SubItems.Add(qtd.ToString());
-                    lv.SubItems.Add(valor.ToString());
-                    listView1.Items.Add(lv);
-
-                }
-                dr.Close();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message);
-            }
-            finally
-            {
-                conn.CloseConnection();
-            }
-        */
+            
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -75,39 +38,11 @@ namespace WindowsFormsApp1
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
-            string sql = "INSERT INTO PAPEL(ID, Acao, Quantidade, Valor) VALUES (@id, @acao, @quantidade, @valor)";
-            //Random numeroID = new Random();
-            //numeroID.Next();
-
-            try
-            {
-                SqlCommand c = new SqlCommand(sql, conn);
-                c.Parameters.Add(new SqlParameter("@id", numeroID.Next()));
-                c.Parameters.Add(new SqlParameter("@acao", this.txbAcao.Text));
-                c.Parameters.Add(new SqlParameter("@quantidade", this.txbQtd.Text));
-                c.Parameters.Add(new SqlParameter("@valor", this.txbValor.Text));
-
-                conn.Open();
-
-                c.ExecuteNonQuery();
-                //conn.Commit();
-
-                conn.Close();
-                MessageBox.Show("Enviado com sucesso!");
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Ocorreu o erro: " + ex);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro: " + ex);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            Conexao conexao = new Conexao();
+            Papel papel = new Papel(txbAcao.Text, int.Parse(txbQtd.Text), int.Parse(txbValor.Text));
+            MessageBox.Show(conexao.cadastrar_papel(papel));
+            //Cadastro cad = new Cadastro(txbAcao.Text, txbQtd.Text, txbValor.Text);
+            //MessageBox.Show(cad.mensagem);
         }
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)

@@ -202,3 +202,30 @@ GO
 --------------------------------------------------------------------------------
 -- FIM!
 --------------------------------------------------------------------------------
+
+
+SELECT	'3.1405'	AS	'PI',
+	PI()		AS	'PI',
+	ABS(-3.1415)	AS	'ABS',
+	CEILING(3.1415)	AS	'CEILING',
+	FLOOR(3.1415)	AS	'FLOOR',
+	EXP(1.0)	AS	'EXP',
+	POWER(2, 3.0)	AS	'POWER',
+	RAND(5)		AS	'RAND',
+	ROUND(PI(), 2)	AS 	'ROUND',
+	SQRT(100)	AS	'SQRT',
+	SIGN(-1)	AS	'SIGN',
+	SQUARE(3)	AS	'SQUARE'
+GO
+
+-- Exibe INFORMAÇÕES SOBRE O VALOR DAS VIAGENS DOS ALUNOS
+SELECT V.Cod_Viagem		AS 'Código da Viagem',
+       A.Nome_Aluno		AS 'Nome do Aluno',
+       V.Valor			AS 'Preçô da Viagem',
+       V.Valor * 0.05	AS 'Desconto de 5%',
+	   V.Valor * 0.05	AS 'Total a Paga',
+	   ROUND(V.Valor * 0.05, 1) AS 'Total a Pagar (ROUND)'
+FROM Viagens V INNER JOIN ALUNOS A
+	ON V.Cod_Viagem = A.Cod_Viagem
+GO
+
