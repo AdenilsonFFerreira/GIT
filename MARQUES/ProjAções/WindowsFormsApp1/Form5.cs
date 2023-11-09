@@ -47,7 +47,10 @@ namespace WindowsFormsApp1
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            listView1.View = View.Details;
+            listView1.Columns.Add("Ação");
+            listView1.Columns.Add("Valor");
+            listView1.Columns.Add("Quantidade");
         }
 
         private void Form5_Load(object sender, EventArgs e)

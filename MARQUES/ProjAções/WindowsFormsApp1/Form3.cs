@@ -42,22 +42,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Substitua essas linhas pelas suas próprias TextBoxes
-            string usuario = textBox12.Text;
-            string senha = textBox13.Text;
-
-            string connectionString = "newConexao"; // Substitua isso pela sua string de conexão
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "INSERT INTO LOGON (Usuario, Senha) VALUES (@Usuario, @Senha)";
-                using (SqlCommand command = new SqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@Usuario", usuario);
-                    command.Parameters.AddWithValue("@Senha", senha);
-                    command.ExecuteNonQuery();
-                }
-            }
+            Conexao conexao = new Conexao();
+            Login login = new Login(txbUsuario.Text, txbSenha.Text);
+            MessageBox.Show(conexao.cadastrar_usuario(login));
+            //Cadastro cad = new Cadastro(txbAcao.Text, txbQtd.Text, txbValor.Text);
+            //MessageBox.Show(cad.mensagem);
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -71,6 +60,11 @@ namespace WindowsFormsApp1
         }
 
         private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
         {
 
         }

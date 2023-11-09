@@ -40,5 +40,10 @@ namespace WindowsFormsApp1
             Form3 form3 = new Form3();
             form3.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

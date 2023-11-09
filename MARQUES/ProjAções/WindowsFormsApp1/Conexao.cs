@@ -67,9 +67,36 @@ namespace WindowsFormsApp1
             return mensagem;
         }
 
-        public void cadastrar_usuario(String username, String password)
+        public String cadastrar_usuario(Login login)
         {
-            // ..
+            SqlCommand cmd = new SqlCommand();
+            String mensagem;
+
+            //comando sql  --SqlCommand
+            cmd.CommandText = "insert into LOGIN (Usuario, Senha) values (@usuario, @senha)";
+
+            //parametros
+            cmd.Parameters.AddWithValue("@usuario", login.usuario);
+            cmd.Parameters.AddWithValue("@senha", login.senha);
+
+            try
+            {
+                //concetar com banco  --Conexao
+                cmd.Connection = this.conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                this.desconectar();
+                //mostrar mensagem de erro ou sucesso  --variavel
+                mensagem = "Cadastrado com Sucesso!!";
+
+            }
+            catch (SqlException e)
+            {
+                mensagem = "Erro: " + e.Message;
+            }
+            return mensagem;
+
         }
 
         public bool autenticar_usuario(String username, String password)
