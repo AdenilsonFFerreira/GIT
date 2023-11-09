@@ -52,11 +52,11 @@
             this.tsbSexo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txbUsuario = new System.Windows.Forms.TextBox();
             this.txbSenha = new System.Windows.Forms.TextBox();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -282,16 +282,6 @@
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(427, 457);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(137, 40);
-            this.btnCancelar.TabIndex = 24;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -331,16 +321,27 @@
             this.txbSenha.TabIndex = 28;
             this.txbSenha.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(461, 457);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(137, 40);
+            this.btnSair.TabIndex = 29;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 525);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.txbUsuario);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.tsbSexo);
             this.Controls.Add(this.label12);
@@ -367,6 +368,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "CADASTRAR";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,10 +401,10 @@
         private System.Windows.Forms.TextBox tsbSexo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txbUsuario;
         private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.Button btnSair;
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
 {
@@ -45,11 +46,15 @@ namespace WindowsFormsApp1
             Conexao conexao = new Conexao();
             Login login = new Login(txbUsuario.Text, txbSenha.Text);
             MessageBox.Show(conexao.cadastrar_usuario(login));
-            //Cadastro cad = new Cadastro(txbAcao.Text, txbQtd.Text, txbValor.Text);
-            //MessageBox.Show(cad.mensagem);
+
+            Usuario usuario = new Usuario(txbNome.Text, txbEndereco.Text, int.Parse(txbNumero.Text), txbBairro.Text, txbCidade.Text, int.Parse(txbCEP.Text), int.Parse(txbCPF.Text), txbEmail.Text, txbSexo.Text, int.Parse(txbCelular.Text), int.Parse(txbTelefone.Text));
+            MessageBox.Show(conexao.inserir_usuario(usuario));
+              
+            conexao.inserir_usuario(usuario);
+            
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e) 
         {
 
         }
@@ -68,5 +73,21 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
-}

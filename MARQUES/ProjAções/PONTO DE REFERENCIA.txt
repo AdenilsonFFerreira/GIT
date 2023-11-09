@@ -1,2 +1,20 @@
 foi criado as classes login e feito a conexão do banco de dados
 foi criado a classe Usiario
+
+nomear os botões e txtbox corretamente
+cria duas classe
+	especifica pra ação desejada
+	conexão que sera usado para todas as conexões do banco de dados com todas as entradas
+
+
+
+
+Primeiro, verifique se o método InserirUsuario está sendo chamado corretamente quando o botão “Adicionar” é clicado. Você pode fazer isso adicionando uma mensagem de depuração ou um ponto de interrupção no método InserirUsuario.
+
+Em segundo lugar, verifique se os valores que você está passando para o método InserirUsuario estão corretos. Você pode fazer isso imprimindo os valores das caixas de texto antes de chamar o método InserirUsuario.
+
+Finalmente, verifique se o comando SQL no método InserirUsuario está correto e se corresponde à estrutura da sua tabela USUARIO. Você pode fazer isso executando o comando SQL manualmente no seu banco de dados com alguns valores de teste.
+
+Se você ainda estiver tendo problemas, por favor, forneça mais detalhes sobre o que está acontecendo. Isso inclui quaisquer mensagens de erro que você esteja vendo, o comportamento exato do programa e quaisquer outras informações que você acha que podem ser úteis. Estou aqui para ajudar! 😊
+	
+	

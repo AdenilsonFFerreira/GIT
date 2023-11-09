@@ -11,11 +11,13 @@ namespace WindowsFormsApp1
     public class Conexao
     {
         SqlConnection con = new SqlConnection();
+        
         //contrutor
         public Conexao()
         {
             con.ConnectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
         }
+
         //metodo conectar
         public SqlConnection conectar()
         {
@@ -69,6 +71,7 @@ namespace WindowsFormsApp1
 
         public String cadastrar_usuario(Login login)
         {
+            Console.WriteLine("cadastrar_usuario foi chamado");
             SqlCommand cmd = new SqlCommand();
             String mensagem;
 
@@ -99,10 +102,54 @@ namespace WindowsFormsApp1
 
         }
 
+        public String inserir_usuario(Usuario usuario)
+            {
+                SqlCommand cmd = new SqlCommand();
+                String mensagem;
+
+                // comando SQL
+                cmd.CommandText = "INSERT INTO USUARIO (Nome, Endereco, Numero, Bairro, Cidade, CEP, CPF, Email, Sexo, Celular, Telefone) VALUES (@nome, @endereco, @numero, @bairro, @cidade, @cep, @cpf, @email, @sexo, @celular, @telefone)";
+
+                // parâmetros
+                cmd.Parameters.AddWithValue("@nome", usuario.nome);
+                cmd.Parameters.AddWithValue("@endereco", usuario.endereco);
+                cmd.Parameters.AddWithValue("@numero", usuario.numero);
+                cmd.Parameters.AddWithValue("@bairro", usuario.bairro);
+                cmd.Parameters.AddWithValue("@cidade", usuario.cidade);
+                cmd.Parameters.AddWithValue("@cep", usuario.cep);
+                cmd.Parameters.AddWithValue("@cpf", usuario.cpf);
+                cmd.Parameters.AddWithValue("@email", usuario.email);
+                cmd.Parameters.AddWithValue("@sexo", usuario.sexo);
+                cmd.Parameters.AddWithValue("@celular", usuario.celular);
+                cmd.Parameters.AddWithValue("@telefone", usuario.telefone);
+
+                try
+                {
+                    // conectar com o banco
+                    cmd.Connection = this.conectar();
+                    // executar comando
+                    cmd.ExecuteNonQuery();
+                    // desconectar
+                    this.desconectar();
+                    // mensagem de sucesso
+                    mensagem = "Usuário cadastrado com sucesso!";
+                }
+                catch (SqlException e)
+                {
+                    // mensagem de erro
+                    mensagem = "Erro ao cadastrar usuário: " + e.Message;
+                }
+
+                return mensagem;
+            }
+        }
+    /*
+
         public bool autenticar_usuario(String username, String password)
         {
             // verifica senha, true se ok, false se nao
             return true;
         }
     }
+    */
 }
