@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    
-    public class Papel
+
+    public class BuscaPapel
     {
         public String acao;
         public int qtd;
-        public double valor;
+        public float valor;
 
-        public Papel(String acao,  int qtd, double valor)
+        public BuscaPapel(String acao, int qtd, float valor)
         {
             this.acao = acao;
             this.valor = valor;
@@ -21,4 +21,3 @@ namespace WindowsFormsApp1
         }
     }
 }
-

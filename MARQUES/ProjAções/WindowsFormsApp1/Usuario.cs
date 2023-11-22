@@ -10,18 +10,32 @@ namespace WindowsFormsApp1
     {
         public String nome;
         public String endereco;
-        public int numero;
+        public String numero;
         public String bairro;
         public String cidade;
-        public int cep;
-        public int cpf;
+        public String cep;
+        public String cpf;
         public String email;
         public String sexo;
-        public int celular;
-        public int telefone;
+        public String celular;
+        public String telefone;
 
-        public Usuario(String nome, String endereco, int numero, String bairro, String cidade,
-        int cep, int cpf, String email, String sexo, int celular, int telefone)
+        public Usuario()
+        {
+            this.nome = String.Empty;
+            this.endereco = String.Empty;
+            this.numero = String.Empty;
+            this.bairro = String.Empty;
+            this.cidade = String.Empty;
+            this.cep = String.Empty;
+            this.cpf = String.Empty;
+            this.email = String.Empty;
+            this.sexo = String.Empty;
+            this.celular = String.Empty;
+            this.telefone = String.Empty;
+        }
+        public Usuario(String nome, String endereco, String numero, String bairro, String cidade,
+        String cep, String cpf, String email, String sexo, String celular, String telefone)
         { 
             this.nome = nome;
             this.endereco = endereco;

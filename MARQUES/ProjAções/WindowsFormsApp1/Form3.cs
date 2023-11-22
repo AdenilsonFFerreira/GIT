@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form3 : Form
     {
-        
+
 
         public Form3()
         {
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void Label6_Click(object sender, EventArgs e)
         {
 
         }
@@ -41,40 +41,49 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             Conexao conexao = new Conexao();
             Login login = new Login(txbUsuario.Text, txbSenha.Text);
-            MessageBox.Show(conexao.cadastrar_usuario(login));
+            MessageBox.Show(conexao.Cadastrar_Usuario(login));
 
-            Usuario usuario = new Usuario(txbNome.Text, txbEndereco.Text, int.Parse(txbNumero.Text), txbBairro.Text, txbCidade.Text, int.Parse(txbCEP.Text), int.Parse(txbCPF.Text), txbEmail.Text, txbSexo.Text, int.Parse(txbCelular.Text), int.Parse(txbTelefone.Text));
-            MessageBox.Show(conexao.inserir_usuario(usuario));
-              
-            conexao.inserir_usuario(usuario);
-            
+            Usuario usuario = new Usuario(txbNome.Text,
+                txbEndereco.Text,
+                txbNumero.Text,
+                txbBairro.Text, txbCidade.Text,
+                txbCep.Text,
+                txbCpf.Text,
+                txbEmail.Text,
+                txbSexo.Text,
+                txbCelular.Text,
+                txbTelefone.Text);
+            MessageBox.Show(conexao.Inserir_Usuario(usuario));
+
+            conexao.Inserir_Usuario(usuario);
+
         }
 
-        private void label13_Click(object sender, EventArgs e) 
+        private void Label13_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox12_TextChanged(object sender, EventArgs e)
+        private void TextBox12_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
+        private void TextBox13_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
+        private void TextBox9_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -86,8 +95,9 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
     }
+}

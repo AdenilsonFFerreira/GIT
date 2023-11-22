@@ -29,11 +29,11 @@ namespace WindowsFormsApp1
             try
             {
                 //concetar com banco  --Conexao
-                cmd.Connection = conexao.conectar();
+                cmd.Connection = conexao.Conectar();
                 //executar comando
                 cmd.ExecuteNonQuery();
                 //desconectar
-                conexao.desconectar();
+                conexao.Desconectar();
                 //mostrar mensagem de erro ou sucesso  --variavel
                 this.mensagem = "Cadastrado com Sucesso!!";
 

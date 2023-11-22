@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Ação");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "1",
+            "2",
+            "3"}, -1);
             System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("QTD");
             System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Valor");
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +45,10 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ListView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -127,24 +134,40 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // listView1
+            // ListView1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.ListView1.HideSelection = false;
+            this.ListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
             listViewItem3});
-            this.listView1.Location = new System.Drawing.Point(15, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(363, 259);
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            this.ListView1.Location = new System.Drawing.Point(15, 12);
+            this.ListView1.Name = "ListView1";
+            this.ListView1.Size = new System.Drawing.Size(363, 259);
+            this.ListView1.TabIndex = 9;
+            this.ListView1.UseCompatibleStateImageBehavior = false;
+            this.ListView1.View = System.Windows.Forms.View.Details;
+            this.ListView1.SelectedIndexChanged += new System.EventHandler(this.ListView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Ação";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Quantidade";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Valor";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.ListView1);
             this.panel1.Location = new System.Drawing.Point(398, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(390, 284);
@@ -186,7 +209,10 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ListView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

@@ -49,7 +49,7 @@
             this.txbEmail = new System.Windows.Forms.TextBox();
             this.txbTelefone = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.tsbSexo = new System.Windows.Forms.TextBox();
+            this.txbSexo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
@@ -120,7 +120,7 @@
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "BAIRRO:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Click += new System.EventHandler(this.Label6_Click);
             // 
             // label7
             // 
@@ -233,7 +233,7 @@
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(270, 26);
             this.txbEmail.TabIndex = 18;
-            this.txbEmail.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
+            this.txbEmail.TextChanged += new System.EventHandler(this.TextBox9_TextChanged);
             // 
             // txbTelefone
             // 
@@ -253,13 +253,13 @@
             this.label11.TabIndex = 19;
             this.label11.Text = "TELEFONE:";
             // 
-            // tsbSexo
+            // txbSexo
             // 
-            this.tsbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tsbSexo.Location = new System.Drawing.Point(507, 336);
-            this.tsbSexo.Name = "tsbSexo";
-            this.tsbSexo.Size = new System.Drawing.Size(57, 26);
-            this.tsbSexo.TabIndex = 22;
+            this.txbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSexo.Location = new System.Drawing.Point(507, 336);
+            this.txbSexo.Name = "txbSexo";
+            this.txbSexo.Size = new System.Drawing.Size(57, 26);
+            this.txbSexo.TabIndex = 22;
             // 
             // label12
             // 
@@ -280,7 +280,7 @@
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label13
             // 
@@ -291,7 +291,7 @@
             this.label13.Size = new System.Drawing.Size(92, 20);
             this.label13.TabIndex = 25;
             this.label13.Text = "USUARIO: ";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.label13.Click += new System.EventHandler(this.Label13_Click);
             // 
             // label14
             // 
@@ -310,7 +310,7 @@
             this.txbUsuario.Name = "txbUsuario";
             this.txbUsuario.Size = new System.Drawing.Size(183, 26);
             this.txbUsuario.TabIndex = 27;
-            this.txbUsuario.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
+            this.txbUsuario.TextChanged += new System.EventHandler(this.TextBox12_TextChanged);
             // 
             // txbSenha
             // 
@@ -319,7 +319,7 @@
             this.txbSenha.Name = "txbSenha";
             this.txbSenha.Size = new System.Drawing.Size(144, 26);
             this.txbSenha.TabIndex = 28;
-            this.txbSenha.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
+            this.txbSenha.TextChanged += new System.EventHandler(this.TextBox13_TextChanged);
             // 
             // btnSair
             // 
@@ -330,7 +330,7 @@
             this.btnSair.TabIndex = 29;
             this.btnSair.Text = "SAIR";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
             // Form3
             // 
@@ -343,7 +343,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.tsbSexo);
+            this.Controls.Add(this.txbSexo);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.label11);
@@ -368,7 +368,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "CADASTRAR";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -398,7 +397,7 @@
         private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.TextBox txbTelefone;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tsbSexo;
+        private System.Windows.Forms.TextBox txbSexo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label13;

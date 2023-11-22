@@ -7,13 +7,13 @@ USE ProjAcoes
 GO
 
 --CRIA A TABELA PAPEL
-CREATE TABLE PAPEL(
-	ID			INT IDENTITY(1,1) PRIMARY KEY,
-	Acao		VARCHAR(10),
-	Quantidade	INT,
-	Valor		INT,
-	)
-GO
+CREATE TABLE PAPEL (
+    ID          INT IDENTITY(1,1) PRIMARY KEY,
+    Acao        VARCHAR(10),
+    Quantidade  INT,
+    Valor       FLOAT -- Usando FLOAT para suportar valores decimais
+);
+
 
 --INSERE DADOS NA TABELA PAPEL
 INSERT INTO PAPEL(
@@ -34,3 +34,4 @@ DROP TABLE PAPEL
 
 SELECT * FROM PAPEL
 GO
+
