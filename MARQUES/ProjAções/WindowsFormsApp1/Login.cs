@@ -10,7 +10,7 @@ namespace WindowsFormsApp1
     {
         public String usuario;
         public String senha;
-        
+
         public Login(String usuario, String senha)
         {
             this.usuario = usuario;

@@ -36,15 +36,15 @@ namespace WindowsFormsApp1
         }
         public Usuario(String nome, String endereco, String numero, String bairro, String cidade,
         String cep, String cpf, String email, String sexo, String celular, String telefone)
-        { 
+        {
             this.nome = nome;
             this.endereco = endereco;
-	        this.numero = numero;
-	        this.bairro = bairro;
-	        this.cidade = cidade;
-	        this.cep = cep;
-	        this.cpf = cpf;
-	        this.email = email;
+            this.numero = numero;
+            this.bairro = bairro;
+            this.cidade = cidade;
+            this.cep = cep;
+            this.cpf = cpf;
+            this.email = email;
             this.sexo = sexo;
             this.celular = celular;
             this.telefone = telefone;

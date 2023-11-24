@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    
+
     public class Papel
     {
         public String acao;
         public int qtd;
         public double valor;
 
-        public Papel(String acao,  int qtd, double valor)
+        public Papel(String acao, int qtd, double valor)
         {
             this.acao = acao;
             this.valor = valor;

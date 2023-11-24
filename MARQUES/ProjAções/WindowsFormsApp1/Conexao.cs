@@ -165,7 +165,7 @@ namespace WindowsFormsApp1
                 SqlDataReader reader = cmd.ExecuteReader();
                 dataTable.Load(reader);
                 papeis = new Papel[dataTable.Rows.Count];
-                for(int row = 0; row < papeis.Length; row++)
+                for (int row = 0; row < papeis.Length; row++)
                 {
                     papeis[row] = new Papel(
                         (string)dataTable.Rows[row][0],
@@ -207,34 +207,4 @@ namespace WindowsFormsApp1
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*
-
-        public bool autenticar_usuario(String username, String password)
-        {
-            // verifica senha, true se ok, false se nao
-            return true;
-        }
-    }
-    */
 }

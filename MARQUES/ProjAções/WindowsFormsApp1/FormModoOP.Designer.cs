@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form4
+    partial class FormModoOP
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.btnFi = new System.Windows.Forms.Button();
             this.btnConfiguracao = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOperacao
@@ -86,17 +87,29 @@
             this.btnRelatorio.Text = "Relatorios";
             this.btnRelatorio.UseVisualStyleBackColor = true;
             // 
-            // Form4
+            // btnFechar
+            // 
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.Location = new System.Drawing.Point(251, 294);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(116, 44);
+            this.btnFechar.TabIndex = 5;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // FormModoOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 361);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnConfiguracao);
             this.Controls.Add(this.btnFi);
             this.Controls.Add(this.btnAnalise);
             this.Controls.Add(this.btnOperacao);
-            this.Name = "Form4";
+            this.Name = "FormModoOP";
             this.Text = "MODO DE OPERAÇÃO";
             this.ResumeLayout(false);
 
@@ -109,5 +122,6 @@
         private System.Windows.Forms.Button btnFi;
         private System.Windows.Forms.Button btnConfiguracao;
         private System.Windows.Forms.Button btnRelatorio;
+        private System.Windows.Forms.Button btnFechar;
     }
 }

@@ -12,11 +12,11 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class FormCadastrar : Form
     {
 
 
-        public Form3()
+        public FormCadastrar()
         {
             InitializeComponent();
         }

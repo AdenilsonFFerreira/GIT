@@ -17,13 +17,13 @@ namespace WindowsFormsApp1
             SqlCommand cmd = new SqlCommand();
 
 
-        //comando sql  --SqlCommand
-        cmd.CommandText = "insert into PAPEL (Acao, Quantidade, Valor) values (@acao, @quantidade, @valor)";
+            //comando sql  --SqlCommand
+            cmd.CommandText = "insert into PAPEL (Acao, Quantidade, Valor) values (@acao, @quantidade, @valor)";
 
             //parametros
-            cmd.Parameters.AddWithValue("@acao",acao);
-            cmd.Parameters.AddWithValue("@quantidade",quantidade);
-            cmd.Parameters.AddWithValue("@valor",valor);
+            cmd.Parameters.AddWithValue("@acao", acao);
+            cmd.Parameters.AddWithValue("@quantidade", quantidade);
+            cmd.Parameters.AddWithValue("@valor", valor);
 
 
             try

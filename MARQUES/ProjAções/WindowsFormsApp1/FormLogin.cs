@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -41,8 +41,9 @@ namespace WindowsFormsApp1
                     if (leitor.HasRows)
                     {
                         // Usuário e senha estão corretos.
-                        Form4 form4 = new Form4();
+                        FormModoOP form4 = new FormModoOP();
                         form4.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -56,13 +57,13 @@ namespace WindowsFormsApp1
 
         private void LblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form2 form2 = new Form2();
+            FormRecuperar form2 = new FormRecuperar();
             form2.Show();
         }
 
         private void LblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form3 form3 = new Form3();
+            FormCadastrar form3 = new FormCadastrar();
             form3.Show();
         }
 

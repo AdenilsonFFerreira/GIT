@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Form5
+    partial class FormOpercao
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "1",
-            "2",
-            "3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("QTD");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Valor");
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -141,10 +134,6 @@
             this.columnHeader2,
             this.columnHeader3});
             this.ListView1.HideSelection = false;
-            this.ListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3});
             this.ListView1.Location = new System.Drawing.Point(15, 12);
             this.ListView1.Name = "ListView1";
             this.ListView1.Size = new System.Drawing.Size(363, 259);
