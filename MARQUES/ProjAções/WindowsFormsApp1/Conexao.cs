@@ -183,6 +183,7 @@ namespace WindowsFormsApp1
             return papeis;
         }
 
+        /*
         public DataTable Busca_Papel(BuscaPapel buscapapel)
         {
             DataTable dataTable = new DataTable();
@@ -205,6 +206,6 @@ namespace WindowsFormsApp1
             // Retorna o DataTable com os dados
             return dataTable;
         }
-
+        */
     }
 }

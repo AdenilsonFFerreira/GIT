@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Globalization;
 
 namespace WindowsFormsApp1
 {
@@ -65,8 +67,14 @@ namespace WindowsFormsApp1
             {
                 Papel papel = new Papel(txbAcao.Text, int.Parse(txbQtd.Text), valor);
                 MessageBox.Show(conexao.Cadastrar_Papel(papel));
+
                 // Atualize a ListView após adicionar o item
                 update_list_view();
+
+                // Limpe os TextBox
+                txbAcao.Text = "";
+                txbQtd.Text = "";
+                txbValor.Text = "";
             }
             else
             {
@@ -96,6 +104,37 @@ namespace WindowsFormsApp1
         }
 
         private void txbValor_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string n;
+                double v;
+                n = txbValor.Text.Replace("R$ ", "").Replace(",", "").Replace(".", "");
+
+                n = n.PadLeft(3, '0');
+                if (n.Length > 3 & n.Substring(0, 1) == "0")
+                    n = n.Substring(1, n.Length - 1);
+                v = Convert.ToDouble(n) / 100.0;
+                txbValor.Text = "R$ " + string.Format("{0:N}", v);
+                txbValor.SelectionStart = txbValor.Text.Length;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

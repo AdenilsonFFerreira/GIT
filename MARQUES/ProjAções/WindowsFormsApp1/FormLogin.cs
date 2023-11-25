@@ -43,6 +43,8 @@ namespace WindowsFormsApp1
                         // Usuário e senha estão corretos.
                         FormModoOP form4 = new FormModoOP();
                         form4.Show();
+                        //como esse form é o principal (form1) não pode fechar (close)
+                        //nesse caso so deixamos ele como invisivel quando é chamado o formulario
                         this.Hide();
                     }
                     else
