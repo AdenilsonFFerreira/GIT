@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
         {
             Conexao conexao = new Conexao();
 
-            // Certifique-se de lidar com possíveis formatos de ponto ou vírgula como separador decimal
+            /*// Certifique-se de lidar com possíveis formatos de ponto ou vírgula como separador decimal
             float valor;
             if (float.TryParse(txbValor.Text.Replace(',', '.'), out valor))
             {
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
             else
             {
                 MessageBox.Show("O valor inserido não é um número válido.");
-            }
+            }*/
         }
 
 
