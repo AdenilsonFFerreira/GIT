@@ -15,9 +15,9 @@ using System.Globalization;
 
 namespace WindowsFormsApp1
 {
-    public partial class FormOpercao : Form
+    public partial class FormOperacao : Form
     {
-        public FormOpercao()
+        public FormOperacao()
         {
             InitializeComponent();
 
@@ -59,28 +59,29 @@ namespace WindowsFormsApp1
 
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
-            Conexao conexao = new Conexao();
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor) VALUES (@Acao, @Quantidade, @Valor)";
 
-            /*// Certifique-se de lidar com possíveis formatos de ponto ou vírgula como separador decimal
-            float valor;
-            if (float.TryParse(txbValor.Text.Replace(',', '.'), out valor))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                Papel papel = new Papel(txbAcao.Text, int.Parse(txbQtd.Text), valor);
-                MessageBox.Show(conexao.Cadastrar_Papel(papel));
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Acao", txbAcao.Text);
+                command.Parameters.AddWithValue("@Quantidade", txbQtd.Text);
+                command.Parameters.AddWithValue("@Valor", txbValor.Text);
 
-                // Atualize a ListView após adicionar o item
-                update_list_view();
-
-                // Limpe os TextBox
-                txbAcao.Text = "";
-                txbQtd.Text = "";
-                txbValor.Text = "";
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Dados inseridos com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao inserir os dados: " + ex.Message);
+                }
             }
-            else
-            {
-                MessageBox.Show("O valor inserido não é um número válido.");
-            }*/
         }
+
 
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,7 +106,7 @@ namespace WindowsFormsApp1
 
         private void txbValor_TextChanged(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 string n;
                 double v;
@@ -121,7 +122,7 @@ namespace WindowsFormsApp1
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "AVISO DE ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void label1_Click(object sender, EventArgs e)

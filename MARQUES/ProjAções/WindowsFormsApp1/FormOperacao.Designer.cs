@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class FormOpercao
+    partial class FormOperacao
     {
         /// <summary>
         /// Required designer variable.

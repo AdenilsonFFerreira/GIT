@@ -86,6 +86,7 @@
             this.btnRelatorio.TabIndex = 4;
             this.btnRelatorio.Text = "Relatorios";
             this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
             // btnFechar
             // 

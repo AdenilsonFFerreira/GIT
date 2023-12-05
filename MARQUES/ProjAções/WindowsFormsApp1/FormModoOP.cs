@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void BtnOperacao_Click(object sender, EventArgs e)
         {
-            FormOpercao form5 = new FormOpercao();
+            FormOperacao form5 = new FormOperacao();
             form5.Show();
             this.Close();
         }
@@ -34,6 +34,13 @@ namespace WindowsFormsApp1
             {
                 Application.Exit();
             }
+        }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            FormRelatorio form6 = new FormRelatorio();
+            form6.Show();
+            this.Close();
         }
     }
 }

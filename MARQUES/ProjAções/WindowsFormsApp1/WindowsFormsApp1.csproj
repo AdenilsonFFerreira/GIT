@@ -48,6 +48,13 @@
   <ItemGroup>
     <Compile Include="Cadastro.cs" />
     <Compile Include="BuscaPapel.cs" />
+    <Compile Include="Pesquisa.cs" />
+    <Compile Include="FormRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorio.Designer.cs">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="FormLogin.cs">
@@ -74,11 +81,11 @@
     <Compile Include="FormModoOP.Designer.cs">
       <DependentUpon>FormModoOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOpercao.cs">
+    <Compile Include="FormOperacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOpercao.Designer.cs">
-      <DependentUpon>FormOpercao.cs</DependentUpon>
+    <Compile Include="FormOperacao.Designer.cs">
+      <DependentUpon>FormOperacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Papel.cs" />
@@ -96,8 +103,11 @@
     <EmbeddedResource Include="FormModoOP.resx">
       <DependentUpon>FormModoOP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOpercao.resx">
-      <DependentUpon>FormOpercao.cs</DependentUpon>
+    <EmbeddedResource Include="FormOperacao.resx">
+      <DependentUpon>FormOperacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorio.resx">
+      <DependentUpon>FormRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
