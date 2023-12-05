@@ -11,6 +11,10 @@ SELECT name
 FROM sys.databases
 GO
 
+--------------------------------------------------------------
+-- Criação do banco de dados LojaAULA12
+--------------------------------------------------------------
+
 -- Criação do banco de dados LojaAULA12
 -- Repare que esse banco será criado em E:\LojaAULA12
 CREATE DATABASE LojaAULA12
