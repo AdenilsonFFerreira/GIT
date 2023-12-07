@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
-            string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor) VALUES (@Acao, @Quantidade, @Valor)";
+            string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor, Data_Compra) VALUES (@Acao, @Quantidade, @Valor, GETDATE())";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

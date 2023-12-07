@@ -32,11 +32,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbPapel = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnImprimir = new System.Windows.Forms.Button();
-            this.btnImprimir2 = new System.Windows.Forms.Button();
+            this.btnImpriCsv = new System.Windows.Forms.Button();
+            this.btnImpriTxt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,18 +79,18 @@
             this.btnPesquisar.TabIndex = 4;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.button1_Click);
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // btnCancelar
+            // btnFechar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(178, 344);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 48);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Fechar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.button2_Click);
+            this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.Location = new System.Drawing.Point(178, 344);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(105, 48);
+            this.btnFechar.TabIndex = 5;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // dateTimePicker1
             // 
@@ -101,44 +101,48 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(317, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(472, 374);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(452, 374);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // btnImprimir
+            // btnImpriCsv
             // 
-            this.btnImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(603, 392);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(112, 46);
-            this.btnImprimir.TabIndex = 8;
-            this.btnImprimir.Text = "Imprimir (csv)";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            this.btnImprimir.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnImpriCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpriCsv.Location = new System.Drawing.Point(595, 392);
+            this.btnImpriCsv.Name = "btnImpriCsv";
+            this.btnImpriCsv.Size = new System.Drawing.Size(112, 46);
+            this.btnImpriCsv.TabIndex = 8;
+            this.btnImpriCsv.Text = "Imprimir (csv)";
+            this.btnImpriCsv.UseVisualStyleBackColor = true;
+            this.btnImpriCsv.Click += new System.EventHandler(this.btnImpriCsv_Click_1);
             // 
-            // btnImprimir2
+            // btnImpriTxt
             // 
-            this.btnImprimir2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir2.Location = new System.Drawing.Point(439, 392);
-            this.btnImprimir2.Name = "btnImprimir2";
-            this.btnImprimir2.Size = new System.Drawing.Size(112, 46);
-            this.btnImprimir2.TabIndex = 9;
-            this.btnImprimir2.Text = "Imprimir (txt)";
-            this.btnImprimir2.UseVisualStyleBackColor = true;
-            this.btnImprimir2.Click += new System.EventHandler(this.btnImprimir2_Click);
+            this.btnImpriTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpriTxt.Location = new System.Drawing.Point(389, 392);
+            this.btnImpriTxt.Name = "btnImpriTxt";
+            this.btnImpriTxt.Size = new System.Drawing.Size(112, 46);
+            this.btnImpriTxt.TabIndex = 9;
+            this.btnImpriTxt.Text = "Imprimir (txt)";
+            this.btnImpriTxt.UseVisualStyleBackColor = true;
+            this.btnImpriTxt.Click += new System.EventHandler(this.btnImpriTxt_Click);
             // 
             // FormRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 450);
-            this.Controls.Add(this.btnImprimir2);
-            this.Controls.Add(this.btnImprimir);
+            this.ClientSize = new System.Drawing.Size(781, 450);
+            this.Controls.Add(this.btnImpriTxt);
+            this.Controls.Add(this.btnImpriCsv);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.txbPapel);
             this.Controls.Add(this.label2);
@@ -158,10 +162,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txbPapel;
         private System.Windows.Forms.Button btnPesquisar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btnImprimir;
-        private System.Windows.Forms.Button btnImprimir2;
+        private System.Windows.Forms.Button btnImpriCsv;
+        private System.Windows.Forms.Button btnImpriTxt;
     }
 }

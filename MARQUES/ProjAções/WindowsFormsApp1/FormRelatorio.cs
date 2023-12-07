@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace WindowsFormsApp1
 {
@@ -23,7 +24,8 @@ namespace WindowsFormsApp1
 
         private void FormRelatorio_Load(object sender, EventArgs e)
         {
-
+            btnImpriTxt.Enabled = false;
+            btnImpriCsv.Enabled = false;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             // Feche o Form5
             this.Close();
@@ -51,7 +53,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
             string query = "SELECT * FROM PAPEL WHERE Acao LIKE @Acao";
@@ -69,14 +71,24 @@ namespace WindowsFormsApp1
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
 
-                        dataGridView1.DataSource = dt;
+                        if (dt.Rows.Count == 0)
+                        {
+                            MessageBox.Show("          Voçê não possui essa AÇÂO em sua carteira.\n\n                 Por favor verificar sua CARTEIRA!");
+                        }
+                        else
+                        {
+                            dataGridView1.DataSource = dt;
+                            dataGridView1.Columns["ID"].Visible = false; // OCULTA COLUNA ID PARA IMPRESSÃO
+                            btnImpriTxt.Enabled = true;
+                            btnImpriCsv.Enabled = true;
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message);
                     }
                 }
-            }
+            }         
         }
 
         private void BuscarPapel(string text)
@@ -86,7 +98,7 @@ namespace WindowsFormsApp1
 
 
         //BOTÃO IMPRIMIR .CSV
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnImpriCsv_Click_1(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
             string query = "SELECT * FROM PAPEL WHERE Acao LIKE @Acao";
@@ -153,7 +165,7 @@ namespace WindowsFormsApp1
 
 
         //BOTÃO IMPRIMIR .TXT
-        private void btnImprimir2_Click(object sender, EventArgs e)
+        private void btnImpriTxt_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
             string query = "SELECT * FROM PAPEL WHERE Acao LIKE @Acao";
@@ -215,6 +227,11 @@ namespace WindowsFormsApp1
             }
 
             return sbldr.ToString();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
         //FINAL DA FUNÇÃO IMPRIMIR .TXT
     }
