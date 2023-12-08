@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
         }
 
 
-        private void BtnAdicionar_Click(object sender, EventArgs e)
+        private void btnComprar_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
             string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor, Data_Compra) VALUES (@Acao, @Quantidade, @Valor, GETDATE())";
@@ -135,9 +135,27 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVender_Click(object sender, EventArgs e)
         {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string query = "DELETE FROM PAPEL WHERE Acao = @Acao";
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Acao", txbAcao.Text);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Dados deletados com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao deletar os dados: " + ex.Message);
+                }
+            }
         }
     }
 }

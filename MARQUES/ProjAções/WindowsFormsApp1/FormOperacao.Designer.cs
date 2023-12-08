@@ -35,7 +35,7 @@
             this.txbAcao = new System.Windows.Forms.TextBox();
             this.txbQtd = new System.Windows.Forms.TextBox();
             this.txbValor = new System.Windows.Forms.TextBox();
-            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnComprar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ListView1 = new System.Windows.Forms.ListView();
@@ -44,7 +44,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnVender = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -118,17 +118,17 @@
             this.txbValor.TabIndex = 6;
             this.txbValor.TextChanged += new System.EventHandler(this.txbValor_TextChanged);
             // 
-            // btnAdicionar
+            // btnComprar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionar.Location = new System.Drawing.Point(769, 139);
-            this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(116, 49);
-            this.btnAdicionar.TabIndex = 7;
-            this.btnAdicionar.Text = "ADICIONAR";
-            this.btnAdicionar.UseVisualStyleBackColor = false;
-            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
+            this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.Location = new System.Drawing.Point(769, 139);
+            this.btnComprar.Name = "btnComprar";
+            this.btnComprar.Size = new System.Drawing.Size(116, 49);
+            this.btnComprar.TabIndex = 7;
+            this.btnComprar.Text = "COMPRAR";
+            this.btnComprar.UseVisualStyleBackColor = false;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnSair
             // 
@@ -198,30 +198,30 @@
             this.panel2.Size = new System.Drawing.Size(279, 433);
             this.panel2.TabIndex = 11;
             // 
-            // btnDeletar
+            // btnVender
             // 
-            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDeletar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(769, 278);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(116, 49);
-            this.btnDeletar.TabIndex = 12;
-            this.btnDeletar.Text = "DELETAR";
-            this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.button1_Click);
+            this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.Location = new System.Drawing.Point(769, 278);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(116, 49);
+            this.btnVender.TabIndex = 12;
+            this.btnVender.Text = "VENDER";
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
-            // FormOpercao
+            // FormOperacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 559);
-            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnAdicionar);
+            this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Name = "FormOpercao";
+            this.Name = "FormOperacao";
             this.Text = "OPERAÇÃO";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
@@ -241,7 +241,7 @@
         private System.Windows.Forms.TextBox txbAcao;
         private System.Windows.Forms.TextBox txbQtd;
         private System.Windows.Forms.TextBox txbValor;
-        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnComprar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ListView ListView1;
@@ -250,6 +250,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnVender;
     }
 }

@@ -13,3 +13,4 @@ C:\Users\adeni\OneDrive\Files\GitHub\MARQUES\ProjAções\WindowsFormsApp1\obj\De
 C:\Users\adeni\OneDrive\Files\GitHub\MARQUES\ProjAções\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormModoOP.resources
 C:\Users\adeni\OneDrive\Files\GitHub\MARQUES\ProjAções\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOperacao.resources
 C:\Users\adeni\OneDrive\Files\GitHub\MARQUES\ProjAções\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormRelatorio.resources
+C:\Users\adeni\OneDrive\Files\GitHub\MARQUES\ProjAções\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormConfiguracoes.resources
