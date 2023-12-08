@@ -41,6 +41,31 @@ namespace WindowsFormsApp1
 
         }
 
+        private void PreencherListView()
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string selectQuery = "SELECT * FROM PAPEL";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(selectQuery, connection);
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                ListView1.Items.Clear();
+
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader["Acao"].ToString());
+                    item.SubItems.Add(reader["Quantidade"].ToString());
+                    item.SubItems.Add(reader["Valor"].ToString());
+                    item.SubItems.Add(reader["Data_Compra"].ToString());
+
+                    ListView1.Items.Add(item);
+                }
+            }
+        }
+
         private void Label3_Click(object sender, EventArgs e)
         {
 
@@ -80,6 +105,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Erro ao inserir os dados: " + ex.Message);
                 }
             }
+            PreencherListView();
         }
 
 
@@ -137,25 +163,97 @@ namespace WindowsFormsApp1
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
-            string query = "DELETE FROM PAPEL WHERE Acao = @Acao";
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Acao", txbAcao.Text);
+                string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+                string selectQuery = "SELECT * FROM PAPEL WHERE Acao = @Acao ORDER BY Data_Compra";
+                string updateQuery = "UPDATE PAPEL SET Quantidade = @Quantidade, Valor = @Valor WHERE Acao = @Acao AND Data_Compra = @DataCompra";
+                string deleteQuery = "DELETE FROM PAPEL WHERE Acao = @Acao AND Data_Compra = @DataCompra";
 
-                try
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Dados deletados com sucesso!");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao deletar os dados: " + ex.Message);
+                    SqlCommand selectCommand = new SqlCommand(selectQuery, connection);
+                    selectCommand.Parameters.AddWithValue("@Acao", txbAcao.Text);
+
+                    try
+                    {
+                        connection.Open();
+
+                        // Verificar a quantidade total disponível
+                        string selectTotalQuery = "SELECT SUM(Quantidade) as TotalQuantidade, SUM(Quantidade * Valor) as TotalValor FROM PAPEL WHERE Acao = @Acao";
+                        SqlCommand selectTotalCommand = new SqlCommand(selectTotalQuery, connection);
+                        selectTotalCommand.Parameters.AddWithValue("@Acao", txbAcao.Text);
+                        SqlDataReader totalReader = selectTotalCommand.ExecuteReader();
+                        totalReader.Read();
+                        int totalQuantidade = totalReader.GetInt32(totalReader.GetOrdinal("TotalQuantidade"));
+                        float totalValor = (float)totalReader.GetDouble(totalReader.GetOrdinal("TotalValor"));
+                        float valorMedio = totalValor / totalQuantidade;
+                        totalReader.Close();
+
+                        int quantidadeVendida = int.Parse(txbQtd.Text);
+                        if (quantidadeVendida > totalQuantidade)
+                        {
+                            MessageBox.Show("Quantidade vendida é maior do que a quantidade disponível!");
+                            return;
+                        }
+
+                        // Carregar os dados em uma lista
+                        SqlDataReader reader = selectCommand.ExecuteReader();
+                        List<(int Quantidade, DateTime DataCompra)> dados = new List<(int Quantidade, DateTime DataCompra)>();
+                        while (reader.Read())
+                        {
+                            int quantidade = reader.GetInt32(reader.GetOrdinal("Quantidade"));
+                            DateTime dataCompra = reader.GetDateTime(reader.GetOrdinal("Data_Compra"));
+                            dados.Add((quantidade, dataCompra));
+                        }
+                        reader.Close();
+
+                        // Vender as ações
+                        foreach (var dado in dados)
+                        {
+                            if (dado.Quantidade <= quantidadeVendida)
+                            {
+                                SqlCommand deleteCommand = new SqlCommand(deleteQuery, connection);
+                                deleteCommand.Parameters.AddWithValue("@Acao", txbAcao.Text);
+                                deleteCommand.Parameters.AddWithValue("@DataCompra", dado.DataCompra);
+                                deleteCommand.ExecuteNonQuery();
+
+                                quantidadeVendida -= dado.Quantidade;
+                            }
+                            else
+                            {
+                                SqlCommand updateCommand = new SqlCommand(updateQuery, connection);
+                                updateCommand.Parameters.AddWithValue("@Acao", txbAcao.Text);
+                                updateCommand.Parameters.AddWithValue("@Quantidade", dado.Quantidade - quantidadeVendida);
+                                updateCommand.Parameters.AddWithValue("@Valor", valorMedio);
+                                updateCommand.Parameters.AddWithValue("@DataCompra", dado.DataCompra);
+                                updateCommand.ExecuteNonQuery();
+
+                                quantidadeVendida = 0;
+                            }
+
+                            if (quantidadeVendida == 0)
+                            {
+                                break;
+                            }
+                        }
+
+                        if (quantidadeVendida > 0)
+                        {
+                            MessageBox.Show("Quantidade vendida é maior do que a quantidade disponível!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Venda realizada com sucesso!");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao vender as ações: " + ex.Message);
+                    }
                 }
             }
+            PreencherListView();
         }
     }
 }
+
