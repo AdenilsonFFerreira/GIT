@@ -6,12 +6,12 @@ GO
 USE ProjAcoes
 GO
 
---CRIA A TABELA PAPEL
 CREATE TABLE PAPEL (
     ID          INT IDENTITY(1,1) PRIMARY KEY,
     Acao        VARCHAR(10),
     Quantidade  INT,
-    Valor       FLOAT -- Usando FLOAT para suportar valores decimais
+    Valor       FLOAT, -- Usando FLOAT para suportar valores decimais
+    Data_Compra datetime DEFAULT GETDATE()
 );
 
 
@@ -35,6 +35,7 @@ DROP TABLE PAPEL
 SELECT * FROM PAPEL
 GO
 
-ALTER TABLE PAPEL
-	ADD Data_Compra datetime DEFAULT GETDATE()
-GO
+--Para criar a coluna depois de ja ter a tabela
+--ALTER TABLE PAPEL
+	--ADD Data_Compra datetime DEFAULT GETDATE()
+--GO

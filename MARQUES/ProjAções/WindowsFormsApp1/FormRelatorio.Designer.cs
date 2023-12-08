@@ -88,7 +88,7 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(105, 48);
             this.btnFechar.TabIndex = 5;
-            this.btnFechar.Text = "Fechar";
+            this.btnFechar.Text = "Voltar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
@@ -107,7 +107,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(317, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(452, 374);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 374);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -118,7 +118,7 @@
             this.btnImpriCsv.Name = "btnImpriCsv";
             this.btnImpriCsv.Size = new System.Drawing.Size(112, 46);
             this.btnImpriCsv.TabIndex = 8;
-            this.btnImpriCsv.Text = "Imprimir (csv)";
+            this.btnImpriCsv.Text = "Salvar - csv";
             this.btnImpriCsv.UseVisualStyleBackColor = true;
             this.btnImpriCsv.Click += new System.EventHandler(this.btnImpriCsv_Click_1);
             // 
@@ -129,7 +129,7 @@
             this.btnImpriTxt.Name = "btnImpriTxt";
             this.btnImpriTxt.Size = new System.Drawing.Size(112, 46);
             this.btnImpriTxt.TabIndex = 9;
-            this.btnImpriTxt.Text = "Imprimir (txt)";
+            this.btnImpriTxt.Text = "Salvar - txt";
             this.btnImpriTxt.UseVisualStyleBackColor = true;
             this.btnImpriTxt.Click += new System.EventHandler(this.btnImpriTxt_Click);
             // 
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 450);
+            this.ClientSize = new System.Drawing.Size(772, 450);
             this.Controls.Add(this.btnImpriTxt);
             this.Controls.Add(this.btnImpriCsv);
             this.Controls.Add(this.dataGridView1);

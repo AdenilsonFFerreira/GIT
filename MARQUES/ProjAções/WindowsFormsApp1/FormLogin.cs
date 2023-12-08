@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,6 +31,18 @@ namespace WindowsFormsApp1
                 conexao.Open();
                 string usuario = txtUsuario.Text; // Substitua 'txtUsuario' pelo nome da sua caixa de texto do usuário
                 string senha = txtSenha.Text; // Substitua 'txtSenha' pelo nome da sua caixa de texto da senha
+
+                // Criptografar a senha
+                using (SHA256 sha256Hash = SHA256.Create())
+                {
+                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                    StringBuilder builder = new StringBuilder();
+                    for (int i = 0; i < bytes.Length; i++)
+                    {
+                        builder.Append(bytes[i].ToString("x2"));
+                    }
+                    senha = builder.ToString();
+                }
 
                 using (SqlCommand comando = new SqlCommand("SELECT * FROM LOGIN WHERE Usuario = @usuario AND Senha = @senha", conexao))
                 {

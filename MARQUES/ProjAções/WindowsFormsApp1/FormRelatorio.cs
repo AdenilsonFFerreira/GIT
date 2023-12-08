@@ -78,6 +78,7 @@ namespace WindowsFormsApp1
                         else
                         {
                             dataGridView1.DataSource = dt;
+                            dataGridView1.Columns["Data_Compra"].HeaderText = "Data da Compra";
                             dataGridView1.Columns["ID"].Visible = false; // OCULTA COLUNA ID PARA IMPRESSÃO
                             btnImpriTxt.Enabled = true;
                             btnImpriCsv.Enabled = true;

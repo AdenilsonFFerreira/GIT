@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -44,7 +46,21 @@ namespace WindowsFormsApp1
         private void Button1_Click(object sender, EventArgs e)
         {
             Conexao conexao = new Conexao();
-            Login login = new Login(txbUsuario.Text, txbSenha.Text);
+
+            // Criptografar a senha
+            string senha = txbSenha.Text;
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                senha = builder.ToString();
+            }
+
+            Login login = new Login(txbUsuario.Text, senha);
             MessageBox.Show(conexao.Cadastrar_Usuario(login));
 
             Usuario usuario = new Usuario(txbNome.Text,
@@ -60,7 +76,6 @@ namespace WindowsFormsApp1
             MessageBox.Show(conexao.Inserir_Usuario(usuario));
 
             conexao.Inserir_Usuario(usuario);
-
         }
 
         private void Label13_Click(object sender, EventArgs e)
