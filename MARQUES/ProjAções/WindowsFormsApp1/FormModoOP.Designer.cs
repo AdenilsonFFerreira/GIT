@@ -76,6 +76,7 @@
             this.btnConfiguracao.TabIndex = 3;
             this.btnConfiguracao.Text = "Configurações";
             this.btnConfiguracao.UseVisualStyleBackColor = true;
+            this.btnConfiguracao.Click += new System.EventHandler(this.btnConfiguracao_Click);
             // 
             // btnRelatorio
             // 

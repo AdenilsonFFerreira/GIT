@@ -42,5 +42,12 @@ namespace WindowsFormsApp1
             form6.Show();
             this.Close();
         }
+
+        private void btnConfiguracao_Click(object sender, EventArgs e)
+        {
+            FormConfiguracoes form5 = new FormConfiguracoes();
+            form5.Show();
+            this.Close();
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
         public FormLogin()
         {
             InitializeComponent();
+            txtSenha.PasswordChar = '*';
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
