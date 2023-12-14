@@ -6,14 +6,16 @@ GO
 USE ProjAcoes
 GO
 
+--DROP TABLE PAPEL
+
 CREATE TABLE PAPEL (
     ID          INT IDENTITY(1,1) PRIMARY KEY,
     Acao        VARCHAR(10),
     Quantidade  INT,
     Valor       FLOAT, -- Usando FLOAT para suportar valores decimais
     Data_Compra datetime DEFAULT GETDATE()
-);
-
+)
+GO
 
 --INSERE DADOS NA TABELA PAPEL
 INSERT INTO PAPEL(
@@ -29,9 +31,6 @@ INSERT INTO PAPEL VALUES (2, 'BBAS3', 15, 35)
 INSERT INTO PAPEL VALUES (3, 'VALE3', 100, 45)
 GO
  
-
---DROP TABLE PAPEL
-
 SELECT * FROM PAPEL
 GO
 
