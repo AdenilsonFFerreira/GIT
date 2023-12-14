@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Dados inseridos com sucesso!");
+                    MessageBox.Show("Compra Realizada com Sucesso!");
                 }
                 catch (Exception ex)
                 {
