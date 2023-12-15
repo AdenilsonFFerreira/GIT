@@ -177,6 +177,7 @@
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(270, 26);
             this.txbCpf.TabIndex = 11;
+            this.txbCpf.TextChanged += new System.EventHandler(this.txbCpf_TextChanged);
             // 
             // txbCep
             // 
@@ -332,7 +333,7 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
-            // Form3
+            // FormCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,7 +367,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
+            this.Name = "FormCadastrar";
             this.Text = "CADASTRAR";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);

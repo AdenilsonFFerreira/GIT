@@ -49,5 +49,10 @@ namespace WindowsFormsApp1
             form5.Show();
             this.Close();
         }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

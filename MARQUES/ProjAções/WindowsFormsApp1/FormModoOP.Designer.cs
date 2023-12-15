@@ -34,6 +34,7 @@
             this.btnConfiguracao = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.btnPerfil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOperacao
@@ -70,7 +71,7 @@
             // btnConfiguracao
             // 
             this.btnConfiguracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracao.Location = new System.Drawing.Point(333, 207);
+            this.btnConfiguracao.Location = new System.Drawing.Point(233, 207);
             this.btnConfiguracao.Name = "btnConfiguracao";
             this.btnConfiguracao.Size = new System.Drawing.Size(147, 58);
             this.btnConfiguracao.TabIndex = 3;
@@ -81,7 +82,7 @@
             // btnRelatorio
             // 
             this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio.Location = new System.Drawing.Point(135, 207);
+            this.btnRelatorio.Location = new System.Drawing.Point(52, 207);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(147, 58);
             this.btnRelatorio.TabIndex = 4;
@@ -100,11 +101,23 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // btnPerfil
+            // 
+            this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.Location = new System.Drawing.Point(417, 207);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(147, 58);
+            this.btnPerfil.TabIndex = 6;
+            this.btnPerfil.Text = "Carregar Perfil";
+            this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
+            // 
             // FormModoOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(632, 361);
+            this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnConfiguracao);
@@ -125,5 +138,6 @@
         private System.Windows.Forms.Button btnConfiguracao;
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnFechar;
+        private System.Windows.Forms.Button btnPerfil;
     }
 }

@@ -23,6 +23,52 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+        public bool ValidaCPF(string cpf)
+        {
+            int[] multiplicador1 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+
+            if (cpf.Length != 11)
+                return false;
+
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            digito = digito + resto.ToString();
+
+            return cpf.EndsWith(digito);
+        }
+
+
         private void Label1_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +91,28 @@ namespace WindowsFormsApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            if (!ValidaCPF(txbCpf.Text))
+            {
+                MessageBox.Show("CPF inválido!");
+                txbCpf.Focus();
+                return;
+            }
+            // Verificação se o CPF já existe no banco de dados
+            string cpf = txbCpf.Text;
+            SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM USUARIO WHERE CPF = @CPF", conn);
+            cmd.Parameters.AddWithValue("@CPF", cpf);
+            conn.Open();
+            int count = (int)cmd.ExecuteScalar();
+            conn.Close();
+
+            if (count > 0)
+            {
+                MessageBox.Show("CPF já existe!");
+                txbCpf.Focus();
+                return;
+            }
+
             Conexao conexao = new Conexao();
 
             // Criptografar a senha
@@ -113,6 +181,11 @@ namespace WindowsFormsApp1
         private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void txbCpf_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

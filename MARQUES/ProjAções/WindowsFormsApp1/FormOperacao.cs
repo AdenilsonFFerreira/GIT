@@ -99,6 +99,9 @@ namespace WindowsFormsApp1
                     connection.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("Compra Realizada com Sucesso!");
+                    txbAcao.Text = "";
+                    txbQtd.Text = "";
+                    txbValor.Text = "";
                 }
                 catch (Exception ex)
                 {
@@ -244,6 +247,9 @@ namespace WindowsFormsApp1
                         else
                         {
                             MessageBox.Show("Venda realizada com sucesso!");
+                            txbAcao.Text = "";
+                            txbQtd.Text = "";
+                            txbValor.Text = "";
                         }
                     }
                     catch (Exception ex)
