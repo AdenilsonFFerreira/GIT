@@ -12,6 +12,9 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Globalization;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
@@ -22,6 +25,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
 
             update_list_view();
+
         }
 
         private void update_list_view()
@@ -35,6 +39,7 @@ namespace WindowsFormsApp1
                 this.ListView1.Items.Add(new ListViewItem(items));
             }
         }
+
 
         private void UpdateListView()
         {
@@ -259,6 +264,11 @@ namespace WindowsFormsApp1
                 }
             }
             PreencherListView();
+        }
+
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
