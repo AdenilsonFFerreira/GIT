@@ -1,0 +1,32 @@
+h1{
+    /* border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: blue; */
+
+    /* padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 50px; */
+
+    /* margin-top: 50px;
+    margin-right: 100px;
+    margin-bottom: 120px;
+    margin-right: 40px; */
+
+    border: 2px solid red;
+    padding: 20px 30px 15px 10px;
+    margin: 50px 100px 120px 40px;
+
+    width: 505;
+    
+}
+p{
+        width: 300px;
+        border: 1px solid blue;
+        display: inline;
+}
+
+a{
+    /* display: inline; */
+    display: block;
+}

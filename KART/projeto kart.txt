@@ -1,0 +1,39 @@
+eficaz - eficiencia
+
+sistema de direção
+	Compra
+		barra direita esquerda 2x
+		terminal rotular (uniball) direito esquerdo 2x
+		mancal de volante (mini)
+		
+		porca 4x
+		
+
+	Contrução
+		barra de direção (preparação, construção da ponta)
+		parafuso cabeça redonda
+		suporte uniball (caixa de direção) 2x
+		suporte da direção (superior)
+		suporte da direção inferior (porca ou qualquer coisa)
+
+banco do kart
+	compra
+		parafusos fixação
+
+	contrução
+		suporte inferior
+		suporte traseiro
+
+tramissão
+	compra
+
+	construção
+		fixão da corrente
+
+freio
+	compra
+		sistema completo (pinça, servo, cabos etc)|
+
+	construção
+		suporte
+		fixação do suporte
