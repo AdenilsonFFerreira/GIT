@@ -1,0 +1,10 @@
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\bin\Debug\acoes.exe.config
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\bin\Debug\acoes.exe
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\bin\Debug\acoes.pdb
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.csproj.AssemblyReference.cache
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.Form1.resources
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.Properties.Resources.resources
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.csproj.GenerateResource.cache
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.csproj.CoreCompileInputs.cache
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.exe
+G:\Meu Drive\01 FAQUI\# 4SEM #\05 logica de programação 2\PROJETO\acoes\obj\Debug\acoes.pdb

@@ -1,0 +1,14 @@
+PROGRAMAS FEITOS
+programa pra calcular a porcentagem que a ação subiu (valorizacao acao)
+simulação de ganhos (calc_simmul_ganho)
+qts a pessoa ganhou com investido e porcetagem ganha (valorizacao acao)
+
+calculo do preço justo da acao
+	indicadores = lucro, divida, fluxo de caixa	
+-Preço/Lucro ou P/L: é a técnica onde o preço da ação (cotação atual) é dividido pelo lucro da ação nos últimos doze meses. Aqui é dado quanto os investidores estão dispostos a pagar pelo ativo naquele momento. Na comparação entre duas ações, por exemplo, aquela que mostrar um P/L menor é considerada a "mais barata" neste caso	p/l p/vp
+
+-Preço/Valor Patrimonial ou P/VP: tecnicamente, é um indicador que mostra se o valor da ação está caro ou barato. Para isso, deve-se fazer uma divisão entre o preço atual da ação (cotação da Bolsa) e o valor patrimonial da empresa. Feita a divisão, o investidor deve analisar o seguinte:
+
+Se o valor encontrado é menor do que 1: indica que uma boa empresa vale menos do que seu patrimônio líquido, insinuando que a ação dela na Bolsa está barata. Dependendo do contexto, a ação com P/VP menor do que 1 pode mostrar uma oportunidade ao investidor nos casos em que a empresa possua resultados sólidos, esteja em um setor lucrativo e etc., mas mesmo assim encontra-se na Bolsa valendo menos do que seu patrimônio.
+Se o P/VP for maior do que 1: é o contrário, indica que a empresa já está supervalorizada no mercado, ou consolidada em seu setor sem muitos lados para crescimento. Assim, a chance de alta na ação dela é menor.
+A ideia do Múltiplo Preço/Valor Patrimonial é essa. De outro lado, ao se comparar duas ou mais empresas, o investidor deve fazer a mesma análise, mas procurando aquela empresa que tenha o P/VP menor

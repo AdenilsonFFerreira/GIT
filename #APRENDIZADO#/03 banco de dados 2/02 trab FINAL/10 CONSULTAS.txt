@@ -1,0 +1,69 @@
+Consulta para obter todos os usuários e seus logins:
+
+SELECT U.Nome, L.Usuario
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+
+Consulta para obter todos os usuários que possuem ações:
+
+SELECT DISTINCT U.Nome
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+JOIN PAPEL P ON L.ID = P.ID
+
+Consulta para obter a quantidade total de ações para cada usuário:
+
+SELECT U.Nome, SUM(P.Quantidade) as Total_Acoes
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+JOIN PAPEL P ON L.ID = P.ID
+GROUP BY U.Nome
+
+Consulta para obter o valor total das ações para cada usuário:
+
+SELECT U.Nome, SUM(P.Quantidade * P.Valor) as Valor_Total
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+JOIN PAPEL P ON L.ID = P.ID
+GROUP BY U.Nome
+
+Consulta para obter os usuários que possuem mais de 100 ações:
+
+SELECT U.Nome
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+JOIN PAPEL P ON L.ID = P.ID
+GROUP BY U.Nome
+HAVING SUM(P.Quantidade) > 100
+
+Consulta para obter os usuários que compraram ações nos últimos 7 dias:
+
+SELECT DISTINCT U.Nome
+FROM USUARIO U
+JOIN LOGIN L ON U.ID = L.UsuarioID
+JOIN PAPEL P ON L.ID = P.ID
+WHERE P.Data_Compra >= DATEADD(day, -7, GETDATE())
+
+Consulta para obter a ação com o maior valor:
+
+SELECT TOP 1 P.Acao, P.Valor
+FROM PAPEL P
+ORDER BY P.Valor DESC
+
+Consulta para obter a ação com o menor valor:
+
+SELECT TOP 1 P.Acao, P.Valor
+FROM PAPEL P
+ORDER BY P.Valor ASC
+
+Consulta para obter a média de valor das ações:
+
+SELECT AVG(P.Valor) as Media_Valor
+FROM PAPEL P
+
+Consulta para obter a ação mais popular (com maior quantidade):
+
+SELECT P.Acao, SUM(P.Quantidade) as Total_Quantidade
+FROM PAPEL P
+GROUP BY P.Acao
+ORDER BY Total_Quantidade DESC

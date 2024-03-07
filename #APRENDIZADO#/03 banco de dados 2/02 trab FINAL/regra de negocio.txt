@@ -1,0 +1,8 @@
+Por exemplo, considerando as tabelas LOGIN, USUARIO e PAPEL que você mencionou, aqui estão algumas possíveis regras de negócios:
+
+Um USUARIO pode ter um e apenas um LOGIN.
+O CPF de um USUARIO deve ser único.
+Um USUARIO pode possuir vários PAPEL.
+A Quantidade de um PAPEL deve ser um número inteiro positivo.
+O Valor de um PAPEL deve ser um número positivo.
+A Data_Compra de um PAPEL não pode ser uma data futura.

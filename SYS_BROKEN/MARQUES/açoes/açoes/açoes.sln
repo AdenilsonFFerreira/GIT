@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "açoes", "açoes.csproj", "{AD5992CB-3538-427C-836D-1B8C61DC9B48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD5992CB-3538-427C-836D-1B8C61DC9B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD5992CB-3538-427C-836D-1B8C61DC9B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD5992CB-3538-427C-836D-1B8C61DC9B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD5992CB-3538-427C-836D-1B8C61DC9B48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {300323DC-C0BB-4D00-B001-D1AE1E28B661}
+	EndGlobalSection
+EndGlobal

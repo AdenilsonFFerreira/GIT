@@ -1,16 +1,3 @@
-PASSO A PASSO
-VC PODE CRIAR A PASTA NO PC PRIMEIRO
-DAR UM GIT INIT PARA CRIAR E INDEXAR A PASTA
-DEPOIS UM GIT CLONE COM O ENDEREÇO DO GIT HUB PEGO NO SITE
-	COM ESSE COMANDO ELE JA VAI PUXAR TUDO QUE ESTA NA INTERNET
-
-CASO DEPOIS QUEIRA MANDAR MAIS PASTA SO FAZER OS PROCESSOS NORMAIS
-
-
-
-
-
-
 SEMPRE NA PASTA DO PROJETO
 
 é possivel utilizar o git apenas local não precisando fazer nada pela interet
@@ -28,7 +15,7 @@ inicializar - sera feito a primeira vez na pasta que se quer manter os projetos
 
 USO GITHUB>COM
 vai ignorar o passo a passo USO LOCAL
-e começa criando o repositorio no site
+e começa criando o repositorio no sitetorio
 ele vai dar um passo a passo de como criar repositorio e depois vai seguindo
 
 -------------------------------------------------------------------------------------------------------------------
