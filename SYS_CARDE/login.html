@@ -1,55 +1,43 @@
 <!DOCTYPE HTML>
-<html lang="br">
+<html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8">
-	<title>CARDE - Museu do Automóvel</title>
-    <style>
-        .center-text {
-          text-align: center;
-        }
-        .center-form {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 50vh;
-          flex-direction: column;
-        }
-        form {
-          display: grid;
-          gap: 10px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>COLEÇÃO AUTOMOTIVA - Login</title>
+    <link rel="stylesheet" href="style_login.css">
 </head>
 
 <body>
-    <h1 class="center-text">CARDE</h1>
-    <br>
-    <hr>
-    <div class="center-form">
-        <form>
-            <fieldset style="text-align: center;">
-                <p class="center-text"><b>LOGIN</b></p><br>
-
-                <label for="usuario" style="display: block; text-align: center;"><b>Usuario</b></label>
-                <input type="text" id="nome" name="nome" style="display: block; text-align: right;"><br><br>
-                
-                <label for="senha" style="display: block; text-align: center;"><b>Senha</b></label>
-                <input type="password" id="dob" name="dob" style="display: block; text-align: right;"><br><br>
-
-                <input type="submit" value="Enviar" style="margin-right: 20px; width: 80px;">
-                <input type="submit" value="cancelar" style="width: 80px;"><br><br>
-                
-                <a href="recuperar.html" style="font-size: 13px;">Recuperar Senha</a>
-
-              </fieldset>
-        </form>
-    </div>
-
     <h2 class="center-text">Bem-vindo ao Sistema de Gerenciamento de Manutenção Automotiva do Museu</h2>
+    <br>
+
+    <div>
+        <img src="01login.png" alt="Foto de Perfil">            
+        <br>
+        <form>
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="ususario" required>
+    
+            <label for="senha">Senha:</label>
+            <input type="senha" id="senha" name="senha" required>           
+        </form>
+
+        <a href="recuperar.html">Recuperar Senha</a>
+	    
+        <br>
+        <a href="home.html">
+            <button type="submit">LOGIN</button>
+        </a>       
+           
+        <button onclick="window.close();">FECHAR</button>
+    </div>
+    
+
+    <br>
+    
+    <br>
     <h4 class="center-text">Este sistema foi meticulosamente projetado para gerenciar e prevenir a manutenção dos veículos que fazem parte do nosso precioso acervo.<br>
     Nosso objetivo é garantir que cada veículo seja mantido nas melhores condições possíveis, preservando a história e a integridade de cada peça.</h4><
 
 </body>
 </html>
-
