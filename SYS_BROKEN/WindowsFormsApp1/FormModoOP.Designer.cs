@@ -35,12 +35,13 @@
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnProvisao = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOperacao
             // 
             this.btnOperacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOperacao.Location = new System.Drawing.Point(52, 82);
+            this.btnOperacao.Location = new System.Drawing.Point(11, 32);
             this.btnOperacao.Name = "btnOperacao";
             this.btnOperacao.Size = new System.Drawing.Size(147, 58);
             this.btnOperacao.TabIndex = 0;
@@ -51,7 +52,7 @@
             // btnAnalise
             // 
             this.btnAnalise.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalise.Location = new System.Drawing.Point(233, 82);
+            this.btnAnalise.Location = new System.Drawing.Point(99, 147);
             this.btnAnalise.Name = "btnAnalise";
             this.btnAnalise.Size = new System.Drawing.Size(147, 58);
             this.btnAnalise.TabIndex = 1;
@@ -61,7 +62,7 @@
             // btnFi
             // 
             this.btnFi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFi.Location = new System.Drawing.Point(417, 82);
+            this.btnFi.Location = new System.Drawing.Point(376, 32);
             this.btnFi.Name = "btnFi";
             this.btnFi.Size = new System.Drawing.Size(147, 58);
             this.btnFi.TabIndex = 2;
@@ -71,7 +72,7 @@
             // btnConfiguracao
             // 
             this.btnConfiguracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracao.Location = new System.Drawing.Point(233, 207);
+            this.btnConfiguracao.Location = new System.Drawing.Point(99, 246);
             this.btnConfiguracao.Name = "btnConfiguracao";
             this.btnConfiguracao.Size = new System.Drawing.Size(147, 58);
             this.btnConfiguracao.TabIndex = 3;
@@ -82,7 +83,7 @@
             // btnRelatorio
             // 
             this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRelatorio.Location = new System.Drawing.Point(52, 207);
+            this.btnRelatorio.Location = new System.Drawing.Point(290, 147);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(147, 58);
             this.btnRelatorio.TabIndex = 4;
@@ -93,7 +94,7 @@
             // btnFechar
             // 
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.Location = new System.Drawing.Point(251, 294);
+            this.btnFechar.Location = new System.Drawing.Point(210, 333);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(116, 44);
             this.btnFechar.TabIndex = 5;
@@ -104,7 +105,7 @@
             // btnPerfil
             // 
             this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Location = new System.Drawing.Point(417, 207);
+            this.btnPerfil.Location = new System.Drawing.Point(290, 246);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(147, 58);
             this.btnPerfil.TabIndex = 6;
@@ -112,11 +113,23 @@
             this.btnPerfil.UseVisualStyleBackColor = true;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
+            // btnProvisao
+            // 
+            this.btnProvisao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProvisao.Location = new System.Drawing.Point(192, 32);
+            this.btnProvisao.Name = "btnProvisao";
+            this.btnProvisao.Size = new System.Drawing.Size(147, 58);
+            this.btnProvisao.TabIndex = 7;
+            this.btnProvisao.Text = "Provisão";
+            this.btnProvisao.UseVisualStyleBackColor = true;
+            this.btnProvisao.Click += new System.EventHandler(this.btnProvisao_Click);
+            // 
             // FormModoOP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 361);
+            this.ClientSize = new System.Drawing.Size(537, 389);
+            this.Controls.Add(this.btnProvisao);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnRelatorio);
@@ -139,5 +152,6 @@
         private System.Windows.Forms.Button btnRelatorio;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Button btnPerfil;
+        private System.Windows.Forms.Button btnProvisao;
     }
 }

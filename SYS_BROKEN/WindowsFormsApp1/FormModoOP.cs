@@ -54,5 +54,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnProvisao_Click(object sender, EventArgs e)
+        {           
+            provisao formProvisao = new provisao();          
+            formProvisao.Show();
+        }
+
     }
+}
 }
