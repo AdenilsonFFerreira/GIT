@@ -1,0 +1,13 @@
+marca
+modelo
+cor
+ano
+carroceria
+motor
+transmissão
+kilometragem
+placa
+chassi
+renavam
+crlv
+dut

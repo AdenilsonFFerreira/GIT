@@ -51,8 +51,39 @@ namespace WindowsFormsApp1
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
-        {
-
+        {           
+            var form = new WindowsFormsApp1.carregarperfil.carregarperfil();            
+            form.Show();           
+            this.Close();
         }
+
+
+
+        private void btnProvisao_Click(object sender, EventArgs e)
+        {            
+            var formProvisao = new WindowsFormsApp1.provisao.provisao();            
+            formProvisao.Show();            
+            this.Close();
+        }
+
+
+        private void btnFi_Click(object sender, EventArgs e)
+        {            
+            var formFi = new WindowsFormsApp1.fi.fi();            
+            formFi.Show();                       
+            this.Close();
+        }
+
+
+        private void btnAnalise_Click(object sender, EventArgs e)
+        {            
+            var formAnalise = new WindowsFormsApp1.analise.analise();           
+            formAnalise.Show();            
+            this.Close();
+        }
+
+
+
     }
 }
+

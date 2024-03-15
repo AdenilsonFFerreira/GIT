@@ -49,12 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.cs" />
-    <Compile Include="BuscaPapel.cs" />
-    <Compile Include="FormConfiguracoes.cs">
+    <Compile Include="analise\analise.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormConfiguracoes.Designer.cs">
+    <Compile Include="analise\analise.Designer.cs">
+      <DependentUpon>analise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro.cs" />
+    <Compile Include="BuscaPapel.cs" />
+    <Compile Include="carregarperfil\carregarperfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="carregarperfil\carregarperfil.Designer.cs">
+      <DependentUpon>carregarperfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fi\fi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fi\fi.Designer.cs">
+      <DependentUpon>fi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="configuracoes\FormConfiguracoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuracoes\FormConfiguracoes.Designer.cs">
       <DependentUpon>FormConfiguracoes.cs</DependentUpon>
     </Compile>
     <Compile Include="Pesquisa.cs" />
@@ -63,6 +81,12 @@
     </Compile>
     <Compile Include="FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="provisao\provisao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="provisao\provisao.Designer.cs">
+      <DependentUpon>provisao.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuario.cs" />
     <Compile Include="Conexao.cs" />
@@ -100,7 +124,10 @@
     <Compile Include="Papel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormConfiguracoes.resx">
+    <EmbeddedResource Include="carregarperfil\carregarperfil.resx">
+      <DependentUpon>carregarperfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuracoes\FormConfiguracoes.resx">
       <DependentUpon>FormConfiguracoes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FormLogin.resx">
@@ -130,6 +157,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="provisao\provisao.resx">
+      <DependentUpon>provisao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
