@@ -58,6 +58,7 @@
             this.btnAnalise.TabIndex = 1;
             this.btnAnalise.Text = "Analise";
             this.btnAnalise.UseVisualStyleBackColor = true;
+            this.btnAnalise.Click += new System.EventHandler(this.btnAnalise_Click);
             // 
             // btnFi
             // 
@@ -68,6 +69,7 @@
             this.btnFi.TabIndex = 2;
             this.btnFi.Text = "FI";
             this.btnFi.UseVisualStyleBackColor = true;
+            this.btnFi.Click += new System.EventHandler(this.btnFi_Click);
             // 
             // btnConfiguracao
             // 

@@ -36,3 +36,5 @@ C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompile
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsF.A1EEDF9B.Up2Date
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.provisao.provisao.resources
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.carregarperfil.carregarperfil.resources
