@@ -1,0 +1,3 @@
+border-colapse: colapse
+button:hover (configura as duas cores)
+
