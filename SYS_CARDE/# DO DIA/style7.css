@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;    
+}
+
+h1{
+    color: blue;
+}
+
+h1:hover{
+    color: rgb(255,174,0);
+}
+
+/* p[title="paragrafo"]{
+    color: red;
+} */
+
+p.p1{
+    color: green;
+}
+
+#container{
+    background-color: beige;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a:active{
+    color: rgb(245, 209, 4);
+}
+
+a:visited{
+    color: rgb(255,234,0);
+}
+
+a:hover{
+    color: rgb(255,60,0);
+}
+
+a.link{
+    color: rgb(255,0,212);
+}
+
+p::first-letter{
+    color: rgb(255,0,212);
+}
+
+p::first-line{
+    rgb(255,60,0)
+}
+div{
+    border: 1px solid #000;
+
+}
+
+div::before{
+    content: "Texto";
+}
