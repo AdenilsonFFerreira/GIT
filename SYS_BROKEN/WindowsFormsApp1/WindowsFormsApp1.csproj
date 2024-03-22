@@ -82,6 +82,7 @@
     <Compile Include="FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Provisao.cs" />
     <Compile Include="provisao\provisao.cs">
       <SubType>Form</SubType>
     </Compile>

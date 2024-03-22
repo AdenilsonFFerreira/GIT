@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
             return con;
 
         }
+
         //METODO DESCONECTAR
         public void Desconectar()
         {
@@ -106,10 +107,8 @@ namespace WindowsFormsApp1
             return mensagem;
 
         }
-        public Usuario Buscar_Usuario(String CPF)
-        {
-            return new Usuario();
-        }
+
+        //METODO USUARIO
         public String Inserir_Usuario(Usuario usuario)
         {
             SqlCommand cmd = new SqlCommand();
@@ -149,6 +148,47 @@ namespace WindowsFormsApp1
             }
 
             return mensagem;
+        }
+
+        //METODO CADASTRAR PROVISAO
+        public String Cadastrar_Provisao(Provisao provisao)
+        {
+            SqlCommand cmd = new SqlCommand();
+            String mensagem;
+
+            //comando sql  --SqlCommand
+            cmd.CommandText = "INSERT INTO PROVISAO (Acao, Div_Valor, Data_Com, Data_Pag) values (@acao, @div_valor, @data_com, @data_pag)";
+
+            //parametros
+            cmd.Parameters.AddWithValue("@acao", provisao.acao);
+            cmd.Parameters.AddWithValue("@div_valor", provisao.div_valor);
+            cmd.Parameters.AddWithValue("@data_com", provisao.data_com);
+            cmd.Parameters.AddWithValue("@data_pag", provisao.data_pag);
+
+            try
+            {
+                //concetar com banco  --Conexao
+                cmd.Connection = this.Conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                this
+                    .Desconectar();
+                //mostrar mensagem de erro ou sucesso  --variavel
+                mensagem = "Cadastrado com Sucesso!!";
+
+            }
+            catch (SqlException e)
+            {
+                mensagem = "Erro: " + e.Message;
+            }
+            return mensagem;
+        }
+
+        //METODO BUSCAR USUARIO
+        public Usuario Buscar_Usuario(String CPF)
+        {
+            return new Usuario();
         }
 
 

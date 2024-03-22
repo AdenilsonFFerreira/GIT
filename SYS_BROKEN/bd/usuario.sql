@@ -3,6 +3,8 @@ SELECT name
 FROM sys.databases
 GO
 
+CREATE DATABASE ProjAcoes;
+
 USE ProjAcoes
 GO
 
