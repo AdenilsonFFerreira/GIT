@@ -82,8 +82,17 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btnPatrimonio_Click(object sender, EventArgs e)
+        {
+            var formPatrimonio = new WindowsFormsApp1.patrimonio.patrimonio();
+            formPatrimonio.Show();
+            this.Close();
+        }
     }
 }
 

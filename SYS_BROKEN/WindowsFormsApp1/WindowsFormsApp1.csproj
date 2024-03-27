@@ -75,6 +75,12 @@
     <Compile Include="configuracoes\FormConfiguracoes.Designer.cs">
       <DependentUpon>FormConfiguracoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="patrimonio\patrimonio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patrimonio\patrimonio.Designer.cs">
+      <DependentUpon>patrimonio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pesquisa.cs" />
     <Compile Include="FormRelatorio.cs">
       <SubType>Form</SubType>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRelatorio.resx">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patrimonio\patrimonio.resx">
+      <DependentUpon>patrimonio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
