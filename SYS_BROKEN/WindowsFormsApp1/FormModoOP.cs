@@ -26,10 +26,7 @@ namespace WindowsFormsApp1
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            // Exiba uma caixa de diálogo de confirmação
             DialogResult result = MessageBox.Show("Tem certeza de que deseja sair?", "Confirmação", MessageBoxButtons.OKCancel);
-
-            // Se o usuário clicou em OK, feche o aplicativo
             if (result == DialogResult.OK)
             {
                 Application.Exit();

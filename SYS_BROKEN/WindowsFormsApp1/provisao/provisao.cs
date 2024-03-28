@@ -158,5 +158,11 @@ namespace WindowsFormsApp1.provisao
             PreencherListView();
         }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormModoOP form4 = new FormModoOP();
+            form4.Show();
+        }
     }
 }

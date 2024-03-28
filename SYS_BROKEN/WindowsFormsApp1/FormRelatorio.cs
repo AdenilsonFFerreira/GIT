@@ -34,11 +34,8 @@ namespace WindowsFormsApp1
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
-        {
-            // Feche o Form5
+        {            
             this.Close();
-
-            // Crie uma nova instância do Form4 e mostre-o
             FormModoOP form4 = new FormModoOP();
             form4.Show();
         }

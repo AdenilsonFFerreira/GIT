@@ -21,5 +21,12 @@ namespace WindowsFormsApp1.carregarperfil
         {
 
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormModoOP form4 = new FormModoOP();
+            form4.Show();
+        }
     }
 }

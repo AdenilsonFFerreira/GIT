@@ -131,11 +131,17 @@
     <Compile Include="Papel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="analise\analise.resx">
+      <DependentUpon>analise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="carregarperfil\carregarperfil.resx">
       <DependentUpon>carregarperfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="configuracoes\FormConfiguracoes.resx">
       <DependentUpon>FormConfiguracoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fi\fi.resx">
+      <DependentUpon>fi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

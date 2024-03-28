@@ -77,11 +77,8 @@ namespace WindowsFormsApp1
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
-        {
-            // Feche o Form5
-            this.Close();
-
-            // Crie uma nova instância do Form4 e mostre-o
+        {            
+            this.Close();            
             FormModoOP form4 = new FormModoOP();
             form4.Show();
         }
@@ -120,6 +117,7 @@ namespace WindowsFormsApp1
 
         private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
 
         }
 

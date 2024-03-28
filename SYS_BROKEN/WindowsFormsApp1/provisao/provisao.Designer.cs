@@ -49,6 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txbData_Pag = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -246,11 +247,24 @@
             this.label9.UseWaitCursor = true;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(287, 540);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(190, 39);
+            this.btnVoltar.TabIndex = 19;
+            this.btnVoltar.Text = "VOLTAR";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // provisao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(800, 604);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txbData_Pag);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
@@ -303,5 +317,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbData_Pag;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
