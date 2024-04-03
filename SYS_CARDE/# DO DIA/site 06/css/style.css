@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* pega no site */
+    font-family: "Montserrat", sans-serif; 
+}
+
+#container{
+    width: 100%;
+}
+
+header{
+    background-image: url(../imagens/teste.jpg);   
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    box-shadow: 2px, 2px, 2px #000;
+}
+
+a.hover{
+    border-bottom: 3px solid #fff;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+    
+nav ul li{
+    margin-left: 100%;
+}
+
+.btn-cadastro button{
+    background-color: rgb(202, 39, 161);
+    color: #fff ;
+    padding: 5%;
+    border: 1px solid rgb(202, 39, 161);
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.texto h1{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.conteudo{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+.conteudo h1{
+    margin-bottom: 2%;
+}
+
+.conteudo p{
+    margin-bottom: 1%;
+}
+
+.servicos{
+    background-color: rgb(120, 129, 200);
+}
+
+.servicos .conteudo{
+    color: #fff;
+}
