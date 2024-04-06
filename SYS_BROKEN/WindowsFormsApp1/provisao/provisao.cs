@@ -18,20 +18,12 @@ namespace WindowsFormsApp1.provisao
         public provisao()
         {
             InitializeComponent();
+            PreencherListView();
             /*update_list_view();*/
+            
         }
 
-        /*private void update_list_view()
-        {
-            this.listView1.Items.Clear();
-            Conexao con = new Conexao();
-            Provisao[] provisao = con.posicao_consolidade();
-            for (int i = 0; i < provisao.Length; i++)
-            {
-                String[] items = { provisao[i].acao, provisao[i].div_valor.ToString(), provisao[i].data_com.ToString(), provisao[i].data_pag.ToString() };
-                this.listView1.Items.Add(new ListViewItem(items));
-            }
-        }*/
+       
 
         private void PreencherListView()
         {
@@ -50,13 +42,36 @@ namespace WindowsFormsApp1.provisao
                 {
                     ListViewItem item = new ListViewItem(reader["Acao"].ToString());
                     item.SubItems.Add(reader["Div_Valor"].ToString());
-                    item.SubItems.Add(reader["Data_com"].ToString());
+                    item.SubItems.Add(reader["Data_Com"].ToString());
                     item.SubItems.Add(reader["Data_Pag"].ToString());
+                    item.SubItems.Add(reader["Total"].ToString());
 
                     listView1.Items.Add(item);
                 }
             }
         }
+
+        private void AtualizarTotal()
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string query = "UPDATE PROVISAO SET Total = (SELECT SUM(Quantidade) FROM PAPEL WHERE PAPEL.Acao = PROVISAO.Acao) * Div_Valor";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao atualizar os dados: " + ex.Message);
+                }
+            }
+        }
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -139,6 +154,7 @@ namespace WindowsFormsApp1.provisao
                     {
                         connection.Open();
                         command.ExecuteNonQuery();
+                        AtualizarTotal();  // Chama o método para atualizar a coluna 'Total'
                         MessageBox.Show("CADASTRO Realizado com Sucesso!");
                         txbAcao.Text = "";
                         txbDiv_Valor.Text = "";
@@ -155,6 +171,7 @@ namespace WindowsFormsApp1.provisao
                     MessageBox.Show("Formato de data inválido. Por favor, insira a data no formato dd/MM/yyyy.");
                 }
             }
+
             PreencherListView();
         }
 
@@ -163,6 +180,11 @@ namespace WindowsFormsApp1.provisao
             this.Close();
             FormModoOP form4 = new FormModoOP();
             form4.Show();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

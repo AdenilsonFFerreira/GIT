@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\provisao\\provisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:provisao\\provisao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,26 +27,28 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormModoOP.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs",
-              "RelativeDocumentMoniker": "FormModoOP.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs [Design]*",
-              "RelativeToolTip": "FormModoOP.cs [Design]*",
+              "Title": "provisao.cs",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\provisao\\provisao.cs",
+              "RelativeDocumentMoniker": "provisao\\provisao.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\provisao\\provisao.cs",
+              "RelativeToolTip": "provisao\\provisao.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T22:32:24.869Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-05T01:02:15.5Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormOperacao.cs [Design]",
+              "Title": "FormOperacao.cs",
               "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs",
               "RelativeDocumentMoniker": "FormOperacao.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs [Design]",
-              "RelativeToolTip": "FormOperacao.cs [Design]",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs",
+              "RelativeToolTip": "FormOperacao.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAUwFgAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T18:47:47.898Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-05T00:31:34.58Z",
+              "EditorCaption": ""
             }
           ]
         }

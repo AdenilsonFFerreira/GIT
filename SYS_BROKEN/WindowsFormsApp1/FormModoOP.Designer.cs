@@ -163,6 +163,7 @@
             this.Controls.Add(this.btnOperacao);
             this.Name = "FormModoOP";
             this.Text = "MODO DE OPERAÇÃO";
+            this.Load += new System.EventHandler(this.FormModoOP_Load);
             this.ResumeLayout(false);
 
         }

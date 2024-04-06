@@ -223,29 +223,6 @@ namespace WindowsFormsApp1
             return papeis;
         }
 
-        /*
-        public DataTable Busca_Papel(BuscaPapel buscapapel)
-        {
-            DataTable dataTable = new DataTable();
-
-            using (SqlCommand cmd = new SqlCommand())
-            {
-                // Comando SQL para selecionar todos os dados da tabela PAPEL
-                cmd.CommandText = "SELECT * FROM PAPEL";
-
-                // Configuração da conexão
-                cmd.Connection = this.Conectar();
-
-                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
-                {
-                    // Preenche o DataTable com os dados da tabela
-                    adapter.Fill(dataTable);
-                }
-            }
-
-            // Retorna o DataTable com os dados
-            return dataTable;
-        }
-        */
+        
     }
 }

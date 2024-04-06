@@ -90,6 +90,11 @@ namespace WindowsFormsApp1
             formPatrimonio.Show();
             this.Close();
         }
+
+        private void FormModoOP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
