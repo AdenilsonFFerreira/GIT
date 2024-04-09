@@ -50,6 +50,7 @@
             this.txbData_Pag = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnComparar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -260,11 +261,22 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnComparar
+            // 
+            this.btnComparar.Location = new System.Drawing.Point(860, 125);
+            this.btnComparar.Name = "btnComparar";
+            this.btnComparar.Size = new System.Drawing.Size(144, 43);
+            this.btnComparar.TabIndex = 20;
+            this.btnComparar.Text = "COMPARAR";
+            this.btnComparar.UseVisualStyleBackColor = true;
+            this.btnComparar.Click += new System.EventHandler(this.btnComparar_Click);
+            // 
             // provisao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 604);
+            this.ClientSize = new System.Drawing.Size(1145, 604);
+            this.Controls.Add(this.btnComparar);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.txbData_Pag);
             this.Controls.Add(this.label9);
@@ -319,5 +331,6 @@
         private System.Windows.Forms.TextBox txbData_Pag;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnComparar;
     }
 }

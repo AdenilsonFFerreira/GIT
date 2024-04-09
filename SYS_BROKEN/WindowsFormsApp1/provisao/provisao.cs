@@ -186,5 +186,10 @@ namespace WindowsFormsApp1.provisao
         {
 
         }
+
+        private void btnComparar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
