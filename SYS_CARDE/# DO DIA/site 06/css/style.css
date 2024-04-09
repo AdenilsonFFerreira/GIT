@@ -49,11 +49,13 @@ nav{
 nav ul{
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
+    width: 30%;
 }
     
-nav ul li{
+/* nav ul li{
     margin-left: 100%;
-}
+} */
 
 .btn-cadastro button{
     background-color: rgb(202, 39, 161);
@@ -153,6 +155,29 @@ footer{
     color: #d3d2d2;
 }
 
+.card{
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+    box-shadow: 2p 2px 2px rgba 0, 0, 0, 0.5;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.card img{
+    max-width: 100%;
+   margin-bottom: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+/*@media normalmente fica em ultimo */
 @media screen and (max-width: 500px){
     .rodape{
         display: block;
@@ -175,4 +200,19 @@ footer{
         padding: 10% 0;
 
     }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul{
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+    }
 }
+
