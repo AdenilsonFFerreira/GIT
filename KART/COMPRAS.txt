@@ -1,0 +1,5 @@
+1500
+165,07	megakart
+63,13	paralego
+12,75	taxa ted
+200	rolamentos
