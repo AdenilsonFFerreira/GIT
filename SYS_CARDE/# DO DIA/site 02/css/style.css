@@ -16,7 +16,7 @@ body{
 }
 
 header{
-    background-color: rgb(38,38,109);
+    background-color: rgb(38,38,109);    
 }
 
 header h1 a, header h2{
@@ -24,7 +24,7 @@ header h1 a, header h2{
 }
 
 header h1, header h2{
-    text-align: right;
+    text-align: center;
     padding: 10px;
 }
 
