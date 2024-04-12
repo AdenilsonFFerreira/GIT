@@ -23,6 +23,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
         public bool ValidaCPF(string cpf)
         {
             int[] multiplicador1 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -68,6 +69,21 @@ namespace WindowsFormsApp1
             return cpf.EndsWith(digito);
         }
 
+        /*private void SaveImagePath(string imagePath, int usuarioId)
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "UPDATE LOGIN SET Foto = @Foto WHERE UsuarioID = @UsuarioID";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@Foto", imagePath);
+                    command.Parameters.AddWithValue("@UsuarioID", usuarioId);
+                    command.ExecuteNonQuery();
+                }
+            }
+        }*/
 
         private void Label1_Click(object sender, EventArgs e)
         {
@@ -97,6 +113,7 @@ namespace WindowsFormsApp1
                 txbCpf.Focus();
                 return;
             }
+
             // Verificação se o CPF já existe no banco de dados
             string cpf = txbCpf.Text;
             SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
@@ -128,7 +145,10 @@ namespace WindowsFormsApp1
                 senha = builder.ToString();
             }
 
-            Login login = new Login(txbUsuario.Text, senha);
+            // Caminho da imagem
+            string imagePath = pictureBox1.ImageLocation;
+
+            Login login = new Login(txbUsuario.Text, senha, imagePath);  // Adicione o caminho da imagem como um novo parâmetro
             MessageBox.Show(conexao.Cadastrar_Usuario(login));
 
             Usuario usuario = new Usuario(txbNome.Text,
@@ -145,6 +165,8 @@ namespace WindowsFormsApp1
 
             conexao.Inserir_Usuario(usuario);
         }
+
+
 
         private void Label13_Click(object sender, EventArgs e)
         {
@@ -185,7 +207,33 @@ namespace WindowsFormsApp1
 
         private void txbCpf_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        string savePathGlobal; // Variável global para armazenar o caminho da imagem
+
+        private void btnFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Imagens (*.BMP;*.JPG;*.GIF,*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG";
+            openFileDialog.Title = "Selecione a imagem";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string sourcePath = openFileDialog.FileName;
+                string targetPath = @"C:\GIT\SYS_BROKEN\bd\imagens\" + txbUsuario.Text + Path.GetExtension(sourcePath);
+
+                System.IO.File.Copy(sourcePath, targetPath, true);
+
+                pictureBox1.ImageLocation = targetPath;
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

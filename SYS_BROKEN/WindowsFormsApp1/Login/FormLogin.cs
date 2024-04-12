@@ -9,6 +9,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -87,5 +88,46 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            string usuario = txtUsuario.Text;
+            // Supondo que você tenha uma função `GetImagePath` para obter o caminho da imagem do banco de dados.
+            string imagePath = GetImagePath(usuario);
+            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+            {
+                pictureBox1.Image = System.Drawing.Image.FromFile(imagePath);
+                pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else
+            {
+                pictureBox1.Image = null;
+            }
+        }
+
+        private string GetImagePath(string usuario)
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string imagePath = null;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "SELECT Foto FROM LOGIN WHERE Usuario = @Usuario";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@Usuario", usuario);
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            imagePath = reader["Foto"] as string;
+                        }
+                    }
+                }
+            }
+            return imagePath;
+        }
+
+
     }
 }

@@ -30,6 +30,7 @@
         {
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnTrocarsenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuario
@@ -54,11 +55,21 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnTrocarsenha
+            // 
+            this.btnTrocarsenha.Location = new System.Drawing.Point(235, 76);
+            this.btnTrocarsenha.Name = "btnTrocarsenha";
+            this.btnTrocarsenha.Size = new System.Drawing.Size(75, 23);
+            this.btnTrocarsenha.TabIndex = 2;
+            this.btnTrocarsenha.Text = "Trocar a Senha";
+            this.btnTrocarsenha.UseVisualStyleBackColor = true;
+            // 
             // FormConfiguracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnTrocarsenha);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FormConfiguracoes";
@@ -71,5 +82,6 @@
 
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnTrocarsenha;
     }
 }

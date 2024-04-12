@@ -82,11 +82,12 @@ namespace WindowsFormsApp1
             String mensagem;
 
             //comando sql  --SqlCommand
-            cmd.CommandText = "insert into LOGIN (Usuario, Senha) values (@usuario, @senha)";
+            cmd.CommandText = "insert into LOGIN (Usuario, Senha, Foto) values (@usuario, @senha, @foto)";
 
             //parametros
-            cmd.Parameters.AddWithValue("@usuario", login.usuario);
-            cmd.Parameters.AddWithValue("@senha", login.senha);
+            cmd.Parameters.AddWithValue("@usuario", login.Usuario);
+            cmd.Parameters.AddWithValue("@senha", login.Senha);
+            cmd.Parameters.AddWithValue("@foto", login.Foto);
 
             try
             {

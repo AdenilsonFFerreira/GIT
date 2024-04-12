@@ -1,0 +1,87 @@
+https://brapi.dev/
+https://edsmartbi.com.br/cotacoes-b3-api-power-bi/
+
+Existem várias APIs disponíveis que fornecem informações sobre a cotação de ações na bolsa de valores. Aqui estão algumas opções populares:
+
+Alpha Vantage: Oferece uma API gratuita que fornece dados históricos e em tempo real para ações, forex e criptomoedas.
+
+Website: https://www.alphavantage.co/
+Yahoo Finance API: Embora não seja oficial, muitos desenvolvedores utilizam esta API para obter dados de cotações de ações.
+
+Exemplo de URL: https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL
+IEX Cloud: Fornece dados financeiros em tempo real, incluindo cotações de ações, dados de mercado e mais.
+
+Website: https://iexcloud.io/
+Quandl: Oferece uma vasta gama de dados financeiros, incluindo dados de mercado de ações.
+
+Website: https://www.quandl.com/
+Alpha Vantage: Fornece uma API gratuita que permite acessar dados de mercado, incluindo cotações de ações.
+
+Website: https://www.alphavantage.co/
+
+Existem diversas opções de APIs para buscar cotações de ações na bolsa de valores, cada uma com suas vantagens e desvantagens. Aqui estão algumas das opções mais populares:
+
+B3:
+
+brapi:
+Vantagens:
+Oficial da B3, com alta confiabilidade e precisão dos dados.
+Acesso a diversos indicadores de mercado, como cotações, históricos de preços, dividendos e fundamentos das empresas.
+Documentação completa e amigável, com exemplos de código em diversos linguagens de programação.
+Desvantagens:
+Requer cadastro e aprovação para utilizar a API em produção.
+Possui um plano gratuito com algumas limitações, como volume de requisições por dia.
+Interface web não tão intuitiva para iniciantes.
+B3 Dados:
+Vantagens:
+Acesso a dados históricos de mercado abrangendo mais de 20 anos.
+Permite download de dados em diversos formatos, como CSV e Excel.
+Possibilidade de consultar indicadores específicos, como volume de negócios e preço médio ponderado.
+Desvantagens:
+Não oferece cotações em tempo real.
+Interface web um pouco complexa para iniciantes.
+Requer pagamento para acessar dados mais recentes.
+Outras APIs:
+
+HG Brasil:
+Vantagens:
+Além de cotações de ações, oferece informações sobre dólar, dividendos e taxa Selic.
+Acesso a dados históricos e em tempo real.
+Interface web amigável e fácil de usar.
+Desvantagens:
+Gratuita com algumas limitações, como volume de requisições por dia.
+Menos abrangente que as APIs da B3 em termos de indicadores de mercado.
+Não é oficial da B3, então a confiabilidade dos dados pode ser um pouco menor.
+Alpha Vantage:
+Vantagens:
+Gratuita e de fácil utilização.
+Oferece cotações de ações de diversas bolsas ao redor do mundo.
+Permite consultar indicadores técnicos, como médias móveis e MACD.
+Desvantagens:
+Limite de 5 requisições por segundo, o que pode ser um problema para aplicações com alto volume de tráfego.
+Dados históricos limitados a 20 anos.
+Não oferece cotações em tempo real para todas as bolsas.
+Escolhendo a API ideal:
+
+A melhor API para você vai depender das suas necessidades específicas. Se você precisa de dados oficiais da B3 e de uma grande variedade de indicadores de mercado, a brapi é uma boa opção. Se você precisa apenas de cotações em tempo real e históricos de preços, a HG Brasil ou a Alpha Vantage podem ser suficientes.
+
+Dicas:
+
+Antes de escolher uma API, leia a documentação com atenção e verifique os planos de preços e as limitações de cada uma.
+Teste a API com dados de teste antes de utilizá-la em produção.
+Utilize ferramentas de autenticação e autorização para proteger seu acesso à API.
+Monitore o uso da API e faça ajustes conforme necessário.
+Recursos adicionais:
+
+Comparação de APIs de ações: [URL inválido removido]
+Tutorial brapi: https://www.youtube.com/watch?v=oIhrwXDbs1M
+Documentação brapi: https://brapi.dev/
+Documentação B3 Dados: [URL inválido removido]
+Documentação HG Brasil: https://hgbrasil.com/status/finance
+Documentação Alpha Vantage: https://www.alphavantage.co/
+Espero que esta informação seja útil! Se você tiver mais dúvidas, não hesite em perguntar.
+
+
+
+
+O Gemini pode apresentar informações imprec
