@@ -1,4 +1,5 @@
-header{
+
+/* header{
     text-align: center;
     background-color: #5fd1b8
     
@@ -36,21 +37,14 @@ footer{
     background-color: #5fd1b8;
     display: flex;
     justify-content: space-around;
-}
+} */
+ */
 
 
 
 
-
-
-
-
-
-
-
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     padding: 0;
@@ -150,5 +144,4 @@ body{
         width: 100%;
 
     }
-}
- */
+} */
