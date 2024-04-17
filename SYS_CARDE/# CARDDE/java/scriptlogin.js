@@ -1,17 +1,24 @@
 function mostrarDataHora() {
-    var d = new Date();
+    const elementoDataHora = document.getElementById("datahora"); // Substitua "demo" pelo ID do elemento onde você quer exibir a data e a hora
 
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
-    var dataFormatada = d.toLocaleString('pt-BR', options);
+    function atualizarDataHora() {
+        const agora = new Date();
+        const diaSemana = agora.toLocaleString('pt-BR', { weekday: 'long' });
+        const dataFormatada = agora.toLocaleString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
+        const hora = agora.getHours();
+        const minutos = agora.getMinutes();
+        const segundos = agora.getSeconds();
 
-    // Capitalize a primeira letra do dia da semana
-    dataFormatada = dataFormatada.charAt(0).toUpperCase() + dataFormatada.slice(1).toLowerCase();
+        // Formate a hora, minutos e segundos com dois dígitos
+        const horaFormatada = hora.toString().padStart(2, '0');
+        const minutosFormatados = minutos.toString().padStart(2, '0');
+        const segundosFormatados = segundos.toString().padStart(2, '0');
 
-    // Substitua o "às" por um traço e adicione "hs" após os minutos
-    dataFormatada = dataFormatada.replace('às', '-').replace(' ', '') + 'hs';
+        // Exiba a data e a hora no formato "Dia da Semana, DD de Mês de Ano - HH:mm:ss hs"
+        const dataHoraCompleta = `${diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1)}, ${dataFormatada} - ${horaFormatada}:${minutosFormatados}:${segundosFormatados} hs`;
+        elementoDataHora.innerHTML = dataHoraCompleta;
+    }
 
-    // Adicione uma vírgula após o dia da semana
-    dataFormatada = dataFormatada.replace(/(^\w+)(\s)/, '$1,$2');
-
-    document.getElementById("demo").innerHTML = dataFormatada;
+    // Atualize a data e a hora a cada segundo
+    setInterval(atualizarDataHora, 1000);
 }
