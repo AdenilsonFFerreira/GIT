@@ -14,9 +14,14 @@ LET escopo local -->
 <body>
    <script>
 
-        var n = Math.random()
+        var min = parseInt(prompt('Digite o valor minimo'))
+        var max = parseInt(prompt('Digite o valor maximo'))
+        var n = Math.round(Math.random() * (max-min)+min)
+        console.log(n)       
+
+        /* var n = Math.round(Math.random()*5)
        
-        console.log(n)    
+        console.log(n)   */  
 
         /* var n = parseInt(prompt('Digite um numero para elevar ao quadrado²'))
         var r = Math.pow(n,2)
