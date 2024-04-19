@@ -114,6 +114,13 @@ namespace WindowsFormsApp1
                 return;
             }
 
+            if (string.IsNullOrEmpty(txbEmail.Text))
+            {
+                MessageBox.Show("O campo de e-mail é obrigatório!");
+                txbEmail.Focus();
+                return;
+            }
+
             // Verificação se o CPF já existe no banco de dados
             string cpf = txbCpf.Text;
             SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");

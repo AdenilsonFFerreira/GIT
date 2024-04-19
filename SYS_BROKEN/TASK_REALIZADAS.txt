@@ -1,0 +1,3 @@
+correções
+12/04 - anexão foto ao banco de dados
+12/04 - puxar a foto quando digita o usuario no login

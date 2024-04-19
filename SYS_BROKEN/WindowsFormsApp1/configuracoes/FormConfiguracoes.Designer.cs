@@ -57,11 +57,11 @@
             // 
             // btnTrocarsenha
             // 
-            this.btnTrocarsenha.Location = new System.Drawing.Point(235, 76);
+            this.btnTrocarsenha.Location = new System.Drawing.Point(610, 55);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
-            this.btnTrocarsenha.Size = new System.Drawing.Size(75, 23);
+            this.btnTrocarsenha.Size = new System.Drawing.Size(139, 45);
             this.btnTrocarsenha.TabIndex = 2;
-            this.btnTrocarsenha.Text = "Trocar a Senha";
+            this.btnTrocarsenha.Text = "TROCA A SENHA";
             this.btnTrocarsenha.UseVisualStyleBackColor = true;
             // 
             // FormConfiguracoes
