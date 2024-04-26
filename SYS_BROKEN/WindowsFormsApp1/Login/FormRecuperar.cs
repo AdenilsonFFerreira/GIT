@@ -113,9 +113,7 @@ namespace WindowsFormsApp1
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            formLogin.Show();
-
+            this.Hide();
         }
     }
 }

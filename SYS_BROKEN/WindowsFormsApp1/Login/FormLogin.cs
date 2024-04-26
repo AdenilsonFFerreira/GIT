@@ -80,8 +80,11 @@ namespace WindowsFormsApp1
 
         private void LblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormCadastrar form3 = new FormCadastrar();
+            /*FormCadastrar form3 = new FormCadastrar();
             form3.Show();
+            */
+            FormAdmin formAdmin = new FormAdmin();
+            formAdmin.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)

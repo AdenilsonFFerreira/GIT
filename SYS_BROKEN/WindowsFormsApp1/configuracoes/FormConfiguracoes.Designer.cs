@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FormConfiguracoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONFIGURAÇÕES";
             this.ResumeLayout(false);
 

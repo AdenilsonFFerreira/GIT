@@ -89,6 +89,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "FormRecuperar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RECUPERAR A SENHA";
             this.Load += new System.EventHandler(this.FormRecuperar_Load);
             this.ResumeLayout(false);
