@@ -149,6 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "patrimonio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patrimônio";
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

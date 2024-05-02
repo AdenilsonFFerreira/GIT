@@ -44,3 +44,4 @@ C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.carregarperfil.car
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.patrimonio.patrimonio.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.analise.analise.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.fi.fi.resources
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAdmin.resources

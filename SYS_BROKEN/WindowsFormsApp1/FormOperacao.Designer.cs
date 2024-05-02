@@ -47,7 +47,6 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.ltvMercado = new System.Windows.Forms.ListView();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -220,7 +219,6 @@
             // 
             this.ltvMercado.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader4,
-            this.columnHeader5,
             this.columnHeader6});
             this.ltvMercado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltvMercado.ForeColor = System.Drawing.SystemColors.InfoText;
@@ -228,7 +226,7 @@
             this.ltvMercado.HideSelection = false;
             this.ltvMercado.Location = new System.Drawing.Point(12, 14);
             this.ltvMercado.Name = "ltvMercado";
-            this.ltvMercado.Size = new System.Drawing.Size(209, 403);
+            this.ltvMercado.Size = new System.Drawing.Size(149, 403);
             this.ltvMercado.TabIndex = 9;
             this.ltvMercado.UseCompatibleStateImageBehavior = false;
             this.ltvMercado.View = System.Windows.Forms.View.Details;
@@ -238,11 +236,6 @@
             // 
             this.columnHeader4.Text = "Ação";
             this.columnHeader4.Width = 64;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Quantidade";
-            this.columnHeader5.Width = 66;
             // 
             // columnHeader6
             // 
@@ -254,7 +247,7 @@
             this.panel3.Controls.Add(this.ltvMercado);
             this.panel3.Location = new System.Drawing.Point(318, 91);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(231, 433);
+            this.panel3.Size = new System.Drawing.Size(173, 433);
             this.panel3.TabIndex = 13;
             // 
             // FormOperacao
@@ -270,6 +263,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "FormOperacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OPERAÇÃO";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.panel1.ResumeLayout(false);
@@ -302,7 +296,6 @@
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.ListView ltvMercado;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Panel panel3;
     }

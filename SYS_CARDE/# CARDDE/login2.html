@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang=“pt-br”>
+
+<head>
+    <meta charset=“UTF-8”>
+    <title>MUSEU - Login</title>
+    <link rel="stylesheet" href="css/stylelogin.css">
+    <link rel="shortcut icon" href="icones/03ico.ico" type="image/x-icon">
+</head>
+
+<body> 
+    <div id="container">
+        <header id="bemvindo">
+            <h1>MUSEU</h1>
+            <h2>BOM DIA.</h2>
+            <h3>Seja Bem vindo ao Sistema.</h3>
+            <br>
+
+            <p id="datahora"></p>                
+                <script src="java/scriptlogin.js"></script>
+            <script>
+            window.onload = mostrarDataHora;           
+            </script>
+        </header>
+
+        <section id="Login">
+            <div id="login">        
+                <img src="imagens/01foto.jpeg">            
+                <br><br>
+                <form>
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="ususario" required>
+                    
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>           
+                </form>
+        
+                <a href="recuperar.html"><h6>Recuperar Senha</h6></a>
+                
+                <a href="home.html">
+                    <button type="submit">LOGIN</button>
+                </a>       
+                   
+                <button onclick="window.close();">FECHAR</button>
+            </div>          
+           
+        </section>
+
+        <section id="menu">
+
+        </section>
+
+        <section>
+
+        </section>
+
+        <footer>
+
+        </footer>
+
+    </div>   
+</body>
+</html>
