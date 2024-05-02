@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1
 {
@@ -53,7 +54,19 @@ namespace WindowsFormsApp1
         {
             string usuario = txtUsuario.Text;
             string senha = txtSenha.Text;
-          
+
+            // Criptografar a senha
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                senha = builder.ToString();
+            }
+
             string tipoUsuario = ValidarUsuario(usuario, senha);
 
             if (tipoUsuario.Equals("Admin", StringComparison.OrdinalIgnoreCase))
@@ -66,8 +79,8 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Acesso negado. Somente administradores podem acessar este recurso.");
             }
-
         }
+
 
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -78,6 +91,11 @@ namespace WindowsFormsApp1
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

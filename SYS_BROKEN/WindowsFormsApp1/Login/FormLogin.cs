@@ -131,6 +131,9 @@ namespace WindowsFormsApp1
             return imagePath;
         }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
