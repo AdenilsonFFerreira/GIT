@@ -25,7 +25,8 @@ namespace WindowsFormsApp1
         public FormOperacao()
         {
             InitializeComponent();
-            FetchAndFillListView2(); 
+            //FetchAndFillListView2();
+            FetchAndFillListView2("DOL");
             update_list_view();
 
         }
@@ -276,30 +277,45 @@ namespace WindowsFormsApp1
 
         }
 
-        private async void FetchAndFillListView2()
+        private async void FetchAndFillListView2(string symbol)
         {
             string apiKey = "0L8VA6QQANQW0EFD"; // Substitua por sua chave API da Alpha Vantage
-            string symbol = "MSFT"; // Substitua pelo símbolo da ação que você deseja buscar
 
             HttpClient client = new HttpClient();
             string response = await client.GetStringAsync($"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}");
 
             JObject data = JObject.Parse(response);
+
+            if (data.ContainsKey("Error Message"))
+            {
+                // A API retornou uma mensagem de erro, mostre-a ao usuário
+                MessageBox.Show(data["Error Message"].ToString());
+                return;
+            }
+
+            if (!data.ContainsKey("Time Series (Daily)"))
+            {
+                // A resposta da API não contém a chave "Time Series (Daily)", mostre uma mensagem de erro ao usuário
+                MessageBox.Show("Não foi possível obter os dados da série temporal diária.");
+                return;
+            }
+
             JToken timeSeries = data["Time Series (Daily)"];
 
             listView2.Items.Clear();
 
             foreach (JProperty day in timeSeries)
             {
-                ListViewItem item = new ListViewItem(day.Name);
-                item.SubItems.Add(day.Value["1. open"].ToString());
-                item.SubItems.Add(day.Value["2. high"].ToString());
-                item.SubItems.Add(day.Value["3. low"].ToString());
-                item.SubItems.Add(day.Value["4. close"].ToString());
+                ListViewItem item = new ListViewItem(symbol); // Adiciona o símbolo da ação como o primeiro item
+                item.SubItems.Add(day.Name); // Adiciona a data como o segundo item
+                item.SubItems.Add(day.Value["4. close"].ToString()); // Adiciona o preço de fechamento como o terceiro item
 
                 listView2.Items.Add(item);
             }
         }
+
+
+
     }
 }
 
