@@ -15,6 +15,8 @@ using System.Globalization;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+
 
 namespace WindowsFormsApp1
 {
@@ -23,7 +25,7 @@ namespace WindowsFormsApp1
         public FormOperacao()
         {
             InitializeComponent();
-
+            FetchAndFillListView2(); 
             update_list_view();
 
         }
@@ -267,6 +269,36 @@ namespace WindowsFormsApp1
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listView2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void FetchAndFillListView2()
+        {
+            string apiKey = "0L8VA6QQANQW0EFD"; // Substitua por sua chave API da Alpha Vantage
+            string symbol = "MSFT"; // Substitua pelo símbolo da ação que você deseja buscar
+
+            HttpClient client = new HttpClient();
+            string response = await client.GetStringAsync($"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}");
+
+            JObject data = JObject.Parse(response);
+            JToken timeSeries = data["Time Series (Daily)"];
+
+            listView2.Items.Clear();
+
+            foreach (JProperty day in timeSeries)
+            {
+                ListViewItem item = new ListViewItem(day.Name);
+                item.SubItems.Add(day.Value["1. open"].ToString());
+                item.SubItems.Add(day.Value["2. high"].ToString());
+                item.SubItems.Add(day.Value["3. low"].ToString());
+                item.SubItems.Add(day.Value["4. close"].ToString());
+
+                listView2.Items.Add(item);
+            }
         }
     }
 }

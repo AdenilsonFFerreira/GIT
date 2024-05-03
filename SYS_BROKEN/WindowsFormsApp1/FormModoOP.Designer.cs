@@ -79,7 +79,7 @@
             // 
             this.btnConfiguracao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnConfiguracao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracao.Location = new System.Drawing.Point(99, 246);
+            this.btnConfiguracao.Location = new System.Drawing.Point(294, 247);
             this.btnConfiguracao.Name = "btnConfiguracao";
             this.btnConfiguracao.Size = new System.Drawing.Size(147, 58);
             this.btnConfiguracao.TabIndex = 3;
@@ -115,7 +115,7 @@
             // 
             this.btnPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfil.Location = new System.Drawing.Point(290, 246);
+            this.btnPerfil.Location = new System.Drawing.Point(99, 247);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(147, 58);
             this.btnPerfil.TabIndex = 6;
