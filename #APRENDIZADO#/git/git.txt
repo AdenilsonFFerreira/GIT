@@ -1,0 +1,8 @@
+git  - pra cria o repositorio em uma pasta ele vai criar a pasta .git para que o git possa começar a reconheçer
+git status - par ver o status do projeto
+git add - adicionas os arquivos no projeto
+git commit (a - m) - salva alterações feitas no projeto
+git push - envia a alterações para o servidor na NET
+git pull - para receber as alterações novas da internet
+
+git clone - puxar um projeto que esta na net
