@@ -36,7 +36,7 @@
             // btnUsuario
             // 
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.Location = new System.Drawing.Point(58, 54);
+            this.btnUsuario.Location = new System.Drawing.Point(143, 227);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(139, 45);
             this.btnUsuario.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             // btnTrocarsenha
             // 
-            this.btnTrocarsenha.Location = new System.Drawing.Point(610, 55);
+            this.btnTrocarsenha.Location = new System.Drawing.Point(545, 227);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
             this.btnTrocarsenha.Size = new System.Drawing.Size(139, 45);
             this.btnTrocarsenha.TabIndex = 2;
@@ -73,6 +73,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
             this.Name = "FormConfiguracoes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONFIGURAÇÕES";
             this.ResumeLayout(false);
 

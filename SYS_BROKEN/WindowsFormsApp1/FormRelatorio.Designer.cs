@@ -149,6 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FormRelatorio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RELATORIO";
             this.Load += new System.EventHandler(this.FormRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

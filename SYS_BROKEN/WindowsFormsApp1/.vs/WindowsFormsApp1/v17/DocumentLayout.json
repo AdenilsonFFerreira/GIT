@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formrecuperar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formrecuperar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formrecuperar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formrecuperar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,77 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormModoOP.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs",
-              "RelativeDocumentMoniker": "FormModoOP.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs",
-              "RelativeToolTip": "FormModoOP.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAiwBwAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T01:21:32.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormModoOP.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs",
-              "RelativeDocumentMoniker": "FormModoOP.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormModoOP.cs [Design]",
-              "RelativeToolTip": "FormModoOP.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T01:21:30.456Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Login\\FormLogin.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeToolTip": "Login\\FormLogin.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAqwA8AAAApAAAA",
+              "Title": "FormOperacao.cs [Design]",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs",
+              "RelativeDocumentMoniker": "FormOperacao.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs [Design]",
+              "RelativeToolTip": "FormOperacao.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T01:20:18.974Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-03T01:02:37.763Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Login\\FormLogin.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs [Design]",
-              "RelativeToolTip": "Login\\FormLogin.cs [Design]",
+              "Title": "FormOperacao.cs",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs",
+              "RelativeDocumentMoniker": "FormOperacao.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\FormOperacao.cs",
+              "RelativeToolTip": "FormOperacao.cs",
+              "ViewState": "AQIAABQBAAAAAAAAAAAswBkBAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T01:20:17.118Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormRecuperar.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormRecuperar.cs",
-              "RelativeDocumentMoniker": "Login\\FormRecuperar.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormRecuperar.cs [Design]",
-              "RelativeToolTip": "Login\\FormRecuperar.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:30:14.644Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormRecuperar.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormRecuperar.cs",
-              "RelativeDocumentMoniker": "Login\\FormRecuperar.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormRecuperar.cs",
-              "RelativeToolTip": "Login\\FormRecuperar.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAAAHUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T23:22:38.479Z",
+              "WhenOpened": "2024-05-03T00:32:25.384Z",
               "EditorCaption": ""
             }
           ]

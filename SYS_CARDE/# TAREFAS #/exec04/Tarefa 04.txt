@@ -1,0 +1,14 @@
+Exercício 04
+Vence hoje às 23:59
+Instruções
+Prezados alunos,
+
+segue os exercícios.
+
+   1) Escreva um programa em JavaScript que faça a soma, a subtração, a multiplicação e a divisão de dois números e retorne os resultados.
+
+   2) Escreva um programa em JavaScript que leia uma quantidade de horas, minutos e segundos e imprima o total de segundos.
+
+   3) Escreva um programa em JavaScript que leia a quantidade de segundos e imprima esse valor convertido para horas, minutos e segundos.‮
+
+   4) Escreva um programa em JavaScript para efetuar a troca dos valores de forma que a variável A passe a possuir o valor da variável B e que a variável B passe a possuir o valor da variável A. Apresentar os valores trocados.
