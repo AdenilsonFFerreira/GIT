@@ -4,22 +4,28 @@
 <head>
     <meta charset=“UTF-8”>
     <title>MUSEU - Login</title>
-    <link rel="stylesheet" href="css/stylelogin.css"> <!--CSS-->
+    <link rel="stylesheet" href="css/stylelogin.css">
     <link rel="shortcut icon" href="icones/03ico.ico" type="image/x-icon">
 </head>
 
-<body>
+<body> 
     <div id="container">
-        <header>
+        <header id="bemvindo">
             <h1>MUSEU</h1>
             <h2>BOM DIA.</h2>
             <h3>Seja Bem vindo ao Sistema.</h3>
-            <hr>
+            <br>
+
+            <p id="datahora"></p>                
+                <script src="java/scriptlogin.js"></script>
+            <script>
+            window.onload = mostrarDataHora;           
+            </script>
         </header>
-    
-        <section>
-            <div>
-                <img src="imagens/01login.png" alt="Foto de Perfil">            
+
+        <section id="Login">
+            <div id="login">        
+                <img src="imagens/01foto.jpeg">            
                 <br><br>
                 <form>
                     <label for="usuario">Usuário:</label>
@@ -36,17 +42,23 @@
                 </a>       
                    
                 <button onclick="window.close();">FECHAR</button>
-            </div> 
-        </section>
+            </div>          
            
-        
-        
+        </section>
+
+        <!-- <section id="menu">
+
+        </section>
+
+        <section>
+
+        </section> -->
+
         <footer>
             <div class="conteudo">
                 <div class="rodape">
                     <div class="um">
-                        <p>% 2024 - Todos os Direitos Reservados</p>
-                        <p>Ultima Atualização - 10 de abril de 2024. </p>
+                        <p>Lorem, ipsum dolor sit amet </p>
                     </div>
                     <div class="dois">
                         <h3>Redes Sociais</h3>
@@ -59,19 +71,14 @@
                         </div>
                     </div>
                     <div class="tres">
-                        <h3>Contato</h3>
-                        <h4>Adenilson Fernandes Ferreira</h4>
-                        <h4>E-mail: adenilson@outlook.com</h4>
-                        <h4>Telefone: (12) 98827-5865</h4>
-                        <h4>Campos do Jordão - SP</h4>
-                    </div>                   
+                        <p>Lorem, ipsum dolor sit amet </p>
+                    </div>
                 </div>
                
             </div>
+
         </footer>
-    </div>
-       
-           
-    
+
+    </div>   
 </body>
 </html>

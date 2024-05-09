@@ -20,6 +20,13 @@ body{
     height: 100vh;     
 }
 
+body, #container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
 #login{       
     
     background-color: #dedede;
@@ -43,68 +50,11 @@ img{
     box-shadow: 2px 2px 2px #424242; 
 }
 
-/*body{
-    background-color: #dedede;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;    
-} 
-
-
-div{    
-    width: 180px;
-    border: 2px solid #424242;
-    border-radius: 10px;
-    padding: 50px;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-}
-
 footer{
-    background-color: #5fd1b8;
-    display: flex;
-    justify-content: space-around;
-} */
+    background-color: rgb(120, 129, 200);
+    margin-top: auto;
 
-
-
-
-
-/* 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-
-
-body{   
-    background-image: url('../imagens/01img.jpg');
-    background-repeat: repeat;         
 }
-
-
-
-#container{
-    width: 100%;
-}
-
-.conteudo{
-    width: 90%;
-    margin: 0 auto;
-    padding: 5% 0;
-}
-
-.conteudo h1{
-    margin-bottom: 2%;
-}
-
-.conteudo p{
-    margin-bottom: 1%;
-}
-
 
 .rodape{
     display: flex;
@@ -113,7 +63,7 @@ body{
 }
 
 .um, .dois, .tres{
-    color: black;
+    color: #fff;
 }
 
 .redes-sociais{
@@ -134,7 +84,29 @@ body{
     color: #d3d2d2;
 }
 
+.card{
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+    box-shadow: 2p 2px 2px rgba 0, 0, 0, 0.5;
+    border-radius: 10px;
+    margin: 10px;
+}
 
+.card img{
+    max-width: 100%;
+   margin-bottom: 10px;
+}
+
+.cards{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+/*@media normalmente fica em ultimo */
 @media screen and (max-width: 500px){
     .rodape{
         display: block;
@@ -146,7 +118,7 @@ body{
     }
 
     .redes-sociais{
-        display: inline;
+        display: inline;    
     }
 
     .redes-sociais a{
