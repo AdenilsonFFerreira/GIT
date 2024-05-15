@@ -58,8 +58,8 @@
     <Compile Include="analise\analise.Designer.cs">
       <DependentUpon>analise.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro.cs" />
-    <Compile Include="BuscaPapel.cs" />
+    <Compile Include="operacao\Cadastro.cs" />
+    <Compile Include="operacao\BuscaPapel.cs" />
     <Compile Include="carregarperfil\carregarperfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,13 +84,19 @@
     <Compile Include="Login\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="modoop\FormAlertas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modoop\FormAlertas.Designer.cs">
+      <DependentUpon>FormAlertas.cs</DependentUpon>
+    </Compile>
     <Compile Include="patrimonio\patrimonio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="patrimonio\patrimonio.Designer.cs">
       <DependentUpon>patrimonio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pesquisa.cs" />
+    <Compile Include="operacao\Pesquisa.cs" />
     <Compile Include="FormRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,7 +110,7 @@
     <Compile Include="provisao\provisao.Designer.cs">
       <DependentUpon>provisao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Login\Usuario.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Login\FormLogin.cs">
       <SubType>Form</SubType>
@@ -124,21 +130,21 @@
     <Compile Include="Login\FormCadastrar.Designer.cs">
       <DependentUpon>FormCadastrar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModoOP.cs">
+    <Compile Include="modoop\FormModoOP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModoOP.Designer.cs">
+    <Compile Include="modoop\FormModoOP.Designer.cs">
       <DependentUpon>FormModoOP.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormOperacao.cs">
+    <Compile Include="operacao\FormOperacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormOperacao.Designer.cs">
+    <Compile Include="operacao\FormOperacao.Designer.cs">
       <DependentUpon>FormOperacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs" />
-    <Compile Include="Papel.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Login\Login.cs" />
+    <Compile Include="operacao\Papel.cs" />
+    <Compile Include="Login\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="analise\analise.resx">
       <DependentUpon>analise.cs</DependentUpon>
@@ -164,10 +170,13 @@
     <EmbeddedResource Include="Login\FormCadastrar.resx">
       <DependentUpon>FormCadastrar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModoOP.resx">
+    <EmbeddedResource Include="modoop\FormAlertas.resx">
+      <DependentUpon>FormAlertas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modoop\FormModoOP.resx">
       <DependentUpon>FormModoOP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormOperacao.resx">
+    <EmbeddedResource Include="operacao\FormOperacao.resx">
       <DependentUpon>FormOperacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRelatorio.resx">

@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
+using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+using WindowsFormsApp1.modoop;
 
 namespace WindowsFormsApp1
 {
@@ -55,9 +50,11 @@ namespace WindowsFormsApp1
 
                     if (leitor.HasRows)
                     {
-                        // Usuário e senha estão corretos.
                         FormModoOP form4 = new FormModoOP();
                         form4.Show();
+                        FormAlertas formAlertas = new FormAlertas();
+                        formAlertas.Show();
+
                         //como esse form é o principal (form1) não pode fechar (close)
                         //nesse caso so deixamos ele como invisivel quando é chamado o formulario
                         this.Hide();

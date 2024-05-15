@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -35,12 +28,12 @@ namespace WindowsFormsApp1
         {
             string emailUsuario = textBox1.Text;
             if (VerificarEmailCadastrado(emailUsuario))
-            {                
-                string senhaTemporaria = GerarSenhaTemporaria();               
-                AtualizarSenhaNoBancoDeDados(emailUsuario, senhaTemporaria);                
+            {
+                string senhaTemporaria = GerarSenhaTemporaria();
+                AtualizarSenhaNoBancoDeDados(emailUsuario, senhaTemporaria);
                 EnviarEmail(emailUsuario, senhaTemporaria);
                 MessageBox.Show("Um e-mail foi enviado com a nova senha temporária.");
-                MessageBox.Show("E-mail cadastrado");                
+                MessageBox.Show("E-mail cadastrado");
             }
             else
             {
@@ -65,7 +58,7 @@ namespace WindowsFormsApp1
         }
 
         private string GerarSenhaTemporaria()
-        {            
+        {
             using (RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider())
             {
                 byte[] data = new byte[4];

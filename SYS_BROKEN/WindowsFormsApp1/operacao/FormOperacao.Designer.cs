@@ -49,10 +49,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.Ação = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Valor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.listView3 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -254,26 +251,22 @@
             this.panel3.Size = new System.Drawing.Size(173, 433);
             this.panel3.TabIndex = 13;
             // 
-            // listView2
+            // listView3
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Ação,
-            this.Data,
-            this.Valor});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(519, 115);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(313, 409);
-            this.listView2.TabIndex = 14;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged_1);
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(527, 92);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(270, 431);
+            this.listView3.TabIndex = 14;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
             // 
             // FormOperacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 649);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.listView3);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel2);
@@ -317,9 +310,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ColumnHeader Ação;
-        private System.Windows.Forms.ColumnHeader Data;
-        private System.Windows.Forms.ColumnHeader Valor;
+        private System.Windows.Forms.ListView listView3;
     }
 }

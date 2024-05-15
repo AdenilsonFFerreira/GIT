@@ -1,35 +1,60 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Data.Sql;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Globalization;
-using Newtonsoft.Json;
 using System.Net.Http;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-
+using System.Net;
 
 namespace WindowsFormsApp1
 {
     public partial class FormOperacao : Form
     {
-        public FormOperacao()
-        {
-            InitializeComponent();
-            //FetchAndFillListView2();
-            FetchAndFillListView2("DOL");
-            update_list_view();
 
+        static readonly HttpClient client = new HttpClient();
+
+        private async Task AtualizarInformacoesAcoes()
+        {
+            string apiKey = "SUA_CHAVE_API"; // Substitua pela sua chave API do Alpha Vantage
+            string symbol = "MSFT"; // Substitua pelo símbolo da ação que você deseja buscar
+
+            string uri = $"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}";
+
+            using (WebClient client = new WebClient())
+            {
+                string responseBody = client.DownloadString(uri);
+
+                // Para .NET Framework
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                dynamic data = js.Deserialize(responseBody, typeof(object));
+
+                // Para .NET Core
+                // dynamic data = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(responseBody);
+
+                // Aqui você pode extrair os dados que você precisa do objeto JObject
+                // Por exemplo, vamos supor que você queira obter o preço de fechamento mais recente
+                string recentClosePrice = data["Time Series (Daily)"]
+                                            .First
+                                            .First["4. close"]
+                                            .ToString();
+
+                // Agora você pode adicionar esses dados ao seu ListView
+                ListViewItem item = new ListViewItem(symbol);
+                item.SubItems.Add(recentClosePrice);
+                listView3.Items.Add(item);
+            }
         }
+
+
+
+        public FormOperacao()
+            {
+                InitializeComponent();  
+                update_list_view();
+            }
+
 
         private void update_list_view()
         {
@@ -80,8 +105,8 @@ namespace WindowsFormsApp1
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
-        {            
-            this.Close();            
+        {
+            this.Close();
             FormModoOP form4 = new FormModoOP();
             form4.Show();
         }
@@ -270,52 +295,12 @@ namespace WindowsFormsApp1
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
+        }        
 
-        private void listView2_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void listView3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
-        private async void FetchAndFillListView2(string symbol)
-        {
-            string apiKey = "0L8VA6QQANQW0EFD"; // Substitua por sua chave API da Alpha Vantage
-
-            HttpClient client = new HttpClient();
-            string response = await client.GetStringAsync($"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}");
-
-            JObject data = JObject.Parse(response);
-
-            if (data.ContainsKey("Error Message"))
-            {
-                // A API retornou uma mensagem de erro, mostre-a ao usuário
-                MessageBox.Show(data["Error Message"].ToString());
-                return;
-            }
-
-            if (!data.ContainsKey("Time Series (Daily)"))
-            {
-                // A resposta da API não contém a chave "Time Series (Daily)", mostre uma mensagem de erro ao usuário
-                MessageBox.Show("Não foi possível obter os dados da série temporal diária.");
-                return;
-            }
-
-            JToken timeSeries = data["Time Series (Daily)"];
-
-            listView2.Items.Clear();
-
-            foreach (JProperty day in timeSeries)
-            {
-                ListViewItem item = new ListViewItem(symbol); // Adiciona o símbolo da ação como o primeiro item
-                item.SubItems.Add(day.Name); // Adiciona a data como o segundo item
-                item.SubItems.Add(day.Value["4. close"].ToString()); // Adiciona o preço de fechamento como o terceiro item
-
-                listView2.Items.Add(item);
-            }
-        }
-
-
-
     }
 }
 

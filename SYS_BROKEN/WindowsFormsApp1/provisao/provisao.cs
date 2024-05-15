@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1.provisao
 {
@@ -20,10 +12,10 @@ namespace WindowsFormsApp1.provisao
             InitializeComponent();
             PreencherListView();
             /*update_list_view();*/
-            
+
         }
 
-       
+
 
         private void PreencherListView()
         {

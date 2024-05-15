@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -48,34 +41,34 @@ namespace WindowsFormsApp1
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
-        {           
-            var form = new WindowsFormsApp1.carregarperfil.carregarperfil();            
-            form.Show();           
+        {
+            var form = new WindowsFormsApp1.carregarperfil.carregarperfil();
+            form.Show();
             this.Close();
         }
 
 
 
         private void btnProvisao_Click(object sender, EventArgs e)
-        {            
-            var formProvisao = new WindowsFormsApp1.provisao.provisao();            
-            formProvisao.Show();            
+        {
+            var formProvisao = new WindowsFormsApp1.provisao.provisao();
+            formProvisao.Show();
             this.Close();
         }
 
 
         private void btnFi_Click(object sender, EventArgs e)
-        {            
-            var formFi = new WindowsFormsApp1.fi.fi();            
-            formFi.Show();                       
+        {
+            var formFi = new WindowsFormsApp1.fi.fi();
+            formFi.Show();
             this.Close();
         }
 
 
         private void btnAnalise_Click(object sender, EventArgs e)
-        {            
-            var formAnalise = new WindowsFormsApp1.analise.analise();           
-            formAnalise.Show();            
+        {
+            var formAnalise = new WindowsFormsApp1.analise.analise();
+            formAnalise.Show();
             this.Close();
         }
 

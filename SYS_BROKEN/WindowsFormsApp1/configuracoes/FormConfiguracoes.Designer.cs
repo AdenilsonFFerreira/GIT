@@ -31,6 +31,7 @@
             this.btnUsuario = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnTrocarsenha = new System.Windows.Forms.Button();
+            this.btnAlerta = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnUsuario
@@ -40,7 +41,7 @@
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(139, 45);
             this.btnUsuario.TabIndex = 0;
-            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.Text = "USUÁRIO";
             this.btnUsuario.UseVisualStyleBackColor = true;
             // 
             // btnVoltar
@@ -61,14 +62,25 @@
             this.btnTrocarsenha.Name = "btnTrocarsenha";
             this.btnTrocarsenha.Size = new System.Drawing.Size(139, 45);
             this.btnTrocarsenha.TabIndex = 2;
-            this.btnTrocarsenha.Text = "TROCA A SENHA";
+            this.btnTrocarsenha.Text = "TROCAR A SENHA";
             this.btnTrocarsenha.UseVisualStyleBackColor = true;
+            // 
+            // btnAlerta
+            // 
+            this.btnAlerta.Location = new System.Drawing.Point(347, 221);
+            this.btnAlerta.Name = "btnAlerta";
+            this.btnAlerta.Size = new System.Drawing.Size(119, 50);
+            this.btnAlerta.TabIndex = 3;
+            this.btnAlerta.Text = "ALERTA";
+            this.btnAlerta.UseVisualStyleBackColor = true;
+            this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
             // 
             // FormConfiguracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAlerta);
             this.Controls.Add(this.btnTrocarsenha);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Button btnUsuario;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnTrocarsenha;
+        private System.Windows.Forms.Button btnAlerta;
     }
 }

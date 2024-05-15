@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Drawing.Printing;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace WindowsFormsApp1
 {
@@ -34,7 +26,7 @@ namespace WindowsFormsApp1
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
-        {            
+        {
             this.Close();
             FormModoOP form4 = new FormModoOP();
             form4.Show();
@@ -86,7 +78,7 @@ namespace WindowsFormsApp1
                         MessageBox.Show(ex.Message);
                     }
                 }
-            }         
+            }
         }
 
         private void BuscarPapel(string text)
@@ -233,7 +225,7 @@ namespace WindowsFormsApp1
         }
         //FINAL DA FUNÇÃO IMPRIMIR .TXT
     }
-        
+
 }
 
 
