@@ -1,12 +1,8 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Net.Http;
 using System.Windows.Forms;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using System.Net;
 
 namespace WindowsFormsApp1
 {
@@ -15,40 +11,7 @@ namespace WindowsFormsApp1
 
         static readonly HttpClient client = new HttpClient();
 
-        private async Task AtualizarInformacoesAcoes()
-        {
-            string apiKey = "SUA_CHAVE_API"; // Substitua pela sua chave API do Alpha Vantage
-            string symbol = "MSFT"; // Substitua pelo símbolo da ação que você deseja buscar
-
-            string uri = $"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={apiKey}";
-
-            using (WebClient client = new WebClient())
-            {
-                string responseBody = client.DownloadString(uri);
-
-                // Para .NET Framework
-                JavaScriptSerializer js = new JavaScriptSerializer();
-                dynamic data = js.Deserialize(responseBody, typeof(object));
-
-                // Para .NET Core
-                // dynamic data = JsonSerializer.Deserialize<Dictionary<string, dynamic>>(responseBody);
-
-                // Aqui você pode extrair os dados que você precisa do objeto JObject
-                // Por exemplo, vamos supor que você queira obter o preço de fechamento mais recente
-                string recentClosePrice = data["Time Series (Daily)"]
-                                            .First
-                                            .First["4. close"]
-                                            .ToString();
-
-                // Agora você pode adicionar esses dados ao seu ListView
-                ListViewItem item = new ListViewItem(symbol);
-                item.SubItems.Add(recentClosePrice);
-                listView3.Items.Add(item);
-            }
-        }
-
-
-
+        
         public FormOperacao()
             {
                 InitializeComponent();  

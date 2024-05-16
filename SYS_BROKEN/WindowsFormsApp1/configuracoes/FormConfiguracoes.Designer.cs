@@ -35,6 +35,7 @@
             this.btnBackup = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // btnUsuario
@@ -52,7 +53,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(86, 232);
+            this.btnVoltar.Location = new System.Drawing.Point(86, 246);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(143, 45);
             this.btnVoltar.TabIndex = 1;
@@ -64,7 +65,7 @@
             // 
             this.btnTrocarsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnTrocarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrocarsenha.Location = new System.Drawing.Point(100, 166);
+            this.btnTrocarsenha.Location = new System.Drawing.Point(99, 175);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
             this.btnTrocarsenha.Size = new System.Drawing.Size(110, 31);
             this.btnTrocarsenha.TabIndex = 2;
@@ -115,6 +116,15 @@
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // listView2
+            // 
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(12, 161);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(295, 58);
+            this.listView2.TabIndex = 7;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
             // FormConfiguracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +137,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
             this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listView2);
             this.Name = "FormConfiguracoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONFIGURAÇÕES";
@@ -143,5 +154,6 @@
         private System.Windows.Forms.Button btnBackup;
         private System.Windows.Forms.Button btnRestore;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listView2;
     }
 }
