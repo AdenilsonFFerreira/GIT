@@ -23,6 +23,10 @@ GO
 INSERT INTO LOGIN (Usuario, Senha, TipoUsuario)
 VALUES ('admin', 'admin', 'admin');
 ---------------------------------------------------------------------------
+INSERT INTO LOGIN (Usuario, Senha, TipoUsuario)
+VALUES ('admin', CONVERT(NVARCHAR(64), HASHBYTES('SHA2_256', 'admin'), 2), 'admin');
+---------------------------------------------------------------------------
+
 
 
 

@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
 
             string tipoUsuario = ValidarUsuario(usuario, senha);
 
-            if (tipoUsuario.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+            if (tipoUsuario.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
                 FormCadastrar form3 = new FormCadastrar();
                 form3.Show();

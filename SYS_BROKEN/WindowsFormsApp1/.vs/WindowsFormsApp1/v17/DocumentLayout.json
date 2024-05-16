@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formcadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formcadastrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:operacao\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:operacao\\formoperacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,50 +30,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormOperacao.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\FormOperacao.cs",
-              "RelativeDocumentMoniker": "operacao\\FormOperacao.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\FormOperacao.cs",
-              "RelativeToolTip": "operacao\\FormOperacao.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAMwE8AAAAMAAAA",
+              "DocumentIndex": 0,
+              "Title": "FormCadastrar.cs [Design]",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormCadastrar.cs",
+              "RelativeDocumentMoniker": "Login\\FormCadastrar.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormCadastrar.cs [Design]",
+              "RelativeToolTip": "Login\\FormCadastrar.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T15:18:35.511Z"
+              "WhenOpened": "2024-05-16T23:11:30.334Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormOperacao.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\FormOperacao.cs",
-              "RelativeDocumentMoniker": "operacao\\FormOperacao.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\operacao\\FormOperacao.cs [Design]",
-              "RelativeToolTip": "operacao\\FormOperacao.cs [Design]",
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "Login\\FormAdmin.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormAdmin.cs",
+              "RelativeToolTip": "Login\\FormAdmin.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAhwC4AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T15:18:33.481Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormConfiguracoes.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs",
-              "RelativeDocumentMoniker": "configuracoes\\FormConfiguracoes.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs",
-              "RelativeToolTip": "configuracoes\\FormConfiguracoes.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAIwCIAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T14:38:43.579Z",
+              "WhenOpened": "2024-05-16T22:57:47.874Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormConfiguracoes.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs",
-              "RelativeDocumentMoniker": "configuracoes\\FormConfiguracoes.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs [Design]",
-              "RelativeToolTip": "configuracoes\\FormConfiguracoes.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "FormAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "Login\\FormAdmin.cs",
+              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormAdmin.cs [Design]",
+              "RelativeToolTip": "Login\\FormAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-16T14:38:40.625Z"
+              "WhenOpened": "2024-05-16T22:57:45.635Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

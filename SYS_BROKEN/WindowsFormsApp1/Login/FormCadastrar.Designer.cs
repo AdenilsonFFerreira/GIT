@@ -335,7 +335,7 @@
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(137, 40);
             this.btnSair.TabIndex = 29;
-            this.btnSair.Text = "SAIR";
+            this.btnSair.Text = "VOLTAR";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.BtnSair_Click);
             // 
