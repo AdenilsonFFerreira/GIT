@@ -45,11 +45,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVender = new System.Windows.Forms.Button();
-            this.ltvMercado = new System.Windows.Forms.ListView();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panel3 = new System.Windows.Forms.Panel();
             this.listView3 = new System.Windows.Forms.ListView();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -59,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(355, 19);
+            this.label1.Location = new System.Drawing.Point(325, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 31);
             this.label1.TabIndex = 0;
@@ -128,7 +125,7 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(1015, 138);
+            this.btnComprar.Location = new System.Drawing.Point(778, 139);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(116, 49);
             this.btnComprar.TabIndex = 7;
@@ -141,7 +138,7 @@
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(1015, 426);
+            this.btnSair.Location = new System.Drawing.Point(778, 427);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(116, 49);
             this.btnSair.TabIndex = 8;
@@ -199,7 +196,7 @@
             this.panel2.Controls.Add(this.txbValor);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txbQtd);
-            this.panel2.Location = new System.Drawing.Point(848, 90);
+            this.panel2.Location = new System.Drawing.Point(611, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 433);
             this.panel2.TabIndex = 11;
@@ -208,7 +205,7 @@
             // 
             this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(1015, 277);
+            this.btnVender.Location = new System.Drawing.Point(778, 278);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(116, 49);
             this.btnVender.TabIndex = 12;
@@ -216,57 +213,29 @@
             this.btnVender.UseVisualStyleBackColor = false;
             this.btnVender.Click += new System.EventHandler(this.btnVender_Click);
             // 
-            // ltvMercado
-            // 
-            this.ltvMercado.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader4,
-            this.columnHeader6});
-            this.ltvMercado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ltvMercado.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.ltvMercado.GridLines = true;
-            this.ltvMercado.HideSelection = false;
-            this.ltvMercado.Location = new System.Drawing.Point(12, 14);
-            this.ltvMercado.Name = "ltvMercado";
-            this.ltvMercado.Size = new System.Drawing.Size(149, 403);
-            this.ltvMercado.TabIndex = 9;
-            this.ltvMercado.UseCompatibleStateImageBehavior = false;
-            this.ltvMercado.View = System.Windows.Forms.View.Details;
-            this.ltvMercado.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Ação";
-            this.columnHeader4.Width = 64;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Valor";
-            this.columnHeader6.Width = 78;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ltvMercado);
-            this.panel3.Location = new System.Drawing.Point(318, 91);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(173, 433);
-            this.panel3.TabIndex = 13;
-            // 
             // listView3
             // 
             this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(527, 92);
+            this.listView3.Location = new System.Drawing.Point(13, 14);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(270, 431);
+            this.listView3.Size = new System.Drawing.Size(217, 403);
             this.listView3.TabIndex = 14;
             this.listView3.UseCompatibleStateImageBehavior = false;
             this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.listView3);
+            this.panel3.Location = new System.Drawing.Point(318, 91);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(243, 433);
+            this.panel3.TabIndex = 13;
             // 
             // FormOperacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 649);
-            this.Controls.Add(this.listView3);
+            this.ClientSize = new System.Drawing.Size(919, 649);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel2);
@@ -306,10 +275,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnVender;
-        private System.Windows.Forms.ListView ltvMercado;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.Panel panel3;
     }
 }

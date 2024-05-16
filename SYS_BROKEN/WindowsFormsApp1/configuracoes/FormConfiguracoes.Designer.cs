@@ -32,23 +32,27 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnTrocarsenha = new System.Windows.Forms.Button();
             this.btnAlerta = new System.Windows.Forms.Button();
+            this.btnBackup = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.Location = new System.Drawing.Point(143, 227);
+            this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Location = new System.Drawing.Point(34, 110);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(139, 45);
+            this.btnUsuario.Size = new System.Drawing.Size(110, 31);
             this.btnUsuario.TabIndex = 0;
             this.btnUsuario.Text = "USUÁRIO";
-            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.btnUsuario.UseVisualStyleBackColor = false;
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(293, 370);
+            this.btnVoltar.Location = new System.Drawing.Point(86, 232);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(143, 45);
             this.btnVoltar.TabIndex = 1;
@@ -58,32 +62,71 @@
             // 
             // btnTrocarsenha
             // 
-            this.btnTrocarsenha.Location = new System.Drawing.Point(545, 227);
+            this.btnTrocarsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnTrocarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrocarsenha.Location = new System.Drawing.Point(100, 166);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
-            this.btnTrocarsenha.Size = new System.Drawing.Size(139, 45);
+            this.btnTrocarsenha.Size = new System.Drawing.Size(110, 31);
             this.btnTrocarsenha.TabIndex = 2;
-            this.btnTrocarsenha.Text = "TROCAR A SENHA";
-            this.btnTrocarsenha.UseVisualStyleBackColor = true;
+            this.btnTrocarsenha.Text = "SENHA";
+            this.btnTrocarsenha.UseVisualStyleBackColor = false;
             // 
             // btnAlerta
             // 
-            this.btnAlerta.Location = new System.Drawing.Point(347, 221);
+            this.btnAlerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlerta.Location = new System.Drawing.Point(175, 110);
             this.btnAlerta.Name = "btnAlerta";
-            this.btnAlerta.Size = new System.Drawing.Size(119, 50);
+            this.btnAlerta.Size = new System.Drawing.Size(110, 31);
             this.btnAlerta.TabIndex = 3;
             this.btnAlerta.Text = "ALERTA";
-            this.btnAlerta.UseVisualStyleBackColor = true;
+            this.btnAlerta.UseVisualStyleBackColor = false;
             this.btnAlerta.Click += new System.EventHandler(this.btnAlerta_Click);
+            // 
+            // btnBackup
+            // 
+            this.btnBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.Location = new System.Drawing.Point(34, 39);
+            this.btnBackup.Name = "btnBackup";
+            this.btnBackup.Size = new System.Drawing.Size(110, 31);
+            this.btnBackup.TabIndex = 4;
+            this.btnBackup.Text = "BACKUP";
+            this.btnBackup.UseVisualStyleBackColor = false;
+            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestore.Location = new System.Drawing.Point(175, 39);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(110, 31);
+            this.btnRestore.TabIndex = 5;
+            this.btnRestore.Text = "RESTORE";
+            this.btnRestore.UseVisualStyleBackColor = false;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(12, 26);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(295, 58);
+            this.listView1.TabIndex = 6;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // FormConfiguracoes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(319, 303);
+            this.Controls.Add(this.btnRestore);
+            this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.btnAlerta);
             this.Controls.Add(this.btnTrocarsenha);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnUsuario);
+            this.Controls.Add(this.listView1);
             this.Name = "FormConfiguracoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONFIGURAÇÕES";
@@ -97,5 +140,8 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnTrocarsenha;
         private System.Windows.Forms.Button btnAlerta;
+        private System.Windows.Forms.Button btnBackup;
+        private System.Windows.Forms.Button btnRestore;
+        private System.Windows.Forms.ListView listView1;
     }
 }
