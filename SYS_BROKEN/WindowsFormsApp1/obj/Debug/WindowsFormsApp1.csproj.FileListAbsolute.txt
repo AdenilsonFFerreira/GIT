@@ -46,3 +46,4 @@ C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.analise.analise.re
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.fi.fi.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAdmin.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.modoop.FormAlertas.resources
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Patrimonio.resources

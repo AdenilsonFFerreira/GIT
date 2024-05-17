@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace WindowsFormsApp1
 {
     public class Conexao
@@ -185,6 +186,70 @@ namespace WindowsFormsApp1
         {
             return new Usuario();
         }
+
+        public string Cadastrar_Patrimonio(Patrimonio patrimonio)
+        {
+            string mensagem = "";
+
+            // Cria um novo comando SQL
+            SqlCommand cmd = new SqlCommand("INSERT INTO PATRIMONIO (Corretora, Valor) VALUES (@corretora, @valor)", Conectar());
+
+            // Adiciona os parâmetros ao comando SQL
+            cmd.Parameters.AddWithValue("@corretora", patrimonio.Corretora);
+            cmd.Parameters.AddWithValue("@valor", patrimonio.Valor);
+
+            // Tenta executar o comando SQL
+            try
+            {
+                cmd.ExecuteNonQuery();
+                mensagem = "Patrimônio cadastrado com sucesso!";
+            }
+            catch (SqlException e)
+            {
+                mensagem = "Erro ao cadastrar patrimônio: " + e.Message;
+            }
+            finally
+            {
+                // Fecha a conexão
+                Desconectar();
+            }
+
+            return mensagem;
+        }
+
+        /*
+        //METODO CADASTRAR PATRIMONIO
+        public String Cadastrar_Patrimonio (Patrimonio patrimonio)
+        {
+            SqlCommand cmd = new SqlCommand();
+            String mensagem;
+
+            //comando sql  --SqlCommand
+            cmd.CommandText = "insert into PATRIMONIO (Corretora, Valor) values (@corretora, @valor)";
+
+            //parametros
+            cmd.Parameters.AddWithValue("@corretora", patrimonio.corretora);            
+            cmd.Parameters.AddWithValue("@valor", patrimonio.valor);
+
+            try
+            {
+                //concetar com banco  --Conexao
+                cmd.Connection = this.Conectar();
+                //executar comando
+                cmd.ExecuteNonQuery();
+                //desconectar
+                this
+                    .Desconectar();
+                //mostrar mensagem de erro ou sucesso  --variavel
+                mensagem = "Cadastrado com Sucesso!!";
+
+            }
+            catch (SqlException e)
+            {
+                mensagem = "Erro: " + e.Message;
+            }
+            return mensagem;
+        }*/
 
 
         public Papel[] posicao_consolidade()

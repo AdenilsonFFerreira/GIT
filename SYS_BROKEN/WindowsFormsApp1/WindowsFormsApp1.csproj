@@ -90,6 +90,7 @@
     <Compile Include="modoop\FormAlertas.Designer.cs">
       <DependentUpon>FormAlertas.cs</DependentUpon>
     </Compile>
+    <Compile Include="patrimonio\Class1.cs" />
     <Compile Include="patrimonio\patrimonio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,13 +98,13 @@
       <DependentUpon>patrimonio.cs</DependentUpon>
     </Compile>
     <Compile Include="operacao\Pesquisa.cs" />
-    <Compile Include="FormRelatorio.cs">
+    <Compile Include="relatorio\FormRelatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRelatorio.Designer.cs">
+    <Compile Include="relatorio\FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Provisao.cs" />
+    <Compile Include="CLASSES\Provisao.cs" />
     <Compile Include="provisao\provisao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +112,7 @@
       <DependentUpon>provisao.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\Usuario.cs" />
-    <Compile Include="Conexao.cs" />
+    <Compile Include="CLASSES\Conexao.cs" />
     <Compile Include="Login\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,7 +180,7 @@
     <EmbeddedResource Include="operacao\FormOperacao.resx">
       <DependentUpon>FormOperacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRelatorio.resx">
+    <EmbeddedResource Include="relatorio\FormRelatorio.resx">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="patrimonio\patrimonio.resx">
