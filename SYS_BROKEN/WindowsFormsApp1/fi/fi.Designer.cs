@@ -52,6 +52,7 @@
             this.Name = "fi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fi";
+            this.Load += new System.EventHandler(this.fi_Load);
             this.ResumeLayout(false);
 
         }

@@ -23,5 +23,10 @@ namespace WindowsFormsApp1.fi
             FormModoOP form4 = new FormModoOP();
             form4.Show();
         }
+
+        private void fi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

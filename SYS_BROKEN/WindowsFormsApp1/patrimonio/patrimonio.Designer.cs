@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿namespace WindowsFormsApp1.patrimonio
 {
-    partial class Patrimonio
+    partial class patrimonio
     {
         /// <summary>
         /// Required designer variable.

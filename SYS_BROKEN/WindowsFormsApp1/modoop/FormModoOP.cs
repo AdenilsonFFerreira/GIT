@@ -82,7 +82,8 @@ namespace WindowsFormsApp1
             var formPatrimonio = new WindowsFormsApp1.patrimonio.patrimonio();
             formPatrimonio.Show();
             this.Close();
-        }
+        }  
+
 
         private void FormModoOP_Load(object sender, EventArgs e)
         {

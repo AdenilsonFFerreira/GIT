@@ -1,0 +1,19 @@
+CHAMAR FORMULARIO
+
+namespace WindowsFormsApp1.form
+	namespace = sempre dessa forma todo form ja cria
+	WindowsFormApp1 = nome principal do projeto ou do primeiro form
+	form = o nome do formulario por exemplo home, configuração etc
+
+
+public partial class fi : Form
+	deve ser cirado automaticamente
+
+
+public form()
+{
+    InitializeComponent();
+}
+	para inicializar os componentes
+	fomr = nome do formulario por exemplo home, configurações etc
+	InitializeComponent = criado sempre padrão
