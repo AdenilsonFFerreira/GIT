@@ -11,6 +11,7 @@ namespace WindowsFormsApp1.patrimonio
         {
             InitializeComponent();
             this.Load += new EventHandler(patrimonio_Load);
+            AtualizarTotalNoLabel();
         }        
 
         private void label1_Click(object sender, EventArgs e)
@@ -60,13 +61,19 @@ namespace WindowsFormsApp1.patrimonio
 
                 while (reader.Read())
                 {
-                    ListViewItem item = new ListViewItem(reader["Corretora"].ToString());                    
-                    item.SubItems.Add(reader["Valor"].ToString());
+                    decimal valor = decimal.Parse(reader["Valor"].ToString());
+                    if (valor == 0)
+                        continue; // Se o valor for 0, não adicione ao ListView
+
+                    ListViewItem item = new ListViewItem(reader["Corretora"].ToString());
+                    item.SubItems.Add("R$ " + valor.ToString("N2"));
 
                     listView1.Items.Add(item);
                 }
             }
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -75,13 +82,51 @@ namespace WindowsFormsApp1.patrimonio
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
-        }        
-
+        
         private void btnAdicionar_Click_1(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
-            string query = "INSERT INTO PATRIMONIO (Corretora, Valor) VALUES (@Corretora, @Valor)";
+            string query = "UPDATE PATRIMONIO SET Valor = Valor + @Valor WHERE Corretora = @Corretora";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Corretora", textBox1.Text);
+                command.Parameters.AddWithValue("@Valor", textBox2.Text);
+
+                try
+                {
+                    connection.Open();
+                    int rowsAffected = command.ExecuteNonQuery();
+                    if (rowsAffected == 0)
+                    {
+                        query = "INSERT INTO PATRIMONIO (Corretora, Valor) VALUES (@Corretora, @Valor)";
+                        command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Corretora", textBox1.Text);
+                        command.Parameters.AddWithValue("@Valor", textBox2.Text);
+                        command.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("VALOR ATUALIZADO COM SUCESSO.");
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao atualizar os dados: " + ex.Message);
+                }
+            }
+            PreencherListView();
+            AtualizarTotalNoLabel();
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string query = "UPDATE PATRIMONIO SET Valor = Valor - @Valor WHERE Corretora = @Corretora";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -93,17 +138,51 @@ namespace WindowsFormsApp1.patrimonio
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("PATRIMONIO CADASTRADO COM SUCESSO.");
+                    MessageBox.Show("VALOR ATUALIZADO COM SUCESSO.");
                     textBox1.Text = "";
                     textBox2.Text = "";
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Erro ao inserir os dados: " + ex.Message);
+                    MessageBox.Show("Erro ao atualizar os dados: " + ex.Message);
                 }
             }
             PreencherListView();
+            AtualizarTotalNoLabel();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void AtualizarTotalNoLabel()
+        {
+            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
+            string query = "SELECT SUM(Valor) as Total FROM PATRIMONIO";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+
+                try
+                {
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    if (result != DBNull.Value)
+                    {
+                        decimal total = (decimal)result;
+                        this.label6.Text = "Total: R$ " + total.ToString("N2");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao calcular o total: " + ex.Message);
+                }
+            }
+        }
+
+
+
     }
 }
