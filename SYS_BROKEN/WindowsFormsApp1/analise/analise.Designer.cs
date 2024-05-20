@@ -52,6 +52,7 @@
             this.Name = "analise";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "analise";
+            this.Load += new System.EventHandler(this.analise_Load);
             this.ResumeLayout(false);
 
         }

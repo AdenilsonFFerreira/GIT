@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.analise
             FormModoOP form4 = new FormModoOP();
             form4.Show();
         }
+
+        private void analise_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

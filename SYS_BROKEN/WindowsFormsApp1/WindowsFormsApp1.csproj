@@ -90,7 +90,6 @@
     <Compile Include="modoop\FormAlertas.Designer.cs">
       <DependentUpon>FormAlertas.cs</DependentUpon>
     </Compile>
-    <Compile Include="patrimonio\Class1.cs" />
     <Compile Include="patrimonio\patrimonio.cs">
       <SubType>Form</SubType>
     </Compile>
