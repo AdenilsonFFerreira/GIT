@@ -30,12 +30,7 @@ namespace WindowsFormsApp1
                 this.ListView1.Items.Add(new ListViewItem(items));
             }
         }
-
-
-        private void UpdateListView()
-        {
-
-        }
+               
 
         private void PreencherListView()
         {
