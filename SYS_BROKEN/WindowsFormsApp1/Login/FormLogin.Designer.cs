@@ -96,6 +96,7 @@
             // 
             this.lblRecuperar.AutoSize = true;
             this.lblRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecuperar.LinkColor = System.Drawing.Color.Blue;
             this.lblRecuperar.Location = new System.Drawing.Point(37, 221);
             this.lblRecuperar.Name = "lblRecuperar";
             this.lblRecuperar.Size = new System.Drawing.Size(124, 16);
@@ -108,6 +109,7 @@
             // 
             this.lblCadastro.AutoSize = true;
             this.lblCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadastro.LinkColor = System.Drawing.Color.Blue;
             this.lblCadastro.Location = new System.Drawing.Point(212, 221);
             this.lblCadastro.Name = "lblCadastro";
             this.lblCadastro.Size = new System.Drawing.Size(62, 16);
@@ -159,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(463, 438);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);

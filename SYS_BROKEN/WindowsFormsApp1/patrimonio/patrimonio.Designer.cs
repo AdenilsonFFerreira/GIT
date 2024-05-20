@@ -178,7 +178,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(237, 466);
+            this.label6.Location = new System.Drawing.Point(191, 466);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 24);
             this.label6.TabIndex = 43;
@@ -189,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(440, 581);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExcluir);
