@@ -42,7 +42,7 @@
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.Location = new System.Drawing.Point(34, 110);
+            this.btnUsuario.Location = new System.Drawing.Point(34, 124);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(110, 31);
             this.btnUsuario.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             this.btnTrocarsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnTrocarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrocarsenha.Location = new System.Drawing.Point(99, 175);
+            this.btnTrocarsenha.Location = new System.Drawing.Point(175, 124);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
             this.btnTrocarsenha.Size = new System.Drawing.Size(110, 31);
             this.btnTrocarsenha.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.btnAlerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlerta.Location = new System.Drawing.Point(175, 110);
+            this.btnAlerta.Location = new System.Drawing.Point(103, 192);
             this.btnAlerta.Name = "btnAlerta";
             this.btnAlerta.Size = new System.Drawing.Size(110, 31);
             this.btnAlerta.TabIndex = 3;
@@ -119,7 +119,7 @@
             // listView2
             // 
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 161);
+            this.listView2.Location = new System.Drawing.Point(12, 111);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(295, 58);
             this.listView2.TabIndex = 7;
