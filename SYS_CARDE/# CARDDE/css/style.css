@@ -1,3 +1,102 @@
+
+
+
+
+
+
+/* *********************************************************************************************************** */
+/* ESTRUTURA DO HEADER*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #08d6f6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Imagem de logo */
+#logo {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    border: 1px solid #ccc; /* Borda desejada */ 
+    border-radius: 50%;
+       
+}
+
+#logo img {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */  
+    border-radius: 50%; 
+}
+/* FIM - imagem de logo */
+
+/* Campo pesquisar */
+.pesquisar {
+    position: center;
+}
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    transition: width 0.4s;
+}
+input[type="text"]:focus {
+    width: 320px;
+}
+button {
+    background-color: #f9fafa;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    cursor: pointer;
+}
+img {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+/* FIM - Campo pesquisar */
+
+/* Botão sair*/
+.btnSair button{
+    background-color: rgb(202, 39, 161);
+    color: #fff ;    
+    border: 1px solid rgb(202, 39, 161);
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: auto;
+    width: 100px;
+}
+
+/* FIM - botão sair */
+
+
+/* IMAGEM - Usuario */
+#usuario {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    border: 1px solid #ccc; /* Borda desejada */   
+    border-radius: 50%; 
+}
+
+#usuario img {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */  
+}
+/* FIM - Imagem usuario */
+
+
+/* *********************************************************************************************************** */
+/* ESTRUTURA BASICA COMUN A TODA PAGINA */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -15,74 +114,5 @@ body{
     font-family: "Montserrat", sans-serif; 
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: #08d6f6;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-}
 
-/* IMAGEM de LOGO */
-#logo {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */
-    background-color: #f0f0f0; /* Cor de fundo desejada */
-    border: 1px solid #ccc; /* Borda desejada */    
-}
 
-#logo img {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */   
-}
-/* FIM - imagem de logo */
-
-/* Campo pesquisar */
-.pesquisar {
-    position: center;
-}
-input[type="text"] {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    transition: width 0.4s;
-}
-input[type="text"]:focus {
-    width: 320px;
-}
-button {
-    background-color: #f9fafa;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-}
-img {
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
-}
-/* FIM - Campo pesquisar */
-
-/* BOTÃO SAIR */
-
-/* FIM - botão sair */
-
-/* IMAGEM - Usuario */
-#logo {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */
-    background-color: #f0f0f0; /* Cor de fundo desejada */
-    border: 1px solid #ccc; /* Borda desejada */    
-}
-
-#logo img {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */   
-}
-/* FIM - Imagem usuario */
