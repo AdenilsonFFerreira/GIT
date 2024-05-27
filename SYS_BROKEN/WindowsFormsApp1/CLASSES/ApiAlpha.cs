@@ -16,7 +16,6 @@ using System.Web.Script.Serialization;
 // -------------------------------------------------------------------------
 // if using .Net Core
 // https://docs.microsoft.com/en-us/dotnet/api/system.text.json?view=net-5.0
-using System.Text.Json;
 // -------------------------------------------------------------------------
 
 namespace ConsoleTests

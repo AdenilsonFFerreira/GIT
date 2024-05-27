@@ -6,13 +6,13 @@ namespace WindowsFormsApp1.patrimonio
 {
     public partial class patrimonio : Form
     {
-        
+
         public patrimonio()
         {
             InitializeComponent();
             this.Load += new EventHandler(patrimonio_Load);
             AtualizarTotalNoLabel();
-        }        
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.patrimonio
             this.Close();
             FormModoOP form4 = new FormModoOP();
             form4.Show();
-        }       
+        }
 
         private void patrimonio_Load(object sender, EventArgs e)
         {
@@ -38,7 +38,7 @@ namespace WindowsFormsApp1.patrimonio
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-               
+
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,10 +82,10 @@ namespace WindowsFormsApp1.patrimonio
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        
+
         private void btnAdicionar_Click_1(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";

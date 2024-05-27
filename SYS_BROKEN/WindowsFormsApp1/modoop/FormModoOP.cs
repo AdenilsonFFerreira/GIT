@@ -70,14 +70,14 @@ namespace WindowsFormsApp1
             var formAnalise = new WindowsFormsApp1.analise.analise();
             formAnalise.Show();
             this.Close();
-        }        
+        }
 
         private void btnPatrimonio_Click(object sender, EventArgs e)
         {
             var formPatrimonio = new WindowsFormsApp1.patrimonio.patrimonio();
             formPatrimonio.Show();
             this.Close();
-        }  
+        }
 
 
         private void FormModoOP_Load(object sender, EventArgs e)

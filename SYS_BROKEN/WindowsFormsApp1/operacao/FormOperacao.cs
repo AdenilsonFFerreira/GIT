@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Net.Http;
 using System.Windows.Forms;
-using System.Web.Script.Serialization;
 
 
 namespace WindowsFormsApp1
@@ -14,11 +13,11 @@ namespace WindowsFormsApp1
         static readonly HttpClient client = new HttpClient();
 
         public FormOperacao()
-            {
-                InitializeComponent();  
-                update_list_view();
+        {
+            InitializeComponent();
+            update_list_view();
 
-        }             
+        }
 
 
 
@@ -32,7 +31,7 @@ namespace WindowsFormsApp1
                 String[] items = { papeis[i].acao, papeis[i].qtd.ToString(), papeis[i].valor.ToString() };
                 this.ListView1.Items.Add(new ListViewItem(items));
             }
-        }        
+        }
 
 
         private void PreencherListView()
@@ -256,8 +255,8 @@ namespace WindowsFormsApp1
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }   
-        
+        }
+
 
 
         private void listView3_SelectedIndexChanged(object sender, EventArgs e)

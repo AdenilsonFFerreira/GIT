@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
-using System.Text;
 using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 
 namespace WindowsFormsApp1
@@ -101,7 +101,7 @@ namespace WindowsFormsApp1
 
         private void btnRestore_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void FormConfiguracoes_Load(object sender, EventArgs e)

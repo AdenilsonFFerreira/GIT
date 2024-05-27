@@ -185,7 +185,7 @@ namespace WindowsFormsApp1
         public Usuario Buscar_Usuario(String CPF)
         {
             return new Usuario();
-        }         
+        }
 
 
         public Papel[] posicao_consolidade()
