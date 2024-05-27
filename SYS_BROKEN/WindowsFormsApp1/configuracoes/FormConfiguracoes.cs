@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
                     using (SqlCommand command = new SqlCommand())
                     {
                         command.Connection = conn;
-                        command.CommandText = String.Format("BACKUP DATABASE {0} TO DISK='{1}'", "ProjAcoes", "C:\\teste\\backup.bak");
+                        command.CommandText = String.Format("BACKUP DATABASE {0} TO DISK='{1}'", "ProjAcoes", "C:\\SysBroken\\Backup\\backup.bak");
 
                         command.ExecuteNonQuery();
                     }
@@ -92,8 +92,8 @@ namespace WindowsFormsApp1
         private void btnBackup_Click(object sender, EventArgs e)
         {
             BackupDatabase();
-            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PAPEL", "C:\\teste\\papel.csv");
-            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PROVISAO", "C:\\teste\\provisao.csv");
+            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PAPEL", "C:\\SysBroken\\Backup\\papel.csv");
+            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PROVISAO", "C:\\SysBroken\\Backup\\provisao.csv");
 
         }
 
@@ -102,6 +102,11 @@ namespace WindowsFormsApp1
         private void btnRestore_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void FormConfiguracoes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
