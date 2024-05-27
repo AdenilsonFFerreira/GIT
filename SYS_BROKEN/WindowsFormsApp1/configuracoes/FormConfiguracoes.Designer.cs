@@ -41,8 +41,8 @@
             // btnUsuario
             // 
             this.btnUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.Location = new System.Drawing.Point(34, 110);
+            this.btnUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.Location = new System.Drawing.Point(34, 124);
             this.btnUsuario.Name = "btnUsuario";
             this.btnUsuario.Size = new System.Drawing.Size(110, 31);
             this.btnUsuario.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(86, 246);
+            this.btnVoltar.Location = new System.Drawing.Point(100, 260);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(143, 45);
             this.btnVoltar.TabIndex = 1;
@@ -64,8 +64,8 @@
             // btnTrocarsenha
             // 
             this.btnTrocarsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnTrocarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrocarsenha.Location = new System.Drawing.Point(99, 175);
+            this.btnTrocarsenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrocarsenha.Location = new System.Drawing.Point(207, 124);
             this.btnTrocarsenha.Name = "btnTrocarsenha";
             this.btnTrocarsenha.Size = new System.Drawing.Size(110, 31);
             this.btnTrocarsenha.TabIndex = 2;
@@ -75,8 +75,8 @@
             // btnAlerta
             // 
             this.btnAlerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlerta.Location = new System.Drawing.Point(175, 110);
+            this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlerta.Location = new System.Drawing.Point(119, 192);
             this.btnAlerta.Name = "btnAlerta";
             this.btnAlerta.Size = new System.Drawing.Size(110, 31);
             this.btnAlerta.TabIndex = 3;
@@ -87,7 +87,7 @@
             // btnBackup
             // 
             this.btnBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackup.Location = new System.Drawing.Point(34, 39);
             this.btnBackup.Name = "btnBackup";
             this.btnBackup.Size = new System.Drawing.Size(110, 31);
@@ -99,8 +99,8 @@
             // btnRestore
             // 
             this.btnRestore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestore.Location = new System.Drawing.Point(175, 39);
+            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestore.Location = new System.Drawing.Point(207, 39);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(110, 31);
             this.btnRestore.TabIndex = 5;
@@ -112,16 +112,16 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 26);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(295, 58);
+            this.listView1.Size = new System.Drawing.Size(326, 58);
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // listView2
             // 
             this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(12, 161);
+            this.listView2.Location = new System.Drawing.Point(12, 111);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(295, 58);
+            this.listView2.Size = new System.Drawing.Size(326, 58);
             this.listView2.TabIndex = 7;
             this.listView2.UseCompatibleStateImageBehavior = false;
             // 
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(319, 303);
+            this.ClientSize = new System.Drawing.Size(353, 336);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.btnAlerta);
@@ -142,6 +142,7 @@
             this.Name = "FormConfiguracoes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONFIGURAÇÕES";
+            this.Load += new System.EventHandler(this.FormConfiguracoes_Load);
             this.ResumeLayout(false);
 
         }
