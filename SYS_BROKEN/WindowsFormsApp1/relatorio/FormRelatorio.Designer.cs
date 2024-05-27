@@ -64,7 +64,7 @@
             // txbPapel
             // 
             this.txbPapel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPapel.Location = new System.Drawing.Point(64, 91);
+            this.txbPapel.Location = new System.Drawing.Point(31, 83);
             this.txbPapel.Name = "txbPapel";
             this.txbPapel.Size = new System.Drawing.Size(100, 26);
             this.txbPapel.TabIndex = 2;
@@ -72,30 +72,31 @@
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.Location = new System.Drawing.Point(39, 344);
+            this.btnPesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.Location = new System.Drawing.Point(89, 268);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(105, 48);
+            this.btnPesquisar.Size = new System.Drawing.Size(121, 48);
             this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Text = "PESQUISAR";
+            this.btnPesquisar.UseVisualStyleBackColor = false;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // btnFechar
             // 
             this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnFechar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFechar.Location = new System.Drawing.Point(178, 344);
+            this.btnFechar.Location = new System.Drawing.Point(89, 390);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(105, 48);
+            this.btnFechar.Size = new System.Drawing.Size(121, 48);
             this.btnFechar.TabIndex = 5;
-            this.btnFechar.Text = "Voltar";
+            this.btnFechar.Text = "VOLTAR";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(64, 213);
+            this.dateTimePicker1.Location = new System.Drawing.Point(31, 217);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 6;
@@ -114,24 +115,26 @@
             // 
             // btnImpriCsv
             // 
-            this.btnImpriCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImpriCsv.Location = new System.Drawing.Point(595, 392);
+            this.btnImpriCsv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnImpriCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpriCsv.Location = new System.Drawing.Point(585, 392);
             this.btnImpriCsv.Name = "btnImpriCsv";
-            this.btnImpriCsv.Size = new System.Drawing.Size(112, 46);
+            this.btnImpriCsv.Size = new System.Drawing.Size(131, 46);
             this.btnImpriCsv.TabIndex = 8;
-            this.btnImpriCsv.Text = "Salvar - csv";
-            this.btnImpriCsv.UseVisualStyleBackColor = true;
+            this.btnImpriCsv.Text = "SALVAR - csv";
+            this.btnImpriCsv.UseVisualStyleBackColor = false;
             this.btnImpriCsv.Click += new System.EventHandler(this.btnImpriCsv_Click_1);
             // 
             // btnImpriTxt
             // 
-            this.btnImpriTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpriTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnImpriTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImpriTxt.Location = new System.Drawing.Point(389, 392);
             this.btnImpriTxt.Name = "btnImpriTxt";
-            this.btnImpriTxt.Size = new System.Drawing.Size(112, 46);
+            this.btnImpriTxt.Size = new System.Drawing.Size(128, 46);
             this.btnImpriTxt.TabIndex = 9;
-            this.btnImpriTxt.Text = "Salvar - txt";
-            this.btnImpriTxt.UseVisualStyleBackColor = true;
+            this.btnImpriTxt.Text = "SALVAR - txt";
+            this.btnImpriTxt.UseVisualStyleBackColor = false;
             this.btnImpriTxt.Click += new System.EventHandler(this.btnImpriTxt_Click);
             // 
             // FormRelatorio

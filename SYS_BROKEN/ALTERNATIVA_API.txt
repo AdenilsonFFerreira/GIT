@@ -1,0 +1,92 @@
+O erro indica que você excedeu o limite diário de 25 requisições da API da Alpha Vantage para contas gratuitas. Aqui estão algumas alternativas que você pode considerar:
+
+Alternativas
+Espalhar as requisições ao longo de vários dias:
+
+Se você não precisa de todas as cotações imediatamente, você pode dividir a execução do script para fazer apenas algumas requisições por dia, respeitando o limite diário.
+Usar uma API alternativa:
+
+Existem outras APIs para dados financeiros que podem ter limites mais altos ou políticas diferentes. Algumas alternativas incluem:
+IEX Cloud
+Yahoo Finance API
+Quandl
+Muitas dessas APIs também oferecem planos gratuitos, mas com diferentes limites de requisição.
+Obter uma chave de API premium:
+
+Subscribir-se a um plano premium da Alpha Vantage para remover os limites de requisição.
+Exemplo usando a IEX Cloud API
+Abaixo está um exemplo de como você pode ajustar o código para usar a IEX Cloud API:
+
+python
+Copy code
+import pandas as pd
+import requests
+
+# Sua chave de API da IEX Cloud
+iex_api_key = 'YOUR_IEX_CLOUD_API_KEY'
+
+# Função para obter o preço de abertura usando a IEX Cloud API
+def get_opening_price(symbol):
+    url = f'https://cloud.iexapis.com/stable/stock/{symbol}/quote?token={iex_api_key}'
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        return data['open'], data['latestUpdate']
+    except requests.exceptions.RequestException as e:
+        print(f"Erro ao fazer a requisição para a ação {symbol}: {e}")
+        return None, None
+    except KeyError as e:
+        print(f"Erro ao processar dados para a ação {symbol}: {e}")
+        return None, None
+
+# Caminho para o arquivo Excel
+excel_file = 'acoes.xlsx'
+
+try:
+    # Listar os nomes das planilhas no arquivo Excel
+    xls = pd.ExcelFile(excel_file)
+    print("Planilhas disponíveis:", xls.sheet_names)
+    
+    # Ler o arquivo Excel (substitua 'Planilha2' pelo nome correto da sua planilha)
+    df = pd.read_excel(excel_file, sheet_name='Planilha2')
+except Exception as e:
+    print(f"Erro ao ler o arquivo Excel: {e}")
+    exit()
+
+# Verificar se a coluna 'Símbolo' existe no DataFrame
+if 'Símbolo' not in df.columns:
+    print("A coluna 'Símbolo' não foi encontrada no arquivo Excel.")
+    exit()
+
+# Adicionar colunas para armazenar o preço de abertura e a data da última atualização
+df['Última Atualização'] = ''
+df['Preço de Abertura'] = ''
+
+# Iterar sobre cada símbolo de ação no DataFrame
+for index, row in df.iterrows():
+    symbol = row['Símbolo']
+    opening_price, last_refreshed = get_opening_price(symbol)
+    if opening_price is not None:
+        df.at[index, 'Última Atualização'] = last_refreshed
+        df.at[index, 'Preço de Abertura'] = opening_price
+
+# Salvar o DataFrame atualizado de volta para o arquivo Excel
+try:
+    df.to_excel('acoes_atualizadas.xlsx', index=False)
+    print("Dados atualizados e salvos no arquivo 'acoes_atualizadas.xlsx'")
+except Exception as e:
+    print(f"Erro ao salvar o arquivo Excel: {e}")
+Passos a seguir:
+Obtenha uma chave de API da IEX Cloud: Cadastre-se na IEX Cloud e obtenha uma chave de API.
+Substitua YOUR_IEX_CLOUD_API_KEY pelo sua chave de API.
+Verifique o símbolo: Os símbolos das ações podem precisar de ajustes dependendo da API utilizada.
+Essa abordagem pode ajudar a contornar as limitações da API da Alpha Vantage e obter os dados necessários.
+
+
+
+
+
+
+
+
