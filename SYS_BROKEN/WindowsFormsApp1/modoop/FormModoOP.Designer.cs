@@ -95,7 +95,7 @@
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Size = new System.Drawing.Size(147, 58);
             this.btnRelatorio.TabIndex = 4;
-            this.btnRelatorio.Text = "Relatorios";
+            this.btnRelatorio.Text = "Relatório";
             this.btnRelatorio.UseVisualStyleBackColor = false;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 

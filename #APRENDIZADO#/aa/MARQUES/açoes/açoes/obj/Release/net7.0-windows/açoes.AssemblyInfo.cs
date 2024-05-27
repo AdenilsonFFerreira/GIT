@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("açoes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ef1b0a49c411eebad3b56bc632bb942eba425989")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83feac8603b63701c0a963bf22b51c0f3a5fc304")]
 [assembly: System.Reflection.AssemblyProductAttribute("açoes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("açoes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

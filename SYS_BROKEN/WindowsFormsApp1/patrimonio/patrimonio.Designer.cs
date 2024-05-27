@@ -80,10 +80,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 16);
+            this.label3.Size = new System.Drawing.Size(170, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Entidade Financeira";
             this.label3.UseWaitCursor = true;
@@ -91,10 +91,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(32, 160);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.Size = new System.Drawing.Size(56, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Valor ";
             this.label5.UseWaitCursor = true;
@@ -136,17 +136,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 117);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(32, 121);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(391, 20);
+            this.textBox1.Size = new System.Drawing.Size(391, 26);
             this.textBox1.TabIndex = 38;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(35, 188);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(154, 20);
+            this.textBox2.Size = new System.Drawing.Size(154, 26);
             this.textBox2.TabIndex = 39;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 

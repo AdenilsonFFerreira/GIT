@@ -28,8 +28,6 @@ VALUES ('admin', CONVERT(NVARCHAR(64), HASHBYTES('SHA2_256', 'admin'), 2), 'admi
 ---------------------------------------------------------------------------
 
 
-
-
 SELECT * FROM LOGIN
 GO
 

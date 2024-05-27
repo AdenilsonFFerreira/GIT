@@ -140,7 +140,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.Black;
             this.btnSair.Location = new System.Drawing.Point(778, 427);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(116, 49);
+            this.btnSair.Size = new System.Drawing.Size(129, 49);
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "VOLTAR";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVender.Location = new System.Drawing.Point(778, 278);
             this.btnVender.Name = "btnVender";
-            this.btnVender.Size = new System.Drawing.Size(116, 49);
+            this.btnVender.Size = new System.Drawing.Size(129, 49);
             this.btnVender.TabIndex = 12;
             this.btnVender.Text = "VENDER";
             this.btnVender.UseVisualStyleBackColor = false;

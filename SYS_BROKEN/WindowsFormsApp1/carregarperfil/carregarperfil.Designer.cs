@@ -51,7 +51,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Name = "carregarperfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "carregarperfil";
+            this.Text = "PERFIL";
             this.Load += new System.EventHandler(this.carregarperfil_Load);
             this.ResumeLayout(false);
 

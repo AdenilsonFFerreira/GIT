@@ -58,7 +58,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(262, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Para cadastrar novo USUARIO.";
+            this.label1.Text = "Para cadastrar novo USUÁRIO.";
             // 
             // label2
             // 
@@ -107,7 +107,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 24);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Usuario: ";
+            this.label4.Text = "Usuário: ";
             // 
             // btnCancelar
             // 
