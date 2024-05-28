@@ -6,13 +6,17 @@ GO
 USE ProjAcoes
 GO
 
+SELECT * FROM PAPEL
+GO
+
 DROP TABLE PAPEL
 
 CREATE TABLE PAPEL (
     ID          INT IDENTITY(1,1) PRIMARY KEY,
     Acao        VARCHAR(10),
     Quantidade  INT,
-    Valor       FLOAT, -- Usando FLOAT para suportar valores decimais
+    Valor       FLOAT, 
+	Total		FLOAT, 
     Data_Compra datetime DEFAULT GETDATE()
 )
 GO
@@ -31,8 +35,6 @@ INSERT INTO PAPEL VALUES (2, 'BBAS3', 15, 35)
 INSERT INTO PAPEL VALUES (3, 'VALE3', 100, 45)
 GO
  
-SELECT * FROM PAPEL
-GO
 
 --Para criar a coluna depois de ja ter a tabela
 --ALTER TABLE PAPEL

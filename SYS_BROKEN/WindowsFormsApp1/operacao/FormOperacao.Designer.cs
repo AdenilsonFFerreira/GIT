@@ -171,7 +171,7 @@
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Quantidade";
+            this.columnHeader2.Text = "QTD";
             this.columnHeader2.Width = 66;
             // 
             // columnHeader3

@@ -19,8 +19,7 @@ namespace WindowsFormsApp1
 
         }
 
-
-
+        
         private void update_list_view()
         {
             this.ListView1.Items.Clear();

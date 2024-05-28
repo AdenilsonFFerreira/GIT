@@ -53,7 +53,7 @@
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(133, 299);
+            this.btnVoltar.Location = new System.Drawing.Point(134, 292);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(143, 45);
             this.btnVoltar.TabIndex = 1;
@@ -76,9 +76,9 @@
             // 
             this.btnAlerta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnAlerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlerta.Location = new System.Drawing.Point(143, 223);
+            this.btnAlerta.Location = new System.Drawing.Point(134, 223);
             this.btnAlerta.Name = "btnAlerta";
-            this.btnAlerta.Size = new System.Drawing.Size(123, 42);
+            this.btnAlerta.Size = new System.Drawing.Size(143, 42);
             this.btnAlerta.TabIndex = 3;
             this.btnAlerta.Text = "ALERTA";
             this.btnAlerta.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(429, 373);
+            this.ClientSize = new System.Drawing.Size(415, 373);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnBackup);
             this.Controls.Add(this.btnAlerta);
