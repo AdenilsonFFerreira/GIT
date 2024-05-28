@@ -47,6 +47,7 @@
             this.btnVender = new System.Windows.Forms.Button();
             this.listView3 = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -56,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 18);
+            this.label1.Location = new System.Drawing.Point(469, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 31);
             this.label1.TabIndex = 0;
@@ -125,7 +126,7 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(778, 139);
+            this.btnComprar.Location = new System.Drawing.Point(922, 136);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(129, 49);
             this.btnComprar.TabIndex = 7;
@@ -138,7 +139,7 @@
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(778, 427);
+            this.btnSair.Location = new System.Drawing.Point(922, 424);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(129, 49);
             this.btnSair.TabIndex = 8;
@@ -151,14 +152,15 @@
             this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.ListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListView1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.ListView1.GridLines = true;
             this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(12, 14);
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(209, 403);
+            this.ListView1.Size = new System.Drawing.Size(355, 403);
             this.ListView1.TabIndex = 9;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -172,19 +174,21 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "QTD";
-            this.columnHeader2.Width = 66;
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 45;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Valor";
-            this.columnHeader3.Width = 78;
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 120;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ListView1);
-            this.panel1.Location = new System.Drawing.Point(35, 91);
+            this.panel1.Location = new System.Drawing.Point(12, 88);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 433);
+            this.panel1.Size = new System.Drawing.Size(382, 433);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -196,7 +200,7 @@
             this.panel2.Controls.Add(this.txbValor);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txbQtd);
-            this.panel2.Location = new System.Drawing.Point(611, 91);
+            this.panel2.Location = new System.Drawing.Point(755, 88);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 433);
             this.panel2.TabIndex = 11;
@@ -205,7 +209,7 @@
             // 
             this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(778, 278);
+            this.btnVender.Location = new System.Drawing.Point(922, 275);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(129, 49);
             this.btnVender.TabIndex = 12;
@@ -226,16 +230,22 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.listView3);
-            this.panel3.Location = new System.Drawing.Point(318, 91);
+            this.panel3.Location = new System.Drawing.Point(462, 88);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(243, 433);
             this.panel3.TabIndex = 13;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Total";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 120;
             // 
             // FormOperacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 649);
+            this.ClientSize = new System.Drawing.Size(1093, 649);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel2);
@@ -277,5 +287,6 @@
         private System.Windows.Forms.Button btnVender;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

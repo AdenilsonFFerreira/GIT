@@ -15,8 +15,7 @@ namespace WindowsFormsApp1
         public FormOperacao()
         {
             InitializeComponent();
-            update_list_view();
-
+            update_list_view();    
         }
 
         
@@ -27,7 +26,7 @@ namespace WindowsFormsApp1
             Papel[] papeis = con.posicao_consolidade();
             for (int i = 0; i < papeis.Length; i++)
             {
-                String[] items = { papeis[i].acao, papeis[i].qtd.ToString(), papeis[i].valor.ToString() };
+                String[] items = { papeis[i].acao, papeis[i].qtd.ToString(), papeis[i].valor.ToString(), };
                 this.ListView1.Items.Add(new ListViewItem(items));
             }
         }
@@ -51,7 +50,7 @@ namespace WindowsFormsApp1
                     ListViewItem item = new ListViewItem(reader["Acao"].ToString());
                     item.SubItems.Add(reader["Quantidade"].ToString());
                     item.SubItems.Add(reader["Valor"].ToString());
-                    item.SubItems.Add(reader["Data_Compra"].ToString());
+                    item.SubItems.Add(reader["Total"].ToString());
 
                     ListView1.Items.Add(item);
                 }
@@ -74,14 +73,21 @@ namespace WindowsFormsApp1
         private void btnComprar_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
-            string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor, Data_Compra) VALUES (@Acao, @Quantidade, @Valor, GETDATE())";
+            // Adiciona a coluna TOTAL no INSERT
+            string query = "INSERT INTO PAPEL (Acao, Quantidade, Valor, Total, Data_Compra) VALUES (@Acao, @Quantidade, @Valor, @Total, GETDATE())";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Acao", txbAcao.Text);
-                command.Parameters.AddWithValue("@Quantidade", txbQtd.Text);
-                command.Parameters.AddWithValue("@Valor", txbValor.Text);
+                // Converte a quantidade e o valor para os tipos numéricos apropriados antes de calcular o total
+                int quantidade = int.Parse(txbQtd.Text);
+                decimal valor = decimal.Parse(txbValor.Text);
+                decimal total = quantidade * valor; // Calcula o total
+
+                command.Parameters.AddWithValue("@Quantidade", quantidade);
+                command.Parameters.AddWithValue("@Valor", valor);
+                command.Parameters.AddWithValue("@Total", total); // Adiciona o total calculado
 
                 try
                 {
@@ -99,6 +105,7 @@ namespace WindowsFormsApp1
             }
             PreencherListView();
         }
+
 
 
 

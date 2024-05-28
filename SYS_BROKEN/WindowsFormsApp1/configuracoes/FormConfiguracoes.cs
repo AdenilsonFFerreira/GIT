@@ -93,7 +93,7 @@ namespace WindowsFormsApp1
         {
             BackupDatabase();
             ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PAPEL", "C:\\SysBroken\\Backup\\papel.csv");
-            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "PROVISAO", "C:\\SysBroken\\Backup\\provisao.csv");
+            ExportDataToCsv("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True", "DIVIDENDOS", "C:\\SysBroken\\Backup\\dividendos.csv");
 
         }
 
