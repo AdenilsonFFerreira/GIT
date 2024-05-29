@@ -8,10 +8,10 @@
     align-items: center;
     padding: 1%;
     background-color: #08d6f6;
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 
 /* Imagem de logo */
@@ -110,5 +110,50 @@ body{
     font-family: "Montserrat", sans-serif; 
 }
 
+/* Estilos para o menu lateral */
+#menu-lateral {
+    width: 200px; /* Largura do menu lateral */
+    position: fixed; /* Fixa o menu na tela */
+    left: 0; /* Alinha o menu à esquerda */
+    top: 0; /* Alinha o menu ao topo */
+    bottom: 0; /* Estende o menu até o fim da altura da tela */
+    background-color: #333; /* Cor de fundo do menu */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    padding-top: 100px; /* Ajuste este valor para a altura do seu cabeçalho */
+}
 
+/* Restante do seu CSS... */
+
+
+/* Estilos para o cabeçalho */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #08d6f6;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    /* Adicione uma altura fixa ao cabeçalho se ainda não tiver uma */
+    height: 60px; /* Ajuste este valor conforme necessário */
+}
+
+/* Estilos para o menu lateral */
+#menu-lateral {
+    width: 200px; /* Largura do menu lateral */
+    position: fixed; /* Fixa o menu na tela */
+    left: 0; /* Alinha o menu à esquerda */
+    top: 60px; /* Ajuste este valor para ser igual à altura do seu cabeçalho */
+    bottom: 0; /* Estende o menu até o fim da altura da tela */
+    background-color: #333; /* Cor de fundo do menu */
+    color: white; /* Cor do texto */
+    padding: 20px; /* Espaçamento interno */
+    z-index: 5; /* Certifique-se de que este valor seja menor que o do cabeçalho */
+    margin-top: 60px; /* Margem superior igual à altura do cabeçalho */
+}
+
+/* Restante do seu CSS... */
 

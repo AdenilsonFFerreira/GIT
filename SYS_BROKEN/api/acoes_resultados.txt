@@ -1,0 +1,3 @@
+Símbolo,Erro ao obter dados
+PETR4.SA,Erro ao obter dados
+VALE3.SA,Erro ao obter dados

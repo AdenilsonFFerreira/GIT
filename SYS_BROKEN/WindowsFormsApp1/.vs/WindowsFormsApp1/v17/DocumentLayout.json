@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:configuracoes\\formconfiguracoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormConfiguracoes.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs",
-              "RelativeDocumentMoniker": "configuracoes\\FormConfiguracoes.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\configuracoes\\FormConfiguracoes.cs",
-              "RelativeToolTip": "configuracoes\\FormConfiguracoes.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAwwF8AAACgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T16:10:09.97Z",
-              "EditorCaption": ""
             }
           ]
         }

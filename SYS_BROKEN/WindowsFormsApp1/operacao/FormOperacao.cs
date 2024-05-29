@@ -14,8 +14,9 @@ namespace WindowsFormsApp1
 
         public FormOperacao()
         {
-            InitializeComponent();
-            update_list_view();    
+            InitializeComponent();            
+            update_list_view();
+            PreencherListView();
         }
 
         
@@ -49,13 +50,15 @@ namespace WindowsFormsApp1
                 {
                     ListViewItem item = new ListViewItem(reader["Acao"].ToString());
                     item.SubItems.Add(reader["Quantidade"].ToString());
-                    item.SubItems.Add(reader["Valor"].ToString());
-                    item.SubItems.Add(reader["Total"].ToString());
+                    // Formata os campos Valor e Total para incluir o símbolo de Real (R$)
+                    item.SubItems.Add(string.Format("R$ {0:N2}", reader["Valor"]));
+                    item.SubItems.Add(string.Format("R$ {0:N2}", reader["Total"]));
 
                     ListView1.Items.Add(item);
                 }
             }
         }
+
 
         private void Label3_Click(object sender, EventArgs e)
         {

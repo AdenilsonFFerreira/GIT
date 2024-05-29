@@ -42,12 +42,16 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnVender = new System.Windows.Forms.Button();
             this.listView3 = new System.Windows.Forms.ListView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -57,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(469, 15);
+            this.label1.Location = new System.Drawing.Point(368, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(284, 31);
             this.label1.TabIndex = 0;
@@ -126,7 +130,7 @@
             // 
             this.btnComprar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(922, 136);
+            this.btnComprar.Location = new System.Drawing.Point(931, 186);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.Size = new System.Drawing.Size(129, 49);
             this.btnComprar.TabIndex = 7;
@@ -139,7 +143,7 @@
             this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Black;
-            this.btnSair.Location = new System.Drawing.Point(922, 424);
+            this.btnSair.Location = new System.Drawing.Point(931, 474);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(129, 49);
             this.btnSair.TabIndex = 8;
@@ -160,7 +164,7 @@
             this.ListView1.HideSelection = false;
             this.ListView1.Location = new System.Drawing.Point(12, 14);
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(355, 403);
+            this.ListView1.Size = new System.Drawing.Size(414, 403);
             this.ListView1.TabIndex = 9;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -181,14 +185,20 @@
             // 
             this.columnHeader3.Text = "Valor";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 120;
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Total";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 150;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ListView1);
-            this.panel1.Location = new System.Drawing.Point(12, 88);
+            this.panel1.Location = new System.Drawing.Point(12, 138);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 433);
+            this.panel1.Size = new System.Drawing.Size(439, 433);
             this.panel1.TabIndex = 10;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -200,7 +210,7 @@
             this.panel2.Controls.Add(this.txbValor);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txbQtd);
-            this.panel2.Location = new System.Drawing.Point(755, 88);
+            this.panel2.Location = new System.Drawing.Point(764, 138);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 433);
             this.panel2.TabIndex = 11;
@@ -209,7 +219,7 @@
             // 
             this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVender.Location = new System.Drawing.Point(922, 275);
+            this.btnVender.Location = new System.Drawing.Point(931, 325);
             this.btnVender.Name = "btnVender";
             this.btnVender.Size = new System.Drawing.Size(129, 49);
             this.btnVender.TabIndex = 12;
@@ -219,33 +229,66 @@
             // 
             // listView3
             // 
+            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.listView3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView3.GridLines = true;
             this.listView3.HideSelection = false;
             this.listView3.Location = new System.Drawing.Point(13, 14);
             this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(217, 403);
+            this.listView3.Size = new System.Drawing.Size(223, 403);
             this.listView3.TabIndex = 14;
             this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.Details;
             this.listView3.SelectedIndexChanged += new System.EventHandler(this.listView3_SelectedIndexChanged);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.listView3);
-            this.panel3.Location = new System.Drawing.Point(462, 88);
+            this.panel3.Location = new System.Drawing.Point(476, 138);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(243, 433);
+            this.panel3.Size = new System.Drawing.Size(251, 433);
             this.panel3.TabIndex = 13;
             // 
-            // columnHeader4
+            // label5
             // 
-            this.columnHeader4.Text = "Total";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 120;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 24);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Ativo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(532, 111);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 24);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Cotação Abertura";
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Ação";
+            this.columnHeader5.Width = 64;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Valor";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 150;
             // 
             // FormOperacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 649);
+            this.ClientSize = new System.Drawing.Size(1089, 582);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnVender);
             this.Controls.Add(this.panel2);
@@ -288,5 +331,9 @@
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
     }
 }
