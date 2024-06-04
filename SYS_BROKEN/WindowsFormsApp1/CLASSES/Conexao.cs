@@ -147,6 +147,7 @@ namespace WindowsFormsApp1
         }
 
         //METODO CADASTRAR PROVISAO
+        /*
         public String Cadastrar_Provisao(Provisao provisao)
         {
             SqlCommand cmd = new SqlCommand();
@@ -186,6 +187,7 @@ namespace WindowsFormsApp1
         {
             return new Usuario();
         }
+        */
 
 
         public Papel[] posicao_consolidade()

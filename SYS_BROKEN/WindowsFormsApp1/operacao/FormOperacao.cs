@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Http;
 using System.Windows.Forms;
@@ -275,16 +276,43 @@ namespace WindowsFormsApp1
 
         }
 
+        private void ExecutePythonScript()
+        {
+            // Caminho para o script Python que você deseja executar
+            string pythonScript = @"C:\SysBroken\utility\api.py";
+
+            // Configuração do processo para executar o script Python com pythonw.exe
+            ProcessStartInfo pythonStartInfo = new ProcessStartInfo("pythonw")
+            {
+                Arguments = pythonScript,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            // Iniciar o processo e esperar que ele termine antes de continuar
+            using (Process pythonProcess = new Process())
+            {
+                pythonProcess.StartInfo = pythonStartInfo;
+                pythonProcess.Start();
+                pythonProcess.WaitForExit(); // Espera o script Python terminar
+            }
+        }
+
+
         private void LoadDataIntoListView()
         {
             // Caminho para o arquivo CSV
             string csvFilePath = @"C:\SysBroken\api\acao_atu.csv";
 
-            // Configurar as colunas do ListView
-            listView3.View = View.Details;
-            listView3.Columns.Add("Acão");
-            listView3.Columns.Add("Data / Hora");
-            listView3.Columns.Add("Valor");
+            // Verificar se as colunas já foram adicionadas
+            if (listView3.Columns.Count == 0)
+            {
+                // Configurar as colunas do ListView
+                listView3.View = View.Details;
+                listView3.Columns.Add("Acão");
+                //listView3.Columns.Add("Data / Hora");
+                listView3.Columns.Add("Valor");
+            }
 
             // Limpar itens existentes no ListView
             listView3.Items.Clear();
@@ -298,11 +326,18 @@ namespace WindowsFormsApp1
                 {
                     string[] items = line.Split(','); // Substitua ',' pelo delimitador usado no seu CSV se for diferente
                     ListViewItem lvItem = new ListViewItem(items[0]);
-                    lvItem.SubItems.Add(items[1]);
+                    //lvItem.SubItems.Add(items[1]);
                     lvItem.SubItems.Add(items[2]);
                     listView3.Items.Add(lvItem);
                 }
             }
+        }
+
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            ExecutePythonScript();
+            LoadDataIntoListView();
         }
     }
 }

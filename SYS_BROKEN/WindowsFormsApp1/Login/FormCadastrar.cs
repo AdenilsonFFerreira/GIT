@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
 
         }
 
-        string savePathGlobal; // Variável global para armazenar o caminho da imagem
+        //string savePathGlobal; // Variável global para armazenar o caminho da imagem
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
