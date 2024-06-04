@@ -41,7 +41,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        // Implemente os métodos EmailCadastrado, GerarSenhaTemporaria, AtualizarSenhaNoBancoDeDados e EnviarEmail
+        
 
         private bool VerificarEmailCadastrado(string emailUsuario)
         {

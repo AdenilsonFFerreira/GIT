@@ -148,7 +148,7 @@ namespace WindowsFormsApp1
             // Caminho da imagem
             string imagePath = pictureBox1.ImageLocation;
 
-            Login login = new Login(txbUsuario.Text, senha, imagePath);  // Adicione o caminho da imagem como um novo parâmetro
+            Login login = new Login(txbUsuario.Text, senha, imagePath);  
             MessageBox.Show(conexao.Cadastrar_Usuario(login));
 
             Usuario usuario = new Usuario(txbNome.Text,

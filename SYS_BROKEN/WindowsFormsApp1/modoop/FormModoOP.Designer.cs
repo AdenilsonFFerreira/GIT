@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormModoOP));
             this.btnOperacao = new System.Windows.Forms.Button();
             this.btnAnalise = new System.Windows.Forms.Button();
             this.btnFi = new System.Windows.Forms.Button();
@@ -162,6 +163,7 @@
             this.Controls.Add(this.btnFi);
             this.Controls.Add(this.btnAnalise);
             this.Controls.Add(this.btnOperacao);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModoOP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MODO DE OPERAÇÃO";

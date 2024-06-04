@@ -28,8 +28,8 @@ namespace WindowsFormsApp1
             using (SqlConnection conexao = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True"))
             {
                 conexao.Open();
-                string usuario = txtUsuario.Text; // Substitua 'txtUsuario' pelo nome da sua caixa de texto do usuário
-                string senha = txtSenha.Text; // Substitua 'txtSenha' pelo nome da sua caixa de texto da senha
+                string usuario = txtUsuario.Text; 
+                string senha = txtSenha.Text; 
 
                 // Criptografar a senha
                 using (SHA256 sha256Hash = SHA256.Create())
@@ -56,15 +56,13 @@ namespace WindowsFormsApp1
                         form4.Show();
                         FormAlertas formAlertas = new FormAlertas();
                         formAlertas.Show();
-
-                        //como esse form é o principal (form1) não pode fechar (close)
-                        //nesse caso so deixamos ele como invisivel quando é chamado o formulario
+                        
                         this.Hide();
                     }
                     else
                     {
-                        // Usuário ou senha estão incorretos.
-                        MessageBox.Show("Usuário ou senha incorretos."); // Mostre uma mensagem de erro ao usuário
+                        
+                        MessageBox.Show("Usuário ou senha incorretos.");
                     }
                 }
             }
@@ -79,9 +77,6 @@ namespace WindowsFormsApp1
 
         private void LblCadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            /*FormCadastrar form3 = new FormCadastrar();
-            form3.Show();
-            */
             FormAdmin formAdmin = new FormAdmin();
             formAdmin.Show();
         }
