@@ -58,7 +58,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 24);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Periodo";
+            this.label2.Text = "Período";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txbPapel
@@ -155,7 +155,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormRelatorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATORIO";
+            this.Text = "RELATÓRIO";
             this.Load += new System.EventHandler(this.FormRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

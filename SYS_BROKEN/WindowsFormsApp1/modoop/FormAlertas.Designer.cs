@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(424, 404);
             this.Name = "FormAlertas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormAlertas";
+            this.Text = "ALERTAS";
             this.Load += new System.EventHandler(this.FormAlertas_Load);
             this.ResumeLayout(false);
 

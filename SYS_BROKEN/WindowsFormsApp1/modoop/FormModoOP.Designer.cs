@@ -131,7 +131,7 @@
             this.btnProvisao.Name = "btnProvisao";
             this.btnProvisao.Size = new System.Drawing.Size(147, 58);
             this.btnProvisao.TabIndex = 7;
-            this.btnProvisao.Text = "Provisão";
+            this.btnProvisao.Text = "Dividendos";
             this.btnProvisao.UseVisualStyleBackColor = false;
             this.btnProvisao.Click += new System.EventHandler(this.btnProvisao_Click);
             // 

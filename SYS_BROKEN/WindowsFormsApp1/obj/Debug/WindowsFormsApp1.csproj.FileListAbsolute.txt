@@ -47,3 +47,16 @@ C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.fi.fi.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAdmin.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.modoop.FormAlertas.resources
 C:\GIT\SYS_BROKEN\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Patrimonio.resources
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\EPPlus.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.Modules.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.SQLite.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.Wpf.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\System.Memory.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\System.Buffers.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\System.Numerics.Vectors.dll
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\EPPlus.xml
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.xml
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.Modules.xml
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.SQLite.xml
+C:\GIT\SYS_BROKEN\WindowsFormsApp1\bin\Debug\IronPython.Wpf.xml
