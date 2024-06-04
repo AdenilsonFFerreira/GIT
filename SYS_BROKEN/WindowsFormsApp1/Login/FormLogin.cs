@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using WindowsFormsApp1.modoop;
 using OfficeOpenXml;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
@@ -23,13 +25,13 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
-        private void BtnOk_Click(object sender, EventArgs e)
+        private async void BtnOk_Click(object sender, EventArgs e)
         {
             using (SqlConnection conexao = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True"))
             {
                 conexao.Open();
-                string usuario = txtUsuario.Text; 
-                string senha = txtSenha.Text; 
+                string usuario = txtUsuario.Text;
+                string senha = txtSenha.Text;
 
                 // Criptografar a senha
                 using (SHA256 sha256Hash = SHA256.Create())
@@ -52,21 +54,46 @@ namespace WindowsFormsApp1
 
                     if (leitor.HasRows)
                     {
+                        // Executar o script Python em uma tarefa separada
+                        Task.Run(() => ExecutePythonScript());
+
                         FormModoOP form4 = new FormModoOP();
                         form4.Show();
                         FormAlertas formAlertas = new FormAlertas();
                         formAlertas.Show();
-                        
+
                         this.Hide();
                     }
                     else
                     {
-                        
                         MessageBox.Show("Usuário ou senha incorretos.");
                     }
                 }
             }
         }
+
+        private void ExecutePythonScript()
+        {
+            // Caminho para o script Python que você deseja executar
+            string pythonScript = @"C:\SysBroken\utility\api.py";
+
+            // Configuração do processo para executar o script Python com pythonw.exe
+            ProcessStartInfo pythonStartInfo = new ProcessStartInfo("pythonw")
+            {
+                Arguments = pythonScript,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
+            // Iniciar o processo sem bloquear a interface do usuário
+            using (Process pythonProcess = new Process())
+            {
+                pythonProcess.StartInfo = pythonStartInfo;
+                pythonProcess.Start();
+            }
+        }
+
+
 
 
         private void LblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
