@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:login\\formlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\modoop\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:modoop\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|c:\\git\\sys_broken\\windowsformsapp1\\modoop\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527CBE2D-1379-4DCE-BB4F-8E4B5F652F4B}|WindowsFormsApp1.csproj|solutionrelative:modoop\\formmodoop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,61 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormLogin.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Login\\FormLogin.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeToolTip": "Login\\FormLogin.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAwwF4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:42:00.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormLogin.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs",
-              "RelativeDocumentMoniker": "Login\\FormLogin.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\Login\\FormLogin.cs [Design]",
-              "RelativeToolTip": "Login\\FormLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:41:57.662Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormModoOP.cs",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\modoop\\FormModoOP.cs",
-              "RelativeDocumentMoniker": "modoop\\FormModoOP.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\modoop\\FormModoOP.cs",
-              "RelativeToolTip": "modoop\\FormModoOP.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAABAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:32:05.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormModoOP.cs [Design]",
-              "DocumentMoniker": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\modoop\\FormModoOP.cs",
-              "RelativeDocumentMoniker": "modoop\\FormModoOP.cs",
-              "ToolTip": "C:\\GIT\\SYS_BROKEN\\WindowsFormsApp1\\modoop\\FormModoOP.cs [Design]",
-              "RelativeToolTip": "modoop\\FormModoOP.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T19:31:27.452Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

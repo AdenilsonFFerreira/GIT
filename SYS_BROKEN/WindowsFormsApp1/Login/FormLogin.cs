@@ -93,9 +93,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
-
-
         private void LblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormRecuperar form2 = new FormRecuperar();

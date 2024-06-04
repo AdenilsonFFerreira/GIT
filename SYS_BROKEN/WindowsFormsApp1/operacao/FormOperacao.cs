@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -17,6 +18,7 @@ namespace WindowsFormsApp1
             InitializeComponent();            
             update_list_view();
             PreencherListView();
+            LoadDataIntoListView();
         }
 
         
@@ -271,6 +273,36 @@ namespace WindowsFormsApp1
         private void listView3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoadDataIntoListView()
+        {
+            // Caminho para o arquivo CSV
+            string csvFilePath = @"C:\SysBroken\api\acao_atu.csv";
+
+            // Configurar as colunas do ListView
+            listView3.View = View.Details;
+            listView3.Columns.Add("Acão");
+            listView3.Columns.Add("Data / Hora");
+            listView3.Columns.Add("Valor");
+
+            // Limpar itens existentes no ListView
+            listView3.Items.Clear();
+
+            // Ler os dados do arquivo CSV e adicionar ao ListView
+            using (StreamReader reader = new StreamReader(csvFilePath))
+            {
+                string line = reader.ReadLine(); // Ler e descartar a linha de cabeçalho
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    string[] items = line.Split(','); // Substitua ',' pelo delimitador usado no seu CSV se for diferente
+                    ListViewItem lvItem = new ListViewItem(items[0]);
+                    lvItem.SubItems.Add(items[1]);
+                    lvItem.SubItems.Add(items[2]);
+                    listView3.Items.Add(lvItem);
+                }
+            }
         }
     }
 }
