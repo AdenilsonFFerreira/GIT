@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -12,10 +14,39 @@ namespace WindowsFormsApp1
 
         private void BtnOperacao_Click(object sender, EventArgs e)
         {
+            // Caminho completo para o script Python
+            string pythonScript = @"C:\SysBroken\utility\import.py";
+
+            // Configuração do processo para executar o script Python
+            ProcessStartInfo pythonProcessInfo = new ProcessStartInfo("python", pythonScript)
+            {
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+
+            // Iniciando o processo
+            using (Process pythonProcess = Process.Start(pythonProcessInfo))
+            {
+                using (StreamReader reader = pythonProcess.StandardOutput)
+                {
+                    // Lendo a saída do script Python
+                    string output = reader.ReadToEnd();
+                    Console.WriteLine(output);
+                }
+            }
+
+            // Mostrando o formulário de operação
             FormOperacao form5 = new FormOperacao();
             form5.Show();
+
+            // Fechando o formulário atual
             this.Close();
         }
+
+
+
+
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
