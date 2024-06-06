@@ -18,6 +18,13 @@ CREATE TABLE LOGIN(
 )
 GO
 
+SELECT * FROM USUARIO
+GO
+
+
+SELECT ID FROM USUARIO WHERE Nome = 'administrador';
+
+
 ---------------------------------------------------------------------------
 -- Insere um novo usuário do tipo 'Admin' na tabela LOGIN
 INSERT INTO LOGIN (Usuario, Senha, TipoUsuario)
@@ -25,6 +32,15 @@ VALUES ('admin', 'admin', 'admin');
 ---------------------------------------------------------------------------
 INSERT INTO LOGIN (Usuario, Senha, TipoUsuario)
 VALUES ('admin', CONVERT(NVARCHAR(64), HASHBYTES('SHA2_256', 'admin'), 2), 'admin');
+
+INSERT INTO LOGIN (ID, UsuarioID, Usuario, Senha, TipoUsuario)
+VALUES ('1', 'UsuarioID_aqui', 'admin', CONVERT(NVARCHAR(64), HASHBYTES('SHA2_256', 'admin'), 2), 'admin');
+
+INSERT INTO LOGIN (UsuarioID, Usuario, Senha, TipoUsuario)
+VALUES (1, 'admin', CONVERT(NVARCHAR(64), HASHBYTES('SHA2_256', 'admin'), 2), 'admin');
+
+
+
 ---------------------------------------------------------------------------
 
 
@@ -37,3 +53,9 @@ ALTER COLUMN Senha VARCHAR(256)
 ALTER TABLE LOGIN
 ALTER COLUMN Foto VARCHAR(MAX);
 
+SELECT UsuarioID FROM LOGIN WHERE UsuarioID = (SELECT ID FROM USUARIO WHERE Email = 'adenilson.ff@outlook.com')
+
+
+UPDATE LOGIN
+SET UsuarioID = (SELECT ID FROM USUARIO WHERE Email = 'adenilson.ff@outlook.com')
+WHERE Usuario = 'ade'

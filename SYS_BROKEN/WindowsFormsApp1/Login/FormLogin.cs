@@ -33,22 +33,13 @@ namespace WindowsFormsApp1
                 string usuario = txtUsuario.Text;
                 string senha = txtSenha.Text;
 
-                // Criptografar a senha
-                using (SHA256 sha256Hash = SHA256.Create())
-                {
-                    byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
-                    StringBuilder builder = new StringBuilder();
-                    for (int i = 0; i < bytes.Length; i++)
-                    {
-                        builder.Append(bytes[i].ToString("x2"));
-                    }
-                    senha = builder.ToString();
-                }
+                // Aplica o hash à senha inserida.
+                string senhaHash = HashPassword(senha);
 
                 using (SqlCommand comando = new SqlCommand("SELECT * FROM LOGIN WHERE Usuario = @usuario AND Senha = @senha", conexao))
                 {
                     comando.Parameters.AddWithValue("@usuario", usuario);
-                    comando.Parameters.AddWithValue("@senha", senha);
+                    comando.Parameters.AddWithValue("@senha", senhaHash);
 
                     SqlDataReader leitor = comando.ExecuteReader();
 
@@ -72,6 +63,21 @@ namespace WindowsFormsApp1
             }
         }
 
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
+
+
         private void ExecutePythonScript()
         {
             // Caminho para o script Python que você deseja executar
@@ -92,6 +98,7 @@ namespace WindowsFormsApp1
                 pythonProcess.Start();
             }
         }
+        
 
         private void LblRecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

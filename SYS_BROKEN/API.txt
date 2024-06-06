@@ -1,8 +1,9 @@
 Alpha Vantage
 0L8VA6QQANQW0EFD
-
 5N97PQ11HSS38K53
 
+NOVA
+E5V0NY3S3W0WIQKX
 
 --------------------------------------------------------------------
 https://www.dadosdemercado.com.br/api/docs

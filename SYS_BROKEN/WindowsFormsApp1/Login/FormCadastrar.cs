@@ -62,22 +62,7 @@ namespace WindowsFormsApp1
             return cpf.EndsWith(digito);
         }
 
-        /*private void SaveImagePath(string imagePath, int usuarioId)
-        {
-            string connectionString = "Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string sql = "UPDATE LOGIN SET Foto = @Foto WHERE UsuarioID = @UsuarioID";
-                using (SqlCommand command = new SqlCommand(sql, connection))
-                {
-                    command.Parameters.AddWithValue("@Foto", imagePath);
-                    command.Parameters.AddWithValue("@UsuarioID", usuarioId);
-                    command.ExecuteNonQuery();
-                }
-            }
-        }*/
-
+        
         private void Label1_Click(object sender, EventArgs e)
         {
 
@@ -100,6 +85,7 @@ namespace WindowsFormsApp1
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            // Validação do CPF.
             if (!ValidaCPF(txbCpf.Text))
             {
                 MessageBox.Show("CPF inválido!");
@@ -107,6 +93,7 @@ namespace WindowsFormsApp1
                 return;
             }
 
+            // Verificação se o campo de e-mail está preenchido.
             if (string.IsNullOrEmpty(txbEmail.Text))
             {
                 MessageBox.Show("O campo de e-mail é obrigatório!");
@@ -114,58 +101,74 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            // Verificação se o CPF já existe no banco de dados
+            // Verificação se o CPF já existe no banco de dados.
             string cpf = txbCpf.Text;
-            SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True");
-            SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM USUARIO WHERE CPF = @CPF", conn);
-            cmd.Parameters.AddWithValue("@CPF", cpf);
-            conn.Open();
-            int count = (int)cmd.ExecuteScalar();
-            conn.Close();
-
-            if (count > 0)
+            int usuarioId = 0; // Variável para armazenar o ID do usuário.
+            using (SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True"))
             {
-                MessageBox.Show("CPF já existe!");
-                txbCpf.Focus();
-                return;
-            }
-
-            Conexao conexao = new Conexao();
-
-            // Criptografar a senha
-            string senha = txbSenha.Text;
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(senha));
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < bytes.Length; i++)
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM USUARIO WHERE CPF = @CPF", conn))
                 {
-                    builder.Append(bytes[i].ToString("x2"));
+                    cmd.Parameters.AddWithValue("@CPF", cpf);
+                    int count = (int)cmd.ExecuteScalar();
+                    if (count > 0)
+                    {
+                        MessageBox.Show("CPF já existe!");
+                        txbCpf.Focus();
+                        return;
+                    }
                 }
-                senha = builder.ToString();
+
+                // Inserção do usuário na tabela USUARIO e obtenção do ID gerado.
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO USUARIO (Nome, CPF, Email) VALUES (@Nome, @CPF, @Email); SELECT SCOPE_IDENTITY();", conn))
+                {
+                    cmd.Parameters.AddWithValue("@Nome", txbNome.Text);
+                    cmd.Parameters.AddWithValue("@CPF", cpf);
+                    cmd.Parameters.AddWithValue("@Email", txbEmail.Text);
+                    usuarioId = Convert.ToInt32(cmd.ExecuteScalar());
+                }
             }
 
-            // Caminho da imagem
+            // Criptografia da senha.
+            string senha = txbSenha.Text;
+            senha = HashPassword(senha);
+
+            // Caminho da imagem.
             string imagePath = pictureBox1.ImageLocation;
 
-            Login login = new Login(txbUsuario.Text, senha, imagePath);  
-            MessageBox.Show(conexao.Cadastrar_Usuario(login));
+            // Inserção do login na tabela LOGIN associado ao ID do usuário.
+            using (SqlConnection conn = new SqlConnection("Data Source=SNVME\\SQLEXPRESS;Initial Catalog=ProjAcoes;Integrated Security=True"))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO LOGIN (UsuarioID, Usuario, Senha, TipoUsuario, Foto) VALUES (@UsuarioID, @Usuario, @Senha, @TipoUsuario, @Foto)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@UsuarioID", usuarioId);
+                    cmd.Parameters.AddWithValue("@Usuario", txbUsuario.Text);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
+                    cmd.Parameters.AddWithValue("@TipoUsuario", "Tipo do Usuário"); // Substitua pelo tipo de usuário apropriado.
+                    cmd.Parameters.AddWithValue("@Foto", imagePath);
+                    cmd.ExecuteNonQuery();
+                }
+            }
 
-            Usuario usuario = new Usuario(txbNome.Text,
-                txbEndereco.Text,
-                txbNumero.Text,
-                txbBairro.Text, txbCidade.Text,
-                txbCep.Text,
-                txbCpf.Text,
-                txbEmail.Text,
-                txbSexo.Text,
-                txbCelular.Text,
-                txbTelefone.Text);
-            MessageBox.Show(conexao.Inserir_Usuario(usuario));
-
-            conexao.Inserir_Usuario(usuario);
+            MessageBox.Show("Usuário cadastrado com sucesso!");
         }
 
+
+        // Método para criar um hash da senha.
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString();
+            }
+        }
 
 
         private void Label13_Click(object sender, EventArgs e)
