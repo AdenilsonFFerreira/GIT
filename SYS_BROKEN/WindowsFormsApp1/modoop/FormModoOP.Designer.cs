@@ -165,7 +165,7 @@
             this.Controls.Add(this.btnOperacao);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormModoOP";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MODO DE OPERAÇÃO";
             this.Load += new System.EventHandler(this.FormModoOP_Load);
             this.ResumeLayout(false);
