@@ -38,8 +38,7 @@ body{
     height: 60px; /* Altura desejada */
     background-color: #f0f0f0; /* Cor de fundo desejada */
     border: 1px solid #ccc; /* Borda desejada */ 
-    border-radius: 50%;
-       
+    border-radius: 50%;       
 }
 
 #logo img {    
@@ -53,6 +52,7 @@ body{
 #pesquisar {
     position: center;
 }
+
 input[type="text"] {
     padding: 8px;
     border: 1px solid #ccc;
@@ -60,6 +60,7 @@ input[type="text"] {
     width: 300px;
     transition: width 0.4s;
 }
+
 input[type="text"]:focus {
     width: 320px;
 }
@@ -143,7 +144,7 @@ img {
   
   .button {
     display: inline-block;  /* Permite que o elemento seja exibido na linha, mas ainda tenha largura e altura definidas */
-    width: 100%;  /* Define a largura do botão para ocupar 100% do espaço disponível de seu contêiner pai */
+    width: 80%;  /* Define a largura do botão para ocupar 100% do espaço disponível de seu contêiner pai */
     padding: 10px 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
     font-size: 20px;  /* Define o tamanho da fonte do texto dentro do botão para 20 pixels */
     cursor: pointer;  /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
@@ -153,10 +154,9 @@ img {
     color: #fff;  /* Define a cor do texto dentro do botão para branco */
     background-color: #4CAF50;  /* Define a cor de fundo do botão para um tom de verde */
     border: none;  /* Remove a borda do botão */
-    border-radius: 15px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
+    border-radius: 10px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
     box-shadow: 0 9px #999;  /* Adiciona uma sombra ao botão. O primeiro valor é o deslocamento horizontal da sombra, o segundo valor é o deslocamento vertical e o terceiro valor é a cor da sombra */
 }
-
   
   .button:hover {background-color: #3e8e41}
   
