@@ -1,18 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    width: 100%;
+}
+
+body{
+    /* pega no site */
+    font-family: "Montserrat", sans-serif; 
+}
 
 
 /* *********************************************************************************************************** */
 /* ESTRUTURA DO HEADER*/
 #header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: #08d6f6;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 10;
+    display: flex;              /* O layout do elemento é definido como flexível, permitindo que seus filhos sejam alinhados e distribuídos de maneira flexível. */
+    justify-content: space-between; /* Os itens filhos são distribuídos uniformemente no contêiner, com espaço máximo entre eles. */
+    align-items: center;        /* Os itens filhos são centralizados verticalmente no contêiner. */
+    padding: 1%;                /* O preenchimento é definido como 1% em todos os lados do elemento. */
+    background-color: #08d6f6;  /* A cor de fundo do elemento é definida como um tom de azul claro. */
+    position: relative;         /* A posição do elemento é definida como relativa, o que significa que ele será posicionado em relação ao seu local normal. */
+    top: 0;                     /* O elemento é posicionado no topo do contêiner. */
+    height:120px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
+    width: 100%;                /* A largura do elemento é definida como 100%, ocupando todo o espaço horizontal disponível. */
+    z-index: 10;                /* O elemento tem um índice de pilha de 10, o que significa que ele será empilhado acima de elementos com um índice de pilha menor. */
 }
+
 
 /* Imagem de logo */
 #logo {    
@@ -45,13 +63,15 @@ input[type="text"] {
 input[type="text"]:focus {
     width: 320px;
 }
-button {
+
+#pesquisar button {
     background-color: #f9fafa;
     border: none;
     border-radius: 5px;
     padding: 6px;
     cursor: pointer;
 }
+
 img {
     height: 20px;
     width: 20px;
@@ -60,7 +80,7 @@ img {
 /* FIM - Campo pesquisar */
 
 /* Botão sair*/
-.btnSair button{
+#btnSair button{
     background-color: rgb(202, 39, 161);
     color: #fff ;    
     border: 1px solid rgb(202, 39, 161);
@@ -69,6 +89,7 @@ img {
     cursor: pointer;
     margin-right: auto;
     width: 100px;
+    height: 40px;
 }
 
 /* FIM - botão sair */
@@ -93,67 +114,54 @@ img {
 /* *********************************************************************************************************** */
 /* ESTRUTURA BASICA COMUN A TODA PAGINA */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+
+/* Estilos para o menu lateral */
+#menu-lateral {
+    width: 220px;
+    height: 120vh;
+    background-color: #333;
+    position: fixed;
+    left: 0;
+    top: 120px;
+    padding: 0px;
+  }
+  
+  #menu-lateral ul {
+    list-style-type: none;
     padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding-top: 50px;  /* Adicione esta linha para mover os itens do menu para baixo */    
+  }
+  
+  #menu-lateral ul li {
+    margin-bottom: 50px;
+  }
+  
+  #menu-lateral ul li a {
+    text-decoration: none;
+  }
+  
+  .button {
+    display: inline-block;  /* Permite que o elemento seja exibido na linha, mas ainda tenha largura e altura definidas */
+    width: 100%;  /* Define a largura do botão para ocupar 100% do espaço disponível de seu contêiner pai */
+    padding: 10px 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
+    font-size: 20px;  /* Define o tamanho da fonte do texto dentro do botão para 20 pixels */
+    cursor: pointer;  /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
+    text-align: center;  /* Centraliza o texto dentro do botão */
+    text-decoration: none;  /* Remove qualquer decoração de texto, como sublinhado, do texto dentro do botão */
+    outline: none;  /* Remove o contorno que aparece quando você clica no botão */
+    color: #fff;  /* Define a cor do texto dentro do botão para branco */
+    background-color: #4CAF50;  /* Define a cor de fundo do botão para um tom de verde */
+    border: none;  /* Remove a borda do botão */
+    border-radius: 15px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
+    box-shadow: 0 9px #999;  /* Adiciona uma sombra ao botão. O primeiro valor é o deslocamento horizontal da sombra, o segundo valor é o deslocamento vertical e o terceiro valor é a cor da sombra */
 }
 
-#container{
-    width: 100%;
-}
-
-body{
-    /* pega no site */
-    font-family: "Montserrat", sans-serif; 
-}
-
-/* Estilos para o menu lateral */
-#menu-lateral {
-    width: 200px; /* Largura do menu lateral */
-    position: fixed; /* Fixa o menu na tela */
-    left: 0; /* Alinha o menu à esquerda */
-    top: 0; /* Alinha o menu ao topo */
-    bottom: 0; /* Estende o menu até o fim da altura da tela */
-    background-color: #333; /* Cor de fundo do menu */
-    color: white; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    padding-top: 100px; /* Ajuste este valor para a altura do seu cabeçalho */
-}
-
-/* Restante do seu CSS... */
-
-
-/* Estilos para o cabeçalho */
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1%;
-    background-color: #08d6f6;
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    /* Adicione uma altura fixa ao cabeçalho se ainda não tiver uma */
-    height: 60px; /* Ajuste este valor conforme necessário */
-}
-
-/* Estilos para o menu lateral */
-#menu-lateral {
-    width: 200px; /* Largura do menu lateral */
-    position: fixed; /* Fixa o menu na tela */
-    left: 0; /* Alinha o menu à esquerda */
-    top: 60px; /* Ajuste este valor para ser igual à altura do seu cabeçalho */
-    bottom: 0; /* Estende o menu até o fim da altura da tela */
-    background-color: #333; /* Cor de fundo do menu */
-    color: white; /* Cor do texto */
-    padding: 20px; /* Espaçamento interno */
-    z-index: 5; /* Certifique-se de que este valor seja menor que o do cabeçalho */
-    margin-top: 60px; /* Margem superior igual à altura do cabeçalho */
-}
-
-/* Restante do seu CSS... */
-
+  
+  .button:hover {background-color: #3e8e41}
+  
+  .button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
