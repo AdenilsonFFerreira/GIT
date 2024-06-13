@@ -1,5 +1,5 @@
 function mostrarDataHora() {
-    const elementoDataHora = document.getElementById("datahora"); // Substitua "demo" pelo ID do elemento onde você quer exibir a data e a hora
+    const elementoDataHora = document.getElementById("datahora");
 
     function atualizarDataHora() {
         const agora = new Date();
@@ -7,15 +7,13 @@ function mostrarDataHora() {
         const dataFormatada = agora.toLocaleString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' });
         const hora = agora.getHours();
         const minutos = agora.getMinutes();
-        const segundos = agora.getSeconds();
 
-        // Formate a hora, minutos e segundos com dois dígitos
+        // Formate a hora e os minutos com dois dígitos
         const horaFormatada = hora.toString().padStart(2, '0');
         const minutosFormatados = minutos.toString().padStart(2, '0');
-        const segundosFormatados = segundos.toString().padStart(2, '0');
 
-        // Exiba a data e a hora no formato "Dia da Semana, DD de Mês de Ano - HH:mm:ss hs"
-        const dataHoraCompleta = `${diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1)}, ${dataFormatada} - ${horaFormatada}:${minutosFormatados}:${segundosFormatados} hs`;
+        // Exiba a data e a hora no formato "Dia da Semana, DD de Mês de Ano - HH:mm hs"
+        const dataHoraCompleta = `${diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1)}, ${dataFormatada} - ${horaFormatada}:${minutosFormatados} hs`;
         elementoDataHora.innerHTML = dataHoraCompleta;
     }
 

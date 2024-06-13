@@ -46,6 +46,8 @@ body::after {
     height:100px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
     width: 100%;                /* A largura do elemento é definida como 100%, ocupando todo o espaço horizontal disponível. */
     z-index: 10;                /* O elemento tem um índice de pilha de 10, o que significa que ele será empilhado acima de elementos com um índice de pilha menor. */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+
 }
 
 
@@ -109,7 +111,8 @@ body::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);     
+    transform: translate(-50%, -50%);  
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);   
 }
 
 #login > * {
@@ -158,7 +161,8 @@ footer {
     bottom: 0;                  
     height: 100px;              
     width: 100%;                
-    z-index: 10;                
+    z-index: 10;  
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.3);              
 }
 
 .rodape {
