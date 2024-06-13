@@ -136,35 +136,46 @@ img {
     top: 120px;
     padding: 0px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-  }
+}
 
-  #home-button {
+#home-button {
     list-style-type: none;
     padding: 0;
     padding-top: 50px;  /* Adicione esta linha para mover os itens do menu para baixo */    
     text-align: center;  /* Centraliza os itens do menu */
-  }
+}
 
-  .button.home {
+.button.home {
     background-color: #9b51e0; /* Substitua por qualquer cor que você queira */
 }
-    
-  #menu-lateral ul {
+
+#configuracao-button {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 50px;  /* Adicione esta linha para mover os itens do menu para baixo */    
+    text-align: center;  /* Centraliza os itens do menu */
+}
+
+.button.configuracao {
+    background-color: #9b51e0; /* Substitua por qualquer cor que você queira */
+}
+
+#menu-lateral ul {
     list-style-type: none;
     padding: 0;
     padding-top: 100px;  /* Adicione esta linha para mover os itens do menu para baixo */    
     text-align: center;  /* Centraliza os itens do menu */
 }
   
-  #menu-lateral ul li {
+#menu-lateral ul li {
     margin-bottom: 50px;
-  }
+}
   
-  #menu-lateral ul li a {
+#menu-lateral ul li a {
     text-decoration: none;
-  }
+}
   
-  .button {
+.button {
     display: inline-block;  /* Permite que o elemento seja exibido na linha, mas ainda tenha largura e altura definidas */
     width: 80%;  /* Define a largura do botão para ocupar 100% do espaço disponível de seu contêiner pai */
     padding: 10px 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
@@ -180,13 +191,15 @@ img {
     box-shadow: 10px 5px 15px rgba(0,0,0,0.3);  /* Adiciona uma sombra ao botão. O primeiro valor é o deslocamento horizontal da sombra, o segundo valor é o deslocamento vertical e o terceiro valor é a cor da sombra */
 }
   
-  .button:hover {background-color: #cf2e2e}
+.button:hover {
+    background-color: #cf2e2e
+}
   
-  .button:active {
+.button:active {
     background-color: #fcb900;
     box-shadow: 0 5px rgba(0,0,0,0.3);
     transform: translateY(4px);
-  }
+}
 
 /* *********************************************************************************************************** */
 /* ESTILO PARA TELA CENTRAL*/

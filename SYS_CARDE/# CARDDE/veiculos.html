@@ -3,7 +3,7 @@
 
 <head>
     <meta charset=“UTF-8”>
-    <title>MUSEU - Home</title> <!-- Nome referente a cada pagina aberta -->
+    <title>MUSEU - MANUTENÇÃO</title> <!-- Nome referente a cada pagina aberta -->
     <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->    
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon"> 
     <!-- ICONES DAS REDES SOCIAIS -->
@@ -20,33 +20,38 @@
                     <img src="img/01img.jpg">
                 </div>
 
-                <div id="pesquisar">
-                    <input type="text" placeholder="Pesquisar...">
-                    <button type="submit">
-                        <img src="img/lupa.png" alt="Lupa">
-                    </button>
-                    <br><br>                    
+                <div id="data_hora">
                     <p id="datahora"></p>
                     <script src="js/datahora.js"></script>
                     <script>window.onload = mostrarDataHora;</script>
                 </div>
 
+                <div id="pesquisar">
+                    <input type="text" placeholder="Pesquisar...">
+                    <button type="submit">
+                        <img src="img/lupa.png" alt="Lupa">
+                    </button>
+                </div>
+
                 <div id="btnSair">
-                        <button type="button">Sair</button>
-                        <img src="img/01foto.jpeg" id="usuario">
+                    <img src="img/01foto.jpeg" id="usuario">
+                    <button type="button">SAIR</button>                        
                 </div>
             </nav>
         </header>
 
         <aside id="menu-lateral">
             <nav>
-              <ul>
-                <li><a href="#"><button class="button">MANUTENÇÃO</button></a></li>
-                <li><a href="#"><button class="button">CADASTRO</button></a></li>
-                <li><a href="#"><button class="button">VEICULOS</button></a></li>
-                <li><a href="#"><button class="button">ESTOQUE</button></a></li>
-                <li><a href="#"><button class="button">CONFIGURAÇÃO</button></a></li>                    
-              </ul>
+                <div id="home-button">
+                    <a href="home.html#"><button class="button home">HOME</button></a>
+                </div>
+                <ul>
+                     <!-- <li><a href="#"><button class="button">MANUTENÇÃO</button></a></li> -->
+                     <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
+                     <li><a href="veiculos.html"><button class="button">VEÍCULOS</button></a></li>
+                     <li><a href="estoque.html"><button class="button">ESTOQUE</button></a></li>
+                     <li><a href="configuracao.html"><button class="button">CONFIGURAÇÃO</button></a></li>                 
+                </ul>
             </nav>
         </aside>
 
@@ -71,12 +76,10 @@
                         </div>
                     </div>
                     <div class="tres">
-                        <p>ULTIMA ATUALIZAÇÂO - 16 de junho de 2024</p>
+                        <p>ÚLTIMA ATUALIZAÇÂO - 16 de junho de 2024</p>
                     </div>
-                </div>
-               
+                </div>               
             </div>
-
         </footer>
         
     </div>    
