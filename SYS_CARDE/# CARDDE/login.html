@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang=“pt-br”>
 
+<!-- contém metadados (como o título da página e links para folhas de estilo e scripts) que não são exibidos na página web. -->
 <head>
     <meta charset=“UTF-8”>
     <title>MUSEU - Login</title>
@@ -11,9 +12,12 @@
 
 </head>
 
+<!-- contém todo o conteúdo que é exibido na página web, como texto, imagens, vídeos, etc. -->
 <body> 
     
     <div id="container">
+
+        <!--  é usada para conter o cabeçalho de um documento ou uma seção. Normalmente contém o logotipo do site, o título do site e/ou links de navegação. -->
         <header>
             <nav id="header">
                 
@@ -23,12 +27,10 @@
 
                 <div id="bomdia">
                     <h1>MUSEU</h1>
-                    <h2>BOM DIA.</h2>
+                    <h2>SEJA BEM VINDO</h2>
                 </div>
 
-                <div id="datahora">
-                    <h3>Seja Bem vindo ao Sistema.</h3>
-                    <br><br>                    
+                <div id="datahora">                                                      
                     <p id="datahora"></p>
                     <script src="js/datahora.js"></script>
                     <script>window.onload = mostrarDataHora;</script>
@@ -40,7 +42,10 @@
             </nav>
         </header>
 
+        <!-- é usada para definir uma seção em um documento. É uma tag semântica em HTML5 que ajuda a organizar o conteúdo em partes distintas e significativas. -->
         <section id="Login">
+
+            <!-- é um container genérico que é usado para agrupar elementos e aplicar estilos CSS. Não tem significado semântico. -->
             <div id="login">        
                 <img src="img/01foto.jpeg">            
                 <br><br>
@@ -50,26 +55,13 @@
                     
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>           
-                </form>
-        
-                <a href="recuperar.html"><h6>Recuperar Senha</h6></a>
-                
+                </form>        
+                <a href="recuperar.html"><h6>Recuperar Senha</h6></a>                
                 <a href="home.html">
-                    <button type="submit">LOGIN</button>
-                </a>       
-                   
-                <button onclick="window.close();">FECHAR</button>
-            </div>          
-           
+                    <button type="submit">LOG IN</button>
+                </a>                       
+            </div>                    
         </section>
-
-        <!-- <section id="menu">
-
-        </section>
-
-        <section>
-
-        </section> -->
 
         <footer>
             <div class="rodapegeral">

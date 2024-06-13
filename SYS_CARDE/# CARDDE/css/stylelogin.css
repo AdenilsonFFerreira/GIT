@@ -43,33 +43,40 @@ body::after {
     background-color: #0693e3;  /* A cor de fundo do elemento é definida como um tom de azul claro. */
     position: relative;         /* A posição do elemento é definida como relativa, o que significa que ele será posicionado em relação ao seu local normal. */
     top: 0;                     /* O elemento é posicionado no topo do contêiner. */
-    height:120px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
+    height:100px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
     width: 100%;                /* A largura do elemento é definida como 100%, ocupando todo o espaço horizontal disponível. */
     z-index: 10;                /* O elemento tem um índice de pilha de 10, o que significa que ele será empilhado acima de elementos com um índice de pilha menor. */
 }
 
 
 /* Imagem de logo */
-#logo {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */
-    background-color: #f0f0f0; /* Cor de fundo desejada */
-    border: 1px solid #ccc; /* Borda desejada */ 
-    border-radius: 50%;       
-}
-
 #logo img {    
     width: 60px; /* Largura desejada */
     height: 60px; /* Altura desejada */  
     border-radius: 50%; 
 }
-/* FIM - imagem de logo */
+
 
 /* Campo Bom dia */
 #bomdia {
-    position: center;  /* Centraliza o elemento na horizontal*/   
+    display: flex;          /* Transforma a div em um container flexível */
+    flex-direction: column; /* Organiza os itens filhos em colunas */
+    justify-content: center;/* Centraliza os itens filhos verticalmente */
+    align-items: center;    /* Centraliza os itens filhos horizontalmente */
+    height: 100vh;          /* Define a altura da div para 100% da altura da janela */
 }
 
+
+/* Campo data e hora */
+#datahora {
+    display: flex;          /* Transforma a div em um container flexível */
+    flex-direction: column; /* Organiza os itens filhos em colunas */
+    justify-content: center;/* Centraliza os itens filhos verticalmente */
+    align-items: center;    /* Centraliza os itens filhos horizontalmente */
+    height: 100vh;          /* Define a altura da div para 100% da altura da janela */
+    font-size: 20px;
+    font-weight: bold; /* Deixa a fonte em negrito */
+}
 
 
 /* Botão sair*/
@@ -77,7 +84,7 @@ body::after {
     background-color: rgb(202, 39, 161);
     color: #fff ;    
     border: 1px solid rgb(202, 39, 161);
-    border-radius: 40px;
+    border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
     margin-right: auto;
@@ -85,28 +92,15 @@ body::after {
     height: 40px;
 }
 
-/* FIM - botão sair */
-
-
-/* IMAGEM - Usuario */
-#usuario {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */
-    background-color: #f0f0f0; /* Cor de fundo desejada */
-    border: 1px solid #ccc; /* Borda desejada */   
-    border-radius: 50%; 
-}
-
-#usuario img {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */  
-}
-/* FIM - Imagem usuario */
 
 /* *********************************************************************************************************** */
 /* ESTILO PARA TELA CENTRAL*/
 
-#login{       
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #00d084;
     width: 250px;
     border: 5px solid #424242;
@@ -115,17 +109,43 @@ body::after {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);     
 }
 
-img{
+#login > * {
+    margin-bottom: 15px; /* Adiciona um espaço de 20 pixels abaixo de cada elemento filho */
+}
+
+
+
+label, input{
+    font-size: 20px; /* Tamnanho da fonte */
+    width: 200px; /* Largura do label */
+    font-weight: bold; /* Deixa a fonte em negrito */
+    border-radius: 5PX; /* bordas dos cantos */ 
+}
+
+
+img {
     width: 150px;
     display: block;
     margin: 0 auto; 
     border-radius: 50%;
     box-shadow: 2px 2px 2px #424242;
-    
 }
+
+button {
+    background-color: #FF6900;
+    color: #fff ;    
+    border: 1px solid rgb(202, 39, 161);
+    border-radius: 20PX;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: auto;
+    width: 100px;
+    height: 40px;
+}
+
 
 /* *********************************************************************************************************** */
 /* Estilos para FOOTER*/

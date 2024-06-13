@@ -50,13 +50,6 @@ body{
 
 
 /* Imagem de logo */
-#logo {    
-    width: 60px; /* Largura desejada */
-    height: 60px; /* Altura desejada */
-    background-color: #f0f0f0; /* Cor de fundo desejada */
-    border: 1px solid #ccc; /* Borda desejada */ 
-    border-radius: 50%;       
-}
 
 #logo img {    
     width: 60px; /* Largura desejada */
@@ -102,7 +95,7 @@ img {
     background-color: rgb(202, 39, 161);
     color: #fff ;    
     border: 1px solid rgb(202, 39, 161);
-    border-radius: 40px;
+    border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
     margin-right: auto;
@@ -167,10 +160,10 @@ img {
     text-align: center;  /* Centraliza o texto dentro do botão */
     text-decoration: none;  /* Remove qualquer decoração de texto, como sublinhado, do texto dentro do botão */
     outline: none;  /* Remove o contorno que aparece quando você clica no botão */
-    color: #080808;  /* Define a cor do texto dentro do botão para branco */
-    background-color: #fcb900;  /* Define a cor de fundo do botão para um tom de verde */
+    color: #fff;  /* Define a cor do texto dentro do botão para branco */
+    background-color: #FF6900;  /* Define a cor de fundo do botão para um tom de verde */
     border: none;  /* Remove a borda do botão */
-    border-radius: 10px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
+    border-radius: 5px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
     box-shadow: 0 9px #999;  /* Adiciona uma sombra ao botão. O primeiro valor é o deslocamento horizontal da sombra, o segundo valor é o deslocamento vertical e o terceiro valor é a cor da sombra */
 }
   
