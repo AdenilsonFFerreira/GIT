@@ -1,40 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    width: 100%;     
 }
 
-header{
-    text-align: center;
-    background-color: #5fd1b8   
-    
+#container{
+    width: 100%;
 }
 
 body{
-    background-image: url(../img/01login.jpg);
-    background-color: #dedede;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;     
+    font-family: "Montserrat", sans-serif; /* Define a fonte do corpo do documento como 'Montserrat', que é uma fonte sans-serif. */    
+    background-color: #dedede; /* Define a cor de fundo do corpo do documento como um cinza claro (#dedede). Esta cor será visível se a imagem de fundo não for carregada. */
+    justify-content: center; /* Centraliza os elementos filhos do corpo do documento horizontalmente. Isso só funciona porque o display está definido como 'flex'. */    
 }
 
-body, #container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+body::after {
+    content: "";
+    background: url('../img/fundo.jpg');
+    opacity: 0.3;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;   
 }
 
+
+/* *********************************************************************************************************** */
+/* ESTRUTURA DO HEADER*/
+
+#header{
+    display: flex;              /* O layout do elemento é definido como flexível, permitindo que seus filhos sejam alinhados e distribuídos de maneira flexível. */
+    justify-content: space-between; /* Os itens filhos são distribuídos uniformemente no contêiner, com espaço máximo entre eles. */
+    align-items: center;        /* Os itens filhos são centralizados verticalmente no contêiner. */
+    padding: 1%;                /* O preenchimento é definido como 1% em todos os lados do elemento. */
+    background-color: #0693e3;  /* A cor de fundo do elemento é definida como um tom de azul claro. */
+    position: relative;         /* A posição do elemento é definida como relativa, o que significa que ele será posicionado em relação ao seu local normal. */
+    top: 0;                     /* O elemento é posicionado no topo do contêiner. */
+    height:120px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
+    width: 100%;                /* A largura do elemento é definida como 100%, ocupando todo o espaço horizontal disponível. */
+    z-index: 10;                /* O elemento tem um índice de pilha de 10, o que significa que ele será empilhado acima de elementos com um índice de pilha menor. */
+}
+
+
+/* Imagem de logo */
+#logo {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    border: 1px solid #ccc; /* Borda desejada */ 
+    border-radius: 50%;       
+}
+
+#logo img {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */  
+    border-radius: 50%; 
+}
+/* FIM - imagem de logo */
+
+/* Campo Bom dia */
+#bomdia {
+    position: center;  /* Centraliza o elemento na horizontal*/   
+}
+
+
+
+/* Botão sair*/
+#btnAjuda button{
+    background-color: rgb(202, 39, 161);
+    color: #fff ;    
+    border: 1px solid rgb(202, 39, 161);
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: auto;
+    width: 100px;
+    height: 40px;
+}
+
+/* FIM - botão sair */
+
+
+/* IMAGEM - Usuario */
+#usuario {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */
+    background-color: #f0f0f0; /* Cor de fundo desejada */
+    border: 1px solid #ccc; /* Borda desejada */   
+    border-radius: 50%; 
+}
+
+#usuario img {    
+    width: 60px; /* Largura desejada */
+    height: 60px; /* Altura desejada */  
+}
+/* FIM - Imagem usuario */
+
+/* *********************************************************************************************************** */
+/* ESTILO PARA TELA CENTRAL*/
 
 #login{       
-    
-    background-color: #dedede;
+    background-color: #00d084;
     width: 250px;
     border: 5px solid #424242;
     border-radius: 10px;
     padding: 50px;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,28 +119,36 @@ body, #container {
 }
 
 img{
-    
     width: 150px;
     display: block;
     margin: 0 auto; 
     border-radius: 50%;
-    box-shadow: 2px 2px 2px #424242; 
+    box-shadow: 2px 2px 2px #424242;
+    
 }
 
-footer{
-    background-color: rgb(120, 129, 200);
-    margin-top: auto;
+/* *********************************************************************************************************** */
+/* Estilos para FOOTER*/
 
+footer {    
+    align-items: center;        
+    padding: 1%;                
+    background-color: rgb(202, 39, 161);  
+    position: fixed;            
+    bottom: 0;                  
+    height: 100px;              
+    width: 100%;                
+    z-index: 10;                
 }
 
-.rodape{
-    display: flex;
-    justify-content: space-around;
-
+.rodape {
+    display: flex;              
+    justify-content: space-around; 
 }
 
 .um, .dois, .tres{
     color: #fff;
+    margin: auto;
 }
 
 .redes-sociais{
@@ -77,33 +162,11 @@ footer{
 
 .redes-sociais a{
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .redes-sociais a:hover{
     color: #d3d2d2;
-}
-
-.card{
-    width: 300px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f0f0f0;
-    color: #000;
-    box-shadow: 2p 2px 2px rgba 0, 0, 0, 0.5;
-    border-radius: 10px;
-    margin: 10px;
-}
-
-.card img{
-    max-width: 100%;
-   margin-bottom: 10px;
-}
-
-.cards{
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
 }
 
 /*@media normalmente fica em ultimo */
@@ -127,7 +190,6 @@ footer{
 
     .conteudo {
         padding: 10% 0;
-
     }
 
     nav{
@@ -141,6 +203,5 @@ footer{
         display: flex;
         justify-content: space-around;
         width: 100%;
-
     }
 }

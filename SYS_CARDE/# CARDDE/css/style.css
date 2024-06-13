@@ -1,5 +1,20 @@
 /* ESTRUTURA BASICA COMUN A TODA PAGINA */
 
+/*CORES
+-wp--preset--color--black: #000000;
+    --wp--preset--color--cyan-bluish-gray: #abb8c3;
+    --wp--preset--color--white: #ffffff;
+    --wp--preset--color--pale-pink: #f78da7;
+    --wp--preset--color--vivid-red: #cf2e2e;
+    --wp--preset--color--luminous-vivid-orange: #ff6900;
+    --wp--preset--color--luminous-vivid-amber: #fcb900;
+    --wp--preset--color--light-green-cyan: #7bdcb5;
+    --wp--preset--color--vivid-green-cyan: #00d084;
+    --wp--preset--color--pale-cyan-blue: #8ed1fc;
+    --wp--preset--color--vivid-cyan-blue: #0693e3;
+    --wp--preset--color--vivid-purple: #9b51e0;
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
@@ -19,13 +34,13 @@ body{
 
 
 /* *********************************************************************************************************** */
-/* ESTRUTURA DO HEADER*/
+/* ESTILO PARA HEADER*/
 #header{
     display: flex;              /* O layout do elemento é definido como flexível, permitindo que seus filhos sejam alinhados e distribuídos de maneira flexível. */
     justify-content: space-between; /* Os itens filhos são distribuídos uniformemente no contêiner, com espaço máximo entre eles. */
     align-items: center;        /* Os itens filhos são centralizados verticalmente no contêiner. */
     padding: 1%;                /* O preenchimento é definido como 1% em todos os lados do elemento. */
-    background-color: #08d6f6;  /* A cor de fundo do elemento é definida como um tom de azul claro. */
+    background-color: #0693e3;  /* A cor de fundo do elemento é definida como um tom de azul claro. */
     position: relative;         /* A posição do elemento é definida como relativa, o que significa que ele será posicionado em relação ao seu local normal. */
     top: 0;                     /* O elemento é posicionado no topo do contêiner. */
     height:120px;               /* Adicione esta linha para fixar a altura em 50 pixels. Ajuste o valor conforme necessário. */
@@ -116,12 +131,12 @@ img {
 
 
 /* *********************************************************************************************************** */
-/* Estilos para o menu lateral */
+/* ESTILO MENU LATERAL*/
 
 #menu-lateral {
     width: 220px;
     height: 120vh;
-    background-color: #4482f5;
+    background-color: #00d084;
     position: fixed;
     left: 0;
     top: 120px;
@@ -152,14 +167,14 @@ img {
     text-align: center;  /* Centraliza o texto dentro do botão */
     text-decoration: none;  /* Remove qualquer decoração de texto, como sublinhado, do texto dentro do botão */
     outline: none;  /* Remove o contorno que aparece quando você clica no botão */
-    color: #fff;  /* Define a cor do texto dentro do botão para branco */
-    background-color: #4CAF50;  /* Define a cor de fundo do botão para um tom de verde */
+    color: #080808;  /* Define a cor do texto dentro do botão para branco */
+    background-color: #fcb900;  /* Define a cor de fundo do botão para um tom de verde */
     border: none;  /* Remove a borda do botão */
     border-radius: 10px;  /* Arredonda os cantos do botão. Quanto maior o valor, mais arredondados serão os cantos */
     box-shadow: 0 9px #999;  /* Adiciona uma sombra ao botão. O primeiro valor é o deslocamento horizontal da sombra, o segundo valor é o deslocamento vertical e o terceiro valor é a cor da sombra */
 }
   
-  .button:hover {background-color: #3e8e41}
+  .button:hover {background-color: #cf2e2e}
   
   .button:active {
     background-color: #3e8e41;
@@ -167,17 +182,32 @@ img {
     transform: translateY(4px);
   }
 
-  /* *********************************************************************************************************** */
-/* Estilos para o menu lateral */
+/* *********************************************************************************************************** */
+/* ESTILO PARA TELA CENTRAL*/
+
+body::after {
+    content: "";
+    background: url('../img/fundo.jpg');
+    opacity: 0.3;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;   
+}
+
+
 
 /* *********************************************************************************************************** */
-/* Estilos para FOOTER*/
-
+/* ESTILO PARA FOOTER*/
 
 footer {    
     align-items: center;        /* Centraliza os itens filhos verticalmente no contêiner. */
     padding: 1%;                /* Define o preenchimento como 1% em todos os lados do elemento. */
-    background-color: #08d6f6;  /* Define a cor de fundo do elemento como um tom de azul claro. */
+    background-color: rgb(202, 39, 161);  /* Define a cor de fundo do elemento como um tom de azul claro. */
     position: fixed;            /* Define a posição do elemento como fixa, o que significa que ele será posicionado em relação à janela de visualização. */
     bottom: 0;                  /* Posiciona o elemento na parte inferior da janela de visualização. */
     height: 100px;              /* Define a altura do elemento como 100 pixels. */

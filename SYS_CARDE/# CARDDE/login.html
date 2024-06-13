@@ -6,21 +6,38 @@
     <title>MUSEU - Login</title>
     <link rel="stylesheet" href="css/stylelogin.css">
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon">
+    <!-- ICONES DAS REDES SOCIAIS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body> 
+    
     <div id="container">
-        <header id="bemvindo">
-            <h1>MUSEU</h1>
-            <h2>BOM DIA.</h2>
-            <h3>Seja Bem vindo ao Sistema.</h3>
-            <br>
+        <header>
+            <nav id="header">
+                
+                <div id="logo">
+                    <img src="img/01img.jpg">
+                </div>
 
-            <p id="datahora"></p>                
-                <script src="js/datahora.js"></script>
-            <script>
-            window.onload = mostrarDataHora;           
-            </script>
+                <div id="bomdia">
+                    <h1>MUSEU</h1>
+                    <h2>BOM DIA.</h2>
+                </div>
+
+                <div id="datahora">
+                    <h3>Seja Bem vindo ao Sistema.</h3>
+                    <br><br>                    
+                    <p id="datahora"></p>
+                    <script src="js/datahora.js"></script>
+                    <script>window.onload = mostrarDataHora;</script>
+                </div>
+
+                <div id="btnAjuda">
+                        <button type="button">AJUDA</button>                        
+                </div>
+            </nav>
         </header>
 
         <section id="Login">
@@ -55,10 +72,10 @@
         </section> -->
 
         <footer>
-            <div class="conteudo">
+            <div class="rodapegeral">
                 <div class="rodape">
                     <div class="um">
-                        <p>Lorem, ipsum dolor sit amet </p>
+                        <p>MUSEU - 2024 &copy; Todos os direitos reservados</p>
                     </div>
                     <div class="dois">
                         <h3>Redes Sociais</h3>
@@ -71,12 +88,10 @@
                         </div>
                     </div>
                     <div class="tres">
-                        <p>Lorem, ipsum dolor sit amet </p>
+                        <p>ULTIMA ATUALIZAÇÂO - 16 de junho de 2024</p>
                     </div>
-                </div>
-               
+                </div>               
             </div>
-
         </footer>
 
     </div>   
