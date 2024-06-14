@@ -88,13 +88,13 @@ input[type="text"]:focus {
     cursor: pointer;
 }
 
-/*
+
 img {
     height: 20px;
     width: 20px;
     vertical-align: middle;
 }
-*/
+
 
 /* Botão sair*/
 #btnSair button{
@@ -204,16 +204,53 @@ img {
 
 /* *********************************************************************************************************** */
 /* ESTILO PARA TELA CENTRAL*/
-#veiculo img {
-    width: 100%; /* Ajuste este valor conforme necessário */
-    height: auto; /* Isso manterá a proporção da imagem */
-    /* restante do seu código CSS para button img */
+/* Elemento pai que contém #veiculo e #estoque */
+#central {
+    position: absolute; /* relative ou absolute, fixed, sticky */
+    top: 300px; 
+    left: 600px;     
 }
 
-#estoque img {
-    width: 100%; /* Ajuste este valor conforme necessário */
-    height: auto; /* Isso manterá a proporção da imagem */
-    /* restante do seu código CSS para button img */
+#nomepagina {    
+    position: absolute;
+    width: 0;
+    height: 500px;       
+    color: blue; 
+    font-size: 30px; 
+    margin-bottom: 20px; /* Adicione esta linha */
+}
+
+
+#nomepagina h1 {
+    color: red; /* Altere para a cor desejada */
+    font-size: 20px; /* Altere para o tamanho de fonte desejado */
+}
+
+
+.cadastro {
+    
+    padding: 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
+    cursor: pointer;  /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
+    order: none;   /*Remove a borda do botão */
+    box-shadow: 10px 5px 15px rgba(0,0,0,0.3);
+}
+  
+.cadastro:active {
+    background-color: #fcb900;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}
+
+/* Estilos comuns para #veiculo e #estoque dentro de #conteudo */
+#veiculo {    
+    width: 300px; /* Define a largura do elemento */
+    height: 300px; /* Define a altura do elemento */  
+}
+
+/* Estilos comuns para #veiculo e #estoque dentro de #conteudo */
+#estoque {    
+    width: 300px; /* Define a largura do elemento */
+    height: 300px; /* Define a altura do elemento */    
 }
 
 
