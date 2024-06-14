@@ -88,12 +88,13 @@ input[type="text"]:focus {
     cursor: pointer;
 }
 
+/*
 img {
     height: 20px;
     width: 20px;
     vertical-align: middle;
 }
-
+*/
 
 /* Botão sair*/
 #btnSair button{
@@ -203,19 +204,32 @@ img {
 
 /* *********************************************************************************************************** */
 /* ESTILO PARA TELA CENTRAL*/
+#veiculo img {
+    width: 100%; /* Ajuste este valor conforme necessário */
+    height: auto; /* Isso manterá a proporção da imagem */
+    /* restante do seu código CSS para button img */
+}
 
+#estoque img {
+    width: 100%; /* Ajuste este valor conforme necessário */
+    height: auto; /* Isso manterá a proporção da imagem */
+    /* restante do seu código CSS para button img */
+}
+
+
+/* Estilo para o fundo do corpo */
 body::after {
-    content: "";
-    background: url('../img/fundo.jpg');
-    opacity: 0.3;
-    background-size: cover;
-    background-position: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    z-index: -1;   
+    content: "";                /* Cria um pseudo-elemento vazio */
+    background: url('../img/fundo.jpg'); /* Define a imagem de fundo */
+    opacity: 0.3;               /* Define a opacidade da imagem de fundo */
+    background-size: cover;     /* A imagem de fundo é redimensionada para cobrir todo o elemento */
+    background-position: center;/* A imagem de fundo é posicionada no centro do elemento */
+    top: 0;                     /* O pseudo-elemento é posicionado no topo do elemento pai */
+    left: 0;                    /* O pseudo-elemento é posicionado à esquerda do elemento pai */
+    bottom: 0;                  /* O pseudo-elemento é posicionado na parte inferior do elemento pai */
+    right: 0;                   /* O pseudo-elemento é posicionado à direita do elemento pai */
+    position: fixed;            /* A posição do pseudo-elemento é definida como fixa */
+    z-index: -1;                /* O pseudo-elemento tem um índice de pilha de -1 */
 }
 
 
