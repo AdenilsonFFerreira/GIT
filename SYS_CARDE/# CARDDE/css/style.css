@@ -211,22 +211,6 @@ img {
     left: 600px;     
 }
 
-#nomepagina {    
-    position: absolute;
-    width: 0;
-    height: 500px;       
-    color: blue; 
-    font-size: 30px; 
-    margin-bottom: 20px; /* Adicione esta linha */
-}
-
-
-#nomepagina h1 {
-    color: red; /* Altere para a cor desejada */
-    font-size: 20px; /* Altere para o tamanho de fonte desejado */
-}
-
-
 .cadastro {
     
     padding: 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
