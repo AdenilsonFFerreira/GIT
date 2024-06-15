@@ -211,8 +211,7 @@ img {
     left: 600px;     
 }
 
-.cadastro {
-    
+.cadastro {    
     padding: 0;  /* Define o preenchimento ao redor do conteúdo do botão. 10px 0 significa que o preenchimento superior e inferior é de 10px, enquanto o preenchimento esquerdo e direito é de 0 */
     cursor: pointer;  /* Muda o cursor para um ponteiro quando você passa o mouse sobre o botão */
     order: none;   /*Remove a borda do botão */
