@@ -3,9 +3,8 @@
 
 <head>
     <meta charset=“UTF-8”>
-    <title>MUSEU - MANUTENÇÃO</title> 
-    <link rel="stylesheet" href="css/style.css">    
-    <link rel="stylesheet" href="css/main.css"> 
+    <title>MUSEU - MANUTENÇÃO</title> <!-- Nome referente a cada pagina aberta -->
+    <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->    
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon"> 
     <!-- ICONES DAS REDES SOCIAIS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -49,8 +48,8 @@
                 <ul>
                      <!-- <li><a href="#"><button class="button">MANUTENÇÃO</button></a></li> -->
                      <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
-                     <li><a href="veiculos.html"><button class="button">VEÍCULOS</button></a></li>
-                     <li><a href="estoque.html"><button class="button">ESTOQUE</button></a></li>                                     
+                     <!-- <li><a href="veiculos.html"><button class="button">VEÍCULOS</button></a></li>
+                     <li><a href="estoque.html"><button class="button">ESTOQUE</button></a></li>  -->                                    
                 </ul>
                 <div id="configuracao-button">
                     <a href="configuracao.html#"><button class="button configuracao">CONFIGURAÇÃO</button></a>
@@ -59,61 +58,64 @@
         </aside>
 
         <main>
-            <div id="cadastroform">
-                <form>
-                    <label for="marca">Marca:</label><br>
-                    <input type="text" id="marca" name="marca"><br><br>
-            
-                    <label for="modelo">Modelo:</label><br>
-                    <input type="text" id="modelo" name="modelo"><br><br>
-            
-                    <label for="cor">Cor:</label><br>
-                    <input type="text" id="cor" name="cor"><br><br>
-                    
-                    <label for="dob">Ano:</label><br>
-                    <input type="dob" id="dob" name="dob"><br><br>
-            
-                    <label for="carroceria">Carroceria:</label><br>
-                    <select id="carroceria" name="carroceria">
-                        <option value="hatch">Hatch</option>
-                        <option value="sedan">Sedan</option>
-                        <option value="cupe">Cupe</option>
-                        <option value="fastback">Fastback</option>
-                        <option value="sport">Sport</option>
-                    </select><br><br>
-            
-                    <label for="motor">Motor:</label><br>
-                    <select id="motor" name="motor">
-                        <option value="3cil">3 Cilindros</option>
-                        <option value="4cil">4 Cilindros</option>
-                        <option value="6cil">6 Cilindros </option>
-                        <option value="v6">V6</option>
-                        <option value="8cil">8 Cilindros</option>
-                        <option value="v8">V8</option>
-                        <option value="v10">V10</option>
-                        <option value="v12">V12</option>
-                        <option value="v16">V16</option>
-                        <option value="w12">W12</option>
-                        <option value="w16">W16</option>
-                    </select><br><br>
-            
-                    <label for="transmissao">Transmissão:</label><br>
-                    <select id="transmissao" name="transmissao">
-                        <option value="manual">Manual</option>
-                        <option value="automatica">Automatica</option>
-                        <option value="cvt">Cvt</option>
-                        <option value="duplaembreagem">Dupla Embreagem</option>            
-                    </select><br><br>
-            
-                    <label for="kilo">Kilometragem:</label><br>
-                    <input type="dob" id="kilo" name="kilo"><br><br>
-            
-                    <label for="placa">Placa:</label><br>
-                    <input type="text" id="placa" name="placa"><br><br>
-            
-                    <input type="submit" value="Salvar">
-                </form>
-            </div>
+            <form id="formcadastro">
+                <label for="marca">Marca:</label><br>
+                <input type="text" id="marca" name="marca"><br><br>
+        
+                <label for="modelo">Modelo:</label><br>
+                <input type="text" id="modelo" name="modelo"><br><br>
+        
+                <label for="cor">Cor:</label><br>
+                <input type="text" id="cor" name="cor"><br><br>
+                
+                <label for="dob">Ano:</label><br>
+                <input type="dob" id="dob" name="dob"><br><br>
+        
+                <label for="carroceria">Carroceria:</label><br>
+                <select id="carroceria" name="carroceria">
+                    <option value="hatch">Hatch</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="cupe">Cupe</option>
+                    <option value="fastback">Fastback</option>
+                    <option value="sport">Sport</option>
+                    <option value="suv">Suv</option>
+                    <option value="pickup">Pickup</option>
+                </select><br><br>
+        
+                <label for="motor">Motor:</label><br>
+                <select id="motor" name="motor">
+                    <option value="3cil">3 Cilindros</option>
+                    <option value="4cil">4 Cilindros</option>
+                    <option value="5cil">5 Cilindros</option>
+                    <option value="6cil">6 em Linha </option>
+                    <option value="vr6">VR6</option>
+                    <option value="v6">V6</option>
+                    <option value="8cil">8 em Linha</option>
+                    <option value="v8">V8</option>
+                    <option value="v10">V10</option>
+                    <option value="v12">V12</option>
+                    <option value="v16">V16</option>
+                    <option value="w12">W12</option>
+                    <option value="w16">W16</option>
+                    <option value="rotativo">Rotativo</option>
+                </select><br><br>
+        
+                <label for="transmissao">Transmissão:</label><br>
+                <select id="transmissao" name="transmissao">
+                    <option value="manual">Manual</option>
+                    <option value="automatica">Automatica</option>
+                    <option value="cvt">Cvt</option>
+                    <option value="duplaembreagem">Dupla Embreagem</option>            
+                </select><br><br>
+        
+                <label for="kilo">Kilometragem:</label><br>
+                <input type="dob" id="kilo" name="kilo"><br><br>
+        
+                <label for="placa">Placa:</label><br>
+                <input type="text" id="placa" name="placa"><br><br>
+        
+                <input id="btnsalvar" type="submit" value="Salvar">
+            </form>
         </main>
 
         <footer>
