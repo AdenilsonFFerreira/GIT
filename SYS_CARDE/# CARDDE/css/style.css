@@ -201,6 +201,31 @@ img {
 /* ESTILO PARA TELA CENTRAL*/
 /* Elemento pai que contém #veiculo e #estoque */
 
+/* Estilo do fundo escurecido */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+  }
+  
+  /* Estilo do pop-up */
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Isso vai arredondar as bordas do pop-up */
+    text-align: center; /* Centraliza o texto */
+    color: red; /* Muda a cor do texto para vermelho */
+  }
+
 #tableveiculos{
     margin-left: 300px; 
     margin-top: 20px; 

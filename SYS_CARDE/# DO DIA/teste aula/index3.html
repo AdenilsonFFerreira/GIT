@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pop-up Personalizado</title>
+<style>
+/* Estilo do fundo escurecido */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+/* Estilo do pop-up */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+</style>
+<script>
+function showPopup() {
+  document.getElementById("popupOverlay").style.display = "block";
+}
+
+window.onload = function() {
+  showPopup();
+};
+</script>
+</head>
+<body>
+
+<div id="popupOverlay" class="overlay">
+  <div class="popup">
+    <p>Este é um pop-up personalizado!</p>
+    <button onclick="document.getElementById('popupOverlay').style.display='none'">Fechar</button>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Pop-up de Alerta Automático</title>
+<script>
+window.onload = function() {
+  alert("Este é um pop-up de alerta automático!");
+};
+</script>
+</head>
+<body>
+
+</body>
+</html>
+ -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial de Alert em JavaScript - Linha de Código</title>
+
+</head>
+<body>
+
+    <button onclick="abriAlerta()">Abrir Alerta</button>
+
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function abriAlerta(){
+        swal("Hello world!");
+    }
+</script>
+</html> -->
