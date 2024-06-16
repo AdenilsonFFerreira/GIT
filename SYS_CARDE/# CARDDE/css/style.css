@@ -201,6 +201,18 @@ img {
 /* ESTILO PARA TELA CENTRAL*/
 /* Elemento pai que contém #veiculo e #estoque */
 
+#tableveiculos{
+    margin-left: 300px; 
+    margin-top: 20px; 
+    font-weight: bold;
+    font-size: medium;
+}
+
+#tableveiculos th, #tableveiculos td {
+    text-align: center;
+}
+
+
 #formcadastro {
     margin-left: 300px; 
     margin-top: 20px; 
