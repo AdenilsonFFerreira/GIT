@@ -5,6 +5,7 @@
     <meta charset=“UTF-8”>
     <title>MUSEU - MANUTENÇÃO</title> <!-- Nome referente a cada pagina aberta -->
     <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->    
+    <link rel="stylesheet" href="css/manutencao.css"> <!-- Caminho do novo CSS para a página de manutenção -->
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon"> 
     <!-- ICONES DAS REDES SOCIAIS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,8 +58,74 @@
             </nav>
         </aside>
 
-        <main>
-            <!-- Seu conteúdo principal aqui -->
+        <main class="clearfix">
+            <p>MANUTENÇÃO PROGRAMADA DA SEMANA.</p>
+            <div id="manutencao">
+                <div id="manutencaoA">
+                    <h2>ALFA ROMERO - 2000 GTV</h2>
+                    <br><hr><br>
+                    <ol type="1">
+                        <li><input type="checkbox" id="correa" name="correa"><label for="correa">Troca da correa (58000 KM)</label></li>
+                        <li><input type="checkbox" id="oleoMotor" name="oleoMotor"><label for="oleoMotor">Troca do Oleo do motor (15w-40)</label></li>
+                        <li><input type="checkbox" id="filtroOleo" name="filtroOleo"><label for="filtroOleo">Troca do Filtro de Oleo</label></li>
+                        <li><input type="checkbox" id="filtroAr" name="filtroAr"><label for="filtroAr">Troca do Filtro de ar</label></li>
+                        <li><input type="checkbox" id="filtroCombustivel" name="filtroCombustivel"><label for="filtroCombustivel">Troca do Filtro de Combutivel</label></li>
+                        <li><input type="checkbox" id="cargaBateria" name="cargaBateria"><label for="cargaBateria">Carga de 6 horas da bateria</label></li>
+                        <li><input type="checkbox" id="fluidoFreio" name="fluidoFreio"><label for="fluidoFreio">Verificação do Fluido do freio</label></li>
+                    </ol>
+                    <br>
+                    <input id="btnfinalizar" type="submit" value="FINALIZAR">                      
+                </div>
+
+                <div id="manutencaoB">
+                    <h2>FERRARI - F50 GT</h2>
+                    <br><hr><br>
+                    <ol type="1">
+                        <li><input type="checkbox" id="cargaBateria" name="cargaBateria"><label for="cargaBateria">Carga de 6 horas da bateria</label></li>
+                        <li><input type="checkbox" id="verificacaoFluidos" name="verificacaoFluidos"><label for="verificacaoFluidos">Verificação de Fuidos</label>
+                          <ul>
+                            <li><input type="checkbox" id="oleoMotor" name="oleoMotor"><label for="oleoMotor">Oleo do motor</label></li>
+                            <li><input type="checkbox" id="oleoFreio" name="oleoFreio"><label for="oleoFreio">Oleo do freio</label></li>
+                            <li><input type="checkbox" id="oleoDirecao" name="oleoDirecao"><label for="oleoDirecao">Oleo da direção hidraulica</label></li>
+                            <li><input type="checkbox" id="oleoTransmissao" name="oleoTransmissao"><label for="oleoTransmissao">Oleo da transmissão</label></li>
+                            <li><input type="checkbox" id="liquidoArrefecimento" name="liquidoArrefecimento"><label for="liquidoArrefecimento">Liquido do arrefecimento</label></li>
+                           </ul>
+                        </li>
+                        <li><input type="checkbox" id="partida" name="partida"><label for="partida">Partida</label></li>
+                        <li><input type="checkbox" id="marchaLenta" name="marchaLenta"><label for="marchaLenta">Marcha lenta por 25 minutos</label></li>
+                        <li><input type="checkbox" id="vazamentos" name="vazamentos"><label for="vazamentos">Verificação de vazamentos</label></li>
+                        <li><input type="checkbox" id="documentacao" name="documentacao"><label for="documentacao">DOCUMENTAÇÂO</label></li>
+                    </ol>
+                    <br>
+                    <input id="btnfinalizar" type="submit" value="FINALIZAR">
+                </div>
+
+                <div id="manutencaoC">
+                    <h2>VOLKSWAGEN - GOL 1000</h2>
+                    <br><hr><br>
+                    <ol type="1">
+                        <li><input type="checkbox" id="verificacaoFluidos2" name="verificacaoFluidos2"><label for="verificacaoFluidos2">Verificação de Fuidos</label>
+                          <ul>
+                            <li><input type="checkbox" id="oleoMotor2" name="oleoMotor2"><label for="oleoMotor2">Oleo do motor</label></li>
+                            <li><input type="checkbox" id="oleoFreio2" name="oleoFreio2"><label for="oleoFreio2">Oleo do freio</label></li>
+                            <li><input type="checkbox" id="liquidoArrefecimento2" name="liquidoArrefecimento2"><label for="liquidoArrefecimento2">Liquido do arrefecimento</label></li>
+                          </ul>
+                        </li>
+                        <li><input type="checkbox" id="partidaAquecimento" name="partidaAquecimento"><label for="partidaAquecimento">Partida, 15 minutos de aquecimento</label></li>
+                        <li><input type="checkbox" id="testeEndurance" name="testeEndurance"><label for="testeEndurance">Teste de endurance 30 Voltas</label></li>
+                        <li><input type="checkbox" id="avaliarSistemas" name="avaliarSistemas"><label for="avaliarSistemas">Avaliar todos os Sistemas</label>
+                          <ul>
+                            <li><input type="checkbox" id="iluminacao" name="iluminacao"><label for="iluminacao">Iluminação</label></li>
+                            <li><input type="checkbox" id="freioSistema" name="freioSistema"><label for="freioSistema">Freio</label></li>
+                            <li><input type="checkbox" id="aceleracao" name="aceleracao"><label for="aceleracao">Aceleração</label></li>
+                            <li><input type="checkbox" id="luzesPosicao" name="luzesPosicao"><label for="luzesPosicao">Luzes de posição</label></li>
+                          </ul> 
+                        </li>
+                    </ol>
+                    <br>
+                    <input id="btnfinalizar" type="submit" value="FINALIZAR">  
+                </div>
+            </div>
         </main>
 
         <footer>

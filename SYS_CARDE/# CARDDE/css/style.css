@@ -277,7 +277,11 @@ img {
     background-color: #49fa03; /* Cor de fundo do botão ao passar o mouse */
 }
 
-
+#btnsalvar:active {
+    background-color: #43ec8f;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}
 
 #central {
     position: absolute; /* relative ou absolute, fixed, sticky */

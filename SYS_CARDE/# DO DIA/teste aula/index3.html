@@ -1,86 +1,26 @@
-<!DOCTYPE html>
 <html>
 <head>
-<title>Pop-up Personalizado</title>
-<style>
-/* Estilo do fundo escurecido */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  display: none;
-}
-
-/* Estilo do pop-up */
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #ddd;
-}
-</style>
-<script>
-function showPopup() {
-  document.getElementById("popupOverlay").style.display = "block";
-}
-
-window.onload = function() {
-  showPopup();
-};
-</script>
+<title> LISTA DE DEFINIÇÃO OU GLOSSÁRIO </title>
 </head>
 <body>
-
-<div id="popupOverlay" class="overlay">
-  <div class="popup">
-    <p>Este é um pop-up personalizado!</p>
-    <button onclick="document.getElementById('popupOverlay').style.display='none'">Fechar</button>
-  </div>
-</div>
-
+<br><br>
+<center><font face="comic sans ms, verdana, sans-serif" size="4" color="#000099"><b> LISTA DE DEFINIÇÃO OU GLOSSÁRIO </b></font></center>
+<br><br>
+<font face="arial" size="3" color="#000000">
+<p align="justify"> O Brasil está dividido em 5 regiões, conforme o esquema abaixo:</p>
+<br>
+<dl>
+<dt> NORTE
+<dd> A região norte do Brasil é subdividida em 7 estados.
+<dt> NORDESTE
+<dd> O nordeste brasileiro, está subdividido em 9 estados.
+<dt> CENTRO-OESTE
+<dd> A região centro-oeste, além do Distrito Federal onde está localizado Brasília, a capital do país, possui 3 estados.
+<dt> SUDESTE
+<dd> O sudeste brasileiro, possui 4 estados.
+<dt> SUL
+<dd> A região sul, é composta por 3 estados.
+</dl>
+</font>
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<title>Pop-up de Alerta Automático</title>
-<script>
-window.onload = function() {
-  alert("Este é um pop-up de alerta automático!");
-};
-</script>
-</head>
-<body>
-
-</body>
-</html>
- -->
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<title>Tutorial de Alert em JavaScript - Linha de Código</title>
-
-</head>
-<body>
-
-    <button onclick="abriAlerta()">Abrir Alerta</button>
-
-</body>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    function abriAlerta(){
-        swal("Hello world!");
-    }
-</script>
-</html> -->

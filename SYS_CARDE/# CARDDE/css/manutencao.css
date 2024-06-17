@@ -1,0 +1,118 @@
+#manutencaoA, #manutencaoB, #manutencaoC {
+    float: left; /* Faz com que os elementos fiquem lado a lado */
+    width: 25%; /* Divide a largura igualmente entre as três divs */
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+    padding: 10px; /* Espaço interno para não colar o conteúdo nas bordas */
+    margin-left: 280px; 
+    margin-top: 40px;    
+    /*height: 520px;*/
+    min-height: 100px; /* Substitua 100px pela altura mínima desejada */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.clearfix h2 {
+    text-align: center;
+}
+
+/* Limpa os floats para garantir que não afetem outros elementos */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.clearfix p {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; /* Define uma largura para o parágrafo se necessário */
+    margin-top: 40px; /* Aumente este valor para descer o parágrafo */
+    font-size:xx-large;
+    font-weight: bold;
+}
+
+
+#manutencaoA, #manutencaoB {
+    margin-right: 20px; /* Diminui o espaço à direita */
+}
+
+#manutencaoB, #manutencaoC {
+    margin-left: 20px; /* Diminui o espaço à esquerda */
+}
+
+#manutencaoA, #manutencaoB, #manutencaoC {
+    /* Estilos para a div com id manutencao */
+    background-color: #f78da7; /* Cor de fundo */
+    padding: 20px; /* Espaçamento interno */
+    border: 1px solid black; /* Borda */
+    border-radius: 10px;    
+}
+
+#manutencao dt {
+    /* Estilos para o elemento dt dentro da div manutencao */
+    color: black; /* Cor do texto */
+    font-weight: bold; /* Peso da fonte */
+}
+
+#manutencao dd {
+    /* Estilos para o elemento dd dentro da div manutencao */
+    margin-left: 20px; /* Margem à esquerda */
+}
+
+#manutencao ol {
+    /* Estilos para a lista ordenada ol dentro da div manutencao */
+    padding-left: 40px; /* Espaçamento interno à esquerda */
+}
+
+#manutencao li {
+    /* Estilos para os itens da lista li dentro da div manutencao */
+    line-height: 2; /* Altura da linha */
+    font-weight: bold;
+}
+
+#manutencao ul {
+    /* Estilos para o elemento dd dentro da div manutencao */
+    margin-left: 30px; /* Margem à esquerda */
+}
+
+
+li::before {    
+    counter-increment: item; /* Increment counter */
+    margin-right: 20px; /* Add space between number and text */
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5); /* Increase size of checkboxes */
+    margin-right: 15px; /* Add space after checkbox */
+}
+
+
+#btnfinalizar {
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    width: 110px;
+    height: 35px;
+    background-color: #029243; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    border: 1px rgb(202, 39, 161);  
+    border-radius: 10px;        
+    display: inline-block; /* Tipo de exibição */
+    margin: auto; /* Margem externa do botão */
+    cursor: pointer; /* Tipo de cursor ao passar o mouse sobre o botão */   
+    line-height: 10px; /* Isso deve ser igual à altura do botão para centralizar o texto verticalmente */   
+    text-align: center;
+}
+
+#btnfinalizar {
+    display: block; /* Faz o botão se comportar como um bloco */
+    margin: 0 auto; /* Margem automática para centralizar horizontalmente */
+}
+
+#btnfinalizar:hover {
+    background-color: #02ee6c; /* Cor de fundo do botão ao passar o mouse */
+}
+
+#btnfinalizar:active {
+    background-color: #43ec8f;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}

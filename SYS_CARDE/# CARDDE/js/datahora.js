@@ -20,3 +20,12 @@ function mostrarDataHora() {
     // Atualize a data e a hora a cada segundo
     setInterval(atualizarDataHora, 1000);
 }
+
+function showPopup() {
+    // Seu código para mostrar o popup
+}
+
+window.onload = function() {
+    mostrarDataHora();
+    showPopup();
+};
