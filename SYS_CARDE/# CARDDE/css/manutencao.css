@@ -87,7 +87,7 @@ input[type="checkbox"] {
 }
 
 
-#btnfinalizar {
+#btnfinalizarA, #btnfinalizarB, #btnfinalizarC {
     font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
     width: 110px;
     height: 35px;
@@ -102,16 +102,16 @@ input[type="checkbox"] {
     text-align: center;
 }
 
-#btnfinalizar {
+#btnfinalizarA, #btnfinalizarB, #btnfinalizarC {
     display: block; /* Faz o botão se comportar como um bloco */
     margin: 0 auto; /* Margem automática para centralizar horizontalmente */
 }
 
-#btnfinalizar:hover {
+#btnfinalizarA:hover, #btnfinalizarB:hover, #btnfinalizarC:hover {
     background-color: #02ee6c; /* Cor de fundo do botão ao passar o mouse */
 }
 
-#btnfinalizar:active {
+#btnfinalizarA:active, #btnfinalizarB:active, #btnfinalizarC:active {
     background-color: #43ec8f;
     box-shadow: 0 5px rgba(0,0,0,0.3);
     transform: translateY(4px);
