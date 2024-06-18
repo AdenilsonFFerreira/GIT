@@ -1,16 +1,16 @@
 
 #nomeTabela {
-    font-family: 'Arial', sans-serif; /* Escolha a fonte desejada */
+    font-family: 'Arial', sans-serif; 
     font-size: xx-large;
-    color: red; /* Escolha a cor do texto */
-    background-color: rgb(211, 214, 8); /* Escolha a cor de fundo */
+    color: red; 
+    background-color: rgb(211, 214, 8); 
   }
 
 #itensTabela {
-    font-family: 'Arial', sans-serif; /* Escolha a fonte desejada */
+    font-family: 'Arial', sans-serif; 
     font-size: large;
-    color: black; /* Escolha a cor do texto */
-    background-color: rgb(7, 168, 243); /* Escolha a cor de fundo */
+    color: black; 
+    background-color: rgb(7, 168, 243); 
 }
   
 #imagemVeiculo {
