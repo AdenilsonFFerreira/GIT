@@ -39,7 +39,7 @@ function showPopup() {
         <h3>ACESSAR MENU:</h3>
         <h1>MANUTENÇÃO.</h1>  
         <br><br>      
-        <button onclick="closePopup()">Fechar</button>
+        <button id="fechar" onclick="closePopup()">Fechar</button>
       </div>
     `;
     document.body.appendChild(overlay);
@@ -54,6 +54,7 @@ function showPopup() {
 function closePopup() {
   document.getElementById('popupOverlay').style.display='none';
 }
+
 
 // Adiciona as funções ao evento de carregamento da página
 window.addEventListener('load', mostrarDataHora);

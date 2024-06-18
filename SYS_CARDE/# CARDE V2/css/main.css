@@ -34,3 +34,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3; /* Cor de fundo mais escura ao passar o mouse (hover) sobre o botão */
 }
+
+#popup {
+    background-color: blue; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+}

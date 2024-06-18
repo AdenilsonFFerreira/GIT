@@ -267,8 +267,8 @@ img {
     display: none;
   }
   
-  /* Estilo do pop-up */
-  .popup {
+/* Estilo do pop-up */
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -280,6 +280,29 @@ img {
     text-align: center; /* Centraliza o texto */
     color: red; /* Muda a cor do texto para vermelho */
   }
+
+#fechar {
+    background-color: green; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Adiciona um espaçamento interno ao botão */
+    border-radius: 5px; /* Arredonda as bordas do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    width: 100px; /* Define a largura do elemento */
+    height: 40px; /* Define a altura do elemento */   
+    font-size: 20px;
+}
+
+#fechar:hover {
+    background-color: #49fa03; /* Cor de fundo do botão ao passar o mouse */
+}
+
+#fechar:active {
+    background-color: #43ec8f;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}
+
 
   #formcadastro {
     margin-left: 300px; /* Margem à esquerda do formulário */
