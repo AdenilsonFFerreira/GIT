@@ -40,7 +40,7 @@
                         <img src="img/lupa.png" alt="Lupa">
                     </button>
                 </div>
-
+                <!-- tela de popup para confirmação do fechamento do sistema -->
                 <div id="msgSair" class="msgSair">
                     <div class="conteudo-da-caixa">
                         <p>Deseja realmente SAIR?</p>
@@ -62,6 +62,7 @@
                 <div id="home-button">
                     <a href="home.html"><button class="button home">HOME</button></a>
                 </div>
+                <!-- menus comentados ão serão chamados na pagina -->
                 <ul>
                      <li><a href="manutencao.html"><button class="button">MANUTENÇÃO</button></a></li>
                      <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
@@ -75,8 +76,10 @@
         </aside>
 
         <main>
+            <!-- tabela de veiculos TR a tabela - TH as colunas TD as linhas -->
             <table id="tableveiculos" border="1">
                 <tr>
+                    <!-- configuração para mesclar a calula veiculos coma o tamanho da tabela - COLSPAN = quantidade de coluna -->
                     <th id="nomeTabela" colspan="11">Veículos</th>
                 </tr>                
                 <tr id="itensTabela">
@@ -102,6 +105,7 @@
                     <td>manual</td>
                     <td>62400 km</td>
                     <td>LNI-7760</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 01.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 01.jpeg" alt="HUPMOBILE 6-40">
@@ -119,6 +123,7 @@
                     <td>manual</td>
                     <td>17400 km</td>
                     <td>MDX-5714</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 02.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 02.jpeg" alt="HP LIMOUSINE">
@@ -151,6 +156,7 @@
                     <td>automática</td>
                     <td>35780 km</td>
                     <td>LWJ-3436</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 04.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 04.jpeg" alt="FNM">
@@ -167,6 +173,7 @@
                     <td>manual</td>
                     <td>328467 km</td>
                     <td>AGA-3269</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 05.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 05.jpeg" alt="JARDINEIRA">
@@ -183,6 +190,7 @@
                     <td>manual</td>
                     <td>1800 km</td>
                     <td>KTO-6943</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 06.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 06.jpeg" alt="GOL 1000">
@@ -199,6 +207,7 @@
                     <td>manual</td>
                     <td>58000 km</td>
                     <td>NAN-7885</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 07.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 07.jpeg" alt="2000 GTV">
@@ -215,6 +224,7 @@
                     <td>manual</td>
                     <td>32300 km</td>
                     <td>NDI-3428</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 08.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 08.jpeg" alt="HOLLYWOOD">
@@ -231,6 +241,7 @@
                     <td>manual</td>
                     <td>215000 km</td>
                     <td>MTN-3111</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 09.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 09.jpeg" alt="MODEL T">
@@ -247,6 +258,7 @@
                     <td>manual</td>
                     <td>22300 km</td>
                     <td>JLG-2155</td>
+                    <!-- carrega a imgame do veiculo no campos e a imagem vira um link para ser aberta em uma pagina em tamanho maior -->
                     <td>
                         <a href="img/carros/foto 10.jpeg" target="_blank">
                           <img id="imagemVeiculo" src="img/carros/foto 10.jpeg" alt="F50 GT">
@@ -255,7 +267,7 @@
                 </tr>
             </table>
         </main>
-
+        <!-- configuração comun a todas paginas -->
         <footer>
             <div class="rodapegeral">
                 <div class="rodape">
@@ -280,6 +292,7 @@
         </footer>
         
     </div> 
+    <!-- script do botão sair -->
     <script src="js/sair.js"></script>    
 </body>
 </html>

@@ -33,46 +33,43 @@ body{
 }
 
 .msgSair {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.4); 
-    text-align: center;
+    display: none; /* Inicialmente não exibido */
+    position: fixed; /* Posição fixa na tela */
+    z-index: 1000; /* Empilhamento acima de outros elementos */
+    left: 0; /* Alinhado à esquerda da tela */
+    top: 0; /* Alinhado ao topo da tela */
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo preta com transparência */
+    text-align: center; /* Texto centralizado horizontalmente */
 }
 
-
 .conteudo-da-caixa {
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1001; 
-    background-color: rgb(212, 210, 80); 
-    padding: 20px; 
-    border-radius: 5px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    font-size: 30px;
-        
+    position: fixed; /* Posição fixa na tela */
+    top: 50%; /* Posicionado no meio verticalmente */
+    left: 50%; /* Posicionado no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o elemento exatamente no meio da tela */
+    z-index: 1001; /* Empilhamento acima do .msgSair */
+    background-color: rgb(212, 210, 80); /* Cor de fundo amarela */
+    padding: 20px; /* Espaçamento interno da caixa de conteúdo */
+    border-radius: 5px; /* Bordas arredondadas da caixa de conteúdo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave ao redor da caixa de conteúdo */
+    font-size: 30px; /* Tamanho da fonte do texto dentro da caixa de conteúdo */
 }
 
 #confirmarSaida, #cancelarSaida {
-    font-size: 25px; 
-    width: 80px;
-    height: 40px;
-    background-color: #038a1a; 
-    color: black;     
-    border-radius: 10px;        
-    display: inline-block; 
-    margin: auto; 
-    cursor: pointer;    
-    line-height: 10px;    
-    text-align: center;    
-    margin: auto auto; /* Margem automática para centralizar horizontalmente */ 
+    font-size: 25px; /* Tamanho da fonte dos botões */
+    width: 80px; /* Largura dos botões */
+    height: 40px; /* Altura dos botões */
+    background-color: #038a1a; /* Cor de fundo verde dos botões */
+    color: black; /* Cor do texto preto dos botões */   
+    border-radius: 10px; /* Bordas arredondadas dos botões */      
+    display: inline-block; /* Exibição em linha para permitir margem automática */ 
+    cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse sobre os botões */  
+    line-height: 10px; /* Altura da linha do texto dentro dos botões */  
+    text-align: center; /* Texto centralizado horizontalmente dentro dos botões */  
 }
+
 
 #confirmarSaida, #cancelarSaida {
     display: inline; 
@@ -124,30 +121,31 @@ body{
 }
 
 input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 300px;
-    transition: width 0.4s;
+    padding: 8px; /* Espaçamento interno do campo de texto */
+    border: 1px solid #ccc; /* Borda sólida cinza clara */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 300px; /* Largura inicial do campo de texto */
+    transition: width 0.4s; /* Transição suave da largura ao focar */
 }
 
 input[type="text"]:focus {
-    width: 320px;
+    width: 320px; /* Largura do campo de texto ao focar (aumenta) */
 }
 
 #pesquisar button {
-    background-color: #f9fafa;
-    border: none;
-    border-radius: 5px;
-    padding: 6px;
-    cursor: pointer;
+    background-color: #f9fafa; /* Cor de fundo do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 6px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Cursor em forma de ponteiro ao passar o mouse */
 }
 
 img {
-    height: 20px;
-    width: 20px;
-    vertical-align: middle;
+    height: 20px; /* Altura da imagem */
+    width: 20px; /* Largura da imagem */
+    vertical-align: middle; /* Alinhamento vertical com o texto ao redor */
 }
+
 
 /* Botão sair*/
 #btnSair button{
@@ -283,27 +281,28 @@ img {
     color: red; /* Muda a cor do texto para vermelho */
   }
 
-#formcadastro {
-    margin-left: 300px; 
-    margin-top: 20px; 
-    font-weight: bold;
-    font-size: medium;
+  #formcadastro {
+    margin-left: 300px; /* Margem à esquerda do formulário */
+    margin-top: 20px; /* Margem superior do formulário */
+    font-weight: bold; /* Peso da fonte negrito */
+    font-size: medium; /* Tamanho da fonte médio */
 }
 
 #formcadastro select {
-    font-size: 16px; 
-    height: 30px; 
-    border: 1px solid black; 
-    border-radius: 5px;
-    font-weight: bold;
+    font-size: 16px; /* Tamanho da fonte do elemento select */
+    height: 30px; /* Altura do elemento select */
+    border: 1px solid black; /* Borda sólida preta do elemento select */
+    border-radius: 5px; /* Bordas arredondadas do elemento select */
+    font-weight: bold; /* Peso da fonte negrito para o texto dentro do select */
 }
 
 #formcadastro input {
-    font-size: 16px; 
-    height: 30px; 
-    border: 1px solid black; 
-    border-radius: 5px; 
+    font-size: 16px; /* Tamanho da fonte dos elementos input */
+    height: 30px; /* Altura dos elementos input */
+    border: 1px solid black; /* Borda sólida preta dos elementos input */
+    border-radius: 5px; /* Bordas arredondadas dos elementos input */
 }
+
 
 #btnsalvar {
     font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
@@ -420,41 +419,40 @@ footer {
     color: #d3d2d2;
 }
 
-/*@media normalmente fica em ultimo */
+/* Media query para telas com largura máxima de 500px */
 @media screen and (max-width: 500px){
     .rodape{
-        display: block;
+        display: block; /* Rodapé exibido como bloco */
     }
 
     .um, .dois, .tres{
-        margin-bottom: 20px;
-        text-align: center;
+        margin-bottom: 20px; /* Margem inferior para espaçamento */
+        text-align: center; /* Texto centralizado horizontalmente */
     }
 
     .redes-sociais{
-        display: inline;    
+        display: inline; /* Redes sociais exibidas em linha */
     }
 
     .redes-sociais a{
-        margin-right: 5px;
+        margin-right: 5px; /* Margem à direita dos links das redes sociais */
     }
 
     .conteudo {
-        padding: 10% 0;
-
+        padding: 10% 0; /* Espaçamento interno superior e inferior como percentual da largura do elemento */
     }
 
     nav{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
+        display: flex; /* Navegação exibida como flexbox */
+        flex-direction: column; /* Itens da navegação organizados em coluna */
+        padding: 20px; /* Espaçamento interno da navegação */
     }
 
     nav ul{
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-        width: 100%;
-
+        margin-bottom: 20px; /* Margem inferior da lista de navegação */
+        display: flex; /* Lista de navegação exibida como flexbox */
+        justify-content: space-around; /* Espaçamento igual entre os itens da lista */
+        width: 100%; /* Largura total da lista de navegação */
     }
 }
+

@@ -39,7 +39,7 @@
                         <img src="img/lupa.png" alt="Lupa">
                     </button>
                 </div>                
-                
+                <!-- tela de popup para confirmação do fechamento do sistema -->
                 <div id="msgSair" class="msgSair">
                     <div class="conteudo-da-caixa">
                         <p>Deseja realmente SAIR?</p>
@@ -73,14 +73,18 @@
                 </div>
             </nav>
         </aside>
-
+        <!-- main para pagina de manutenção -->
         <main class="clearfix">
             <p>MANUTENÇÃO PROGRAMADA DA SEMANA.</p>
+            <!-- div manutenção para a criação de 3 DIVs separadas para os alertas de manutenção -->
+             <!-- há a lista ordenada OL e também não ordenada UL -->
             <div id="manutencao">
+                <!-- div da primeira seção -->
                 <div id="manutencaoA">
                     <h2>ALFA ROMERO - 2000 GTV</h2>
                     <br><hr><br>
                     <ol type="1">
+                        <!-- as linhas LI possuem uma entrada IMPUT do tipo CHECKBOX para marcação dos serviços realizados -->
                         <li><input type="checkbox" id="correa" name="correa"><label for="correa">Troca da correia (58000 KM)</label></li>
                         <li><input type="checkbox" id="oleoMotor" name="oleoMotor"><label for="oleoMotor">Troca do Óleo do motor (15w-40)</label></li>
                         <li><input type="checkbox" id="filtroOleo" name="filtroOleo"><label for="filtroOleo">Troca do Filtro de Óleo</label></li>
@@ -90,10 +94,12 @@
                         <li><input type="checkbox" id="fluidoFreio" name="fluidoFreio"><label for="fluidoFreio">Verificação do Fluido do freio</label></li>
                     </ol>
                     <br> 
+                    <!-- script do botão finalizar que oculta a DV correspondente -->
                     <script src="js/finalizar.js"></script>                     
                     <input id="btnfinalizarA" type="submit" value="FINALIZAR">                      
                 </div>
-
+                <!-- DIV da segunda seção  -->
+                 <!-- traalhando com as opção de lista ordenada OL e não ordenada UL -->
                 <div id="manutencaoB">
                     <h2>FERRARI - F50 GT</h2>
                     <br><hr><br>
@@ -114,10 +120,13 @@
                         <li><input type="checkbox" id="documentacao" name="documentacao"><label for="documentacao">DOCUMENTAÇÂO</label></li>
                     </ol>
                     <br>
+                    <!-- script do botão finalizar que oculta a DV correspondente -->
                     <script src="js/finalizar.js"></script>
                     <input id="btnfinalizarB" type="submit" value="FINALIZAR">
                 </div>
 
+                <!-- DIV da terceira seção  -->
+                <!-- tralhando com as opção de lista ordenada OL e não ordenada UL -->
                 <div id="manutencaoC">
                     <h2>VOLKSWAGEN - GOL 1000</h2>
                     <br><hr><br>
@@ -141,12 +150,13 @@
                         </li>
                     </ol>
                     <br>
+                    <!-- script do botão finalizar que oculta a DV correspondente -->
                     <script src="js/finalizar.js"></script>
                     <input id="btnfinalizarC" type="submit" value="FINALIZAR">  
                 </div>
             </div>
         </main>
-
+        <!-- configuração comun a todas paginas -->
         <footer>
             <div class="rodapegeral">
                 <div class="rodape">
@@ -170,6 +180,7 @@
             </div>
         </footer>        
     </div>  
+    <!-- sctipt do botão sair -->
     <script src="js/sair.js"></script>    
 </body>
 </html>

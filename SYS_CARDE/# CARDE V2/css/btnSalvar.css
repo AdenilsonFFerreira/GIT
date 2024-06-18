@@ -1,48 +1,52 @@
-
+/* configuração do botão salvar */
+/* Estilos aplicados à mensagem de salvar (.msgSalvar) */
 .msgSalvar {
-    display: none; 
-    position: fixed; 
-    z-index: 1000; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%; 
-    background-color: rgba(0,0,0,0.4);       
-    text-align: center;  
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posicionamento fixo na página */
+    z-index: 1000; /* Coloca acima de outros elementos na página */
+    left: 0; /* Alinhado à esquerda da página */
+    top: 0; /* Alinhado ao topo da página */
+    width: 100%; /* Largura estendida para toda a largura da página */
+    height: 100%; /* Altura estendida para toda a altura da página */
+    background-color: rgba(0,0,0,0.4); /* Cor de fundo preta com opacidade para efeito de sobreposição */      
+    text-align: center; /* Centraliza o texto horizontalmente */  
 }
 
-
+/* Estilos aplicados ao conteúdo da caixa de mensagem (.conteudo-da-caixa) */
 .conteudo-da-caixa {
-    display: block;
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1001; 
-    background-color: rgb(212, 210, 80); 
-    padding: 20px; 
-    border-radius: 5px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    font-size: 30px;        
+    display: block; /* Exibido como bloco */
+    position: fixed; /* Posicionamento fixo na página */
+    top: 50%; /* Posicionado no meio verticalmente */
+    left: 50%; /* Posicionado no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Deslocamento para centralizar exatamente no meio da página */
+    z-index: 1001; /* Coloca acima da sobreposição e outros elementos na página */
+    background-color: rgb(212, 210, 80); /* Cor de fundo amarela */
+    padding: 20px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave abaixo da caixa de mensagem */
+    font-size: 30px; /* Tamanho da fonte do texto dentro da caixa */        
 }
 
+/* Estilos aplicados ao botão de confirmação (#confirmarOk) */
 #confirmarOk {
-    font-size: 20px;     
-    width: 70px;
-    height: 30px;
-    background-color: #038a1a; 
-    color: black;     
-    border-radius: 10px;
-    cursor: pointer;   
+    font-size: 20px; /* Tamanho da fonte do texto do botão */    
+    width: 70px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    background-color: #038a1a; /* Cor de fundo verde do botão */ 
+    color: black; /* Cor do texto preto */    
+    border-radius: 10px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Cursor em forma de ponteiro quando passa sobre o botão */   
 }   
 
+/* Estilos para o estado hover do botão de confirmação (#confirmarOk:hover) */
 #confirmarOk:hover {
-    background-color: #03d827;
-    color: black; 
+    background-color: #03d827; /* Cor de fundo verde mais claro quando o mouse passa sobre o botão */
 }
- 
+
+/* Estilos para o estado active do botão de confirmação (#confirmarOk:active) */
 #confirmarOk:active {
-    background-color: #fcb900;
-    box-shadow: 0 5px rgba(0,0,0,0.3);
-    transform: translateY(4px);
+    background-color: #fcb900; /* Cor de fundo laranja quando o botão é clicado */
+    box-shadow: 0 5px rgba(0,0,0,0.3); /* Sombra mais escura e maior abaixo do botão quando clicado */
+    transform: translateY(4px); /* Desloca o botão ligeiramente para baixo quando clicado */
 }
+

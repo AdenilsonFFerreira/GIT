@@ -21,17 +21,17 @@
         <header>
             <!-- deve definir as seções de navegação, como links para outras paginas -->
             <nav id="header">
-                
+                <!-- logo da empresa -->
                 <div id="logo">
                     <img src="img/01img.jpg">
                 </div>
-
+                <!-- script de data e hora do dia -->
                 <div id="data_hora">
                     <p id="datahora"></p>
                     <script src="js/datahora.js"></script>
                     <script>window.onload = mostrarDataHora;</script>
                 </div>
-
+                <!-- menu de pesquisa no site -->
                 <div id="pesquisar">
                     <input type="text" placeholder="Pesquisar...">
                     <button type="submit">
@@ -39,6 +39,7 @@
                     </button>
                 </div>
                 
+                <!-- tela de popup para confirmação do fechamento do sistema -->
                 <div id="msgSair" class="msgSair">
                     <div class="conteudo-da-caixa">
                         <p>Deseja realmente SAIR?</p>
@@ -47,7 +48,7 @@
                         <button id="cancelarSaida">Não</button>
                     </div>
                 </div>                
-                
+                <!-- imagem do usuario que esta logado e botão de sair do sistema -->
                 <div id="btnSair">
                     <img src="img/01foto.jpeg" id="usuario">
                     <a href="login.html"><button type="button">SAIR</button></a>              
@@ -55,8 +56,11 @@
             </nav>
         </header>
 
+        <!-- normalmente para criação dos menus laterais podendo serutilizado como a crição de tabelas -->
+         <!-- nesse os menus refente ao sistema -->
         <aside id="menu-lateral">
             <nav>
+              <!-- lista não ordenada com a opção LI sendo as linhas  -->  
               <ul>
                 <li><a href="manutencao.html"><button class="button">MANUTENÇÃO</button></a></li>
                 <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
@@ -68,15 +72,16 @@
             </div>
             </nav>
         </aside>
-
+        <!-- parte principal da pagina nesse projeto onde ficar a parte estrutural do sistema -->
         <main>
             <div>
+                <!-- chamada do script da tela de alerta POPUP -->
                 <script src="js/popup.js"></script>
                 <button id="popup" onclick="showPopup()">Abrir Alerta</button>
             </div>
         </main>
         
-
+        <!-- configuração padrão em todas paginas -->
         <footer>
             <div class="rodapegeral">
                 <div class="rodape">
@@ -100,7 +105,8 @@
             </div>
         </footer>
         
-    </div>     
+    </div>  
+    <!-- chamada do script do botão sair -->
     <script src="js/sair.js"></script>   
 </body>
 

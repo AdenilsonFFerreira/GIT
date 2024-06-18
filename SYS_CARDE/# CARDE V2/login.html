@@ -22,7 +22,8 @@
         <header>
             <!-- deve definir as seções de navegação, como links para outras paginas -->
             <nav id="header">
-                
+
+                <!-- usadao ccomo seção para aplicar configurações especificas como CSS -->
                 <div id="logo">
                     <img src="img/01img.jpg">
                 </div>
@@ -34,6 +35,7 @@
 
                 <div id="datahora">                                                      
                     <p id="datahora"></p>
+                    <!-- chamada do script da data e hora -->
                     <script src="js/datahora.js"></script>
                     <script>window.onload = mostrarDataHora;</script>
                 </div>
@@ -44,13 +46,15 @@
             </nav>
         </header>
 
-        <!-- é usada para definir uma seção em um documento. É uma tag semântica em HTML5 que ajuda a organizar o conteúdo em partes distintas e significativas. -->
+        <!-- é usada para definir uma seção em um documento ajudando a organizar o conteúdo -->
         <section id="Login">
-
-            <!-- é um container genérico que é usado para agrupar elementos e aplicar estilos CSS. Não tem significado semântico. -->
+            
             <div id="login">        
                 <img src="img/01foto.jpeg">            
                 <br><br>
+
+                <!-- utilizado para entrada de dados de determinados assuntos  -->
+                 <!-- form da tela de login -->
                 <form>
                     <label for="usuario">Usuário:</label>
                     <input type="text" id="usuario" name="ususario" required>
@@ -64,9 +68,10 @@
                 </a>                       
             </div>                    
         </section>
-
+        <!-- seção na parte inferior da pagina onde fica as informações de direitos autorais, ajuda, link de redes sociais -->
         <footer>
             <div class="rodapegeral">
+                <!-- div rodape, detro dela há 3 divs: direitos autorais, redes sociais e ultima atualização -->
                 <div class="rodape">
                     <div class="um">
                         <p>MUSEU - 2024 &copy; Todos os direitos reservados</p>

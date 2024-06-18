@@ -39,7 +39,7 @@
                         <img src="img/lupa.png" alt="Lupa">
                     </button>
                 </div>
-
+                <!-- tela de popup para confirmação do fechamento do sistema -->
                 <div id="msgSair" class="msgSair">
                     <div class="conteudo-da-caixa">
                         <p>Deseja realmente SAIR?</p>
@@ -55,12 +55,13 @@
                 </div>
             </nav>
         </header>
-
+        <!-- comun a toda pagina porem na parte de cadastro fica habilitado apenas o menu anterior -->
         <aside id="menu-lateral">
             <nav>
                 <div id="home-button">
                     <a href="home.html#"><button class="button home">HOME</button></a>
                 </div>
+                <!-- menus não habilitados pra pagina estão comentados -->
                 <ul>
                      <!-- <li><a href="#"><button class="button">MANUTENÇÃO</button></a></li> -->
                      <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
@@ -74,6 +75,8 @@
         </aside>
 
         <main>
+            <!-- form de cadastro do veiculços utilizando dos LABEL e os IMPUT de acordo com a caracteristica da informação -->
+             <!-- IMPUT - type = ira indicar o tipo de dados que sera entrado -->
             <form id="formcadastro">
                 <label for="marca">Marca:</label><br>
                 <input type="text" id="marca" name="marca"><br><br>
@@ -86,7 +89,8 @@
                 
                 <label for="dob">Ano:</label><br>
                 <input type="dob" id="dob" name="dob"><br><br>
-        
+                <!-- type = dob / valor numerico -->
+
                 <label for="carroceria">Carroceria:</label><br>
                 <select id="carroceria" name="carroceria">
                     <option value="hatch">Hatch</option>
@@ -97,6 +101,7 @@
                     <option value="suv">Suv</option>
                     <option value="pickup">Pickup</option>
                 </select><br><br>
+                <!-- select / para adicionar informações ja conhecidas -->
         
                 <label for="motor">Motor:</label><br>
                 <select id="motor" name="motor">
@@ -132,6 +137,7 @@
         
                 <input id="btnsalvar" type="submit" value="Salvar">
 
+                <!-- div informatica do popup de confirmação de cadastro do veiculo -->
                 <div id="msgSalvar" class="msgSalvar">
                     <div class="conteudo-da-caixa">
                         <p>Veículo Salvo</p>
@@ -166,7 +172,8 @@
             </div>
         </footer>
         
-    </div>    
+    </div> 
+    <!-- scripts do botão sair e do botão salvar -->   
     <script src="js/sair.js"></script> 
     <script src="js/salvar.js"></script>
 </body>

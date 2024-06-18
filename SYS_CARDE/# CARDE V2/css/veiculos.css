@@ -1,41 +1,37 @@
-
 #nomeTabela {
-    font-family: 'Arial', sans-serif; 
-    font-size: xx-large;
-    color: red; 
-    background-color: rgb(211, 214, 8); 
-  }
+    font-family: 'Arial', sans-serif; /* Tipo de fonte Arial */
+    font-size: xx-large; /* Tamanho da fonte extra-extra-grande */
+    color: red; /* Cor do texto vermelha */
+    background-color: rgb(211, 214, 8); /* Cor de fundo amarela */
+}
 
 #itensTabela {
-    font-family: 'Arial', sans-serif; 
-    font-size: large;
-    color: black; 
-    background-color: rgb(7, 168, 243); 
+    font-family: 'Arial', sans-serif; /* Tipo de fonte Arial */
+    font-size: large; /* Tamanho da fonte grande */
+    color: black; /* Cor do texto preta */
+    background-color: rgb(7, 168, 243); /* Cor de fundo azul */
 }
-  
+
 #imagemVeiculo {
-    width: 60px;
-    height: 40px;
+    width: 60px; /* Largura da imagem */
+    height: 40px; /* Altura da imagem */
 }
-   
+
 td {
-    padding: 5px;
+    padding: 5px; /* Espaçamento interno das células da tabela */
 }
 
- 
 th {
-    padding: 5px;
+    padding: 5px; /* Espaçamento interno dos cabeçalhos da tabela */
 }
 
-
-
-#tableveiculos{
-    margin-left: 300px; 
-    margin-top: 20px; 
-    font-weight: bold;
-    font-size: medium;
+#tableveiculos {
+    margin-left: 300px; /* Margem à esquerda da tabela */
+    margin-top: 20px; /* Margem superior da tabela */
+    font-weight: bold; /* Peso da fonte negrito */
+    font-size: medium; /* Tamanho da fonte médio */
 }
 
 #tableveiculos th, #tableveiculos td {
-    text-align: center;
+    text-align: center; /* Alinhamento do texto ao centro para cabeçalhos e células da tabela */
 }

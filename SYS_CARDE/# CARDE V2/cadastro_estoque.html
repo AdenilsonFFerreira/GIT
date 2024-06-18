@@ -39,7 +39,7 @@
                         <img src="img/lupa.png" alt="Lupa">
                     </button>
                 </div>
-
+                <!-- tela de popup para confirmação do fechamento do sistema -->
                 <div id="msgSair" class="msgSair">
                     <div class="conteudo-da-caixa">
                         <p>Deseja realmente SAIR?</p>
@@ -56,11 +56,13 @@
             </nav>
         </header>
 
+        <!-- comun a toda pagina porem na parte de cadastro fica habilitado apenas o menu anterior -->
         <aside id="menu-lateral">
             <nav>
                 <div id="home-button">
                     <a href="home.html#"><button class="button home">HOME</button></a>
                 </div>
+                <!-- menus não habilitados pra pagina estão comentados -->
                 <ul>
                      <!-- <li><a href="#"><button class="button">MANUTENÇÃO</button></a></li> -->
                      <li><a href="cadastro.html"><button class="button">CADASTRO</button></a></li>
@@ -74,6 +76,8 @@
         </aside>
 
         <main>
+             <!-- form de cadastro do veiculços utilizando dos LABEL e os IMPUT de acordo com a caracteristica da informação -->
+             <!-- IMPUT - type = ira indicar o tipo de dados que sera entrado -->
             <form id="formcadastro">
                 <label for="produto">Produto:</label><br>
                 <input type="text" id="produto" name="produto"><br><br>
@@ -89,9 +93,11 @@
 
                 <label for="dataentrada">Data de Entrada:</label><br>
                 <input type="date" id="dataentrada" name="dataentrada"><br><br>
+                <!-- type = date / chama uma caixa de datas apenas para selecionar -->
 
                 <label for="validade">Validade:</label><br>
                 <input type="date" id="validade" name="validade"><br><br>
+                <!-- type = date / chama uma caixa de datas apenas para selecionar -->
 
                 <label for="quantidade">Quantidade:</label><br>
                 <input type="dob" id="quantidade" name="quantidade">
@@ -99,7 +105,8 @@
                 <br><br>                
 
                 <input id="btnsalvar" type="submit" value="Salvar">
-                
+
+                <!-- div informatica do popup de confirmação de cadastro do veiculo -->
                 <div id="msgSalvar" class="msgSalvar">
                     <div class="conteudo-da-caixa">
                         <p>Produto Salvo</p> 
@@ -133,7 +140,8 @@
             </div>
         </footer>
         
-    </div>   
+    </div> 
+    <!-- scripts do botão sair e do botão salvar -->     
     <script src="js/sair.js"></script>
     <script src="js/salvar.js"></script>  
 </body>
