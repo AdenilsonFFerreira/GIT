@@ -4,7 +4,9 @@
 <head>
     <meta charset=“UTF-8”>
     <title>MUSEU - VEÍCULOS</title> <!-- Nome referente a cada pagina aberta -->
-    <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->    
+    <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->  
+    <link rel="stylesheet" href="css/veiculos.css"><!-- Caminho do CSS usado para pagina -->  
+
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon"> 
     <!-- ICONES DAS REDES SOCIAIS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -69,9 +71,9 @@
         <main>
             <table id="tableveiculos" border="1">
                 <tr>
-                    <th colspan="11" style="font-size: 35px; text-align: center; font-weight: bold;">Veiculos</th>
+                    <th id="nomeTabela" colspan="11">Veículos</th>
                 </tr>                
-                <tr>
+                <tr id="itensTabela">
                     <th>Marca</th>
                     <th>Modelo</th>
                     <th>Cor</th>
@@ -79,7 +81,7 @@
                     <th>Carroceria</th>
                     <th>Motor</th>
                     <th>Transmissão</th>
-                    <th>Kilometragem</th>   
+                    <th>Quilometragem</th>   
                     <th>Placa</th>
                     <th>Foto</th>
                     <th>OBS</th>
@@ -87,41 +89,51 @@
                 <tr>
                     <td>HUPMOBILE</td>
                     <td>6-40</td>
-                    <td>AZUL</td>
+                    <td>VERMELHO</td>
                     <td>1911</td>
                     <td>sedan</td>
                     <td>6 em linha</td>
                     <td>manual</td>
                     <td>62400 km</td>
                     <td>LNI-7760</td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 01.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 01.jpeg" alt="HUPMOBILE 6-40">
+                        </a>
+                    </td>                      
                     <td></td>
                 </tr>
                 <tr>
                     <td>ROLLS ROYCE</td>
                     <td>HP LIMOUSINE</td>
-                    <td>AZUL</td>
+                    <td>PRETO/BEGE</td>
                     <td>1936</td>
                     <td>sedan</td>
                     <td>6 em linha</td>
                     <td>manual</td>
                     <td>17400 km</td>
                     <td>MDX-5714</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 02.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 02.jpeg" alt="HP LIMOUSINE">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>FORD</td>
                     <td>SUPER DELUXE</td>
-                    <td>VINHO</td>
+                    <td>AZUL</td>
                     <td>1941</td>
                     <td>sedan</td>
                     <td>v8</td>
                     <td>manual</td>
                     <td>187000 km</td>
                     <td>HUZ-1522</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 03.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 03.jpeg" alt="SUPER DELUXE">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>ALFA ROMEO</td>
@@ -130,37 +142,46 @@
                     <td>1960</td>
                     <td>sedan</td>
                     <td>4 cilindros</td>
-                    <td>automatica</td>
+                    <td>automática</td>
                     <td>35780 km</td>
                     <td>LWJ-3436</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 04.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 04.jpeg" alt="FNM">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>CHEVROLET</td>
                     <td>GM JARDINEIRA</td>
-                    <td>AZUL</td>
+                    <td>BRANCA</td>
                     <td>1957</td>
                     <td>pickup</td>
                     <td>v8</td>
                     <td>manual</td>
                     <td>328467 km</td>
                     <td>AGA-3269</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 05.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 05.jpeg" alt="JARDINEIRA">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>VOLKSWAGEN</td>
                     <td>GOL 1000</td>
-                    <td>VERMELHO</td>
+                    <td>VERDE</td>
                     <td>1996</td>
                     <td>hatch</td>
                     <td>4 cilindros</td>
                     <td>manual</td>
                     <td>1800 km</td>
                     <td>KTO-6943</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 06.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 06.jpeg" alt="GOL 1000">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>ALFA ROMEO</td>
@@ -172,21 +193,27 @@
                     <td>manual</td>
                     <td>58000 km</td>
                     <td>NAN-7885</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 07.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 07.jpeg" alt="2000 GTV">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>GRAHAM</td>
                     <td>HOLLYWOOD</td>
-                    <td>CINZA</td>
+                    <td>AZUL</td>
                     <td>1941</td>
                     <td>fastback</td>
                     <td>6 em linha</td>
                     <td>manual</td>
                     <td>32300 km</td>
                     <td>NDI-3428</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 08.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 08.jpeg" alt="HOLLYWOOD">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>FORD</td>
@@ -198,8 +225,11 @@
                     <td>manual</td>
                     <td>215000 km</td>
                     <td>MTN-3111</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 09.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 09.jpeg" alt="MODEL T">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
                 <tr>
                     <td>FERRARI</td>
@@ -211,8 +241,11 @@
                     <td>manual</td>
                     <td>22300 km</td>
                     <td>JLG-2155</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="img/carros/foto 10.jpeg" target="_blank">
+                          <img id="imagemVeiculo" src="img/carros/foto 10.jpeg" alt="F50 GT">
+                        </a>
+                    </td>                    <td></td>
                 </tr>
             </table>
         </main>

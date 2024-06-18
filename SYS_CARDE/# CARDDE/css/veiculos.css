@@ -1,0 +1,41 @@
+
+#nomeTabela {
+    font-family: 'Arial', sans-serif; /* Escolha a fonte desejada */
+    font-size: xx-large;
+    color: red; /* Escolha a cor do texto */
+    background-color: rgb(211, 214, 8); /* Escolha a cor de fundo */
+  }
+
+#itensTabela {
+    font-family: 'Arial', sans-serif; /* Escolha a fonte desejada */
+    font-size: large;
+    color: black; /* Escolha a cor do texto */
+    background-color: rgb(7, 168, 243); /* Escolha a cor de fundo */
+}
+  
+#imagemVeiculo {
+    width: 60px;
+    height: 40px;
+}
+   
+td {
+    padding: 5px;
+}
+
+ 
+th {
+    padding: 5px;
+}
+
+
+
+#tableveiculos{
+    margin-left: 300px; 
+    margin-top: 20px; 
+    font-weight: bold;
+    font-size: medium;
+}
+
+#tableveiculos th, #tableveiculos td {
+    text-align: center;
+}
