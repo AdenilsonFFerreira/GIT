@@ -33,52 +33,49 @@ body{
 }
 
 .msgSair {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Fica fixo na tela */
-    z-index: 1000; /* Fica no topo */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
-    background-color: rgba(0,0,0,0.4); /* Fundo escurecido com opacidade */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 
 .conteudo-da-caixa {
-    position: fixed; /* Fica fixo na tela */
+    position: fixed; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza a caixa */
-    z-index: 1001; /* Garante que a caixa fique acima do fundo escurecido */
-    background-color: white; /* Fundo sólido branco */
-    padding: 20px; /* Espaçamento interno para não colar o texto nas bordas */
-    border-radius: 5px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para um efeito 3D sutil */
-    font-size: 20px;
-    height: 120px;
-    width: 400px;
+    transform: translate(-50%, -50%); 
+    z-index: 1001; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 30px;
+        
 }
 
 #confirmarSaida, #cancelarSaida {
-    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
-    width: 50px;
-    height: 35px;
-    background-color: #029243; /* Cor de fundo do botão */
-    color: black; /* Cor do texto do botão */
-    border: 1px rgb(202, 39, 161);  
+    font-size: 25px; 
+    width: 80px;
+    height: 40px;
+    background-color: #038a1a; 
+    color: black;     
     border-radius: 10px;        
-    display: inline-block; /* Tipo de exibição */
-    margin: auto; /* Margem externa do botão */
-    cursor: pointer; /* Tipo de cursor ao passar o mouse sobre o botão */   
-    line-height: 10px; /* Isso deve ser igual à altura do botão para centralizar o texto verticalmente */   
-    text-align: center;
-    
+    display: inline-block; 
+    margin: auto; 
+    cursor: pointer;    
+    line-height: 10px;    
+    text-align: center;    
+    margin: auto auto; /* Margem automática para centralizar horizontalmente */ 
 }
 
 #confirmarSaida, #cancelarSaida {
-    display: inline; /* Faz o botão se comportar como um bloco */
-    margin: 0 auto; /* Margem automática para centralizar horizontalmente */
-    align-items: center;
+    display: inline; 
+    margin: 0 auto;
 }
 
 #confirmarSaida:hover, #cancelarSaida:hover {
