@@ -34,11 +34,6 @@ body{
 
 .msgSair {
     display: none; /* Escondido por padrão */
-    /* Restante do seu CSS aqui */
-}
-
-.msgSair {
-    display: none; /* Escondido por padrão */
     position: fixed; /* Fica fixo na tela */
     z-index: 1000; /* Fica no topo */
     left: 0;
@@ -59,9 +54,43 @@ body{
     padding: 20px; /* Espaçamento interno para não colar o texto nas bordas */
     border-radius: 5px; /* Bordas arredondadas */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para um efeito 3D sutil */
-    /* Restante do seu CSS aqui */
+    font-size: 20px;
+    height: 120px;
+    width: 400px;
 }
 
+#confirmarSaida, #cancelarSaida {
+    font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
+    width: 50px;
+    height: 35px;
+    background-color: #029243; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    border: 1px rgb(202, 39, 161);  
+    border-radius: 10px;        
+    display: inline-block; /* Tipo de exibição */
+    margin: auto; /* Margem externa do botão */
+    cursor: pointer; /* Tipo de cursor ao passar o mouse sobre o botão */   
+    line-height: 10px; /* Isso deve ser igual à altura do botão para centralizar o texto verticalmente */   
+    text-align: center;
+    
+}
+
+#confirmarSaida, #cancelarSaida {
+    display: inline; /* Faz o botão se comportar como um bloco */
+    margin: 0 auto; /* Margem automática para centralizar horizontalmente */
+    align-items: center;
+}
+
+#confirmarSaida:hover, #cancelarSaida:hover {
+    background-color: #f590df;
+    color: black; 
+}
+  
+#confirmarSaida:active, #cancelarSaida:active {
+    background-color: #fcb900;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}
 
 /* *********************************************************************************************************** */
 /* ESTILO PARA HEADER*/
