@@ -1,0 +1,47 @@
+
+.msgSalvar {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.4);         
+}
+
+
+.conteudo-da-caixa {
+    display: block;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1001; 
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    font-size: 30px;        
+}
+
+#confirmarOk {
+    font-size: 20px;     
+    width: 70px;
+    height: 30px;
+    background-color: #038a1a; 
+    color: black;     
+    border-radius: 10px;
+    cursor: pointer;   
+}   
+
+#confirmarOk:hover {
+    background-color: #03d827;
+    color: black; 
+}
+ 
+#confirmarOk:active {
+    background-color: #fcb900;
+    box-shadow: 0 5px rgba(0,0,0,0.3);
+    transform: translateY(4px);
+}

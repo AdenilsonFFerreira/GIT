@@ -3,8 +3,9 @@
 
 <head>
     <meta charset=“UTF-8”>
-    <title>MUSEU - MANUTENÇÃO</title> <!-- Nome referente a cada pagina aberta -->
-    <link rel="stylesheet" href="css/style.css"><!-- Caminho do CSS usado para pagina -->    
+    <title>MUSEU - MANUTENÇÃO</title> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/btnSalvar.css">   
     <link rel="shortcut icon" href="ico/03ico.ico" type="image/x-icon"> 
     <!-- ICONES DAS REDES SOCIAIS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -92,6 +93,15 @@
                 <br><br>                
 
                 <input id="btnsalvar" type="submit" value="Salvar">
+                
+                <div id="msgSalvar" class="msgSalvar">
+                    <div class="conteudo-da-caixa">
+                        <p>Produto Salvo</p>
+                        <br>
+                        <button id="confirmarOk">OK</button>
+                        
+                    </div>
+                </div> 
             </form>
         </main>
 
@@ -119,7 +129,8 @@
         </footer>
         
     </div>   
-    <script src="js/sair.js"></script>  
+    <script src="js/sair.js"></script>
+    <script src="js/salvar.js"></script>  
 </body>
 </html>
 
