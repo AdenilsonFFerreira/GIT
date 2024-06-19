@@ -273,7 +273,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: rgb(212, 210, 80);
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px; /* Isso vai arredondar as bordas do pop-up */
@@ -283,14 +283,14 @@ img {
 
 #fechar {
     background-color: green; /* Define a cor de fundo do botão */
-    color: white; /* Define a cor do texto do botão */
+    color: black; /* Define a cor do texto do botão */
     border: none; /* Remove a borda do botão */
     padding: 10px 20px; /* Adiciona um espaçamento interno ao botão */
     border-radius: 5px; /* Arredonda as bordas do botão */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     width: 100px; /* Define a largura do elemento */
     height: 40px; /* Define a altura do elemento */   
-    font-size: 20px;
+    font-size: 20px; /*Define o tamanho da fonte bo botão */
 }
 
 #fechar:hover {
