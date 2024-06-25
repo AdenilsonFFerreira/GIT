@@ -4,11 +4,45 @@
 <head>
     <!-- carde v2 - site 07 - site 08 - site 09 - exec04 - exec05 - exec06 -->
 	<meta charset="UTF-8">
-    <title>Documente</title>
+    <title>PROVA</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- CHAMANDO O SCRIPT POR FORA -->
+    <!-- base paea toda chamada apenas indicando o local do arquivo -->
+     <!-- é criado um botão no html que vai chamar a função em script -->
+      <!-- o codigo que sera executado sera a minhaFuncao() -->
+    <button type="button" onclick="minhaFuncao();">Chamar Função</button>
+    <script src="js/script.js"></script>
+
+
+    <!--  
+    /* CHAMANDO O SCRIPT NA CORPO NO CASO BODY */
+    <script>
+        
+        /* apenas emite um alerta na tela */
+        window.alert("Boa Noite \nSeja bem vindo");
+
+        /* vai armazenar log de erro para verificação */
+        console.log("teste");
+
+        /* necessario apenas a mensagem sera cirado o botão OK - CANCELAR */
+        confirm("o que deseja confirmar")
+
+        /* prompt - entrada de dados precisa da variavel onde vai ficar os dados
+        primeira " é a descrição a segunda " informa~]ao dentro da caixa opcional */
+        var nome = prompt("Qual a cor do seu carro:", "Digite a cor do seu carro");
+        
+        /* imprimi informações na tela  " informação que vc quer adicionar
+        nome = a informação que esta na variavel*/
+        document.write('Boa noite, ' + nome);
+    </script>
+    -->
+
+
+    <!-- 
     window.alert(“arg”);
     alert(“arg”);  
 
@@ -65,7 +99,8 @@
 – keydown
 – keypress
 – keyup
+ -->
 
-            </body>
+</body>
 
 </html>

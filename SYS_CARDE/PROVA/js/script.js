@@ -1,28 +1,42 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
+/* BASICO IGUAL NO CORPO DO HTML
+VAI COLOCAR O CODIGO IGUALMENTE */
 
-<head>
-    <meta charset="UTF-8">    
-    <link rel="stylesheet" href="css/style_login.css">
-    <link rel="shortcut icon" href="icones/03ico.ico" type="image/x-icon">
-    <title>Documento</title>
-</head>
+/* alerta simples 
+function minhaFuncao(){
+    alert('Boa Noite');
+}
+*/
 
-<!-- VAR escopo geral
-LET escopo local -->
+/* teste de mensagens
+window.alert("Boa Noite \nSeja bem vindo");
+console.log("teste");
+confirm("o que deseja confirmar")
+var nome = prompt("Qual a cor do seu carro:", "Digite a cor do seu carro");
+document.write('Boa noite, ' + nome);
+*/
 
-<body>
-   <script>
-
-        var min = parseInt(prompt('Digite o valor minimo'))
+/* vai gerar um numero aleatorio com a equação
+var min = parseInt(prompt('Digite o valor minimo'))
         var max = parseInt(prompt('Digite o valor maximo'))
         var n = Math.round(Math.random() * (max-min)+min)
         console.log(n)    
         document.write(n);   
+*/
 
-        /* var n = Math.round(Math.random()*5)
-       
-        console.log(n)   */  
+/* script ja sendo executado ao abrir a pagina 
+var n = Math.round(Math.random()*5)      
+        console.log(n) 
+        document.write(n);  
+*/
+
+/* mesma função anterior porem sendo chamado pelo botão
+function minhaFuncao(){
+    var n = Math.round(Math.random()*5)      
+    console.log(n) 
+    document.write(n); 
+}*/
+
+/* varias equações matematicas */
 
         /* var n = parseInt(prompt('Digite um numero para elevar ao quadrado²'))
         var r = Math.pow(n,2)
@@ -63,8 +77,3 @@ LET escopo local -->
         }
         console.log('Fora do IF' + n) */
 
-
-   </script>
-
-</body>
-</html>
