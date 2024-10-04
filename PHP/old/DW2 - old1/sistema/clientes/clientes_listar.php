@@ -1,8 +1,6 @@
 <?php
-session_start();
 // Incluir o arquivo de conexão com o banco de dados
-include($_SERVER['DOCUMENT_ROOT'] . '/dw2/central/conexao.php');
-include('../../central/fn/validar_sessao.php');
+include('../../central/conexao.php');
 
 // Criar a consulta SQL para selecionar todos os clientes
 $sql = "SELECT * FROM clientes";
@@ -14,20 +12,10 @@ $result = mysqli_query($conexao, $sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../central/css/estilo.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/estilo.css"/>
     <title>Lista de Clientes</title>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>    
     <div class="container">
         <h1>Lista de Clientes</h1>
         <table>
@@ -41,7 +29,6 @@ $result = mysqli_query($conexao, $sql);
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Ação</th>
-                    <th>Deletar?</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,8 +45,7 @@ $result = mysqli_query($conexao, $sql);
                         echo "<td>" . $row['dt_nasc'] . "</td>";
                         echo "<td>" . $row['email'] . "</td>";
                         echo "<td>" . $row['telefone'] . "</td>";
-                        echo "<td><a href='cliente_editar.php?codigo=".$row['codigo']."'>Editar</a></td>";
-                        echo "<td><a href='cliente_deletar.php?codigo=".$row['codigo']."'>DELETAR</a></td>";
+                        echo "<td>Editar</td>";
                         echo "</tr>";
                     }
                 } else {

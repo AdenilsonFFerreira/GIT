@@ -1,5 +1,5 @@
 <?php
-/* Funcão que cria o código do cliente*/
+//Função que cria o codigo do cliente
 function gerarCodigoCliente() {
     $caracteres = 'QWERTYUPADFGHJKLZXCVM1234567890';
     
@@ -8,5 +8,4 @@ function gerarCodigoCliente() {
     
     return $parte1 . '-' . $parte2;
 }
-
 ?>

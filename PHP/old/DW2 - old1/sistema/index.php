@@ -2,10 +2,40 @@
 session_start();
 // Incluir o arquivo de conexão com o banco de dados
 include($_SERVER['DOCUMENT_ROOT'] . '/dw2/central/conexao.php');
+include($_SERVER['DOCUMENT_ROOT'] . '/dw2/central/fn/links.php');
 include('../../central/fn/validar_sessao.php');
 
+if (isset($_GET['filtro'])) or 
+ {
+    $filtro = $_GET['filtro'];
+    $pgs = #_GET['pg'];
+ } 
+ else 
+  {
+    $filtro = null;
+  }
+
+switch ($filtro) {
+    
+    case 'id':
+        $sql = "SELECT * FROM clientes "; //ordena por id
+        break;
+
+    case 'az':
+        $sql = "SELECT * FROM clientes ORDER BY nome_completo"; //de A a Z
+        break;
+
+    case 'za':
+        $sql = "SELECT * FROM clientes ORDER BY nome_completo DESC"; //de A a Z
+        break;
+ 
+    case null:
+        $sql = "SELECT * FROM clientes"; //ordena pelo id
+        break;
+
+}
+
 // Criar a consulta SQL para selecionar todos os clientes
-$sql = "SELECT * FROM clientes";
 $result = mysqli_query($conexao, $sql);
 ?>
 
@@ -19,17 +49,12 @@ $result = mysqli_query($conexao, $sql);
     <title>Lista de Clientes</title>
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>    
+    <?php echo menuClientes(); ?> 
     <div class="container">
         <h1>Lista de Clientes</h1>
+        <div class='row'>
+                Ordenar por: <a href="index.php?filtro=az"> Ordem A-Z </a> &nbsp;|&nbsp; <a href="index.php?filtro=za"> Ordem Z-A </a>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -38,6 +63,7 @@ $result = mysqli_query($conexao, $sql);
                     <th>Nome Completo</th>
                     <th>Sexo</th>
                     <th>Data de Nascimento</th>
+                    <th>Idade</th>
                     <th>Email</th>
                     <th>Telefone</th>
                     <th>Ação</th>
@@ -50,12 +76,22 @@ $result = mysqli_query($conexao, $sql);
                 if (mysqli_num_rows($result) > 0) {
                     // Loop através de cada linha de resultado e exibi-la na tabela
                     while($row = mysqli_fetch_assoc($result)) {
+
+                        //Formatando a data para o pt-br
+                        $data_nasc = date("d/m/Y", strtotime($row['dt_nasc']));
+
+                        //calcular a idade do cliente
+                        $data_nascimento = new DateTime($row['dt_nasc']);
+                        $hoje = new DateTime();
+                        $idade = $hoje->diff($data_nascimento)->y;
+                        
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
                         echo "<td>" . $row['codigo'] . "</td>";
                         echo "<td>" . $row['nome_completo'] . "</td>";
                         echo "<td>" . $row['sexo'] . "</td>";
-                        echo "<td>" . $row['dt_nasc'] . "</td>";
+                        echo "<td>" . $data_nasc . "</td>";  // Exibindo a data de nascimento formatada
+                        echo "<td>" .$idade."</td>"; // Exibindo a idade calculada
                         echo "<td>" . $row['email'] . "</td>";
                         echo "<td>" . $row['telefone'] . "</td>";
                         echo "<td><a href='cliente_editar.php?codigo=".$row['codigo']."'>Editar</a></td>";
@@ -74,3 +110,4 @@ $result = mysqli_query($conexao, $sql);
     </div>
 </body>
 </html>
+

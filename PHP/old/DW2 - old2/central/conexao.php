@@ -13,7 +13,7 @@ if ($conexao->connect_error) {
 }
 else
 {
-	//echo "<br>Conexão bem-sucedida<br>";
+	echo "<br>Conexão bem-sucedida<br>";
 }
 
 ?>

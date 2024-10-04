@@ -1,13 +1,13 @@
 <?php
 
-$senha = $_GET["psw"];
+ //$senha = $_GET["psw"];
 
-//$senha = "abc@1234";
+$senha = "abc@1234";
 
-$passHash = password_hash($senha, PASSWORD_DEFAULT);
+ $passHash = password_hash($senha, PASSWORD_DEFAULT);
  //$passHash = "$2y$10$4Lpy25uBXYxW97faMw5Cy.GnX64Da9nv4Yobb6Jml/.xP2Wh6ylgS";
 
-//$senha = "abc@123";
+$senha = "abc@123";
 
 echo " Senha textual informada: ".$senha."</BR></BR>";
 
@@ -32,5 +32,4 @@ if(password_verify($senha, $passHash))
   {
     echo "As senhas NÃO Conferem";
   }
-
-?>
+?>  

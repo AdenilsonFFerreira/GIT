@@ -22,17 +22,14 @@ INSERT INTO `banco_dw2`.`clientes`
 ('codigo',   'nome_completo', 'dt_nasc', 'email' , 'telefone');
 */
 
-$sql = "INSERT INTO clientes 
-( codigo,      nome_completo,     dt_nasc,      email,              telefone) VALUES 
-('ABCD-1234', 'Ricardo Alsoa',   '1977-08-15', 'ricardo@acme.com', '12991747581')";
-
-    if (mysqli_query($conexao, $sql)) {
+$sql = "INSERT INTO clientes
+(codigo, nome_completo, dt_nasc, email, telefone)VALUES
+('ABCD-1234', 'Ricardo Alves', '1977-08-15', 'ricardo@acme.com', '12988276987')";
+    if (mysqli_query($conexao, $sql)){
         echo "Cadastro realizado com sucesso!";
-        //header("Location: clientes_listar.php");
-    } else {
-        echo "Erro: " . $sql . "<br>" . mysqli_error($conexao);
+        //header("location: clientes_listar.php");
+    }else{
+        echo"Erro: " . $sql . "<br>" . mysqli_error($conexao);
     }
-
-
 
 ?>
