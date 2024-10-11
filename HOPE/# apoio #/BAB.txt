@@ -1,3 +1,20 @@
 listas > funções e conjuntos
 
 truval - verdadeiro e falso no hope
+
+lambda formula - entre parentes() + \ + x => e a expressão - valor fora dos parentes
+ex: (\x => x*2)9
+OBS: mais de um arguento sempre enre ()
+
+(\a => \b => pow((a+b),2)) - como passa dois valores não precisa de parentes
+
+======================
+RECURIVIDADE
+1 - condição de aterramento - permite encerrar a recursão senão sera infinita
+2 - mudar de estado para se aproximar do caso básico
+3 - chamar a si mesma, certo numero de vezes ate chegar ao caso básico
+
+simples e de cauda (mesmo resultado)
+
+
+recursividade de caudda 
