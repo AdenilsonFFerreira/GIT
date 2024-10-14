@@ -1,0 +1,20 @@
+uses base1;
+dec multiplo : num # num -> truval;
+dec divisor : num -> list num;
+dec listamult : list num # num -> list num;
+dec divisro2 : num -> list num;
+dec divisor2 : num -> list num;
+dec checa_primo : num -> truval;
+dec lprimos : num -> list num;
+
+--- multiplo (n, m) <= if n mod m = 0 then true else false;
+
+--- listamult ([], n) <= [];
+--- listamult (x :: xs, n) <= if n mod x = 0 then x :: listamult (xs, n) else listamult (xs, n);
+
+--- divisor2 n <= listamult (faixa (1, n, 1), n);
+
+--- checa_primo 1 <= false;
+--- checa_primo 2 <= true;
+
+--- lprimos n <= comp (faixa (1, n, 1), lambda x => checa_primo x);

@@ -18,3 +18,8 @@ simples e de cauda (mesmo resultado)
 
 
 recursividade de caudda 
+
+compreensão de lista
+com(conjunto(faixa), qualificador(outra função))
+
+x(cabeaça) xs(cauda)

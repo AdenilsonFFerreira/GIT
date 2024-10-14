@@ -5,15 +5,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/dw2/central/conexao.php');
 include($_SERVER['DOCUMENT_ROOT'] . '/dw2/central/fn/links.php');
 include('../../central/fn/validar_sessao.php');
 
-if (isset($_GET['filtro']) or ($_GET['pg'])) 
+if (isset($_GET['filtro'])) 
  {
     $filtro = $_GET['filtro'];
-    $pgs    = $_GET['pg'];
  } 
  else 
   {
     $filtro = null;
-    $pgs    = null;
   }
 
 switch ($filtro) {
