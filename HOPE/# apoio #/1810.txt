@@ -1,0 +1,161 @@
+inverte : list num -> list num;
+inverte [] <= [];
+inverte (x :: xs) <= inverte xs <> [x];
+
+divisores' :  num -> list num;
+divisores' 0 <= [];
+divisores' n <=
+	inverte (comp (faixa (1, n+1, 1), 
+	\ x => múltiplo (n, x )));
+
+
+produtolst : list num -> num;
+produtolst [] <= 0;
+produtolst ([x]) <= x;
+produtolst (x :: xs) <= x * produtolst xs;
+
+faixa_primo : num # num -> list num;
+faixa_primo (n, m) <= comp (faixa (n, m, 1), 
+	\x => checa_primo (x));
+
+multlstn : num # list num -> list num;
+multlstn  (x, []) <= [];
+multlstn  (x, n :: ns) <= x*x :: multlstn (x, ns);
+
+tabuada : num -> list num;
+tabuada n  <= multlstn (n, faixa (1, 10,1));
+
+
+divisores : num -> list num;
+divisores n <=
+	inverte (comp (faixa (1, n +1, 1) , \x =>
+	multiplo (n, x)));
+
+somalst : list num -> num;
+somalst ([]) <=0;
+somalst (x :: xs) <= x + somalst xs;
+
+amigos : num # num -> truval;
+amigos (x, y) <=
+	somalst (divisores x) -x = y
+	and somalst (divisores y) -y = x;
+
+abundante : num -> truval;
+abundante n <= 
+	somalst (comp (faixa (1, n+1, 1),
+	\x => multiplo (n, x ))) -n > n;
+
+div84 : num -> truval;
+div84 n <= if n mod 8 = 4
+	then true
+	else false;
+
+div84' : num -> truval;
+div84' n <= n mod 8 = 4;
+
+lstdiv84 : num -> list num;
+lstdiv84 n <= 
+	comp (faixa (1, n, 1), \x => div84 x);
+
+multip_faixa : num # num -> num;  
+multip_faixa (x, y) <=
+	if x > y
+	then 0
+	else if x = y
+		then y
+		else x * multip_faixa (x+1, y);
+
+deficiente : num -> truval;
+deficiente n <= 
+	somalst (comp (faixa (1, n+1, 1),
+	\x => multiplo (n, x ))) -n > n;
+
+perfeito : num -> truval;
+perfeito n <= 
+	somalst (comp (faixa (1, n+1, 1),
+	\x => multiplo (n, x ))) -n = n;
+
+
+primeiros_enquanto : (num -> truval) # list num -> list num;
+primeiros_enquanto (funcao, []) <= [];
+primeiros_enquanto (funcao, x :: xs ) <= if funcao x
+	then x :: primeiros_enquanto (funcao, xs)
+	else [];
+
+suspende_enquanto : (num -> truval) # list num -> list num;
+suspende_enquanto (funcao, []) <= [];
+suspende_enquanto (funcao, x :: xs ) <= if funcao x
+	then suspende_enquanto (funcao, xs)
+	else x :: xs;
+
+primeiros : num # list num -> num;
+primeiros (0, _) <= [];
+primeiros (_, []) <= [];
+primeiros (n, x::xs) <= x :: primeiros (n-1, xs);
+
+itera : (num -> num) # num -> list num;
+itera(funcao, n) <= [n] <> itera(funcao, funcao n);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

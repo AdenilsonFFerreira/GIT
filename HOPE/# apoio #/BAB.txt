@@ -24,3 +24,9 @@ com(conjunto(faixa), qualificador(outra função))
 
 x(cabeaça) xs(cauda)
 
+0 não eh divisisvel por ele mesmo 0/0
+qualquer numero dividido por zero tende ao infinito
+
+primo divisível por 1 e somente por ele mesmo
+
+
