@@ -1,0 +1,54 @@
+uses base2;
+dec juncao : list num # list num -> list num;
+dec unico : list num -> list num;
+dec insira : num # list num -> list num;
+dec membro : num # list num -> truval;
+dec uniao : list num # list num -> list num;
+dec classifica : list num -> list num;
+dec iniao : list num # list num -> list num;
+dec interseccao : list num # list num -> list num;
+dec diferenca : list num # list num -> list num;
+dec sub_lista : list num # list num -> list num;
+dec igualdade : list num # list num;
+
+--- juncao ([], []) <= [];
+--- juncao (a, []) <= a;
+--- juncao ([], b) <= b;
+--- juncao (a :: ax, b) <= a :: juncao (ax, b);
+--- juncao ([], []) <= [];
+--- juncao (a, []) <= a;
+--- juncao ([], b) <= b;
+--- juncao (a :: ax, b) <= a :: juncao (ax, b);
+
+--- unico [] <= [];
+--- unico [] <= [];
+--- unico (x :: xs) <= if membro (x, xs) then unico xs else x :: unico xs;
+--- unico [] <= [];
+--- unico (x :: xs) <= if membro (x, xs) then unico xs else x :: unico xs;
+--- unico [] <= [];
+--- unico (x :: xs) <= if membro (x, xs) then unico xs else x :: unico xs;
+
+--- insira (n, []) <= [n];
+--- insira (n, x :: xs) <= if n =< x then n :: x :: xs else x :: insira (n, xs);
+--- insira (n, []) <= [n];
+--- insira (n, x :: xs) <= if n =< x then n :: x :: xs else x :: insira (n, xs);
+--- insira (n, []) <= [n];
+--- insira (n, x :: xs) <= if n =< x then n :: x :: xs else x :: insira (n, xs);
+--- insira (n, []) <= [n];
+--- insira (n, x :: xs) <= if n =< x then n :: x :: xs else x :: insira (n, xs);
+
+--- membro (n, []) <= false;
+--- membro (n, x :: xs) <= if n = x then true else membro (n, xs);
+
+--- uniao (a, b) <= classifica (unico (juncao (a, b)));
+
+--- classifica [] <= [];
+--- classifica (x :: xs) <= insira (x, classifica xs);
+
+--- interseccao (a, []) <= [];
+--- interseccao ([], b) <= [];
+--- interseccao (a, x :: b) <= if membro (x, a) then x :: interseccao (a, b) else interseccao (a, b);
+
+--- diferenca (a, []) <= a;
+--- diferenca ([], b) <= [];
+--- diferenca (a :: ax, b) <= if membro (a, b) then diferenca (ax, b) else a :: diferenca (ax, b);

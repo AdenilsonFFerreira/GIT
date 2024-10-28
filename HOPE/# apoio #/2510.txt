@@ -1,0 +1,77 @@
+membro : num # list num -> truval;
+membro (n, []) <= false;
+membro (n, x::xs) <= if n = x
+	then true
+	else membro (n, xs);
+
+juncao : list num # list num -> list num;
+juncao ([], []) <= [];
+juncao (a, []) <= a;
+juncao ([], b) <= b;
+juncao (a :: ax, b) <= a :: juncao (ax, b);
+
+unico : list num -> list num;
+unico [] <= [];
+unico (x :: xs) <= if membro (x, xs)
+	then unico xs
+	else x :: unico xs;
+
+insira : num # list num -> list num;
+insira (n, []) <= [n];
+insira (n, x :: xs) <= if n =<x
+	then n :: x :: xs
+	else x :: insira (n, xs);
+
+
+classifica : list num -> list num;
+classifica [] <= [];
+classifica (x :: xs) <= insira(x, classifica(xs));
+
+iniao : list num # list num -> list num;
+uniao (a,b) <= classifica (unico (juncao (a,b)));
+
+interseccao : list num # list num -> list num;
+interseccao (a, []) <= [];
+interseccao ([], b) <= [];
+interseccao (a, x::b) <= if membro (x, a)
+	then x :: interseccao (a, b)
+	else interseccao (a, b);
+
+diferenca : list num # list num -> list num;
+diferenca (a, []) <= a;
+diferenca ([], b) <= [];
+diferenca (a :: ax, b) <= if membro (a, b)
+	then diferenca (ax, b)
+	else a :: diferenca (ax, b);
+
+sub_lista : list num # list num -> truval;
+sub_lista ([], ys) <= true;
+sub_lista (x :: xs, ys) <= if membro (x, ys)
+	then sub_lista (xs, ys)
+	else false;
+
+igualdade : list num # list num -> truval;
+igualdade (a,b) <= sub_lista (a,b) and sub_lista (b,a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
