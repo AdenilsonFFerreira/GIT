@@ -28,5 +28,10 @@ x(cabeaça) xs(cauda)
 qualquer numero dividido por zero tende ao infinito
 
 primo divisível por 1 e somente por ele mesmo
+==================================================
+base2, conjuntos, basico, fluxo
+
+mapeamento
+
 
 
