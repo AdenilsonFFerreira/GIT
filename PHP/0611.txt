@@ -1,0 +1,9 @@
+php OO (orientada a objeto)
+agrupar tarefas semelhantes em classes
+
+a classe quando eh executada ela gera um um objeto
+
+atributos (substantivos) - caracteristicas (cor, tamanho, tipo etc)
+metodos(verbo) - esta na ação
+
+nome da classe tem que ser o mesmo nome do arquivo
