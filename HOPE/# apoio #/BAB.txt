@@ -1,3 +1,17 @@
+> - maior 
+< - menor
+>= - maior ou igual que
+<= - menor ou igual que
+= - igual
+<> - diferente
+.não.
+.e.
+.ou. 
+
+, = caracter especial para números usar .
+
+-----------------------------------------------------------------------------------------
+
 listas > funções e conjuntos
 
 truval - verdadeiro e falso no hope
