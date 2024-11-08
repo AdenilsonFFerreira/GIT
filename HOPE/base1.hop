@@ -1,12 +1,6 @@
-dec par : num -> truval;
-dec impar : num -> truval;
 dec faixa : num # num # num -> list num;
 dec comp : list num # (num -> truval) -> list num;
 dec listapot : num # list num -> list num;
-
---- par x <= if x mod 2 = 0 then true else false;
-
---- impar x <= if x mod 2 = 0 then false else true;
 
 --- faixa (i, f, p) <= if i > f then [] else i :: faixa (i + p, f, p);
 

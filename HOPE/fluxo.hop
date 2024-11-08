@@ -1,0 +1,16 @@
+uses basico;
+dec par : num -> truval;
+dec par' : num -> truval;
+dec impat : num -> truval;
+dec impar'' : num -> truval;
+dec valor : num -> num;
+
+--- par n <= if n mod 2 = 0 then true else false;
+
+--- par' n <= n mod 2 = 0;
+
+--- impat n <= n mod 2 /= 0;
+
+--- valor 0 <= 0;
+--- valor 1 <= 2;
+--- valor n <= if n > 1 and n < 9 then n * 5 else n / 5;

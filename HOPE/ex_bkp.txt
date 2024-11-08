@@ -1,0 +1,17 @@
+dec primeiros : num # list num -> list num;
+--- primeiros (0, []) <= [];
+--- primeiros (n, []) <= [];
+
+dec primeiros' : num # list num -> list num;
+--- primeiros' (0, []) <= [];
+--- primeiros' (n, []) <= [];
+--- primeiros' (n, x :: xs) <= x :: primeiros' (n - 1, xs);
+
+dec penultimo : list num -> num;
+--- penultimo [] <= error ("lista vazia");
+--- penultimo ([x]) <= error ("lista com um elemento");
+--- penultimo (x :: y :: xs) <= penultimo (y :: xs);
+
+dec maisDeTres : list num -> num;
+--- maisDeTres [] <= 0;
+--- maisDeTres (x :: xs) <= if x > 3 then x + maisDeTres xs else maisDeTres xs;

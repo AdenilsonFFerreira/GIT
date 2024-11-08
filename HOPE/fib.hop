@@ -1,0 +1,12 @@
+dec fibo : num # num -> list num;
+dec lstfib : num -> list num;
+dec primeiros4 : num # list num -> list num;
+
+--- fibo (n, m) <= n :: fibo (m, n + m);
+--- fibo (n, m) <= n :: fibo (m, n + m);
+
+--- lstfib n <= primeiros4 (n, fibo (0, 1));
+
+--- primeiros4 (0, _) <= [];
+--- primeiros4 (_, []) <= [];
+--- primeiros4 (n, x :: xs) <= x :: primeiros4 (n - 1, xs);

@@ -1,0 +1,42 @@
+uses array;
+dec suspende : num # list num -> list num;
+dec concatena : list num # list num -> list num;
+dec remove : num # list num -> list num;
+dec posicao : num # list num -> num;
+dec rmvult : list num -> list num;
+dec rmvult' : list num -> list num;
+dec ate : num -> list num;
+dec quadrados : num -> list num;
+dec quadrados' : num -> list num;
+dec quads_inv : num -> list num;
+
+--- suspende (0, [xs]) <= [xs];
+--- suspende (_, []) <= [];
+--- suspende (n, x :: xs) <= suspende (n - 1, xs);
+
+--- concatena ([], lst) <= lst;
+
+--- remove (n, []) <= [];
+--- remove (n, x :: xs) <= if n = x then xs else x :: remove (n, xs);
+
+--- posicao (n, []) <= 0;
+--- posicao (n, x :: xs) <= if n = x then 1 else 1 + posicao (n, xs);
+
+--- rmvult [] <= error ("Lista vazia");
+--- rmvult (x :: xs) <= arranjo xs;
+--- rmvult ([x]) <= [];
+
+--- rmvult' [] <= error ("Lista vazia");
+--- rmvult' ([x]) <= [];
+
+--- ate 0 <= [];
+--- ate n <= ate (n - 1) <> [n - 1];
+
+--- quadrados 0 <= [];
+--- quadrados n <= quadrados (n - 1) <> [pow (n - 1, 2)];
+
+--- quadrados' 0 <= [];
+--- quadrados' n <= quadrados' (n - 1) <> [pow (n, 2)];
+
+--- quads_inv 0 <= [];
+--- quads_inv n <= [pow (n, 2)] <> quads_inv (n - 1);

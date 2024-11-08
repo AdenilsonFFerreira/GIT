@@ -1,0 +1,39 @@
+uses recursao;
+dec fatbase : num # num -> num;
+dec fat2 : num -> num;
+dec fibo2 : num # num # num -> num;
+dec fib2 : num -> num;
+dec par : num -> truval;
+dec base2_1 : num -> num;
+dec base2x : num # num -> num;
+dec base2_2 : num -> num;
+dec quantasVezes : num # num # num -> num;
+dec qquantasVezes1 : num # num -> num;
+
+--- fatbase (0, x) <= x;
+--- fatbase (n, x) <= fatbase (n - 1, n * x);
+
+--- fat2 n <= fatbase (n, 1);
+
+--- fibo2 (0, anter, atual) <= anter;
+--- fibo2 (1, anter, atual) <= atual;
+--- fibo2 (2, anter, atual) <= atual + anter;
+--- fibo2 (n, anter, atual) <= fibo2 (n - 1, atual, anter + atual);
+
+--- fib2 n <= fibo2 (n, 0, 1);
+
+--- par 0 <= true;
+--- par n <= not (par (n - 1));
+
+--- base2_1 0 <= 1;dec 
+--- base2_1 n <= 2 * base2_1 (n - 1);
+
+--- base2x (0, x) <= x;
+--- base2x (n, x) <= base2x (n - 1, x * 2);
+
+--- base2_2 n <= base2x (n, 1);
+
+--- quantasVezes (0, k, x) <= 0;
+--- quantasVezes (n, k, x) <= if n = 0 then x else if n mod 10 = k then quantasVezes (n, k div 10, x + 1) else quantasVezes (n, k div 10, x);
+
+--- qquantasVezes1 (k, n) <= quantasVezes (k, n, 0);

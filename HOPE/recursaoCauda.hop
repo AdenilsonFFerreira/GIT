@@ -1,0 +1,32 @@
+uses recursao;
+dec fbs : num # num # num -> num;
+dec fib2 : num -> num;
+dec par : num -> truval;
+dec base2_1 : num -> num;
+dec base2x : num # num -> num;
+dec base2_2 : num -> num;
+dec quantasVezes : num # num -> num;
+dec qvbase : num # num # num -> num;
+dec quantasVezes2 : num # num -> num;
+
+--- fbs (0, anter, atual) <= anter;
+--- fbs (1, anter, atual) <= atual;
+--- fbs (2, anter, atual) <= atual + anter;
+--- fbs (n, anter, atual) <= fbs (n - 1, atual, anter + atual);
+
+--- fib2 n <= fbs (n, 0, 1);
+
+--- par 0 <= true;
+--- par n <= not (par (n - 1));
+
+--- base2_1 0 <= 1;
+--- base2_1 n <= 2 * base2_1 (n - 1);
+
+--- base2x (0, x) <= x;
+--- base2x (n, x) <= base2x (n - 1, x * 2);
+
+--- base2_2 n <= base2x (n, 1);
+
+--- qvbase (k, n, i) <= if n = 0 then i else if n mod 10 = k then qvbase (k, n div 10, i + 1) else qvbase (k, n div 10, i);
+
+--- quantasVezes2 (k, n) <= qvbase (k, n, 0);
