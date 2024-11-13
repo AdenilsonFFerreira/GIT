@@ -8,6 +8,16 @@ dec c2f : num -> num;
 dec f2c : num -> num;
 dec c2k : num -> num;
 dec k2c : num -> num;
+dec metros2centimetros : num -> num;
+dec sao_iguais : num # num -> truval;
+dec ant : num -> num;
+dec cubo : num -> num;
+dec k2f : num -> num;
+dec f2k : num -> num;
+dec imc : num # num -> num;
+dec produto : num # num -> num;
+dec eq1grau : num # num -> num;
+dec area_ret : num # num -> num;
 
 --- x_pi <= 3.14159;
 
@@ -28,3 +38,23 @@ dec k2c : num -> num;
 --- c2k c <= c + 273.15;
 
 --- k2c k <= k - 273.15;
+
+--- metros2centimetros m <= m * 100;
+
+--- sao_iguais (a, b) <= if a = b then true else false;
+
+--- ant x <= x - 1;
+
+--- cubo x <= x ^ 3;
+
+--- k2f k <= (k - 273.15) * 9 / 5 + 32;
+
+--- f2k f <= (f - 32) * 5 / 9 + 273.15;
+
+--- imc (p, a) <= p / a ^ 2;
+
+--- produto (x, y) <= x * y;
+
+--- eq1grau (a, b) <= (0 - b) / a;
+
+--- area_ret (lado1, lado2) <= lado1 * lado2;
