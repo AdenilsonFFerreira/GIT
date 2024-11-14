@@ -1,0 +1,30 @@
+dec x_pi : num;
+dec area_circ : num -> num;
+dec qsoma : num # num -> num;
+dec x_e : num;
+dec x_pi_em_e : num -> num;
+dec suc : num -> num;
+dec c2f : num -> num;
+dec f2c : num -> num;
+dec c2k : num -> num;
+dec k2c : num -> num;
+
+--- x_pi <= 3.14159;
+
+--- area_circ r <= x_pi * r ^ 2;
+
+--- qsoma (a, b) <= a ^ 2 + b ^ 2;
+
+--- x_e <= 2.71828;
+
+--- x_pi_em_e x <= x * x_pi / x_e;
+
+--- suc x <= x + 1;
+
+--- c2f c <= c * 9 / 5 + 32;
+
+--- f2c f <= (f - 32) * 5 / 9;
+
+--- c2k c <= c + 273.15;
+
+--- k2c k <= k - 273.15;

@@ -1,0 +1,61 @@
+dec ehPotenciaDeDois : num -> truval;
+dec mediaDigitos : num -> num;
+dec contaDigitos : num -> num;
+dec somaDigitos : num -> num;
+dec collatz : num -> num;
+dec calc : num -> num;
+dec exp : num # num -> num;
+dec somaFaixa : num # num -> num;
+dec dec2bin : num -> num;
+dec sucessor : num -> num;
+dec antecessor : num -> num;
+dec minhaSoma : num # num -> num;
+dec produto : num # num -> num;
+dec bin2dec : num -> num;
+dec binon : num # num -> num;
+
+--- ehPotenciaDeDois 1 <= true;
+--- ehPotenciaDeDois n <= if n > 1 and n mod 2 = 0 then ehPotenciaDeDois (n div 2) else false;
+
+--- mediaDigitos n <= somaDigitos n / contaDigitos n;
+
+--- contaDigitos 0 <= 0;
+--- contaDigitos n <= 1 + contaDigitos (n div 10);
+
+--- somaDigitos 0 <= 0;
+--- somaDigitos n <= n mod 10 + somaDigitos (n div 10);
+
+--- collatz 1 <= 1;
+--- collatz n <= if abs n mod 2 = 0 then collatz (abs n div 2) else collatz (abs n * 3 + 1);
+
+--- calc 0 <= 0;
+--- calc n <= 1.5 + calc (n - 1) / 2;
+--- calc n <= (1.5 + calc (n - 1)) / 2;
+
+--- exp (x, 0) <= 0;
+--- exp (x, n) <= x * exp (x, n - 1);
+
+--- somaFaixa (m, n) <= if n < m then 0 else if n = m then m else n + somaFaixa (m, n - 1);
+
+--- dec2bin 0 <= 0;
+--- dec2bin 1 <= 1;
+--- dec2bin n <= 10 * dec2bin (n div 2) + n mod 2;
+
+--- sucessor n <= n + 1;
+
+--- antecessor n <= n - 1;
+
+--- minhaSoma (0, b) <= b;
+--- minhaSoma (a, 0) <= a;
+--- minhaSoma (0, 0) <= 0;
+--- minhaSoma (a, b) <= minhaSoma (sucessor a, antecessor b);
+
+--- produto (x, 0) <= 0;
+--- produto (0, y) <= 0;
+--- produto (x, y) <= x + produto (x, y - 1);
+
+--- bin2dec 0 <= 0;
+--- bin2dec n <= 2 * bin2dec (n div 10) + n mod 10;
+
+--- binon (n, 0) <= 1;
+--- binon (n, k) <= if n < k then error ("n < k") else if k = 0 then 1 else if k = n then 1 else binon (n - 1, k - 1) + binon (n - 1, k);

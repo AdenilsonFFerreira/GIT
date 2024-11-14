@@ -1,0 +1,38 @@
+uses recursao;
+dec prodIntervalo1 : num # num -> num;
+dec resto : num # num -> num;
+dec somaCubos : num -> num;
+dec contaPares : num -> num;
+dec somaDigitos : num -> num;
+dec somaDigitos2 : num -> num;
+dec primeiroDigito : num -> num;
+dec primeiroDigito2 : num -> num;
+dec zeros : num -> num;
+dec somaQuadrados : num -> num;
+
+--- prodIntervalo1 (m, n) <= if m > n then 1 else m * prodIntervalo1 (m + 1, n);
+
+--- resto (p, q) <= p - q * (p / q);
+
+--- somaCubos 0 <= 0;
+--- somaCubos n <= pow (n, 3) + somaCubos (n - 1);
+
+--- contaPares 0 <= 1;
+--- contaPares 1 <= 1;
+--- contaPares n <= if n mod 2 = 0 then contaPares (n - 1) + 1 else contaPares (n - 1);
+
+--- somaDigitos 0 <= 0;
+--- somaDigitos n <= n mod 10 + somaDigitos (n div 10);
+
+--- somaDigitos2 n <= if n = 0 then 0 else n mod 10 + somaDigitos2 (n div 10);
+
+--- primeiroDigito n <= n mod 10;
+
+--- primeiroDigito2 n <= n div 10;
+--- primeiroDigito2 0 <= 0;
+
+--- zeros 0 <= 1;
+--- zeros n <= if n < 10 then 0 else if n mod 10 = 0 then 1 + zeros (n div 10) else zeros (n div 10);
+
+--- somaQuadrados 0 <= 0;
+--- somaQuadrados n <= n ^ 2 + somaQuadrados (n - 1);

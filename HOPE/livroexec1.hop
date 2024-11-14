@@ -49,6 +49,6 @@ dec area_ret : num # num -> num;
 
 --- produto (x, y) <= x * y;
 
---- eq1grau (a, b) <= 0 - b / a;
+--- eq1grau (a, b) <= b / a;
 
 --- area_ret (lado1, lado2) <= lado1 * lado2;
