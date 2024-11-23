@@ -1,0 +1,76 @@
+somaMoedas : num # num # num # num # num -> num;
+somaMoedas (a, b, c, d, e) <= 1*a + 2*b + 5*c + 10*d + 20*e;
+
+maxTres : num # num # num -> num;
+maxTres (x,y,z) <= if x>y & x>z then x, else if y>z then y else z;
+
+maxTres : num # num # num -> num;
+maxTres (x,y,z) <= max (x, max (y,z));
+
+xor1 : truval # truval -> truval;
+xor1 (true, true) <= false;
+xor1 (true, false) <= true;
+xor1 (false, true) <= true;
+xor1 (false, false) <= false;
+
+xor2 : truval # truval -> truval;
+xor2 (true, y) <= not y;
+xor2 (false, y) <= y;
+
+xor3 : truval # truval -> truval;
+xor3 (x, y) <= (x or y) and not (x and y);
+
+xor4 : truval # truval -> truval;
+xor4 (x,y) <= x /= y;
+
+nota : list num -> list num;
+nota xs <= tail xs <> [head xs];
+
+palindromo : list num -> truval;
+palindromo xs <= xs = reverse xs;
+
+repetir: num # num -> list num;
+repetir (0, _) <= [];
+repetir (n +1, x) <= x :: repetir (n,x);
+
+duploFatorial : num -> num;
+duploFatorial 0 <= 1;
+duploFatorial 1 <= 1;
+duploFatorial n <= n*duploFatorial(n-2);
+
+mdc: num # num -> num;
+mdc (a, 0) <= a;
+mdc (a, b) <= mdc (b, a mod b);
+
+seleciona : list num # num -> num;
+seleciona (x :: _, 0) <= x;
+seleciona (_ :: xs, n) <= seleciona (xs, n-1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

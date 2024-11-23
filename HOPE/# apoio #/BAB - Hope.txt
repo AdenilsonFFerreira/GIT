@@ -1,3 +1,5 @@
+alpha, beta, gama - identifica qualquer tipo de dados 
+
 > - maior 
 < - menor
 >= - maior ou igual que
