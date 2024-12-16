@@ -1,9 +1,0 @@
-dec x_pi : num;
-dec acirc : num -> num;
-dec soma : num # num -> num;
-
---- x_pi <= 3.14159;
-
---- acirc r <= x_pi * pow (r, 2);
-
---- soma (x, y) <= x + y;
