@@ -1,4 +1,0 @@
-o sistema tera um banco de dados com as informações importante dos veiculos
-essas informações seram escolhidas com os representantes dos sistema
-
-o usuario podera fazer o login na pagina principal
