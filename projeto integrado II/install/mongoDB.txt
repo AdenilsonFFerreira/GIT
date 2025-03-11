@@ -1,0 +1,6 @@
+mongoDB Community server
+mongoDB database tools
+
+
+C:\Program Files\MongoDB\Server\8.0\data\
+C:\Program Files\MongoDB\Server\8.0\log\
