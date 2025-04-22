@@ -1,9 +1,0 @@
-6.   Resultados Obtidos: Nessa parte do documento, o aluno deve apresentar e descrever os modelos conceitual, lógico e físico, que foram obtidos durante o desenvolvimento do projeto.
-
-Para o modelo conceitual, apresente suas respectivas regras de negócio e o dicionário de dados de cada tabela.
-
-Para o modelo físico, insira o código de criação do banco de dados e descreva a maneira como os dados foram inseridos dentro de cada tabela.
-
-Por último, apresente uma descrição de dez possíveis consultas que podem ser realizadas dentro da base de dados que foi desenvolvida, empregando o conteúdo apresentado nas aulas da disciplina. Insira a descrição da consulta, o código SQL que representa sua solução e o resultado de sua execução, utilizando um limite de vinte linhas para exibir o resultado de cada consulta.
- 
-7.   Conclusão: Incluir um capítulo final no relatório, apresentando as conclusões finais sobre o resultado que foi obtido. Por último, indicar sugestões para possíveis melhorias que podem ser realizadas no projeto.

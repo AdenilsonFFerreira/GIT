@@ -1,9 +1,0 @@
-mongoDB Community server
-mongoDB database tools
-
-
-C:\Program Files\MongoDB\Server\8.0\data\
-C:\Program Files\MongoDB\Server\8.0\log\
-
-abrir o mongoDB e criar um banco de dados
-Geralmente, o MongoDB está instalado em C:\Program Files\MongoDB\Server\<versão>\bin. Verifique se a pasta bin contém o arquivo mongod.exe.

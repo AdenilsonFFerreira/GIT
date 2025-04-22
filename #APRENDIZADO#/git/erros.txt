@@ -1,3 +1,0 @@
-erros
-	another git process seems to be running in this repository
-	apagar os arquivos na pasta git/index.lock
