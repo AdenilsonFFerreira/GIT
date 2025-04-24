@@ -1,0 +1,4 @@
+no visual code 
+terminar 
+executar o comando 
+npm install mongoose

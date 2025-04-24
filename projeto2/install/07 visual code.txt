@@ -32,7 +32,4 @@ Tailwind CSS IntelliSense: Se você usar Tailwind CSS, essa extensão sugere cla
 
 Path Intellisense: Autocompleta caminhos de arquivos e pastas.
 
-EditorConfig: Ajuda a manter configurações consistentes entre diferentes editores.
-
-
-Adenilson Fernandes FerreiraTécnico em Labotatório - Área InformáticaIFSP - Câmpus Campos do Jordão
+EditorConfig: Ajuda a manter configurações consistentes entre diferentes editores. Jordão
