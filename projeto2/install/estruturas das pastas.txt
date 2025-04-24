@@ -1,0 +1,23 @@
+investdb-system/
+│── backend/                  # Código do servidor Node.js
+│   ├── config/               # Configurações (Banco, JWT, etc.)
+│   ├── controllers/          # Lógica dos endpoints
+│   ├── middleware/           # Middlewares (autenticação, segurança)
+│   ├── models/               # Modelos do MongoDB com Mongoose
+│   ├── routes/               # Definição das rotas (API REST)
+│   ├── utils/                # Funções auxiliares
+│   ├── server.js             # Arquivo principal do servidor
+│   ├── .env                  # Variáveis de ambiente
+│   ├── package.json          # Dependências do Node.js
+│── frontend/                 # Código do React.js
+│   ├── src/
+│   │   ├── components/       # Componentes reutilizáveis
+│   │   ├── pages/            # Páginas principais do sistema
+│   │   ├── services/         # Chamadas à API backend
+│   │   ├── utils/            # Funções auxiliares
+│   │   ├── App.js            # Componente raiz do React
+│   │   ├── index.js          # Entrada principal da aplicação
+│   ├── public/               # Arquivos estáticos (favicon, imagens)
+│   ├── package.json          # Dependências do React
+│── README.md                 # Documentação do projeto
+│── .gitignore                 # Ignorar arquivos desnecessários no Git
