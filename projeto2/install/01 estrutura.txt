@@ -1,4 +1,4 @@
-banco 		mongoodb
+banco 		MongoDB Community Edition
 backend		node.js
 frontend	react.js
 segurança	jwt(json web tokens), crypt
