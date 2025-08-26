@@ -1,3 +1,14 @@
+vai ate o local onde quer a pasta do git
+git init
+git clone "repositório pego na pagina n internet"
+
+git status 		- ver o que foi mudado
+git add .		- adiciona arquivos para envio ao git
+git commit -a -m "XXX"	- envia os dados com o m de mensagem para saber o que foi
+git pull		- puxa as informações mais novas da net
+git push		- envia as informações alterada pra net
+
+
 git config --global user.name "AdenilsonFFerreira"
 
 git config --global user.email "adenilson.fernandes@aluno.ifsp.edu.br"
