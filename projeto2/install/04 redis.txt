@@ -18,3 +18,17 @@ Etapa: Instalação do Redis
 Descrição: Banco de dados em memória para cache e tarefas agendadas.
 Método: Instalação via WSL com Ubuntu
 Verificação: Comando 'redis-cli ping' retornou 'PONG'
+
+-------------------------------------------------------------------------------------
+
+OBS EXECUTAR APOS O ITEM -05 BACKEND ESTRUTURA- ESTAR CONCLUIDO
+
+NA PASTA BACKEND
+npm install redis
+
+Etapa: 2.2 — Integração com Redis
+Descrição: Instalação da biblioteca Redis para Node.js e teste de conexão.
+Comandos executados:
+- npm install redis
+Arquivo de teste: redisTest.js
+Verificação: Execução retornou valor armazenado com sucesso.

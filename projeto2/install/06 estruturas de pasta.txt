@@ -1,0 +1,47 @@
+CRIAR PASTA
+controllers
+	criar arquivo homeController.js
+	
+exports.home = (req, res) => {
+  res.send('Página inicial via controller');
+};		
+
+routes
+	criar arquivo index.js
+
+const express = require('express');
+const router = express.Router();
+const homeController = require('../controllers/homeController');
+
+router.get('/', homeController.home);
+
+module.exports = router;
+
+ATUALIZA SERVER.JS
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Importa as rotas definidas em routes/index.js
+const routes = require('./routes');
+
+// Middleware para interpretar JSON (opcional, mas útil)
+app.use(express.json());
+
+// Usa as rotas
+app.use('/', routes);
+
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado em http://localhost:${PORT}`);
+});
+
+-------------------------------------------------------------------
+TESTAR retorna 'Página inicial via controller'
+node server.js
+
+
+
+Etapa: Atualização do server.js
+Descrição: Integração da estrutura modular de rotas e controllers ao servidor principal.
+Arquivo atualizado: server.js
+Verificação: Rota principal acessada com sucesso via controller.

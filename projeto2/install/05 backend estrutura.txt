@@ -1,0 +1,48 @@
+CRIAR
+broken/
+├── backend/       ← Aqui ficará o Node.js, Express, Redis, MongoDB
+│   ├── server.js
+│   ├── routes/
+│   ├── controllers/
+│   ├── services/
+│   └── config/
+├── frontend/      ← Aqui ficará o React (ou outro framework web)
+│   ├── public/
+│   ├── src/
+│   └── package.json
+└── README.md      ← Documentação geral do projeto
+
+INICIAR O SERVIÇO NA PASTA BACKEND
+npm init -y
+
+INSTALAR O EXPRESS
+npm install express
+
+CRIE O ARQUIVO SERVER.JS NA PASTABACKEND COM O CONTEUDO
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Servidor rodando com sucesso!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado em http://localhost:${PORT}`);
+});
+
+TESTE DO SERVIDOR
+node server.js
+
+TESTE DO SERVIDOR NO NAVEGADOR
+http://localhost:3000/
+
+
+------------------------------------------------------------------------Etapa: 2.1 — Inicialização do Backend
+Descrição: Criação da estrutura base do servidor com Node.js e Express.js.
+Local do projeto: C:\GIT\projeto2\broken\backend
+Comandos executados:
+- npm init -y
+- npm install express
+Arquivo principal: server.js
+Verificação: Acesso ao endereço http://localhost:3000 retornou mensagem de sucesso.

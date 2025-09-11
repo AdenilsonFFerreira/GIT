@@ -1,0 +1,143 @@
+INSTALAR AS DEPENDENCIAS
+npm install bcrypt jsonwebtoken express-validator express-rate-limit
+
+CRIAR OS ARQUIVOS NA PASTAS
+C:\GIT\projeto2\broken\backend\controllers\authController.js
+
+const authService = require('../services/authService');
+const { validationResult } = require('express-validator');
+
+exports.login = async (req, res) => {
+  const erros = validationResult(req);
+  if (!erros.isEmpty()) {
+    return res.status(400).json({ erros: erros.array() });
+  }
+
+  const { email, senha } = req.body;
+  const resultado = await authService.validarLogin(email, senha);
+
+  if (resultado.sucesso) {
+    const token = authService.gerarToken(email);
+    authService.registrarLog(email); // log de acesso
+
+    res.status(200).json({
+      mensagem: 'Login realizado com sucesso',
+      token,
+      dados: resultado.dados
+    });
+  } else {
+    res.status(401).json({ mensagem: 'Credenciais inválidas' });
+  }
+};
+
+--------------------------------------------------------------------
+C:\GIT\projeto2\broken\backend\routes\authRoutes.js
+
+const express = require('express');
+const router = express.Router();
+const authController = require('../controllers/authController');
+const { body } = require('express-validator');
+const rateLimit = require('express-rate-limit');
+
+// Limite de 5 tentativas por minuto
+const limiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  message: 'Muitas tentativas de login. Tente novamente em 1 minuto.'
+});
+
+router.post(
+  '/login',
+  limiter,
+  [
+    body('email').isEmail().withMessage('Email inválido'),
+    body('senha').isLength({ min: 6 }).withMessage('Senha deve ter no mínimo 6 caracteres')
+  ],
+  authController.login
+);
+
+module.exports = router;
+
+-----------------------------------------------------------------------------------------------
+
+C:\GIT\projeto2\broken\backend\services\authService.js
+
+const redis = require('../config/redisClient');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+const tabelaCredenciais = 'usuarios:credenciais';
+const tabelaDados = 'usuarios:dados';
+const tabelaLogs = 'usuarios:logs';
+
+exports.validarLogin = async (email, senhaDigitada) => {
+  const credenciais = await redis.hGetAll(`${tabelaCredenciais}:${email}`);
+
+  if (credenciais && credenciais.senha) {
+    const senhaValida = await bcrypt.compare(senhaDigitada, credenciais.senha);
+
+    if (senhaValida) {
+      const dados = await redis.hGetAll(`${tabelaDados}:${email}`);
+      return { sucesso: true, dados };
+    }
+  }
+
+  return { sucesso: false };
+};
+
+exports.gerarToken = (email) => {
+  const payload = { email };
+  const token = jwt.sign(payload, 'segredo_super_secreto', { expiresIn: '1h' });
+  return token;
+};
+
+exports.registrarLog = async (email) => {
+  const timestamp = new Date().toISOString();
+  await redis.lPush(`${tabelaLogs}:${email}`, timestamp);
+};
+
+------------------------------------------------------------------------------------------
+
+C:\GIT\projeto2\broken\backend\config\redisClient.js
+const redis = require('redis');
+
+const client = redis.createClient({
+  socket: {
+    host: '127.0.0.1',
+    port: 6379
+  }
+});
+
+client.connect()
+  .then(() => console.log('✅ Redis conectado'))
+  .catch(err => console.error('❌ Erro Redis:', err));
+
+module.exports = client;
+
+----------------------------------------------------------------------------------
+
+ATUALIZAR O SERVER.JS
+const express = require('express');
+const app = express();
+const PORT = 3000;
+
+// Importa as rotas principais e de autenticação
+const routes = require('./routes');
+const authRoutes = require('./routes/authRoutes');
+
+// Middleware para interpretar JSON
+app.use(express.json());
+
+// Usa as rotas
+app.use('/', routes);
+app.use('/auth', authRoutes); // ← esta linha é essencial para ativar o login
+
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado em http://localhost:${PORT}`);
+});
+
+TESTE
+VA PARA O UBUNTU NO WSL E RODE O TERMINAL REDIS
+redis-cli
+VAI RETORNAR
+127.0.0.1:6379>
