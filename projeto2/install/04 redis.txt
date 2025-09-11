@@ -1,0 +1,20 @@
+Redis é um banco de dados chave-valor super rápido, usado para cache de dados, controle de sessões, filas de tarefas e muito mais
+
+a partir do ubuntu instalado no wsl
+
+sudo apt update
+sudo apt install redis-server
+
+TESTE (se retornar pong esta ok)
+redis-cli ping
+
+INICIAR O SERVIÇO
+sudo service redis-server start
+
+CARREGAR TODA VEZ QUE INICIAR O UBUNTU
+sudo systemctl enable redis-server
+
+Etapa: Instalação do Redis
+Descrição: Banco de dados em memória para cache e tarefas agendadas.
+Método: Instalação via WSL com Ubuntu
+Verificação: Comando 'redis-cli ping' retornou 'PONG'

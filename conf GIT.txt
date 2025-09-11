@@ -9,6 +9,8 @@ EVITA SUBIR ARQUIVOS DESNECESSARIOS
 echo node_modules/ > .gitignore
 echo .env >> .gitignore
 
+git remote add origin https://github.com/seu-usuario/nome-do-repositorio.git
+
 ---------------------------------------------------------------------------------------
 COMANDO BASICOS
 

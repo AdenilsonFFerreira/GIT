@@ -1,0 +1,8 @@
+maquina virtual do Linux para ser usada no windows
+
+wsl --install
+
+user
+guest
+
+após ele já deve estar no menu inciar

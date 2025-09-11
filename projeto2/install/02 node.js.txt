@@ -1,0 +1,15 @@
+Node.js é um ambiente que permite executar código JavaScript fora do navegador — ideal para criar APIs, servidores e sistemas backend.
+LTS (Long Term Support) — é a versão mais estável e recomendada para produção.
+
+
+node.js
+
+Teste do node
+node -v
+
+nmp -v
+
+Etapa: Instalação do Node.js
+Descrição: Ambiente de execução JavaScript para backend.
+Versão instalada: Node.js v20.11.1 (LTS)
+Verificação: Comando 'node -v' e 'npm -v' executado com sucesso.

@@ -3,6 +3,22 @@ backend		node.js
 frontend	react.js
 segurança	jwt(json web tokens), crypt
 
+---------------------------------------------------------------------------------------
+
+ATUALIZADA
+
+banco        MongoDB Community Edition + Redis (cache)
+backend      Node.js + Express.js
+frontend     React.js (com suporte a PWA e design responsivo)
+segurança    JWT (access + refresh tokens), bcrypt, Helmet, CORS
+validação    Joi ou Zod (validação de dados no backend)
+tempo real   WebSockets ou Server-Sent Events (SSE)
+agendamento  node-cron ou Agenda.js (tarefas programadas)
+notificações Firebase Cloud Messaging ou OneSignal
+testes       Jest, Supertest (backend), React Testing Library, Cypress (frontend)
+monitoramento Winston, Sentry, LogRocket
+CI/CD        GitHub Actions (pipeline de testes e deploy)
+
 
 hospedagem
 
