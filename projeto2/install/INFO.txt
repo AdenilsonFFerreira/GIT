@@ -1,0 +1,21 @@
+com base nessas informações pode me ajudar?
+preciso criar uma sistema de investimento que ira utilizar apis como da bolsa de valores, deve rodar no navegador e celular.
+o sistema antigo que montei foi no visual studio utilizando forms, porem a exigencia do professor é que ele seja web por isso a mudança
+lembrando que não tenho experiencia e desenvolvimento web por isso esse é um campo novo
+por esse motivo a estrutura de desenvolvimento do sistema deve ser simples e direta pois tenho pouco tempo para desenvolver
+estou utilizando ambiente Windows 
+a estrutura básica que pesquisei seria essa
+docker
+banco        MongoDB Community Edition + Redis (cache)
+backend      Node.js + Express.js
+frontend     React.js (com suporte a PWA e design responsivo)
+segurança    JWT (access + refresh tokens), bcrypt, Helmet, CORS
+validação    Joi ou Zod (validação de dados no backend)
+tempo real   WebSockets ou Server-Sent Events (SSE)
+agendamento  node-cron ou Agenda.js (tarefas programadas)
+notificações Firebase Cloud Messaging ou OneSignal
+testes       Jest, Supertest (backend), React Testing Library, Cypress (frontend)
+monitoramento Winston, Sentry, LogRocket
+CI/CD        GitHub Actions (pipeline de testes e deploy)
+
+com base nas informações essa seria a melhor abordagem ou estou deixando de ver ou perceber algo importante e teria mais alguma dica ou mudaria algo com base nas informações que passei

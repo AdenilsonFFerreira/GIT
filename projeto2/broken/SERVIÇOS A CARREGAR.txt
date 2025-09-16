@@ -1,0 +1,9 @@
+REDIS (MAQUINA VIRTUAL UBUNTU)
+
+redis-server
+
+----------------------------------
+
+POWERSHELL
+
+node server.js

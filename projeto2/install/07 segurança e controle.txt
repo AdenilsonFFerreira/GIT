@@ -141,3 +141,10 @@ VA PARA O UBUNTU NO WSL E RODE O TERMINAL REDIS
 redis-cli
 VAI RETORNAR
 127.0.0.1:6379>
+
+-------------------------------------------------------------------------------------------
+
+TESTE retorna redis conectado
+node server.js
+
+Se quiser pode testar no postman

@@ -1,3 +1,16 @@
+FINAL
+docker        Não utilizado inicialmente (para facilitar o desenvolvimento local)
+banco         MongoDB Atlas (online e gratuita)
+backend       Node.js + Express.js
+frontend      React.js + Vite (interface rápida e moderna)
+segurança     JWT + bcrypt (autenticação simples)
+estilo        Tailwind CSS ou Material UI (design responsivo sem esforço)
+API Bolsa     HG Brasil Finance API (fácil de integrar)
+deploy        Vercel (frontend) + Render (backend) — hospedagem gratuita e simples
+
+---------------------------------------------------------------------------------------
+
+1ª TENTATIVA
 banco 		MongoDB Community Edition
 backend		node.js
 frontend	react.js
@@ -6,9 +19,9 @@ segurança	jwt(json web tokens), crypt
 ---------------------------------------------------------------------------------------
 
 ATUALIZADA
-
+docker
 banco        MongoDB Community Edition + Redis (cache)
-	backend      Node.js + Express.js
+backend      Node.js + Express.js
 frontend     React.js (com suporte a PWA e design responsivo)
 segurança    JWT (access + refresh tokens), bcrypt, Helmet, CORS
 validação    Joi ou Zod (validação de dados no backend)
@@ -17,7 +30,11 @@ agendamento  node-cron ou Agenda.js (tarefas programadas)
 notificações Firebase Cloud Messaging ou OneSignal
 testes       Jest, Supertest (backend), React Testing Library, Cypress (frontend)
 monitoramento Winston, Sentry, LogRocket
-	CI/CD        GitHub Actions (pipeline de testes e deploy)
+CI/CD        GitHub Actions (pipeline de testes e deploy)
+
+---------------------------------------------------------------------------------------
+
+
 
 
 hospedagem
