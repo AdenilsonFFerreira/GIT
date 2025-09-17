@@ -1,0 +1,49 @@
+mongooDb atlas
+1º cria a organização (ifsp)
+2º cria o banco (investDb)
+criar um cluster padrão
+
+CONFIGURAÇÃO
+Criar usuário de acesso ao banco
+- No menu lateral, clique em Database Access
+- Clique em Add New Database User
+- Preencha:
+- Username: admin
+- Password: guest123 (ou outra que preferir)
+- Em Database User Privileges, selecione:
+✅ Read and write to any database
+- Clique em Add User
+
+2. Liberar acesso à rede
+- Vá em Network Access
+- Clique em Add IP Address
+- Escolha:
+✅ Allow access from anywhere (0.0.0.0/0)
+- Clique em Confir
+
+Etapa 5: Obter a string de conexão
+- Volte para Clusters
+- Clique em Connect
+- Escolha: Connect your application
+- Selecione:
+- Driver: Node.js
+- Versão: 5.0 ou superior
+- Copie a string que aparece, por exemplo:
+
+MONGO_URI=mongodb+srv://admin:guest123@cluster0.eo7h8ka.mongodb.net/investDb?retryWrites=true&w=majority&appName=Cluster0
+
+Substitua <password> pela senha que você criou (admin123)
+E adicione o nome do banco no final
+
+Etapa 6: Inserir no arquivo .env
+No seu projeto backend (C:\GIT\projeto2\broken\backend), abra o arquivo .env e insira:
+
+PORT=5000
+MONGO_URI=mongodb+srv://admin:guest123@cluster0.eo7h8ka.mongodb.net/investDb?retryWrites=true&w=majority&appName=Cluster0
+
+instalação
+
+ATLAS
+dj4d3n1l50n	GCJGABCl4Q9JShsv
+
+

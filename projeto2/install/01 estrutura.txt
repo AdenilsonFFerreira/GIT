@@ -1,5 +1,5 @@
 FINAL
-docker        Não utilizado inicialmente (para facilitar o desenvolvimento local)
+
 banco         MongoDB Atlas (online e gratuita)
 backend       Node.js + Express.js
 frontend      React.js + Vite (interface rápida e moderna)
@@ -7,6 +7,8 @@ segurança     JWT + bcrypt (autenticação simples)
 estilo        Tailwind CSS ou Material UI (design responsivo sem esforço)
 API Bolsa     HG Brasil Finance API (fácil de integrar)
 deploy        Vercel (frontend) + Render (backend) — hospedagem gratuita e simples
+
+docker        Não utilizado inicialmente (para facilitar o desenvolvimento local)
 
 ---------------------------------------------------------------------------------------
 

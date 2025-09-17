@@ -9,6 +9,12 @@ node -v
 
 nmp -v
 
+criar pasta backend 
+npm init -y
+npm install express cors dotenv mongoose bcrypt jsonwebtoken
+npm install --save-dev nodemon
+
+
 Etapa: Instalação do Node.js
 Descrição: Ambiente de execução JavaScript para backend.
 Versão instalada: Node.js v20.11.1 (LTS)
