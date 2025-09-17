@@ -14,13 +14,14 @@ app.get('/', (req, res) => {
   res.send('API funcionando!');
 });
 
+// Importação e uso das rotas
+const authRoutes = require('./routes/auth');
+app.use('/api/auth', authRoutes);
+
 // Conexão com MongoDB Atlas
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => console.log('✅ Conectado ao MongoDB Atlas'))
-.catch((err) => console.error('❌ Erro ao conectar ao MongoDB:', err));
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('✅ Conectado ao MongoDB Atlas'))
+  .catch((err) => console.error('❌ Erro ao conectar ao MongoDB:', err));
 
 // Inicialização do servidor
 const PORT = process.env.PORT || 5000;
