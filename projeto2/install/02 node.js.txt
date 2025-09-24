@@ -13,6 +13,7 @@ criar pasta backend
 npm init -y
 npm install express cors dotenv mongoose bcrypt jsonwebtoken
 npm install --save-dev nodemon
+npm install bcrypt jsonwebtoken
 
 
 Etapa: Instalação do Node.js
