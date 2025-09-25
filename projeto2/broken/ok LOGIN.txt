@@ -1,0 +1,16 @@
+Autenticação concluída
+🔐 Cadastro de usuário
+- Rota: POST /api/auth/register
+- Cria novo usuário no MongoDB
+- Valida campos e evita duplicidade
+🔑 Login de usuário
+- Rota: POST /api/auth/login
+- Verifica credenciais
+- Gera token JWT válido por 1 dia
+🔒 Middleware de autenticação
+- Verifica token no cabeçalho Authorization
+- Protege rotas privadas
+👤 Rota protegida /perfil
+- Rota: GET /api/auth/perfil
+- Retorna dados do usuário logado
+- Testada com sucesso via Postman

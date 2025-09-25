@@ -1,0 +1,5 @@
+POST http://localhost:5000/api/auth/login
+ao carregar o usuario para gerar o token com metodo POST
+
+GET http://localhost:5000/api/auth/perfil
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Y2FkMGZlYWUyOGEzMzRlNjdmNmVlNCIsImlhdCI6MTc1ODgxMDU1NiwiZXhwIjoxNzU4ODk2OTU2fQ.ZfBvzVp9vUsEkEpxivqMEuSmlOFKOy-4Osq5azKYhPg
