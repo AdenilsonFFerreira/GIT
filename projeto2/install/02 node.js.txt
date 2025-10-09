@@ -7,7 +7,7 @@ node.js
 Teste do node
 node -v
 
-nmp -v
+npm -v
 
 criar pasta backend 
 npm init -y
